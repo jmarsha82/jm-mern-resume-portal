@@ -1,8 +1,6 @@
 import { useEffect } from "react"
 import { useWorkoutsContext } from "../hooks/useWorkoutsContext"
 import WorkoutDetails from "../components/WorkoutDetails"
-import WorkoutForm from "../components/WorkoutForm"
-
 const Home = () => {
   const { workouts, dispatch } = useWorkoutsContext()
 
@@ -26,7 +24,6 @@ const Home = () => {
           <WorkoutDetails workout={workout} key={workout._id} />
         ))}
       </div>
-      <WorkoutForm />
     </div>
   )
 }
