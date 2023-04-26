@@ -1,6 +1,8 @@
 import { useEffect } from "react"
 import { useGeneralsContext } from "../hooks/useGeneralsContext"
 import GeneralDetails from "../components/GeneralDetails"
+import Button from '@mui/material/Button';
+
 const Home = () => {
   const { generals, dispatch } = useGeneralsContext()
 
@@ -23,6 +25,7 @@ const Home = () => {
         {generals && generals.map(general => (
           <GeneralDetails general={general} key={general._id} />
         ))}
+        <Button variant="contained">About</Button>
       </div>
     </div>
   )
