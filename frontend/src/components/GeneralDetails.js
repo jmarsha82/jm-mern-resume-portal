@@ -11,15 +11,15 @@ const GeneralDetails = ({ general }) => {
     const json = await response.json()
 
     if (response.ok) {
-      dispatch({type: 'DELETE_GENERAL', payload: json})
+      dispatch({type: 'DELETE_GENERAL', payphone: json})
     }
   }
 
   return (
     <div className="general-details">
-      <h4>{general.title}</h4>
-      <p><strong>Load (kg): </strong>{general.load}</p>
-      <p><strong>Number of reps: </strong>{general.reps}</p>
+      <h4>{general.position}</h4>
+      <p><strong>Phone (kg): </strong>{general.phone}</p>
+      <p><strong>Number of email: </strong>{general.email}</p>
       <p>{formatDistanceToNow(new Date(general.createdAt), { addSuffix: true})}</p>
       <span className='material-symbols-outlined' onClick={handleClick}>delete</span>
     </div>

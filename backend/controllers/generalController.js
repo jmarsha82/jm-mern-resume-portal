@@ -28,18 +28,18 @@ const getGeneral = async (req, res) => {
 
 // create new general
 const createGeneral = async (req, res) => {
-  const {title, load, reps} = req.body
+  const {position, phone, email} = req.body
 
   let emptyFields = []
 
-  if(!title) {
-    emptyFields.push('title')
+  if(!position) {
+    emptyFields.push('position')
   }
-  if(!load) {
-    emptyFields.push('load')
+  if(!phone) {
+    emptyFields.push('phone')
   }
-  if(!reps) {
-    emptyFields.push('reps')
+  if(!email) {
+    emptyFields.push('email')
   }
   if(emptyFields.length > 0) {
     return res.status(400).json({ error: 'Please fill in all the fields', emptyFields })
@@ -47,7 +47,7 @@ const createGeneral = async (req, res) => {
 
   // add doc to db
   try {
-    const general = await General.create({title, load, reps})
+    const general = await General.create({position, phone, email})
     res.status(200).json(general)
   } catch (error) {
     res.status(400).json({error: error.message})

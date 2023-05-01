@@ -4,16 +4,16 @@ import { useGeneralsContext } from '../hooks/useGeneralsContext'
 const GeneralForm = () => {
   const { dispatch } = useGeneralsContext()
 
-  const [title, setTitle] = useState('')
-  const [load, setLoad] = useState('')
-  const [reps, setReps] = useState('')
+  const [position, setPosition] = useState('')
+  const [phone, setPhone] = useState('')
+  const [email, setEmail] = useState('')
   const [error, setError] = useState(null)
   const [emptyFields, setEmptyFields] = useState([])
 
   const handleSubmit = async (e) => {
     e.preventDefault()
 
-    const general = {title, load, reps}
+    const general = {position, phone, email}
     
     const response = await fetch('/api/generals', {
       method: 'POST',
@@ -31,10 +31,10 @@ const GeneralForm = () => {
     if (response.ok) {
       setEmptyFields([])
       setError(null)
-      setTitle('')
-      setLoad('')
-      setReps('')
-      dispatch({type: 'CREATE_GENERAL', payload: json})
+      setPosition('')
+      setPhone('')
+      setEmail('')
+      dispatch({type: 'CREATE_GENERAL', payphone: json})
     }
 
   }
@@ -43,28 +43,28 @@ const GeneralForm = () => {
     <form className="create" onSubmit={handleSubmit}> 
       <h3>Add a New General</h3>
 
-      <label>Exersize Title:</label>
+      <label>Exersize Position:</label>
       <input 
         type="text" 
-        onChange={(e) => setTitle(e.target.value)} 
-        value={title}
-        className={emptyFields.includes('title') ? 'error' : ''}
+        onChange={(e) => setPosition(e.target.value)} 
+        value={position}
+        className={emptyFields.includes('position') ? 'error' : ''}
       />
 
-      <label>Load (in kg):</label>
+      <label>Phone (in kg):</label>
       <input 
         type="number" 
-        onChange={(e) => setLoad(e.target.value)} 
-        value={load}
-        className={emptyFields.includes('load') ? 'error' : ''}
+        onChange={(e) => setPhone(e.target.value)} 
+        value={phone}
+        className={emptyFields.includes('phone') ? 'error' : ''}
       />
 
-      <label>Number of Reps:</label>
+      <label>Number of Email:</label>
       <input 
         type="number" 
-        onChange={(e) => setReps(e.target.value)} 
-        value={reps}
-        className={emptyFields.includes('reps') ? 'error' : ''}
+        onChange={(e) => setEmail(e.target.value)} 
+        value={email}
+        className={emptyFields.includes('email') ? 'error' : ''}
       />
 
       <button>Add General</button>
