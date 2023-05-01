@@ -21,9 +21,9 @@ const GeneralDetails = ({ general }) => {
   return (
     <div className="general-details">
       <h4>{general.position}</h4>
-      <p><PhoneAndroidIcon /><strong> {general.phone}</strong></p>
-      <p><EmailIcon /><strong> {general.email}</strong></p>
-      <p><strong>Last Updated : </strong>{formatDistanceToNow(new Date(general.createdAt), { addSuffix: true})}</p>
+      <p><PhoneAndroidIcon className='icon-text-alignment'/><strong>     {general.phone}</strong></p>
+      <p><EmailIcon className='icon-text-alignment'/><strong>       {general.email}</strong></p>
+      <p><strong>Last updated : </strong>{formatDistanceToNow(new Date(general.createdAt), { addSuffix: true})}</p>
       <span className='material-symbols-outlined' onClick={handleClick}>delete</span>
     </div>
   )

@@ -55,6 +55,15 @@ header a {
   margin: 0;
   font-size: 0.9em;
   color: #555;
+  padding: 5px;
+}
+.general-details {
+  margin: 0;
+  font-size: 1.0em;
+  color: #555;
+}
+.icon-text-alignment {
+  vertical-align: bottom;
 }
 .general-details span {
   position: absolute;
