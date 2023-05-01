@@ -2,7 +2,7 @@ const mongoose = require('mongoose')
 
 const Schema = mongoose.Schema
 
-const generalSchema = new Schema({
+const workoutSchema = new Schema({
   title: {
     type: String,
     required: true
@@ -17,4 +17,4 @@ const generalSchema = new Schema({
   }
 }, { timestamps: true })
 
-module.exports = mongoose.model('General', generalSchema)
+module.exports = mongoose.model('Workout', workoutSchema)

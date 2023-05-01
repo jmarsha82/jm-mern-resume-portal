@@ -1,32 +1,32 @@
 import { useEffect } from "react"
-import { useGeneralsContext } from "../hooks/useGeneralsContext"
-import GeneralDetails from "../components/GeneralDetails"
-import Button from '@mui/material/Button';
+import { useWorkoutsContext } from "../hooks/useWorkoutsContext"
+import WorkoutDetails from "../components/WorkoutDetails"
+import WorkoutForm from "../components/WorkoutForm"
 
 const Home = () => {
-  const { generals, dispatch } = useGeneralsContext()
+  const { workouts, dispatch } = useWorkoutsContext()
 
   useEffect(() => {
-    const fetchGenerals = async () => {
-      const response = await fetch('/api/generals')
+    const fetchWorkouts = async () => {
+      const response = await fetch('/api/workouts')
       const json = await response.json()
 
       if (response.ok) {
-        dispatch({type: 'SET_GENERALS', payload: json})
+        dispatch({type: 'SET_WORKOUTS', payload: json})
       }
     }
 
-    fetchGenerals()
+    fetchWorkouts()
   }, [dispatch])
 
   return (
     <div className="home">
-      <div className="generals">
-        {generals && generals.map(general => (
-          <GeneralDetails general={general} key={general._id} />
+      <div className="workouts">
+        {workouts && workouts.map(workout => (
+          <WorkoutDetails workout={workout} key={workout._id} />
         ))}
-        <Button variant="contained">About</Button>
       </div>
+      <WorkoutForm />
     </div>
   )
 }
