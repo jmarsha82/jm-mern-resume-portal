@@ -1,5 +1,8 @@
 import { useGeneralsContext } from '../hooks/useGeneralsContext'
 import formatDistanceToNow from 'date-fns/formatDistanceToNow'
+import PhoneAndroidIcon from '@mui/icons-material/PhoneAndroid';
+import EmailIcon from '@mui/icons-material/Email';
+
 
 const GeneralDetails = ({ general }) => {
   const { dispatch } = useGeneralsContext()
@@ -18,9 +21,9 @@ const GeneralDetails = ({ general }) => {
   return (
     <div className="general-details">
       <h4>{general.position}</h4>
-      <p><strong>Phone (kg): </strong>{general.phone}</p>
-      <p><strong>Number of email: </strong>{general.email}</p>
-      <p>{formatDistanceToNow(new Date(general.createdAt), { addSuffix: true})}</p>
+      <p><PhoneAndroidIcon /><strong> {general.phone}</strong></p>
+      <p><EmailIcon /><strong> {general.email}</strong></p>
+      <p><strong>Last Updated : </strong>{formatDistanceToNow(new Date(general.createdAt), { addSuffix: true})}</p>
       <span className='material-symbols-outlined' onClick={handleClick}>delete</span>
     </div>
   )

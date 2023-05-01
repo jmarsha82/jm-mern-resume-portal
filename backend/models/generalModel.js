@@ -8,11 +8,11 @@ const generalSchema = new Schema({
     required: true
   },
   email: {
-    type: Number,
+    type: String,
     required: true
   },
   phone: {
-    type: Number,
+    type: String,
     required: true
   }
 }, { timestamps: true })

@@ -53,7 +53,7 @@ const GeneralForm = () => {
 
       <label>Phone (in kg):</label>
       <input 
-        type="number" 
+        type="text" 
         onChange={(e) => setPhone(e.target.value)} 
         value={phone}
         className={emptyFields.includes('phone') ? 'error' : ''}
@@ -61,7 +61,7 @@ const GeneralForm = () => {
 
       <label>Number of Email:</label>
       <input 
-        type="number" 
+        type="text" 
         onChange={(e) => setEmail(e.target.value)} 
         value={email}
         className={emptyFields.includes('email') ? 'error' : ''}
