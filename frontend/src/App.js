@@ -4,7 +4,7 @@ import Home from './pages/Home';
 
 function App() {
     return ( 
-    <div className = "App" >
+    <div data-testid="app-element" className = "App" >
         <BrowserRouter>
         <Navbar />
             <div className="pages">

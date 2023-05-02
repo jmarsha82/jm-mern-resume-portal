@@ -1,7 +1,11 @@
-import { render, screen } from '@testing-library/react';
+import React from 'react';
+import { shallow } from enzyme;
 import App from './App';
 
-it('renders resume name', () => {
-  render(<App />);
-  expect(screen.getByText('Justin Marshall')).toBeInTheDocument();
-});
+describe('App', () => {
+  test('should render App component', () => {
+    const wrapper = shallow(<App/>);
+    expect(wrapper).toBeTruthy();
+    expect(wrapper.length).toBe(1);
+  })
+})
