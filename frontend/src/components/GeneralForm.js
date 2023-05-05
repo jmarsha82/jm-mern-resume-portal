@@ -41,9 +41,9 @@ const GeneralForm = () => {
 
   return (
     <form className="create" onSubmit={handleSubmit}> 
-      <h3>Add a New General</h3>
+      <h3>General Info Edit</h3>
 
-      <label>Exersize Position:</label>
+      <label>Current Position:</label>
       <input 
         type="text" 
         onChange={(e) => setPosition(e.target.value)} 
@@ -51,7 +51,7 @@ const GeneralForm = () => {
         className={emptyFields.includes('position') ? 'error' : ''}
       />
 
-      <label>Phone (in kg):</label>
+      <label>Phone:</label>
       <input 
         type="text" 
         onChange={(e) => setPhone(e.target.value)} 
@@ -59,7 +59,7 @@ const GeneralForm = () => {
         className={emptyFields.includes('phone') ? 'error' : ''}
       />
 
-      <label>Number of Email:</label>
+      <label>Email:</label>
       <input 
         type="text" 
         onChange={(e) => setEmail(e.target.value)} 
