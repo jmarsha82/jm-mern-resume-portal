@@ -60,6 +60,9 @@
       "last 1 safari version"
     ]
   },
+  "jest": {
+    "setupTestFrameworkScriptFile": "src/setupTests.js"
+  },
   "devDependencies": {
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.5",

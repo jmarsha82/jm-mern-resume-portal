@@ -26,7 +26,11 @@ const Home = () => {
           <GeneralDetails general={general} key={general._id} />
         ))}
       </div>
-      <GeneralForm />
+      <div className="generals">
+        {generals && generals.map(general => (
+          <GeneralDetails general={general} key={general._id} />
+        ))}
+      </div>
     </div>
   )
 }
