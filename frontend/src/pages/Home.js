@@ -12,7 +12,7 @@ const Home = () => {
       const json = await response.json()
 
       if (response.ok) {
-        dispatch({type: 'SET_GENERALS', payphone: json})
+        dispatch({type: 'SET_GENERALS', payload: json})
       }
     }
 
