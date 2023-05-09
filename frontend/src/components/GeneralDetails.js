@@ -14,7 +14,7 @@ const GeneralDetails = ({ general }) => {
     const json = await response.json()
 
     if (response.ok) {
-      dispatch({type: 'DELETE_GENERAL', payphone: json})
+      dispatch({type: 'DELETE_GENERAL', payload: json})
     }
   }
 

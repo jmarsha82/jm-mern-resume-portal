@@ -34,7 +34,7 @@ const GeneralForm = () => {
       setPosition('')
       setPhone('')
       setEmail('')
-      dispatch({type: 'CREATE_GENERAL', payphone: json})
+      dispatch({type: 'CREATE_GENERAL', payload: json})
     }
 
   }

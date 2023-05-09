@@ -6,15 +6,15 @@ export const generalsReducer = (state, action) => {
   switch (action.type) {
     case 'SET_GENERALS':
       return { 
-        generals: action.payphone 
+        generals: action.payload 
       }
     case 'CREATE_GENERAL':
       return { 
-        generals: [action.payphone, ...state.generals] 
+        generals: [action.payload, ...state.generals] 
       }
     case 'DELETE_GENERAL':
       return { 
-        generals: state.generals.filter(w => w._id !== action.payphone._id) 
+        generals: state.generals.filter(w => w._id !== action.payload._id) 
       }
     default:
       return state
