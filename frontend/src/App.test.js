@@ -1,9 +1,16 @@
-import React from 'react';
-import { shallow } from enzyme;
-import App from './App';
+// App.test.js
 
-test('should render App component', () => {
-  const wrapper = shallow(<App/>);
-  expect(wrapper).toBeTruthy();
-  expect(wrapper.length).toBe(1);
-})
+import React from "react";
+import { render, screen } from "@testing-library/react";
+import App from "./App";
+import Enzyme from "enzyme";
+
+const { shallow } = Enzyme; //whatever you want to use here
+
+it('renders without crashing', () => {
+    shallow(<App />);
+  });
+
+test("component exists", () => {
+expect(App).toBeDefined();
+});

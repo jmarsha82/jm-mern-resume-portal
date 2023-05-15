@@ -1,10 +1,11 @@
 import { useEffect } from "react"
 import { useGeneralsContext } from "../hooks/useGeneralsContext"
+import { useCurrentSkillsContext } from "../hooks/useCurrentSkillsContext"
 import GeneralDetails from "../components/GeneralDetails"
-import GeneralForm from "../components/GeneralForm"
+import CurrentSkillDetails from "../components/CurrentSkillDetails"
 
 const Home = () => {
-  const { generals, dispatch } = useGeneralsContext()
+  const { generals, dispatchGeneral } = useGeneralsContext()
 
   useEffect(() => {
     const fetchGenerals = async () => {
@@ -12,12 +13,27 @@ const Home = () => {
       const json = await response.json()
 
       if (response.ok) {
-        dispatch({type: 'SET_GENERALS', payload: json})
+        dispatchGeneral({type: 'SET_GENERALS', payload: json})
       }
     }
 
     fetchGenerals()
-  }, [dispatch])
+  }, [dispatchGeneral])
+
+  const { currentSkills, dispatchSkills } = useCurrentSkillsContext()
+
+  useEffect(() => {
+    const fetchCurrentSkills = async () => {
+      const response = await fetch('/api/currentSkill')
+      const json = await response.json()
+
+      if (response.ok) {
+        dispatchSkills({type: 'SET_CURRENT_SKILLS', payload: json})
+      }
+    }
+
+    fetchCurrentSkills()
+  }, [dispatchSkills])
 
   return (
     <div className="home">
@@ -26,9 +42,9 @@ const Home = () => {
           <GeneralDetails general={general} key={general._id} />
         ))}
       </div>
-      <div className="generals">
-        {generals && generals.map(general => (
-          <GeneralDetails general={general} key={general._id} />
+      <div className="">
+        {currentSkills && currentSkills.map(currentSkill => (
+          <CurrentSkillDetails currentSkill={currentSkill} key={currentSkill._id} />
         ))}
       </div>
     </div>

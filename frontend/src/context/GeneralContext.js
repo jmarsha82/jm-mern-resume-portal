@@ -22,12 +22,12 @@ export const generalsReducer = (state, action) => {
 }
 
 export const GeneralsContextProvider = ({ children }) => {
-  const [state, dispatch] = useReducer(generalsReducer, { 
+  const [state, dispatchGeneral] = useReducer(generalsReducer, { 
     generals: null
   })
   
   return (
-    <GeneralsContext.Provider value={{ ...state, dispatch }}>
+    <GeneralsContext.Provider value={{ ...state, dispatchGeneral }}>
       { children }
     </GeneralsContext.Provider>
   )
