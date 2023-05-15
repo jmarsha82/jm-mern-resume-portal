@@ -36,18 +36,21 @@ const Home = () => {
   }, [dispatchSkills])
 
   return (
-    <div className="home">
-      <div className="generals">
-        {generals && generals.map(general => (
-          <GeneralDetails general={general} key={general._id} />
-        ))}
-      </div>
-      <div className="">
-        {currentSkills && currentSkills.map(currentSkill => (
-          <CurrentSkillDetails currentSkill={currentSkill} key={currentSkill._id} />
-        ))}
+    <div>
+      <div className="home">
+        <div>
+          {generals && generals.map(general => (
+            <GeneralDetails general={general} key={general._id} />
+          ))}
+        </div>
+        <div>
+          {currentSkills && currentSkills.map(currentSkill => (
+            <CurrentSkillDetails currentSkill={currentSkill} key={currentSkill._id} />
+          ))}
+        </div>
       </div>
     </div>
+    
   )
 }
 

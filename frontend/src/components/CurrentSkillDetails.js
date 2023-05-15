@@ -1,9 +1,9 @@
 
 const CurrentSkillDetails = ({ currentSkill }) => {
   return (
-    <div className="general-details">
+    <div className="current-skill-details">
       <h4>{currentSkill.skillset}</h4>
-      <p><strong>{currentSkill.freguency}</strong></p>
+      <p>Used {currentSkill.frequency}</p>
       <p><strong>{currentSkill.description}</strong></p>
     </div>
   )
