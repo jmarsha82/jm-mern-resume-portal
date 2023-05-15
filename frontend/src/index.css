@@ -35,7 +35,7 @@ header a {
 /* homepage */
 .home {
   display: grid;
-  grid-template-columns: 1fr 3fr;
+  grid-template-columns: 1fr 1fr 2fr;
   gap: 2rem;
 }
 /* general details tab */
@@ -77,8 +77,8 @@ header a {
 .current-skill-details {
   background: #fff;
   border-radius: 4px;
-  margin: 20px auto;
-  padding: 20px;
+  margin: 5px auto;
+  padding: 5px;
   position: relative;
   box-shadow: 2px 2px 5px rgba(0,0,0,0.05);
 }
@@ -108,44 +108,22 @@ header a {
   border-radius: 50%;
   color: #333;
 }
-
 .icon-text-alignment {
   vertical-align: bottom;
 }
 .navbar-site-buttons {
   margin: 5px;
 }
-
-/* new general form */
-label, input {
-  display: block;
-}
-input {
-  padding: 10px;
-  margin-top: 10px;
-  margin-bottom: 20px;
-  width: 100%;
-  border: 1px solid #ddd;
+.current-skill-heading {
+  background: #fff;
+  font-size: 1.2rem;
   border-radius: 4px;
-  box-sizing: border-box;
+  margin: 10px auto;
+  padding: 20px;
+  position: relative;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.05);
 }
-form button {
-  background: var(--primary);
-  border: 0;
-  color: #fff;
-  padding: 10px;
-  font-family: "Poppins";
-  border-radius: 4px;
-  cursor: pointer;
-}
-div.error {
-  padding: 10px;
-  background: #ffefef;
-  border: 1px solid var(--error);
-  color: var(--error);
-  border-radius: 4px;
-  margin: 20px 0;
-}
-input.error {
-  border: 1px solid var(--error);
+.current-skill-heading h4 {
+  margin: 0 0 0 0;
+  color: #1976d2;
 }

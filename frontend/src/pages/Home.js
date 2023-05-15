@@ -3,6 +3,7 @@ import { useGeneralsContext } from "../hooks/useGeneralsContext"
 import { useCurrentSkillsContext } from "../hooks/useCurrentSkillsContext"
 import GeneralDetails from "../components/GeneralDetails"
 import CurrentSkillDetails from "../components/CurrentSkillDetails"
+import { ButtonGroup } from "@mui/material"
 
 const Home = () => {
   const { generals, dispatchGeneral } = useGeneralsContext()
@@ -44,9 +45,22 @@ const Home = () => {
           ))}
         </div>
         <div>
+          <div className="current-skill-heading"><h4>Current Project(s) Tech Stack</h4></div>
+          <div className="current-skill-details">
+            <ButtonGroup variant="contained" aria-label="outlined primary button group">
           {currentSkills && currentSkills.map(currentSkill => (
             <CurrentSkillDetails currentSkill={currentSkill} key={currentSkill._id} />
           ))}
+          </ButtonGroup>
+          </div>
+        </div>
+        <div>
+          <div className="current-skill-heading"><h4>Mission Statement?</h4></div>
+          <div className="general-details">
+            Cras mattis consectetur purus sit amet fermentum. Cras justo odio,
+            dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac
+            consectetur ac, vestibulum at eros.
+          </div>
         </div>
       </div>
     </div>
