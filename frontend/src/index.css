@@ -33,9 +33,14 @@ header a {
 }
 
 /* homepage */
-.home {
+.home-one {
   display: grid;
-  grid-template-columns: 1fr 1fr 2fr;
+  grid-template-columns: 1fr 3fr;
+  gap: 2rem;
+}
+.home-two {
+  display: grid;
+  grid-template-columns: 5fr;
   gap: 2rem;
 }
 /* general details tab */
@@ -81,6 +86,10 @@ header a {
   padding: 5px;
   position: relative;
   box-shadow: 2px 2px 5px rgba(0,0,0,0.05);
+}
+.current-skill-details-desc {
+  margin-left: 2rem;
+  display: inline-block;
 }
 .current-skill-details h4 {
   margin: 0 0 0 0;
