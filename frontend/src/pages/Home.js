@@ -1,9 +1,10 @@
 import { useEffect } from "react"
 import { useGeneralsContext } from "../hooks/useGeneralsContext"
 import { useCurrentSkillsContext } from "../hooks/useCurrentSkillsContext"
+import { useWorkExperiencesContext } from "../hooks/useWorkExperienceContext"
 import GeneralDetails from "../components/GeneralDetails"
 import CurrentSkillDetails from "../components/CurrentSkillDetails"
-import { ButtonGroup } from "@mui/material"
+import WorkExperienceDetails from "../components/WorkExperienceDetails"
 
 const Home = () => {
   const { generals, dispatchGeneral } = useGeneralsContext()
@@ -36,6 +37,21 @@ const Home = () => {
     fetchCurrentSkills()
   }, [dispatchSkills])
 
+  const { workExperiences, dispatchExperience } = useWorkExperiencesContext()
+
+  useEffect(() => {
+    const fetchWorkExperiences = async () => {
+      const response = await fetch('/api/workExperience')
+      const json = await response.json()
+
+      if (response.ok) {
+        dispatchExperience({type: 'SET_WORK_EXPERIENCE', payload: json})
+      }
+    }
+
+    fetchWorkExperiences()
+  }, [dispatchExperience])
+
   return (
     <div>
       <div className="home-one">
@@ -57,9 +73,9 @@ const Home = () => {
         <div>
           <div className="current-skill-heading"><h4>Experience</h4></div>
           <div className="general-details">
-            Cras mattis consectetur purus sit amet fermentum. Cras justo odio,
-            dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac
-            consectetur ac, vestibulum at eros.
+          {workExperiences && workExperiences.map(workExperience => (
+            <WorkExperienceDetails workExperience={workExperience} key={workExperience._id} />
+          ))}
           </div>
         </div>
       </div>
