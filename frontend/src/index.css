@@ -86,6 +86,7 @@ header a {
   padding: 5px;
   position: relative;
   box-shadow: 2px 2px 5px rgba(0,0,0,0.05);
+  z-index: 0;
 }
 .current-skill-details-desc {
   margin-left: 2rem;
@@ -108,12 +109,9 @@ header a {
   color: #555;
 }
 .current-skill-details span {
-  position: absolute;
   top: 20px;
   right: 20px;
   cursor: pointer;
-  background: #f1f1f1;
-  padding: 6px;
   border-radius: 50%;
   color: #333;
 }
