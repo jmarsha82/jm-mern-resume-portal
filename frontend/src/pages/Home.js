@@ -79,6 +79,14 @@ const Home = () => {
           </div>
         </div>
       </div>
+      <div className="home-two">
+        <div>
+          <div className="current-skill-heading"><h4>Education</h4></div>
+          <div className="general-details">
+            Coming Soon
+          </div>
+        </div>
+      </div>
     </div>
     
   )
