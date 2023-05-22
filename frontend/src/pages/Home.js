@@ -55,7 +55,7 @@ const Home = () => {
       </div>
       <div className="home-two">
         <div>
-          <div className="current-skill-heading"><h4>Mission Statement?</h4></div>
+          <div className="current-skill-heading"><h4>Experience</h4></div>
           <div className="general-details">
             Cras mattis consectetur purus sit amet fermentum. Cras justo odio,
             dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac

@@ -3,8 +3,9 @@ require('dotenv').config()
 const express = require('express')
 const mongoose = require('mongoose')
 const generalRoutes = require('./routes/general')
-const currentSkill = require('./routes/currentSkill')
+const currentSkillRoutes = require('./routes/currentSkill')
 const userRoutes = require('./routes/user')
+const workExperienceRoutes = require('./routes/workExperience')
 
 // express app
 const app = express()
@@ -19,8 +20,9 @@ app.use((req, res, next) => {
 
 // routes
 app.use('/api/generals', generalRoutes)
-app.use('/api/currentSkill', currentSkill)
+app.use('/api/currentSkill', currentSkillRoutes)
 app.use('/api/user', userRoutes)
+app.use('/api/workExperience', workExperienceRoutes)
 
 // connect to db
 mongoose.connect(process.env.MONGO_URI)
