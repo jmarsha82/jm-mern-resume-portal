@@ -115,6 +115,10 @@ header a {
   border-radius: 50%;
   color: #333;
 }
+/* work experience details tab */
+.work-experience-comment-list {
+  list-style-type:disc;
+}
 .icon-text-alignment {
   vertical-align: bottom;
 }
