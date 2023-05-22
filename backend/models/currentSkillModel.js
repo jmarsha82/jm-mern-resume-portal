@@ -14,6 +14,10 @@ const currentSkillSchema = new Schema({
   description: {
     type: String,
     required: true
+  },
+  languagelink: {
+    type: String,
+    required: true
   }
 }, { timestamps: true })
 

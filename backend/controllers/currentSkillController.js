@@ -28,7 +28,7 @@ const getCurrentSkill = async (req, res) => {
 
 // create new currentSkill
 const createCurrentSkill = async (req, res) => {
-  const {skillset, frequency, description} = req.body
+  const {skillset, frequency, description, languagelink} = req.body
 
   let emptyFields = []
 
@@ -41,13 +41,16 @@ const createCurrentSkill = async (req, res) => {
   if(!description) {
     emptyFields.push('description')
   }
+  if(!languagelink) {
+    emptyFields.push('languagelink')
+  }
   if(emptyFields.length > 0) {
     return res.status(400).json({ error: 'Please fill in all the fields', emptyFields })
   }
 
   // add doc to db
   try {
-    const currentSkill = await CurrentSkill.create({skillset, frequency, description})
+    const currentSkill = await CurrentSkill.create({skillset, frequency, description, languagelink})
     res.status(200).json(currentSkill)
   } catch (error) {
     res.status(400).json({error: error.message})
