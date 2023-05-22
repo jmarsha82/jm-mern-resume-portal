@@ -2,11 +2,11 @@ import * as React from 'react';
 
 const WorkExperienceDetails = ({ workExperience }) => {
   return (
-    <div className="current-skill-details">
+    <div className="work-experience-details">
       <h4>{workExperience.company}</h4>
-      <div className="current-skill-details-desc">{workExperience.jobtitle}</div><br />
-      <div className="current-skill-details-desc">{workExperience.timerange}</div><br />
-      <div className="current-skill-details-desc">{workExperience.location}</div>
+      <div className="work-experience-title">{workExperience.jobtitle}</div>
+      <div className="work-experience-misc">{workExperience.timerange}</div>
+      <div className="work-experience-misc">{workExperience.location}</div>
       <ul className='work-experience-comment-list'>
         <li><strong>{workExperience.commentone}</strong></li>
         <li><strong>{workExperience.commenttwo}</strong></li>
