@@ -11,6 +11,7 @@ const Navbar = () => {
                 <div>
                     <span className="navbar-site-buttons"><Button variant="contained" href="https://www.linkedin.com/in/justin-marshall-3733065b" target="_blank">LinkedIN</Button></span>
                     <span className="navbar-site-buttons"><Button variant="contained" href="https://www.instagram.com/marshajus/" target="_blank">Instagram</Button></span>
+                    <span className="navbar-site-buttons"><Button variant="contained" href="https://github.com/jmarsha82" target="_blank">Github</Button></span>
                 </div>
             </div>
         </header>
