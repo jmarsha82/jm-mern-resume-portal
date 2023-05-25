@@ -7,11 +7,6 @@ import { Link } from "react-router-dom";
 
 const EducationDetails = ({ education }) => {
   return (
-    // <div className="education-skill-details">
-    //   <h4>{education.college}</h4>
-    //   <title>{education.location}</title>
-    //   <div className="education-title">{education.degree}</div>
-    // </div>
     <List component="nav" aria-label="mailbox folders">
       <Divider />
       <ListItem button component={Link} to={education.collegelink} target="_blank">
