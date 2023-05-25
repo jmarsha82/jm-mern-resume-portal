@@ -94,6 +94,13 @@ const Home = () => {
             <GeneralDetails general={general} key={general._id} />
           ))}
         </div>
+        <div className="full-skill-heading">
+          <h4>Github Contributions</h4>
+          <img src="https://ghchart.rshah.org/1976d2/jmarsha82" alt="Github Profile" />
+        </div>
+      </div>
+      <div className="home-two">
+        <div>
         <div>
           <div className="current-skill-heading"><h4>Current Project(s) Tech Stack</h4></div>
           <div className="current-skill-details">
@@ -102,9 +109,6 @@ const Home = () => {
           ))}
           </div>
         </div>
-      </div>
-      <div className="home-two">
-        <div>
           <div className="current-skill-heading"><h4>Experience</h4></div>
           <div className="work-experience-details">
           {workExperiences && workExperiences.map(workExperience => (
