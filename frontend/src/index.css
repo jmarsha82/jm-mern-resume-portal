@@ -204,3 +204,6 @@ header a {
 .navbar-site-buttons {
   margin: 5px;
 }
+.navbar-nav-site-buttons {
+  margin: 0px;
+}

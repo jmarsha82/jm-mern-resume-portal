@@ -119,7 +119,7 @@ const Home = () => {
       </div>
       <div className="home-three">
         <div>
-          <div className="current-skill-heading"><h4>Education</h4></div>
+          <div id="education-id" className="current-skill-heading"><h4>Education</h4></div>
           <div className="education-details">
           {educations && educations.map(education => (
             <EducationDetails education={education} key={education._id} />
@@ -129,11 +129,19 @@ const Home = () => {
       </div>
       <div className="home-three">
         <div>
-          <div className="current-skill-heading"><h4>Extended Tech Stack</h4></div>
+          <div id="extended-skills-id" className="current-skill-heading"><h4>Extended Tech Stack</h4></div>
           <div className="current-skill-details">
           {fullSkills && fullSkills.map(fullSkill => (
             <FullSkillDetails fullSkill={fullSkill} key={fullSkill._id} />
           ))}
+          </div>
+        </div>
+      </div>
+      <div className="home-three">
+        <div>
+          <div id="dev-books-id" className="current-skill-heading"><h4>Dev Books</h4></div>
+          <div className="general-details">
+            Coming Soon
           </div>
         </div>
       </div>
