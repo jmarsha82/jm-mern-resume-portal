@@ -6,7 +6,6 @@ const EducationDetails = ({ education }) => {
       <h4>{education.college}</h4>
       <title>{education.location}</title>
       <div className="education-title">{education.degree}</div>
-      <div className="education-title">{education.collegelink}</div>
     </div>
   )
 }

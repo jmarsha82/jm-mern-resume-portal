@@ -1,4 +1,4 @@
-import GeneralForm from "./GeneralForm";
+import GeneralForm from "../components/GeneralForm"
 
 test("GeneralForm exists", () => {
     expect(GeneralForm).toBeDefined();
