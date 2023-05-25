@@ -43,6 +43,11 @@ header a {
   grid-template-columns: 5fr;
   gap: 2rem;
 }
+.home-three {
+  display: grid;
+  grid-template-columns: 5fr;
+  gap: 2rem;
+}
 /* general details tab */
 .general-details {
   background: #fff;
@@ -115,6 +120,19 @@ header a {
   border-radius: 50%;
   color: #333;
 }
+.current-skill-heading {
+  background: #fff;
+  font-size: 1.2rem;
+  border-radius: 4px;
+  margin: 10px auto;
+  padding: 20px;
+  position: relative;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.05);
+}
+.current-skill-heading h4 {
+  margin: 0 0 0 0;
+  color: #1976d2;
+}
 /* work experience details tab */
 .work-experience-details{
   background: #fff;
@@ -137,22 +155,27 @@ header a {
   font-style: italic;
   font-weight: bold;
 }
+/*education*/
+.education-details {
+  background: #fff;
+  border-radius: 4px;
+  margin: 20px auto;
+  padding: 20px;
+  position: relative;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.05);
+}
+.education-details h4 {
+  margin: 0 0 10px 0;
+  font-size: 1.2em;
+  color: #1976d2;
+}
+.education-title{
+  font-weight: bold;
+}
+/*misc*/
 .icon-text-alignment {
   vertical-align: bottom;
 }
 .navbar-site-buttons {
   margin: 5px;
-}
-.current-skill-heading {
-  background: #fff;
-  font-size: 1.2rem;
-  border-radius: 4px;
-  margin: 10px auto;
-  padding: 20px;
-  position: relative;
-  box-shadow: 2px 2px 5px rgba(0,0,0,0.05);
-}
-.current-skill-heading h4 {
-  margin: 0 0 0 0;
-  color: #1976d2;
 }

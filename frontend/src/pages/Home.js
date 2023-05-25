@@ -2,9 +2,11 @@ import { useEffect } from "react"
 import { useGeneralsContext } from "../hooks/useGeneralsContext"
 import { useCurrentSkillsContext } from "../hooks/useCurrentSkillsContext"
 import { useWorkExperiencesContext } from "../hooks/useWorkExperienceContext"
+import { useEducationsContext } from "../hooks/useEducationContext"
 import GeneralDetails from "../components/GeneralDetails"
 import CurrentSkillDetails from "../components/CurrentSkillDetails"
 import WorkExperienceDetails from "../components/WorkExperienceDetails"
+import EducationDetails from "../components/EducationDetails"
 
 const Home = () => {
   const { generals, dispatchGeneral } = useGeneralsContext()
@@ -52,6 +54,21 @@ const Home = () => {
     fetchWorkExperiences()
   }, [dispatchExperience])
 
+  const { educations, dispatchEducation } = useEducationsContext()
+
+  useEffect(() => {
+    const fetchEducation = async () => {
+      const response = await fetch('/api/education')
+      const json = await response.json()
+
+      if (response.ok) {
+        dispatchEducation({type: 'SET_EDUCATIONS', payload: json})
+      }
+    }
+
+    fetchEducation()
+  }, [dispatchEducation])
+
   return (
     <div>
       <div className="home-one">
@@ -79,11 +96,13 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div className="home-two">
+      <div className="home-three">
         <div>
           <div className="current-skill-heading"><h4>Education</h4></div>
-          <div className="general-details">
-            Coming Soon
+          <div className="education-details">
+          {educations && educations.map(education => (
+            <EducationDetails education={education} key={education._id} />
+          ))}
           </div>
         </div>
       </div>
