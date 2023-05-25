@@ -72,7 +72,7 @@ const Home = () => {
       <div className="home-two">
         <div>
           <div className="current-skill-heading"><h4>Experience</h4></div>
-          <div className="general-details">
+          <div className="work-experience-details">
           {workExperiences && workExperiences.map(workExperience => (
             <WorkExperienceDetails workExperience={workExperience} key={workExperience._id} />
           ))}

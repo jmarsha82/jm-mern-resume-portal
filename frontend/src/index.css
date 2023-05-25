@@ -119,8 +119,8 @@ header a {
 .work-experience-details{
   background: #fff;
   border-radius: 4px;
-  margin: 5px auto;
-  padding: 5px;
+  margin: 5px;
+  padding: 1rem;
   position: relative;
   box-shadow: 2px 2px 5px rgba(0,0,0,0.05);
   z-index: 0; 
