@@ -143,34 +143,45 @@ header a {
   box-shadow: 2px 2px 5px rgba(0,0,0,0.05);
   z-index: 0; 
 }
+.work-experience-details h4 {
+  margin: 0 0 0 0;
+  color: #1976d2;
+  font-size: larger;
+}
 .work-experience-comment-list {
   list-style-type:disc;
 }
 .work-experience-title{
   font-weight: bold;
+  margin: 0.5rem;
 }
 .work-experience-misc{
   padding: .5rem;
-  font-family: 'Courier New', Courier;
-  font-style: italic;
+  font-family: "Arial";
   font-weight: bold;
+  font-size: 12pt;
 }
 /*education*/
 .education-details {
   background: #fff;
   border-radius: 4px;
-  margin: 20px auto;
-  padding: 20px;
+  margin: 5px;
+  padding: 1rem;
   position: relative;
   box-shadow: 2px 2px 5px rgba(0,0,0,0.05);
+  z-index: 0; 
 }
 .education-details h4 {
-  margin: 0 0 10px 0;
-  font-size: 1.2em;
+  margin: 0 0 0 0;
   color: #1976d2;
+  font-size: larger;
 }
 .education-title{
   font-weight: bold;
+  margin: 0.5rem;
+}
+.education-details-list {
+  width: 100%;
 }
 /*misc*/
 .icon-text-alignment {
