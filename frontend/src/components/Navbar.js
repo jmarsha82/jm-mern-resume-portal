@@ -15,9 +15,10 @@ const Navbar = () => {
                     <span className="navbar-site-buttons"><Button variant="contained" href="https://github.com/jmarsha82" target="_blank">Github</Button></span>
                 </div>
             </div>
-            <div className="container">
+            <div className="lower-container">
+                <span className="navbar-nav-site-buttons"><HashLink className="navbar-site-buttons" to='/#experience-id'><Button variant="outlined">Experience</Button></HashLink></span>
                 <span className="navbar-nav-site-buttons"><HashLink className="navbar-site-buttons" to='/#education-id'><Button variant="outlined">Education</Button></HashLink></span>
-                <span className="navbar-nav-site-buttons"><HashLink className="navbar-site-buttons" to='/#extended-skills-id'><Button variant="outlined">Extended Skills</Button></HashLink></span>
+                <span className="navbar-nav-site-buttons"><HashLink className="navbar-site-buttons" to='/#extended-skills-id'><Button variant="outlined">Extended Tech Stack</Button></HashLink></span>
                 <span className="navbar-nav-site-buttons"><HashLink className="navbar-site-buttons" to='/#dev-books-id'><Button variant="outlined">Dev Books</Button></HashLink></span>
             </div>
         </header>

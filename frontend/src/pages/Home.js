@@ -4,6 +4,7 @@ import { useCurrentSkillsContext } from "../hooks/useCurrentSkillsContext"
 import { useWorkExperiencesContext } from "../hooks/useWorkExperienceContext"
 import { useEducationsContext } from "../hooks/useEducationContext"
 import { useFullSkillsContext } from "../hooks/useFullSkillsContext"
+import { Button } from "@mui/material"
 import GeneralDetails from "../components/GeneralDetails"
 import CurrentSkillDetails from "../components/CurrentSkillDetails"
 import WorkExperienceDetails from "../components/WorkExperienceDetails"
@@ -109,7 +110,9 @@ const Home = () => {
           ))}
           </div>
         </div>
-          <div className="current-skill-heading"><h4>Experience</h4></div>
+          <div id="experience-id" className="current-skill-heading"><h4 onClick={() => {
+                  window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
+                }}>Experience</h4></div>
           <div className="work-experience-details">
           {workExperiences && workExperiences.map(workExperience => (
             <WorkExperienceDetails workExperience={workExperience} key={workExperience._id} />
@@ -119,7 +122,11 @@ const Home = () => {
       </div>
       <div className="home-three">
         <div>
-          <div id="education-id" className="current-skill-heading"><h4>Education</h4></div>
+          <div id="education-id" className="current-skill-heading">
+                <h4 onClick={() => {
+                  window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
+                }}>Education</h4>
+          </div>
           <div className="education-details">
           {educations && educations.map(education => (
             <EducationDetails education={education} key={education._id} />
@@ -129,7 +136,9 @@ const Home = () => {
       </div>
       <div className="home-three">
         <div>
-          <div id="extended-skills-id" className="current-skill-heading"><h4>Extended Tech Stack</h4></div>
+          <div id="extended-skills-id" className="current-skill-heading"><h4 onClick={() => {
+                  window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
+                }}>Extended Tech Stack</h4></div>
           <div className="current-skill-details">
           {fullSkills && fullSkills.map(fullSkill => (
             <FullSkillDetails fullSkill={fullSkill} key={fullSkill._id} />
@@ -139,7 +148,9 @@ const Home = () => {
       </div>
       <div className="home-three">
         <div>
-          <div id="dev-books-id" className="current-skill-heading"><h4>Dev Books</h4></div>
+          <div id="dev-books-id" className="current-skill-heading"><h4 onClick={() => {
+                  window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
+                }}>Dev Books</h4></div>
           <div className="general-details">
             Coming Soon
           </div>
