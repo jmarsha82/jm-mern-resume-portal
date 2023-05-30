@@ -8,6 +8,7 @@ const userRoutes = require('./routes/user')
 const workExperienceRoutes = require('./routes/workExperience')
 const educationRoutes = require('./routes/education')
 const fullSkillRoutes = require('./routes/fullSkill')
+const devBookRoutes = require('./routes/devBook')
 
 // express app
 const app = express()
@@ -27,6 +28,7 @@ app.use('/api/user', userRoutes)
 app.use('/api/workExperience', workExperienceRoutes)
 app.use('/api/education', educationRoutes)
 app.use('/api/fullSkill', fullSkillRoutes)
+app.use('/api/devBook', devBookRoutes)
 
 // connect to db
 mongoose.connect(process.env.MONGO_URI)
