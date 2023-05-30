@@ -7,6 +7,7 @@ import { CurrentSkillsContextProvider } from './context/CurrentSkillsContext';
 import { WorkExperiencesContextProvider } from './context/WorkExperienceContext';
 import { EducationsContextProvider } from './context/EducationContext';
 import { FullSkillsContextProvider } from './context/FullSkillsContext';
+import { DevBooksContextProvider } from './context/DevBookContext';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -16,7 +17,9 @@ root.render(
         <WorkExperiencesContextProvider>
           <EducationsContextProvider>
             <FullSkillsContextProvider>
-              <App />
+              <DevBooksContextProvider>
+                <App />
+              </DevBooksContextProvider>
             </FullSkillsContextProvider>
           </EducationsContextProvider>
         </WorkExperiencesContextProvider>
