@@ -201,9 +201,13 @@ const Home = () => {
       <div id="dev-links-id" className="current-skill-heading"><h4 onClick={() => {
                   window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
                 }}>Dev Links</h4></div>
+                <Grid container spacing={0}> 
           {devLinks && devLinks.map(devLink => (
+            <Grid item xs={12}>
             <DevLinkDetails devLink={devLink} key={devLink._id} />
+            </Grid>
           ))}
+          </Grid>
 
         </div>
       </div>
