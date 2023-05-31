@@ -13,6 +13,7 @@ import EducationDetails from "../components/EducationDetails"
 import FullSkillDetails from "../components/FullSkillDetails"
 import DevBooksDetails from "../components/DevBooksDetails"
 import DevLinkDetails from "../components/DevLinkDetails"
+import { Grid } from "@mui/material"
 
 const Home = () => {
   const { generals, dispatchGeneral } = useGeneralsContext()
@@ -185,9 +186,13 @@ const Home = () => {
                   window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
                 }}>Dev Books</h4></div>
           <div className="general-details">
+          <Grid container spacing={0}>              
           {devBooks && devBooks.map(devBook => (
+            <Grid item xs={6}>
             <DevBooksDetails devBook={devBook} key={devBook._id} />
+            </Grid>
           ))}
+          </Grid>
           </div>
         </div>
       </div>
@@ -199,6 +204,7 @@ const Home = () => {
           {devLinks && devLinks.map(devLink => (
             <DevLinkDetails devLink={devLink} key={devLink._id} />
           ))}
+
         </div>
       </div>
     </div>
