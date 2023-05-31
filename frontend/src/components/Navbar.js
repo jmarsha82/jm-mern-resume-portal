@@ -20,6 +20,7 @@ const Navbar = () => {
                 <span className="navbar-nav-site-buttons"><HashLink className="navbar-site-buttons" to='/#education-id'><Button variant="outlined">Education</Button></HashLink></span>
                 <span className="navbar-nav-site-buttons"><HashLink className="navbar-site-buttons" to='/#extended-skills-id'><Button variant="outlined">Extended Tech Stack</Button></HashLink></span>
                 <span className="navbar-nav-site-buttons"><HashLink className="navbar-site-buttons" to='/#dev-books-id'><Button variant="outlined">Dev Books</Button></HashLink></span>
+                <span className="navbar-nav-site-buttons"><HashLink className="navbar-site-buttons" to='/#dev-links-id'><Button variant="outlined">Dev Links</Button></HashLink></span>
             </div>
         </header>
     )

@@ -5,12 +5,14 @@ import { useWorkExperiencesContext } from "../hooks/useWorkExperienceContext"
 import { useEducationsContext } from "../hooks/useEducationContext"
 import { useFullSkillsContext } from "../hooks/useFullSkillsContext"
 import { useDevBooksContext } from "../hooks/useDevBooksContext"
+import { useDevLinksContext } from "../hooks/useDevLinksContext"
 import GeneralDetails from "../components/GeneralDetails"
 import CurrentSkillDetails from "../components/CurrentSkillDetails"
 import WorkExperienceDetails from "../components/WorkExperienceDetails"
 import EducationDetails from "../components/EducationDetails"
 import FullSkillDetails from "../components/FullSkillDetails"
 import DevBooksDetails from "../components/DevBooksDetails"
+import DevLinkDetails from "../components/DevLinkDetails"
 
 const Home = () => {
   const { generals, dispatchGeneral } = useGeneralsContext()
@@ -103,6 +105,21 @@ const Home = () => {
     fetchDevBooks()
   }, [dispatchDevBooks])
 
+  const { devLinks, dispatchDevLink } = useDevLinksContext()
+
+  useEffect(() => {
+    const fetchDevLinks = async () => {
+      const response = await fetch('/api/devLink')
+      const json = await response.json()
+
+      if (response.ok) {
+        dispatchDevLink({type: 'SET_DEVLINKS', payload: json})
+      }
+    }
+
+    fetchDevLinks()
+  }, [dispatchDevLink])
+
   return (
     <div>
       <div className="home-one">
@@ -172,6 +189,16 @@ const Home = () => {
             <DevBooksDetails devBook={devBook} key={devBook._id} />
           ))}
           </div>
+        </div>
+      </div>
+      <div className="home-three">
+      <div>
+      <div id="dev-links-id" className="current-skill-heading"><h4 onClick={() => {
+                  window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
+                }}>Dev Links</h4></div>
+          {devLinks && devLinks.map(devLink => (
+            <DevLinkDetails devLink={devLink} key={devLink._id} />
+          ))}
         </div>
       </div>
     </div>
