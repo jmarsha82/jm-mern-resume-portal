@@ -6,15 +6,10 @@ import Typography from '@mui/material/Typography';
 
 const DevBooksDetails = ({ devBook }) => {
   return (
-    // <div className="devbooks-details">
-    //   <h4>{devBook.title}</h4>
-    //   <img src={bookImage} width="100" height="100"/>
-    //   {console.log(bookImage)}
-    // </div>
     <Card>
     <CardMedia
       sx={{ height: 140 }}
-      src={""}
+      image={`${process.env.PUBLIC_URL}/img/${devBook.imagepath}`} 
       title={devBook.title}
     />
     {console.log(`../img/${devBook.imagepath}`)}
