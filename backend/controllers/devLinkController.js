@@ -28,7 +28,7 @@ const getDevLink = async (req, res) => {
 
 // create new devLink
 const createDevLink = async (req, res) => {
-  const {title, link, description} = req.body
+  const {title, link, description, imagepath} = req.body
 
   let emptyFields = []
 
@@ -41,13 +41,16 @@ const createDevLink = async (req, res) => {
   if(!description) {
     emptyFields.push('description')
   }
+  if(!imagepath) {
+    emptyFields.push('imagepath')
+  }
   if(emptyFields.length > 0) {
     return res.status(400).json({ error: 'Please fill in all the fields', emptyFields })
   }
 
   // add doc to db
   try {
-    const devLink = await DevLink.create({title, link, description})
+    const devLink = await DevLink.create({title, link, description, imagepath})
     res.status(200).json(devLink)
   } catch (error) {
     res.status(400).json({error: error.message})

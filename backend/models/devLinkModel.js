@@ -14,6 +14,10 @@ const devLinkSchema = new Schema({
   description: {
     type: String,
     required: true
+  },
+  imagepath: {
+    type: String,
+    required: true
   }
 }, { timestamps: true })
 
