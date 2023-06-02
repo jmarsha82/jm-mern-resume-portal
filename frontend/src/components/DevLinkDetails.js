@@ -19,24 +19,23 @@ const DevLinkDetails = ({ devLink }) => {
   return (
     <Item>
     <Card>
+    <a href={devLink.link} target="_blank">
     <CardMedia
       sx={{
-        borderRadius: 3,
-        backgroundSize: 200,
-        margin: 5,
-        width: 200,
-        height: 250
+        margin: 2,
+        height: 600,
+        boxShadow: 10,
       }}
       image={`${process.env.PUBLIC_URL}/img/${devLink.imagepath}`} 
       title={devLink.title}
     />
+    </a>
     {console.log(`../img/${devLink.imagepath}`)}
     <CardContent>
       <Typography gutterBottom variant="h6" component="div">
       {devLink.title}
       </Typography>
       <Typography variant="body2" color="text.secondary">{devLink.description}</Typography>
-      <Typography variant="body2" color="text.secondary">{devLink.link}</Typography>
     </CardContent>
   </Card>
   </Item>
