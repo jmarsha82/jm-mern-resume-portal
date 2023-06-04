@@ -7,7 +7,6 @@ function App() {
     return ( 
     <div data-testid="app-element" className = "" >
         <BrowserRouter>
-            <div className="pages">
                 <Routes>
                     <Route 
                     path="/"
@@ -22,7 +21,6 @@ function App() {
                     element={<ArtistProfile />}
                     />
                 </Routes>
-            </div>
         </BrowserRouter>
     </div>
     );

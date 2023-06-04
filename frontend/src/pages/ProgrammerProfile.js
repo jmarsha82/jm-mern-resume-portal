@@ -125,7 +125,7 @@ const ProgrammerProfile = () => {
   return (
     <div>
     <ProgrammerNavbar className="navbar-background" />
-    <div className = "App">
+    <div className = "pages">
         <div className="home-one">
             <div>
             {generals && generals.map(general => (
