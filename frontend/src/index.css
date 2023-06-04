@@ -38,8 +38,22 @@ header a {
   padding: 20px;
   margin: 0 auto;
 }
-
+.navbar-background {
+  max-width: 1600px;
+}
 /* homepage */
+.choice-screen {
+  padding: 20rem;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  height: 4rem;
+}
+.choice-button {
+  padding: 1rem;
+  margin: auto;
+}
+/* programmer page */
 .home-one {
   display: grid;
   grid-template-columns: 2fr 3fr;

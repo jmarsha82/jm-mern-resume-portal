@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { Button } from '@mui/material';
 import { HashLink } from 'react-router-hash-link'
 
-const Navbar = () => {
+const ProgrammerNavbar = () => {
     return (
         <header>
             <div className="container">
@@ -11,7 +11,6 @@ const Navbar = () => {
                 </Link>
                 <div>
                     <span className="navbar-site-buttons"><Button variant="contained" href="https://www.linkedin.com/in/justin-marshall-3733065b" target="_blank">LinkedIN</Button></span>
-                    <span className="navbar-site-buttons"><Button variant="contained" href="https://www.instagram.com/marshajus/" target="_blank">Instagram</Button></span>
                     <span className="navbar-site-buttons"><Button variant="contained" href="https://github.com/jmarsha82" target="_blank">Github</Button></span>
                 </div>
             </div>
@@ -26,4 +25,4 @@ const Navbar = () => {
     )
 }
 
-export default Navbar;
+export default ProgrammerNavbar;
