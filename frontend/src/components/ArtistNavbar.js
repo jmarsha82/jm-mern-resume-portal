@@ -6,7 +6,7 @@ const ArtistNavbar = () => {
         <header>
             <div className="container">
                 <Link to ='/'>
-                    <h1>Home</h1>
+                    <h1>Justin Marshall Aritst</h1>
                 </Link>
                 <div>
                     <span className="navbar-site-buttons"><Button variant="contained" href="https://www.instagram.com/marshajus/" target="_blank">Instagram</Button></span>

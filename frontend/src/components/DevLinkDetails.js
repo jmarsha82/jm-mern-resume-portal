@@ -22,9 +22,10 @@ const DevLinkDetails = ({ devLink }) => {
     <a href={devLink.link} target="_blank">
     <CardMedia
       sx={{
-        margin: 2,
-        height: 600,
-        boxShadow: 10,
+        backgroundSize: 200,
+        margin: 5,
+        width: 200,
+        height: 60
       }}
       image={`${process.env.PUBLIC_URL}/img/${devLink.imagepath}`} 
       title={devLink.title}

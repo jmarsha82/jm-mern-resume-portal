@@ -6,10 +6,14 @@ import { Router, Route } from "react-router-dom";
 const Home = () => {
   return (
     <div>
-      <span className="choice-screen">
-        <Button className="choice-button" variant="contained"  href="/artist">Artist</Button>&nbsp;&nbsp;&nbsp;
-        <Button className="choice-button" variant="contained"  href="/programmer">Programmer</Button>
-      </span>
+      <div className="home-origin">
+        <div className="choice-box">
+          <Button className="choice-button" variant="contained"  href="/artist">Artist</Button>
+        </div>
+        <div className="choice-box">
+          <Button className="choice-button" variant="contained"  href="/programmer">Developer</Button>
+        </div>
+      </div>
     </div>
     
   )

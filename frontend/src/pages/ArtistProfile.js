@@ -7,7 +7,9 @@ const ArtistProfile = () => {
     <ArtistNavbar className="navbar-background" />
     <div className = "App">
         <div className="home-one">
-            <h4>Artist Profile</h4>
+          <div className="full-skill-heading">
+            <h4>Artist Profile Coming</h4>
+          </div>
         </div>
         </div>
     </div>

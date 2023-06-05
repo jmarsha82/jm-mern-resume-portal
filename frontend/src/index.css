@@ -42,16 +42,26 @@ header a {
   max-width: 1600px;
 }
 /* homepage */
-.choice-screen {
-  padding: 20rem;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  height: 3rem;
+.choice-box {
+  background: #fff;
+  font-size: 1.2rem;
+  border-radius: 4px;
+  margin: 4px auto;
+  padding: 10px;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.05);
+  width: 95vh;
+}
+.home-origin {
+  display: grid;
+  grid-template-columns: 3fr 3fr;
+  margin: 0 auto;
+  padding: 10px;
+  height: 95vh;
 }
 .choice-button {
-  padding: 1rem;
-  margin: auto;
+  position: absolute;
+  top: 94%;
+  left: 45%;
 }
 /* programmer page */
 .home-one {
@@ -220,6 +230,16 @@ header a {
 }
 /* dev books */
 
+/* dev links */
+.devlink-heading {
+  background: #fff;
+  font-size: 1.2rem;
+  border-radius: 4px;
+  margin: 10px auto;
+  padding: 20px;
+  position: relative;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.05);
+}
 /*misc*/
 .icon-text-alignment {
   vertical-align: bottom;

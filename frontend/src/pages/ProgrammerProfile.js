@@ -197,7 +197,7 @@ const ProgrammerProfile = () => {
             ))}
             </Grid>
             </div>
-            </div>
+        </div>
         </div>
         <div className="home-three">
         <div>
@@ -206,12 +206,11 @@ const ProgrammerProfile = () => {
                     }}>Dev Links</h4></div>
                     <Grid container spacing={0}> 
             {devLinks && devLinks.map(devLink => (
-                <Grid item xs={12}>
+                <Grid item xs={6}>
                 <DevLinkDetails devLink={devLink} key={devLink._id} />
                 </Grid>
             ))}
             </Grid>
-
             </div>
         </div>
         </div>

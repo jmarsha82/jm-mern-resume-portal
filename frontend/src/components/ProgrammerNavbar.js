@@ -7,7 +7,7 @@ const ProgrammerNavbar = () => {
         <header>
             <div className="container">
                 <Link to ='/'>
-                    <h1>Justin Marshall</h1>
+                    <h1>Justin Marshall Developer</h1>
                 </Link>
                 <div>
                     <span className="navbar-site-buttons"><Button variant="contained" href="https://www.linkedin.com/in/justin-marshall-3733065b" target="_blank">LinkedIN</Button></span>
