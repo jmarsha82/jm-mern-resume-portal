@@ -61,7 +61,16 @@ header a {
 .choice-button {
   position: absolute;
   top: 94%;
-  left: 45%;
+  left: 34%;
+  width: 20rem;
+}
+.choice-image {
+  border-radius: 8px;
+  display: block;
+  margin: 10px;
+  width: 854px;
+  height: 47rem;
+  position: absolute;
 }
 /* programmer page */
 .home-one {
