@@ -11,9 +11,9 @@ const EducationDetails = ({ education }) => {
       <Divider />
       <ListItem button component={Link} to={education.collegelink} target="_blank">
         <ListItemText>
-          <h4>{education.college}</h4>
+          <h4>{education.degree}</h4>
           <title>{education.location}</title>
-          <div className="education-title">{education.degree}</div>
+          <div className="education-title">{education.college}</div>
         </ListItemText>
       </ListItem>
       <Divider />
