@@ -26,10 +26,10 @@ const DevBooksDetails = ({ devBook }) => {
         width: 200,
         height: 250
       }}
-      image={`${process.env.PUBLIC_URL}/img/${devBook.imagepath}`} 
+      image={`${process.env.PUBLIC_URL}/img/developer/${devBook.imagepath}`} 
       title={devBook.title}
     />
-    {console.log(`../img/${devBook.imagepath}`)}
+    {console.log(`../img/developer/${devBook.imagepath}`)}
     <CardContent>
       <Typography gutterBottom variant="h6" component="div">
       {devBook.title}

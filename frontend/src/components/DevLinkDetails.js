@@ -27,11 +27,11 @@ const DevLinkDetails = ({ devLink }) => {
         width: 200,
         height: 60
       }}
-      image={`${process.env.PUBLIC_URL}/img/${devLink.imagepath}`} 
+      image={`${process.env.PUBLIC_URL}/img/developer/${devLink.imagepath}`} 
       title={devLink.title}
     />
     </a>
-    {console.log(`../img/${devLink.imagepath}`)}
+    {console.log(`../img/developer/${devLink.imagepath}`)}
     <CardContent>
       <Typography gutterBottom variant="h6" component="div">
       {devLink.title}
