@@ -10,6 +10,8 @@ const educationRoutes = require('./routes/education')
 const fullSkillRoutes = require('./routes/fullSkill')
 const devBookRoutes = require('./routes/devBook')
 const devLinkRoutes = require('./routes/devLink')
+const artworkRoutes = require('./routes/artwork')
+
 
 // express app
 const app = express()
@@ -31,6 +33,7 @@ app.use('/api/education', educationRoutes)
 app.use('/api/fullSkill', fullSkillRoutes)
 app.use('/api/devBook', devBookRoutes)
 app.use('/api/devLink', devLinkRoutes)
+app.use('/api/artwork', artworkRoutes)
 
 // connect to db
 mongoose.connect(process.env.MONGO_URI)
