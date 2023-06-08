@@ -43,20 +43,19 @@ header a {
 }
 /* homepage */
 .choice-box {
-  background: #fff;
+  background: center no-repeat url("../public/img/main_background.jpg");
+  background-size: contain;
   font-size: 1.2rem;
   border-radius: 4px;
   margin: 4px auto;
   padding: 10px;
   box-shadow: 2px 2px 5px rgba(0,0,0,0.05);
-  width: 95vh;
+  width: 200vh;
 }
 .home-origin {
   display: grid;
-  grid-template-columns: 3fr 3fr;
-  margin: 0 auto;
-  padding: 10px;
-  height: 95vh;
+  grid-template-columns: 4fr;
+  height: 100vh;
 }
 .choice-button {
   position: absolute;
