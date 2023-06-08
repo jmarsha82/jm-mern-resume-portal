@@ -9,6 +9,7 @@ import { EducationsContextProvider } from './context/EducationContext';
 import { FullSkillsContextProvider } from './context/FullSkillsContext';
 import { DevBooksContextProvider } from './context/DevBookContext';
 import { DevLinksContextProvider } from './context/DevLinkContext';
+import { ArtworksContextProvider } from './context/ArtworkContext';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -20,7 +21,9 @@ root.render(
             <FullSkillsContextProvider>
               <DevBooksContextProvider>
                 <DevLinksContextProvider>
-                  <App />
+                  <ArtworksContextProvider>
+                    <App />
+                  </ArtworksContextProvider>
                 </DevLinksContextProvider>
               </DevBooksContextProvider>
             </FullSkillsContextProvider>
