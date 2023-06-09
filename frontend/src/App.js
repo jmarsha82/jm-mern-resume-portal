@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Home from './pages/Home';
 import ProgrammerProfile from './pages/ProgrammerProfile';
 import ArtistProfile from './pages/ArtistProfile';
+import ArtworkDetails from './components/ArtworkDetails';
 
 function App() {
     return ( 
@@ -19,6 +20,10 @@ function App() {
                     <Route 
                     path="artist"
                     element={<ArtistProfile />}
+                    />
+                    <Route 
+                    path="/artist/:id"
+                    element={<ArtworkDetails />}
                     />
                 </Routes>
         </BrowserRouter>
