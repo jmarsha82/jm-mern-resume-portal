@@ -59,6 +59,7 @@ header a {
 }
 .choice-button-artist {
   padding: 0.6em 2em;
+  font-size: large !important;
   border: none;
   outline: none;
   color: rgb(255, 255, 255);
@@ -124,6 +125,7 @@ header a {
 }
 .choice-button-dev {
   padding: 0.6em 2em;
+  font-size: large !important;
   border: none;
   outline: none;
   color: rgb(255, 255, 255);
