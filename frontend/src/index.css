@@ -44,10 +44,10 @@ header a {
 /* homepage */
 .choice-box {
   background: center no-repeat url("../public/img/main_background.jpg");
-  background-size: contain;
+  background-size: cover;
   font-size: 1.2rem;
   border-radius: 4px;
-  margin: 4px auto;
+  margin: .5rem auto;
   padding: 10px;
   box-shadow: 2px 2px 5px rgba(0,0,0,0.05);
   width: 200vh;
@@ -57,11 +57,17 @@ header a {
   grid-template-columns: 4fr;
   height: 100vh;
 }
-.choice-button {
-  position: absolute;
-  top: 94%;
-  left: 34%;
+.choice-button-artist {
+  top: 36rem;
+  float: left;
   width: 20rem;
+  margin-left: 20rem !important;
+}
+.choice-button-dev {
+  top: 36rem;
+  width: 20rem;
+  float: right;
+  margin-right: 20rem !important;
 }
 .choice-image {
   border-radius: 8px;
