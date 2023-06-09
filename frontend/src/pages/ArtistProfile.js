@@ -24,10 +24,10 @@ const ArtistProfile = () => {
     <div>
     <ArtistNavbar className="navbar-background" />
       <div className = "home-three">
-        <div className="">
+        <div className="pages">
           <Grid container spacing={0}>              
           {artworks && artworks.map(artwork => (
-          <Grid item xs={2}>
+          <Grid item xs={3}>
           <ArtworkGallery artwork={artwork} key={artwork._id} />
           </Grid>
           ))}
