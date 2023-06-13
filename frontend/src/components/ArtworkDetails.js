@@ -4,6 +4,8 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
+import { Button } from "@mui/material";
+import { HashLink } from "react-router-hash-link";
 
 const ArtworkDetails = () => {
     const { id } = useParams();
@@ -16,6 +18,9 @@ const ArtworkDetails = () => {
             { artwork && (
                 <div>
                     <Card>
+                    <HashLink to='/artist'>
+                    <Button variant="contained" className="artwork-back-button">Back</Button>
+                    </HashLink>
                     <CardMedia
                         sx={{
 

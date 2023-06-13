@@ -191,6 +191,11 @@ header a {
   top: 0;
   border-radius: 10px;
 }
+/* artist page */
+.artwork-back-button {
+  position: absolute !important;
+  margin: 1rem!important;
+}
 /* programmer page */
 .home-one {
   display: grid;
