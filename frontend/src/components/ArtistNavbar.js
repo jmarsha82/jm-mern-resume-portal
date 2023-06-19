@@ -1,14 +1,16 @@
 import { HashLink } from 'react-router-hash-link';
-import { Button, Typography } from '@mui/material';
+import HomeIcon from '@mui/icons-material/Home';
+import InstagramIcon from '@mui/icons-material/Instagram';
+import { Link } from 'react-router-dom';
+
 
 const ArtistNavbar = () => {
     return (
         <header>
             <div className="container">
-            <span className="navbar-nav-site-buttons"><HashLink className="navbar-site-buttons" to='/'><Button variant="contained">Home</Button></HashLink></span>
-            <Typography variant="h3" align="center">Artist</Typography>
+            <span><HashLink to='/'><HomeIcon sx={{ color: 'black' }} fontSize="large" /></HashLink></span>
                 <div>
-                    <span className="navbar-site-buttons"><Button variant="contained" href="https://www.instagram.com/marshajus/" target="_blank">Instagram</Button></span>
+                    <span><Link to="https://www.instagram.com/marshajus/" target="_blank"><InstagramIcon sx={{ color: 'black' }} fontSize="large" /></Link></span>
                 </div>
             </div>
         </header>

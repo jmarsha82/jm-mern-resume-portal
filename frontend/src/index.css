@@ -12,34 +12,31 @@ body {
   font-family: "Poppins";
 }
 header {
-  background: #fff;
+  background: #1976d2;
+  height: 2.5rem;
+
 }
 header .container {
   max-width: 1400px;
-  margin: 0 auto;
-  padding: 10px 20px;
+  margin: auto;
   display: flex;
-  align-items: center;
   justify-content: space-between;
 }
 header .lower-container {
   max-width: 1400px;
   margin: 0 auto;
-  padding: 10px 20px;
   align-items: center;
   justify-content: space-between;
 }
 header a {
   color: #333;
   text-decoration: none;
+  align-items: center;
 }
 .pages{
   max-width: 1400px;
   padding: 20px;
   margin: 0 auto;
-}
-.navbar-background {
-  max-width: 1600px;
 }
 /* homepage */
 .choice-box {
@@ -382,11 +379,9 @@ header a {
   vertical-align: bottom;
 }
 .navbar-site-buttons {
-  margin: 2px;
+  margin: 4px;
 }
-.navbar-nav-site-buttons {
-  margin: 20px 20px 40px 0px;
-}
-.navbar-nav-top-buttons {
-  margin: 0px;
+.navbar-button-color {
+  color: #111 !important;
+  font-weight: 700 !important;
 }
