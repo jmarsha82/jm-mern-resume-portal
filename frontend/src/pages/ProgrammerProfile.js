@@ -188,7 +188,7 @@ const ProgrammerProfile = () => {
             <div id="dev-books-id" className="current-skill-heading"><h4 onClick={() => {
                     window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
                     }}>Dev Books</h4></div>
-            <div className="general-details">
+            <div className="current-skill-details">
             <Grid container spacing={0}>              
             {devBooks && devBooks.map(devBook => (
                 <Grid item xs={6}>

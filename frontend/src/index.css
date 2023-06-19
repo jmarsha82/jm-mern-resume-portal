@@ -213,6 +213,10 @@ header a {
   grid-template-columns: 5fr;
   gap: 2rem;
 }
+.programmer-to-top-button {
+  position: absolute !important;
+  margin-right: 1rem;
+}
 /* general details tab */
 .general-details {
   background: #fff;
