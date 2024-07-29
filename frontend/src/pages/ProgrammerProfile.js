@@ -128,9 +128,7 @@ const ProgrammerProfile = () => {
     <div className = "pages">
         <div className="home-one">
             <div>
-            {generals && generals.map(general => (
-                <GeneralDetails general={general} key={general._id} />
-            ))}
+                <GeneralDetails/>
             </div>
             <div className="full-skill-heading">
             <h4>Github Contributions</h4>
@@ -142,9 +140,7 @@ const ProgrammerProfile = () => {
             <div>
             <div className="current-skill-heading"><h4>Current Project(s) Tech Stack</h4></div>
             <div className="current-skill-details">
-            {currentSkills && currentSkills.map(currentSkill => (
-                <CurrentSkillDetails currentSkill={currentSkill} key={currentSkill._id} />
-            ))}
+                <CurrentSkillDetails/>
             </div>
             </div>
             <div id="experience-id" className="current-skill-heading"><h4 onClick={() => {
