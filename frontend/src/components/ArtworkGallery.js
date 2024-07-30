@@ -15,13 +15,13 @@ const Item = styled(Paper)(({ theme }) => ({
   color: theme.palette.text.secondary,
 }));
 
-const ArtworkGallery = ({ artwork }) => {
+const ArtworkGallery = () => {
 
   return (
+    <div>
     <Item>
     <Card>
-    <Link to={`/artist/${artwork._id}`}>
-      {console.log("Artwork id : " + artwork._id)}
+    {/* <Link to={`/artist/1`}> */}
       <CardMedia
         sx={{
           backgroundSize: 200,
@@ -29,20 +29,429 @@ const ArtworkGallery = ({ artwork }) => {
           width: 200,
           height: 250
         }}
-        image={`${process.env.PUBLIC_URL}/img/artist/${artwork.imagepath}`} 
-        title={artwork.title}
+        image={`${process.env.PUBLIC_URL}/img/artist/beauty_with_butterfly_wings.jpg`} 
+        title={"Beauty with Butterfly Wings"}
       />
-    </Link>
+    {/* </Link> */}
     <CardContent>
       <Typography gutterBottom variant="h6" component="div">
-      {artwork.title}
+      {"Beauty with Butterfly Wings"}
       </Typography>
-      <Typography variant="body2" color="text.secondary">{artwork.size}</Typography>
-      <Typography variant="body2" color="text.secondary">{artwork.media}</Typography>
-      <Typography variant="body2" color="text.secondary">{artwork.price}</Typography>
+      <Typography variant="body2" color="text.secondary">{"36 X 48 inches"}</Typography>
+      <Typography variant="body2" color="text.secondary">{"Oil on Canvas"}</Typography>
+      <Typography variant="body2" color="text.secondary">{"SOLD"}</Typography>
     </CardContent>
   </Card>
   </Item>
+  <Item>
+    <Card>
+    {/* <Link to={`/artist/1`}> */}
+      <CardMedia
+        sx={{
+          backgroundSize: 200,
+          margin: 5,
+          width: 200,
+          height: 250
+        }}
+        image={`${process.env.PUBLIC_URL}/img/artist/diamond_rimmed_dahlia.jpg`} 
+        title={"Diamond Rimmed Dahlia"}
+      />
+    {/* </Link> */}
+    <CardContent>
+      <Typography gutterBottom variant="h6" component="div">
+      {"Diamond Rimmed Dahlia"}
+      </Typography>
+      <Typography variant="body2" color="text.secondary">{"24 X 36 inches"}</Typography>
+      <Typography variant="body2" color="text.secondary">{"Oil, Jewel, and Beads on Canvas"}</Typography>
+      <Typography variant="body2" color="text.secondary">{"NFS"}</Typography>
+    </CardContent>
+  </Card>
+  </Item>
+  <Item>
+    <Card>
+    {/* <Link to={`/artist/1`}> */}
+      <CardMedia
+        sx={{
+          backgroundSize: 200,
+          margin: 5,
+          width: 200,
+          height: 250
+        }}
+        image={`${process.env.PUBLIC_URL}/img/artist/`} 
+        title={""}
+      />
+    {/* </Link> */}
+    <CardContent>
+      <Typography gutterBottom variant="h6" component="div">
+      {""}
+      </Typography>
+      <Typography variant="body2" color="text.secondary">{""}</Typography>
+      <Typography variant="body2" color="text.secondary">{""}</Typography>
+      <Typography variant="body2" color="text.secondary">{""}</Typography>
+    </CardContent>
+  </Card>
+  </Item>
+  <Item>
+    <Card>
+    {/* <Link to={`/artist/1`}> */}
+      <CardMedia
+        sx={{
+          backgroundSize: 200,
+          margin: 5,
+          width: 200,
+          height: 250
+        }}
+        image={`${process.env.PUBLIC_URL}/img/artist/`} 
+        title={""}
+      />
+    {/* </Link> */}
+    <CardContent>
+      <Typography gutterBottom variant="h6" component="div">
+      {""}
+      </Typography>
+      <Typography variant="body2" color="text.secondary">{""}</Typography>
+      <Typography variant="body2" color="text.secondary">{""}</Typography>
+      <Typography variant="body2" color="text.secondary">{""}</Typography>
+    </CardContent>
+  </Card>
+  </Item>
+  <Item>
+    <Card>
+    {/* <Link to={`/artist/1`}> */}
+      <CardMedia
+        sx={{
+          backgroundSize: 200,
+          margin: 5,
+          width: 200,
+          height: 250
+        }}
+        image={`${process.env.PUBLIC_URL}/img/artist/`} 
+        title={""}
+      />
+    {/* </Link> */}
+    <CardContent>
+      <Typography gutterBottom variant="h6" component="div">
+      {""}
+      </Typography>
+      <Typography variant="body2" color="text.secondary">{""}</Typography>
+      <Typography variant="body2" color="text.secondary">{""}</Typography>
+      <Typography variant="body2" color="text.secondary">{""}</Typography>
+    </CardContent>
+  </Card>
+  </Item>
+  <Item>
+    <Card>
+    {/* <Link to={`/artist/1`}> */}
+      <CardMedia
+        sx={{
+          backgroundSize: 200,
+          margin: 5,
+          width: 200,
+          height: 250
+        }}
+        image={`${process.env.PUBLIC_URL}/img/artist/`} 
+        title={""}
+      />
+    {/* </Link> */}
+    <CardContent>
+      <Typography gutterBottom variant="h6" component="div">
+      {""}
+      </Typography>
+      <Typography variant="body2" color="text.secondary">{""}</Typography>
+      <Typography variant="body2" color="text.secondary">{""}</Typography>
+      <Typography variant="body2" color="text.secondary">{""}</Typography>
+    </CardContent>
+  </Card>
+  </Item>
+  <Item>
+    <Card>
+    {/* <Link to={`/artist/1`}> */}
+      <CardMedia
+        sx={{
+          backgroundSize: 200,
+          margin: 5,
+          width: 200,
+          height: 250
+        }}
+        image={`${process.env.PUBLIC_URL}/img/artist/`} 
+        title={""}
+      />
+    {/* </Link> */}
+    <CardContent>
+      <Typography gutterBottom variant="h6" component="div">
+      {""}
+      </Typography>
+      <Typography variant="body2" color="text.secondary">{""}</Typography>
+      <Typography variant="body2" color="text.secondary">{""}</Typography>
+      <Typography variant="body2" color="text.secondary">{""}</Typography>
+    </CardContent>
+  </Card>
+  </Item>
+  <Item>
+    <Card>
+    {/* <Link to={`/artist/1`}> */}
+      <CardMedia
+        sx={{
+          backgroundSize: 200,
+          margin: 5,
+          width: 200,
+          height: 250
+        }}
+        image={`${process.env.PUBLIC_URL}/img/artist/`} 
+        title={""}
+      />
+    {/* </Link> */}
+    <CardContent>
+      <Typography gutterBottom variant="h6" component="div">
+      {""}
+      </Typography>
+      <Typography variant="body2" color="text.secondary">{""}</Typography>
+      <Typography variant="body2" color="text.secondary">{""}</Typography>
+      <Typography variant="body2" color="text.secondary">{""}</Typography>
+    </CardContent>
+  </Card>
+  </Item>
+  <Item>
+    <Card>
+    {/* <Link to={`/artist/1`}> */}
+      <CardMedia
+        sx={{
+          backgroundSize: 200,
+          margin: 5,
+          width: 200,
+          height: 250
+        }}
+        image={`${process.env.PUBLIC_URL}/img/artist/`} 
+        title={""}
+      />
+    {/* </Link> */}
+    <CardContent>
+      <Typography gutterBottom variant="h6" component="div">
+      {""}
+      </Typography>
+      <Typography variant="body2" color="text.secondary">{""}</Typography>
+      <Typography variant="body2" color="text.secondary">{""}</Typography>
+      <Typography variant="body2" color="text.secondary">{""}</Typography>
+    </CardContent>
+  </Card>
+  </Item>
+  <Item>
+    <Card>
+    {/* <Link to={`/artist/1`}> */}
+      <CardMedia
+        sx={{
+          backgroundSize: 200,
+          margin: 5,
+          width: 200,
+          height: 250
+        }}
+        image={`${process.env.PUBLIC_URL}/img/artist/`} 
+        title={""}
+      />
+    {/* </Link> */}
+    <CardContent>
+      <Typography gutterBottom variant="h6" component="div">
+      {""}
+      </Typography>
+      <Typography variant="body2" color="text.secondary">{""}</Typography>
+      <Typography variant="body2" color="text.secondary">{""}</Typography>
+      <Typography variant="body2" color="text.secondary">{""}</Typography>
+    </CardContent>
+  </Card>
+  </Item>
+  <Item>
+    <Card>
+    {/* <Link to={`/artist/1`}> */}
+      <CardMedia
+        sx={{
+          backgroundSize: 200,
+          margin: 5,
+          width: 200,
+          height: 250
+        }}
+        image={`${process.env.PUBLIC_URL}/img/artist/`} 
+        title={""}
+      />
+    {/* </Link> */}
+    <CardContent>
+      <Typography gutterBottom variant="h6" component="div">
+      {""}
+      </Typography>
+      <Typography variant="body2" color="text.secondary">{""}</Typography>
+      <Typography variant="body2" color="text.secondary">{""}</Typography>
+      <Typography variant="body2" color="text.secondary">{""}</Typography>
+    </CardContent>
+  </Card>
+  </Item>
+  <Item>
+    <Card>
+    {/* <Link to={`/artist/1`}> */}
+      <CardMedia
+        sx={{
+          backgroundSize: 200,
+          margin: 5,
+          width: 200,
+          height: 250
+        }}
+        image={`${process.env.PUBLIC_URL}/img/artist/`} 
+        title={""}
+      />
+    {/* </Link> */}
+    <CardContent>
+      <Typography gutterBottom variant="h6" component="div">
+      {""}
+      </Typography>
+      <Typography variant="body2" color="text.secondary">{""}</Typography>
+      <Typography variant="body2" color="text.secondary">{""}</Typography>
+      <Typography variant="body2" color="text.secondary">{""}</Typography>
+    </CardContent>
+  </Card>
+  </Item>
+  <Item>
+    <Card>
+    {/* <Link to={`/artist/1`}> */}
+      <CardMedia
+        sx={{
+          backgroundSize: 200,
+          margin: 5,
+          width: 200,
+          height: 250
+        }}
+        image={`${process.env.PUBLIC_URL}/img/artist/`} 
+        title={""}
+      />
+    {/* </Link> */}
+    <CardContent>
+      <Typography gutterBottom variant="h6" component="div">
+      {""}
+      </Typography>
+      <Typography variant="body2" color="text.secondary">{""}</Typography>
+      <Typography variant="body2" color="text.secondary">{""}</Typography>
+      <Typography variant="body2" color="text.secondary">{""}</Typography>
+    </CardContent>
+  </Card>
+  </Item>
+  <Item>
+    <Card>
+    {/* <Link to={`/artist/1`}> */}
+      <CardMedia
+        sx={{
+          backgroundSize: 200,
+          margin: 5,
+          width: 200,
+          height: 250
+        }}
+        image={`${process.env.PUBLIC_URL}/img/artist/`} 
+        title={""}
+      />
+    {/* </Link> */}
+    <CardContent>
+      <Typography gutterBottom variant="h6" component="div">
+      {""}
+      </Typography>
+      <Typography variant="body2" color="text.secondary">{""}</Typography>
+      <Typography variant="body2" color="text.secondary">{""}</Typography>
+      <Typography variant="body2" color="text.secondary">{""}</Typography>
+    </CardContent>
+  </Card>
+  </Item>
+  <Item>
+    <Card>
+    {/* <Link to={`/artist/1`}> */}
+      <CardMedia
+        sx={{
+          backgroundSize: 200,
+          margin: 5,
+          width: 200,
+          height: 250
+        }}
+        image={`${process.env.PUBLIC_URL}/img/artist/`} 
+        title={""}
+      />
+    {/* </Link> */}
+    <CardContent>
+      <Typography gutterBottom variant="h6" component="div">
+      {""}
+      </Typography>
+      <Typography variant="body2" color="text.secondary">{""}</Typography>
+      <Typography variant="body2" color="text.secondary">{""}</Typography>
+      <Typography variant="body2" color="text.secondary">{""}</Typography>
+    </CardContent>
+  </Card>
+  </Item>
+  <Item>
+    <Card>
+    {/* <Link to={`/artist/1`}> */}
+      <CardMedia
+        sx={{
+          backgroundSize: 200,
+          margin: 5,
+          width: 200,
+          height: 250
+        }}
+        image={`${process.env.PUBLIC_URL}/img/artist/`} 
+        title={""}
+      />
+    {/* </Link> */}
+    <CardContent>
+      <Typography gutterBottom variant="h6" component="div">
+      {""}
+      </Typography>
+      <Typography variant="body2" color="text.secondary">{""}</Typography>
+      <Typography variant="body2" color="text.secondary">{""}</Typography>
+      <Typography variant="body2" color="text.secondary">{""}</Typography>
+    </CardContent>
+  </Card>
+  </Item>
+  <Item>
+    <Card>
+    {/* <Link to={`/artist/1`}> */}
+      <CardMedia
+        sx={{
+          backgroundSize: 200,
+          margin: 5,
+          width: 200,
+          height: 250
+        }}
+        image={`${process.env.PUBLIC_URL}/img/artist/`} 
+        title={""}
+      />
+    {/* </Link> */}
+    <CardContent>
+      <Typography gutterBottom variant="h6" component="div">
+      {""}
+      </Typography>
+      <Typography variant="body2" color="text.secondary">{""}</Typography>
+      <Typography variant="body2" color="text.secondary">{""}</Typography>
+      <Typography variant="body2" color="text.secondary">{""}</Typography>
+    </CardContent>
+  </Card>
+  </Item>
+  <Item>
+    <Card>
+    {/* <Link to={`/artist/1`}> */}
+      <CardMedia
+        sx={{
+          backgroundSize: 200,
+          margin: 5,
+          width: 200,
+          height: 250
+        }}
+        image={`${process.env.PUBLIC_URL}/img/artist/`} 
+        title={""}
+      />
+    {/* </Link> */}
+    <CardContent>
+      <Typography gutterBottom variant="h6" component="div">
+      {""}
+      </Typography>
+      <Typography variant="body2" color="text.secondary">{""}</Typography>
+      <Typography variant="body2" color="text.secondary">{""}</Typography>
+      <Typography variant="body2" color="text.secondary">{""}</Typography>
+    </CardContent>
+  </Card>
+  </Item>
+  </div>
   )
 }
 

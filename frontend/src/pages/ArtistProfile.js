@@ -5,7 +5,7 @@ import ArtworkGallery from "../components/ArtworkGallery"
 import { Grid } from "@mui/material"
 
 const ArtistProfile = () => {
-  const { artworks, dispatchArtwork } = useArtworksContext()
+  const {dispatchArtwork } = useArtworksContext()
 
   useEffect(() => {
     const fetchArtworks = async () => {
@@ -26,11 +26,9 @@ const ArtistProfile = () => {
       <div className = "home-three">
         <div className="pages">
           <Grid container spacing={0}>              
-          {artworks && artworks.map(artwork => (
           <Grid item xs={3}>
-          <ArtworkGallery artwork={artwork} key={artwork._id} />
+          <ArtworkGallery/>
           </Grid>
-          ))}
           </Grid>
         </div>
         </div>

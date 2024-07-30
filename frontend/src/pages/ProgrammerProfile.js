@@ -159,9 +159,7 @@ const ProgrammerProfile = () => {
                     }}>Education</h4>
             </div>
             <div className="education-details">
-            {educations && educations.map(education => (
-                <EducationDetails education={education} key={education._id} />
-            ))}
+                <EducationDetails/>
             </div>
             </div>
         </div>
@@ -171,9 +169,7 @@ const ProgrammerProfile = () => {
                     window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
                     }}>Extended Tech Stack</h4></div>
             <div className="current-skill-details">
-            {fullSkills && fullSkills.map(fullSkill => (
-                <FullSkillDetails fullSkill={fullSkill} key={fullSkill._id} />
-            ))}
+                <FullSkillDetails/>
             </div>
             </div>
         </div>
@@ -184,11 +180,9 @@ const ProgrammerProfile = () => {
                     }}>Dev Books</h4></div>
             <div className="current-skill-details">
             <Grid container spacing={0}>              
-            {devBooks && devBooks.map(devBook => (
                 <Grid item xs={6}>
-                <DevBooksDetails devBook={devBook} key={devBook._id} />
+                <DevBooksDetails/>
                 </Grid>
-            ))}
             </Grid>
             </div>
         </div>
@@ -199,11 +193,9 @@ const ProgrammerProfile = () => {
                     window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
                     }}>Dev Links</h4></div>
                     <Grid container spacing={0}> 
-            {devLinks && devLinks.map(devLink => (
                 <Grid item xs={6}>
-                <DevLinkDetails devLink={devLink} key={devLink._id} />
+                <DevLinkDetails/>
                 </Grid>
-            ))}
             </Grid>
             </div>
         </div>
