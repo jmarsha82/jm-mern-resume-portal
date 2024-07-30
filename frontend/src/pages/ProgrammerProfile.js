@@ -147,9 +147,7 @@ const ProgrammerProfile = () => {
                     window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
                     }}>Experience</h4></div>
             <div className="work-experience-details">
-            {workExperiences && workExperiences.map(workExperience => (
-                <WorkExperienceDetails workExperience={workExperience} key={workExperience._id} />
-            ))}
+                <WorkExperienceDetails/>
             </div>
             </div>
         </div>
