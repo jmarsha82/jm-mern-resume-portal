@@ -25,7 +25,7 @@ const ProgrammerProfile = () => {
       const json = await response.json()
 
       if (response.ok) {
-        dispatchGeneral({type: 'SET_GENERALS', payload: json})
+        dispatchGeneral({ type: 'SET_GENERALS', payload: json })
       }
     }
 
@@ -40,7 +40,7 @@ const ProgrammerProfile = () => {
       const json = await response.json()
 
       if (response.ok) {
-        dispatchSkills({type: 'SET_CURRENT_SKILLS', payload: json})
+        dispatchSkills({ type: 'SET_CURRENT_SKILLS', payload: json })
       }
     }
 
@@ -55,7 +55,7 @@ const ProgrammerProfile = () => {
       const json = await response.json()
 
       if (response.ok) {
-        dispatchExperience({type: 'SET_WORK_EXPERIENCE', payload: json})
+        dispatchExperience({ type: 'SET_WORK_EXPERIENCE', payload: json })
       }
     }
 
@@ -70,7 +70,7 @@ const ProgrammerProfile = () => {
       const json = await response.json()
 
       if (response.ok) {
-        dispatchEducation({type: 'SET_EDUCATIONS', payload: json})
+        dispatchEducation({ type: 'SET_EDUCATIONS', payload: json })
       }
     }
 
@@ -85,7 +85,7 @@ const ProgrammerProfile = () => {
       const json = await response.json()
 
       if (response.ok) {
-        dispatchFullSkills({type: 'SET_FULL_SKILLS', payload: json})
+        dispatchFullSkills({ type: 'SET_FULL_SKILLS', payload: json })
       }
     }
 
@@ -100,7 +100,7 @@ const ProgrammerProfile = () => {
       const json = await response.json()
 
       if (response.ok) {
-        dispatchDevBooks({type: 'SET_DEVBOOKS', payload: json})
+        dispatchDevBooks({ type: 'SET_DEVBOOKS', payload: json })
       }
     }
 
@@ -115,7 +115,7 @@ const ProgrammerProfile = () => {
       const json = await response.json()
 
       if (response.ok) {
-        dispatchDevLink({type: 'SET_DEVLINKS', payload: json})
+        dispatchDevLink({ type: 'SET_DEVLINKS', payload: json })
       }
     }
 
@@ -124,84 +124,76 @@ const ProgrammerProfile = () => {
 
   return (
     <div>
-    <ProgrammerNavbar className="navbar-background" />
-    <div className = "pages">
+      <ProgrammerNavbar className="navbar-background" />
+      <div className="pages">
         <div className="home-one">
-            <div>
-                <GeneralDetails/>
-            </div>
-            <div className="full-skill-heading">
+          <div>
+            <GeneralDetails />
+          </div>
+          <div className="full-skill-heading">
             <h4>Github Contributions</h4>
             <img src="https://ghchart.rshah.org/1976d2/jmarsha82" alt="Github Profile" />
-            </div>
+          </div>
         </div>
         <div className="home-two">
+          <div>
             <div>
-            <div>
-            <div className="current-skill-heading"><h4>Current Project(s) Tech Stack</h4></div>
-            <div className="current-skill-details">
-                <CurrentSkillDetails/>
-            </div>
+              <div className="current-skill-heading"><h4>Current Project(s) Tech Stack</h4></div>
+              <div className="current-skill-details">
+                <CurrentSkillDetails />
+              </div>
             </div>
             <div id="experience-id" className="current-skill-heading"><h4 onClick={() => {
-                    window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
-                    }}>Experience</h4></div>
+              window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+            }}>Experience</h4></div>
             <div className="work-experience-details">
-                <WorkExperienceDetails/>
+              <WorkExperienceDetails />
             </div>
-            </div>
+          </div>
         </div>
         <div className="home-three">
-            <div>
+          <div>
             <div id="education-id" className="current-skill-heading">
-                    <h4 onClick={() => {
-                    window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
-                    }}>Education</h4>
+              <h4 onClick={() => {
+                window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+              }}>Education</h4>
             </div>
             <div className="education-details">
-                <EducationDetails/>
+              <EducationDetails />
             </div>
-            </div>
+          </div>
         </div>
         <div className="home-three">
-            <div>
+          <div>
             <div id="extended-skills-id" className="current-skill-heading"><h4 onClick={() => {
-                    window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
-                    }}>Extended Tech Stack</h4></div>
+              window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+            }}>Extended Tech Stack</h4></div>
             <div className="current-skill-details">
-                <FullSkillDetails/>
+              <FullSkillDetails />
             </div>
-            </div>
+          </div>
         </div>
         <div className="home-three">
-            <div>
+          <div>
             <div id="dev-books-id" className="current-skill-heading"><h4 onClick={() => {
-                    window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
-                    }}>Dev Books</h4></div>
+              window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+            }}>Dev Books</h4></div>
             <div className="current-skill-details">
-            <Grid container spacing={0}>              
-                <Grid item xs={6}>
-                <DevBooksDetails/>
-                </Grid>
-            </Grid>
+              <DevBooksDetails />
             </div>
-        </div>
+          </div>
         </div>
         <div className="home-three">
-        <div>
-        <div id="dev-links-id" className="current-skill-heading"><h4 onClick={() => {
-                    window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
-                    }}>Dev Links</h4></div>
-                    <Grid container spacing={0}> 
-                <Grid item xs={6}>
-                <DevLinkDetails/>
-                </Grid>
-            </Grid>
-            </div>
+          <div>
+            <div id="dev-links-id" className="current-skill-heading"><h4 onClick={() => {
+              window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+            }}>Dev Links</h4></div>
+            <DevLinkDetails />
+          </div>
         </div>
-        </div>
+      </div>
     </div>
-    
+
   )
 }
 

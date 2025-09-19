@@ -19,7 +19,7 @@ const DevBooksDetails = () => {
   return (
     <div>
       <Grid container spacing={2} wrap="nowrap">
-        <Grid size={4} item xs="auto">
+        <Grid size={4} item xs={12}>
           <Item>
             <Card>
               <CardMedia
@@ -44,7 +44,7 @@ const DevBooksDetails = () => {
             </Card>
           </Item>
         </Grid>
-        <Grid size={4} item xs="auto">
+        <Grid size={4} item xs={12}>
           <Item>
             <Card>
               <CardMedia
@@ -68,11 +68,8 @@ const DevBooksDetails = () => {
               </CardContent>
             </Card>
           </Item>
-        </Grid>
-      </Grid>
-      <br />
-      <Grid container spacing={2} wrap="nowrap">
-        <Grid size={4} item xs="auto">
+          </Grid>
+          <Grid size={4} item xs={12}>
           <Item>
             <Card>
               <CardMedia
@@ -96,8 +93,11 @@ const DevBooksDetails = () => {
               </CardContent>
             </Card>
           </Item>
-        </Grid>
-        <Grid size={4} item xs="auto">
+          </Grid>
+      </Grid>
+      <br />
+      <Grid container spacing={2} wrap="nowrap">
+      <Grid size={4} item xs={12}>
           <Item>
             <Card>
               <CardMedia
@@ -121,11 +121,8 @@ const DevBooksDetails = () => {
               </CardContent>
             </Card>
           </Item>
-        </Grid>
-      </Grid>
-      <br />
-      <Grid container spacing={2} wrap="nowrap">
-        <Grid size={4} item xs="auto">
+          </Grid>
+          <Grid size={4} item xs={12}>
           <Item>
             <Card>
               <CardMedia
@@ -150,7 +147,7 @@ const DevBooksDetails = () => {
             </Card>
           </Item>
         </Grid>
-        <Grid size={4} item xs="auto">
+        <Grid size={4} item xs={12}>
           <Item>
             <Card>
               <CardMedia
@@ -174,11 +171,11 @@ const DevBooksDetails = () => {
               </CardContent>
             </Card>
           </Item>
-        </Grid>
+          </Grid>
       </Grid>
       <br />
       <Grid container spacing={2} wrap="nowrap">
-        <Grid size={4} item xs="auto">
+      <Grid size={4} item xs={12}>
           <Item>
             <Card>
               <CardMedia
@@ -203,7 +200,7 @@ const DevBooksDetails = () => {
             </Card>
           </Item>
         </Grid>
-        <Grid size={4} item xs="auto">
+        <Grid size={4} item xs={12}>
           <Item>
             <Card>
               <CardMedia

@@ -20,7 +20,7 @@ const DevLinkDetails = () => {
   return (
     <div>
       <Grid container spacing={2} wrap="nowrap">
-        <Grid size={4} item xs="auto">
+      <Grid size={4} item xs={12}>
           <Item>
             <Card>
               <a href={"https://www.codingame.com/start"} target="_blank">
@@ -44,7 +44,7 @@ const DevLinkDetails = () => {
             </Card>
           </Item>
         </Grid>
-        <Grid size={4} item xs="auto">
+        <Grid size={4} item xs={12}>
           <Item>
             <Card>
               <a href={"https://learning.oreilly.com/home/"} target="_blank">
@@ -71,7 +71,7 @@ const DevLinkDetails = () => {
       </Grid>
       <br />
       <Grid container spacing={2} wrap="nowrap">
-        <Grid size={4} item xs="auto">
+      <Grid size={4} item xs={12}>
           <Item>
             <Card>
               <a href={"https://www.cs.usfca.edu/~galles/visualization/"} target="_blank">
@@ -95,7 +95,7 @@ const DevLinkDetails = () => {
             </Card>
           </Item>
         </Grid>
-        <Grid size={4} item xs="auto">
+        <Grid size={4} item xs={12}>
           <Item>
             <Card>
               <a href={"https://jsonplaceholder.typicode.com/"} target="_blank">
@@ -122,7 +122,7 @@ const DevLinkDetails = () => {
       </Grid>
       <br />
       <Grid container spacing={2} wrap="nowrap">
-        <Grid size={4} item xs="auto">
+      <Grid size={4} item xs={12}>
           <Item>
             <Card>
               <a href={"https://replit.com/"} target="_blank">
@@ -146,7 +146,7 @@ const DevLinkDetails = () => {
             </Card>
           </Item>
         </Grid>
-        <Grid size={4} item xs="auto">
+        <Grid size={4} item xs={12}>
           <Item>
             <Card>
               <a href={"https://www.w3schools.com/default.asp"} target="_blank">
@@ -173,7 +173,7 @@ const DevLinkDetails = () => {
       </Grid>
       <br />
       <Grid container spacing={2} wrap="nowrap">
-        <Grid size={4} item xs="auto">
+      <Grid size={4} item xs={12}>
           <Item>
             <Card>
               <a href={"https://ninjamock.com/"} target="_blank">
@@ -197,7 +197,7 @@ const DevLinkDetails = () => {
             </Card>
           </Item>
         </Grid>
-        <Grid size={4} item xs="auto">
+        <Grid size={4} item xs={12}>
           <Item>
             <Card>
               <a href={"https://trello.com/en"} target="_blank">
@@ -224,7 +224,7 @@ const DevLinkDetails = () => {
       </Grid>
       <br />
       <Grid container spacing={2} wrap="nowrap">
-        <Grid size={4} item xs="auto">
+      <Grid size={4} item xs={12}>
           <Item>
             <Card>
               <a href={"https://www.hackerrank.com/dashboard"} target="_blank">
@@ -248,7 +248,7 @@ const DevLinkDetails = () => {
             </Card>
           </Item>
         </Grid>
-        <Grid size={4} item xs="auto">
+        <Grid size={4} item xs={12}>
           <Item>
             <Card>
               <a href={"https://spring.io/guides"} target="_blank">
@@ -275,7 +275,7 @@ const DevLinkDetails = () => {
       </Grid>
       <br />
       <Grid container spacing={2} wrap="nowrap">
-        <Grid size={4} item xs="auto">
+      <Grid size={4} item xs={12}>
           <Item>
             <Card>
               <a href={"https://react.dev/"} target="_blank">
@@ -299,7 +299,7 @@ const DevLinkDetails = () => {
             </Card>
           </Item>
         </Grid>
-        <Grid size={4} item xs="auto">
+        <Grid size={4} item xs={12}>
           <Item>
             <Card>
               <a href={"https://angular.io/"} target="_blank">
