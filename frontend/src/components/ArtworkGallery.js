@@ -59,7 +59,7 @@ const ArtworkGallery = () => {
                 </Typography>
                 <Typography variant="body2" color="text.secondary">{"36 X 48 inches"}</Typography>
                 <Typography variant="body2" color="text.secondary">{"Oil on Canvas"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"SOLD"}</Typography>
+                <Typography variant="body2" color="text.secondary">{"Private Collection"}</Typography>
               </CardContent>
             </Card>
           </Item>
@@ -89,7 +89,7 @@ const ArtworkGallery = () => {
                 </Typography>
                 <Typography variant="body2" color="text.secondary">{"24 X 36 inches"}</Typography>
                 <Typography variant="body2" color="text.secondary">{"Oil, Jewel, and Beads on Canvas"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"NFS"}</Typography>
+                <Typography variant="body2" color="text.secondary">{"Private Collection"}</Typography>
               </CardContent>
             </Card>
           </Item>
@@ -119,7 +119,7 @@ const ArtworkGallery = () => {
                 </Typography>
                 <Typography variant="body2" color="text.secondary">{"36 X 48 inches"}</Typography>
                 <Typography variant="body2" color="text.secondary">{"Pen on Canvas"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"NFS"}</Typography>
+                <Typography variant="body2" color="text.secondary">{"Private Collection"}</Typography>
               </CardContent>
             </Card>
           </Item>
@@ -152,7 +152,7 @@ const ArtworkGallery = () => {
                 </Typography>
                 <Typography variant="body2" color="text.secondary">{"36 X 36 inches"}</Typography>
                 <Typography variant="body2" color="text.secondary">{"Oil, Jewel, and Beads on Canvas"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"SOLD"}</Typography>
+                <Typography variant="body2" color="text.secondary">{"Private Collection"}</Typography>
               </CardContent>
             </Card>
           </Item>
@@ -182,7 +182,7 @@ const ArtworkGallery = () => {
                 </Typography>
                 <Typography variant="body2" color="text.secondary">{"16 X 20 inches"}</Typography>
                 <Typography variant="body2" color="text.secondary">{"Oil on Canvas"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"NFS"}</Typography>
+                <Typography variant="body2" color="text.secondary">{"Private Collection"}</Typography>
               </CardContent>
             </Card>
           </Item>
@@ -212,7 +212,7 @@ const ArtworkGallery = () => {
                 </Typography>
                 <Typography variant="body2" color="text.secondary">{"24 X 36 inches"}</Typography>
                 <Typography variant="body2" color="text.secondary">{"Oil and Jewels on Canvas"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"NFS"}</Typography>
+                <Typography variant="body2" color="text.secondary">{"Private Collection"}</Typography>
               </CardContent>
             </Card>
           </Item>
@@ -245,7 +245,7 @@ const ArtworkGallery = () => {
                 </Typography>
                 <Typography variant="body2" color="text.secondary">{"16 X 20 inches"}</Typography>
                 <Typography variant="body2" color="text.secondary">{"Oil, Jewel, and Beads on Canvas"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"NFS"}</Typography>
+                <Typography variant="body2" color="text.secondary">{"Private Collection"}</Typography>
               </CardContent>
             </Card>
           </Item>
@@ -275,7 +275,7 @@ const ArtworkGallery = () => {
                 </Typography>
                 <Typography variant="body2" color="text.secondary">{"18 X 20 inches"}</Typography>
                 <Typography variant="body2" color="text.secondary">{"Oil and Pen on Canvas"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"NFS"}</Typography>
+                <Typography variant="body2" color="text.secondary">{"Private Collection"}</Typography>
               </CardContent>
             </Card>
           </Item>
@@ -305,7 +305,7 @@ const ArtworkGallery = () => {
                 </Typography>
                 <Typography variant="body2" color="text.secondary">{"24 X 30 inches"}</Typography>
                 <Typography variant="body2" color="text.secondary">{"Oil on Canvas"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"NFS"}</Typography>
+                <Typography variant="body2" color="text.secondary">{"Private Collection"}</Typography>
               </CardContent>
             </Card>
           </Item>
@@ -338,7 +338,7 @@ const ArtworkGallery = () => {
                 </Typography>
                 <Typography variant="body2" color="text.secondary">{"36 X 48 inches"}</Typography>
                 <Typography variant="body2" color="text.secondary">{"Oil and Beads on Canvas"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"SOLD"}</Typography>
+                <Typography variant="body2" color="text.secondary">{"Private Collection"}</Typography>
               </CardContent>
             </Card>
           </Item>
@@ -368,7 +368,7 @@ const ArtworkGallery = () => {
                 </Typography>
                 <Typography variant="body2" color="text.secondary">{"18 X 20 inches"}</Typography>
                 <Typography variant="body2" color="text.secondary">{"Pen on Canvas"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"NFS"}</Typography>
+                <Typography variant="body2" color="text.secondary">{"Private Collection"}</Typography>
               </CardContent>
             </Card>
           </Item>
@@ -398,7 +398,7 @@ const ArtworkGallery = () => {
                 </Typography>
                 <Typography variant="body2" color="text.secondary">{"48 X 48 inches"}</Typography>
                 <Typography variant="body2" color="text.secondary">{"Oil and Jewels on Canvas"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"NFS"}</Typography>
+                <Typography variant="body2" color="text.secondary">{"Private Collection"}</Typography>
               </CardContent>
             </Card>
           </Item>
@@ -431,7 +431,7 @@ const ArtworkGallery = () => {
                 </Typography>
                 <Typography variant="body2" color="text.secondary">{"36 X 36 inches"}</Typography>
                 <Typography variant="body2" color="text.secondary">{"Oil on Canvas"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"SOLD"}</Typography>
+                <Typography variant="body2" color="text.secondary">{"Private Collection"}</Typography>
               </CardContent>
             </Card>
           </Item>
@@ -461,7 +461,7 @@ const ArtworkGallery = () => {
                 </Typography>
                 <Typography variant="body2" color="text.secondary">{"36 X 48 inches"}</Typography>
                 <Typography variant="body2" color="text.secondary">{"Oil on Canvas"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"NFS"}</Typography>
+                <Typography variant="body2" color="text.secondary">{"Private Collection"}</Typography>
               </CardContent>
             </Card>
           </Item>
@@ -491,7 +491,7 @@ const ArtworkGallery = () => {
                 </Typography>
                 <Typography variant="body2" color="text.secondary">{"36 X 48 inchess"}</Typography>
                 <Typography variant="body2" color="text.secondary">{"Oil on Canvas"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"NFS"}</Typography>
+                <Typography variant="body2" color="text.secondary">{"Private Collection"}</Typography>
               </CardContent>
             </Card>
           </Item>
@@ -524,7 +524,7 @@ const ArtworkGallery = () => {
                 </Typography>
                 <Typography variant="body2" color="text.secondary">{"54 X 72 inches"}</Typography>
                 <Typography variant="body2" color="text.secondary">{"Oil on Canvas"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"NFS"}</Typography>
+                <Typography variant="body2" color="text.secondary">{"Private Collection"}</Typography>
               </CardContent>
             </Card>
           </Item>
@@ -554,7 +554,7 @@ const ArtworkGallery = () => {
                 </Typography>
                 <Typography variant="body2" color="text.secondary">{"24 X 30 inches"}</Typography>
                 <Typography variant="body2" color="text.secondary">{"Oil and Jewels on Canvas"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"NFS"}</Typography>
+                <Typography variant="body2" color="text.secondary">{"Private Collection"}</Typography>
               </CardContent>
             </Card>
           </Item>
@@ -584,7 +584,7 @@ const ArtworkGallery = () => {
                 </Typography>
                 <Typography variant="body2" color="text.secondary">{"48 X 72 inches"}</Typography>
                 <Typography variant="body2" color="text.secondary">{"Oil on Canvas"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"NFS"}</Typography>
+                <Typography variant="body2" color="text.secondary">{"Private Collection"}</Typography>
               </CardContent>
             </Card>
           </Item>
@@ -617,7 +617,7 @@ const ArtworkGallery = () => {
                 </Typography>
                 <Typography variant="body2" color="text.secondary">{"54 X 72 inches"}</Typography>
                 <Typography variant="body2" color="text.secondary">{"Oil on Canvas"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"NFS"}</Typography>
+                <Typography variant="body2" color="text.secondary">{"Private Collection"}</Typography>
               </CardContent>
             </Card>
           </Item>
@@ -647,7 +647,7 @@ const ArtworkGallery = () => {
                 </Typography>
                 <Typography variant="body2" color="text.secondary">{"24 X 24 inches"}</Typography>
                 <Typography variant="body2" color="text.secondary">{"Oil and Jewels on Canvas"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"SOLD"}</Typography>
+                <Typography variant="body2" color="text.secondary">{"Private Collection"}</Typography>
               </CardContent>
             </Card>
           </Item>
@@ -677,7 +677,7 @@ const ArtworkGallery = () => {
                 </Typography>
                 <Typography variant="body2" color="text.secondary">{"12 X 18 inches"}</Typography>
                 <Typography variant="body2" color="text.secondary">{"Oil and Pen on Canvas"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"NFS"}</Typography>
+                <Typography variant="body2" color="text.secondary">{"Private Collection"}</Typography>
               </CardContent>
             </Card>
           </Item>
@@ -710,7 +710,7 @@ const ArtworkGallery = () => {
                 </Typography>
                 <Typography variant="body2" color="text.secondary">{"30 X 36 inches"}</Typography>
                 <Typography variant="body2" color="text.secondary">{"Oil on Canvas"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"NFS"}</Typography>
+                <Typography variant="body2" color="text.secondary">{"Private Collection"}</Typography>
               </CardContent>
             </Card>
           </Item>
@@ -770,7 +770,7 @@ const ArtworkGallery = () => {
                 </Typography>
                 <Typography variant="body2" color="text.secondary">{"16 X 20 inches"}</Typography>
                 <Typography variant="body2" color="text.secondary">{"Oil on Canvas"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"SOLD"}</Typography>
+                <Typography variant="body2" color="text.secondary">{"Private Collection"}</Typography>
               </CardContent>
             </Card>
           </Item>
@@ -832,8 +832,8 @@ const ArtworkGallery = () => {
                   {"Blue Brittany"}
                 </Typography>
                 <Typography variant="body2" color="text.secondary">{"36 X 48 inches"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"Oil on Canvas"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"NFS"}</Typography>
+                <Typography variant="body2" color="text.secondary">{"Pen on Canvas"}</Typography>
+                <Typography variant="body2" color="text.secondary">{"Private Collection"}</Typography>
               </CardContent>
             </Card>
           </Item>
@@ -896,7 +896,7 @@ const ArtworkGallery = () => {
                 </Typography>
                 <Typography variant="body2" color="text.secondary">{"24 X 36 inches"}</Typography>
                 <Typography variant="body2" color="text.secondary">{"Oil on Canvas"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"NFS"}</Typography>
+                <Typography variant="body2" color="text.secondary">{"Private Collection"}</Typography>
               </CardContent>
             </Card>
           </Item>
@@ -956,7 +956,7 @@ const ArtworkGallery = () => {
                 </Typography>
                 <Typography variant="body2" color="text.secondary">{"12 X 16 inches"}</Typography>
                 <Typography variant="body2" color="text.secondary">{"Oil and Jewel on Canvas"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"NFS"}</Typography>
+                <Typography variant="body2" color="text.secondary">{"Private Collection"}</Typography>
               </CardContent>
             </Card>
           </Item>
@@ -1019,7 +1019,7 @@ const ArtworkGallery = () => {
                 </Typography>
                 <Typography variant="body2" color="text.secondary">{"24 X 24 inches"}</Typography>
                 <Typography variant="body2" color="text.secondary">{"Oil on Canvas"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"NFS"}</Typography>
+                <Typography variant="body2" color="text.secondary">{"Private Collection"}</Typography>
               </CardContent>
             </Card>
           </Item>
@@ -1082,7 +1082,7 @@ const ArtworkGallery = () => {
                 </Typography>
                 <Typography variant="body2" color="text.secondary">{"8 X 11 inches"}</Typography>
                 <Typography variant="body2" color="text.secondary">{"Pen on Paper"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"NFS"}</Typography>
+                <Typography variant="body2" color="text.secondary">{"Private Collection"}</Typography>
               </CardContent>
             </Card>
           </Item>
@@ -1142,7 +1142,7 @@ const ArtworkGallery = () => {
                 </Typography>
                 <Typography variant="body2" color="text.secondary">{"12 X 16 inches"}</Typography>
                 <Typography variant="body2" color="text.secondary">{"Oil and Pen on Canvas"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"NFS"}</Typography>
+                <Typography variant="body2" color="text.secondary">{"Private Collection"}</Typography>
               </CardContent>
             </Card>
           </Item>
@@ -1175,7 +1175,7 @@ const ArtworkGallery = () => {
                 </Typography>
                 <Typography variant="body2" color="text.secondary">{"24 X 30 inches"}</Typography>
                 <Typography variant="body2" color="text.secondary">{"Oil on Canvas"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"NFS"}</Typography>
+                <Typography variant="body2" color="text.secondary">{"Private Collection"}</Typography>
               </CardContent>
             </Card>
           </Item>
@@ -1235,7 +1235,7 @@ const ArtworkGallery = () => {
                 </Typography>
                 <Typography variant="body2" color="text.secondary">{"8 X 11 inches"}</Typography>
                 <Typography variant="body2" color="text.secondary">{"Pen on paper"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"NFS"}</Typography>
+                <Typography variant="body2" color="text.secondary">{"Private Collection"}</Typography>
               </CardContent>
             </Card>
           </Item>
@@ -1391,7 +1391,7 @@ const ArtworkGallery = () => {
                 </Typography>
                 <Typography variant="body2" color="text.secondary">{"18 X 24 inches"}</Typography>
                 <Typography variant="body2" color="text.secondary">{"Oil and Pen on Canvas"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"NFS"}</Typography>
+                <Typography variant="body2" color="text.secondary">{"Private Collection"}</Typography>
               </CardContent>
             </Card>
           </Item>
@@ -1547,7 +1547,7 @@ const ArtworkGallery = () => {
                 </Typography>
                 <Typography variant="body2" color="text.secondary">{"8 X 11 inches"}</Typography>
                 <Typography variant="body2" color="text.secondary">{"Pen on paper"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"NFS"}</Typography>
+                <Typography variant="body2" color="text.secondary">{"Private Collection"}</Typography>
               </CardContent>
             </Card>
           </Item>
@@ -1577,7 +1577,7 @@ const ArtworkGallery = () => {
                 </Typography>
                 <Typography variant="body2" color="text.secondary">{"48 X 48 inches"}</Typography>
                 <Typography variant="body2" color="text.secondary">{"Oil and Pen on paper"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"NFS"}</Typography>
+                <Typography variant="body2" color="text.secondary">{"Private Collection"}</Typography>
               </CardContent>
             </Card>
           </Item>
@@ -1607,7 +1607,7 @@ const ArtworkGallery = () => {
                 </Typography>
                 <Typography variant="body2" color="text.secondary">{"12 X 16 inches"}</Typography>
                 <Typography variant="body2" color="text.secondary">{"Oil on Canvas"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"NFS"}</Typography>
+                <Typography variant="body2" color="text.secondary">{"Private Collection"}</Typography>
               </CardContent>
             </Card>
           </Item>
@@ -1640,7 +1640,7 @@ const ArtworkGallery = () => {
                 </Typography>
                 <Typography variant="body2" color="text.secondary">{"30 X 40 inches"}</Typography>
                 <Typography variant="body2" color="text.secondary">{"Pen on Canvas"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"NFS"}</Typography>
+                <Typography variant="body2" color="text.secondary">{"Private Collection"}</Typography>
               </CardContent>
             </Card>
           </Item>
@@ -1670,7 +1670,7 @@ const ArtworkGallery = () => {
                 </Typography>
                 <Typography variant="body2" color="text.secondary">{"24 X 30 inches"}</Typography>
                 <Typography variant="body2" color="text.secondary">{"Oil on Canvas"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"NFS"}</Typography>
+                <Typography variant="body2" color="text.secondary">{"Private Collection"}</Typography>
               </CardContent>
             </Card>
           </Item>
@@ -1700,7 +1700,7 @@ const ArtworkGallery = () => {
                 </Typography>
                 <Typography variant="body2" color="text.secondary">{"16 X 20 inches"}</Typography>
                 <Typography variant="body2" color="text.secondary">{"Oil on Canvas"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"NFS"}</Typography>
+                <Typography variant="body2" color="text.secondary">{"Private Collection"}</Typography>
               </CardContent>
             </Card>
           </Item>
@@ -1763,7 +1763,7 @@ const ArtworkGallery = () => {
                 </Typography>
                 <Typography variant="body2" color="text.secondary">{"24 X 30 inches"}</Typography>
                 <Typography variant="body2" color="text.secondary">{"Oil on Canvas"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"NFS"}</Typography>
+                <Typography variant="body2" color="text.secondary">{"SOLD"}</Typography>
               </CardContent>
             </Card>
           </Item>
@@ -1793,7 +1793,7 @@ const ArtworkGallery = () => {
                 </Typography>
                 <Typography variant="body2" color="text.secondary">{"16 X 20 inches"}</Typography>
                 <Typography variant="body2" color="text.secondary">{"Oil on Canvas"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"NFS"}</Typography>
+                <Typography variant="body2" color="text.secondary">{"Private Collection"}</Typography>
               </CardContent>
             </Card>
           </Item>
@@ -1813,20 +1813,20 @@ const ArtworkGallery = () => {
                   height: 250,
                   cursor: 'pointer'
                 }}
-                image={`${process.env.PUBLIC_URL}/img/artist/heart_glasses.jpg`}
-                title={"Heart Vision"}
+                image={`${process.env.PUBLIC_URL}/img/artist/gaga_two.jpg`}
+                title={"Untitled 27"}
                 onClick={() => handleImageClick(
-                  `${process.env.PUBLIC_URL}/img/artist/heart_glasses.jpg`
+                  `${process.env.PUBLIC_URL}/img/artist/gaga_two.jpg`
                 )}
               />
               {/* </Link> */}
               <CardContent>
                 <Typography gutterBottom variant="h6" component="div">
-                  {"Heart Vision"}
+                  {"Untitled 27"}
                 </Typography>
-                <Typography variant="body2" color="text.secondary">{"16 X 20 inches"}</Typography>
+                <Typography variant="body2" color="text.secondary">{"24 X 36 inches"}</Typography>
                 <Typography variant="body2" color="text.secondary">{"Oil on Canvas"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"NFS"}</Typography>
+                <Typography variant="body2" color="text.secondary">{"Private Collection"}</Typography>
               </CardContent>
             </Card>
           </Item>
@@ -1856,7 +1856,7 @@ const ArtworkGallery = () => {
                 </Typography>
                 <Typography variant="body2" color="text.secondary">{"36 X 48 inches"}</Typography>
                 <Typography variant="body2" color="text.secondary">{"Oil and Jewels on Canvas"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"NFS"}</Typography>
+                <Typography variant="body2" color="text.secondary">{"Private Collection"}</Typography>
               </CardContent>
             </Card>
           </Item>
@@ -1886,7 +1886,7 @@ const ArtworkGallery = () => {
                 </Typography>
                 <Typography variant="body2" color="text.secondary">{"24 X 24 inches"}</Typography>
                 <Typography variant="body2" color="text.secondary">{"Oil and Jewels on Canvas"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"NFS"}</Typography>
+                <Typography variant="body2" color="text.secondary">{"Private Collection"}</Typography>
               </CardContent>
             </Card>
           </Item>
@@ -1919,7 +1919,7 @@ const ArtworkGallery = () => {
                 </Typography>
                 <Typography variant="body2" color="text.secondary">{"24 X 36 inches"}</Typography>
                 <Typography variant="body2" color="text.secondary">{"Oil on Canvas"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"NFS"}</Typography>
+                <Typography variant="body2" color="text.secondary">{"Private Collection"}</Typography>
               </CardContent>
             </Card>
           </Item>
@@ -1949,7 +1949,7 @@ const ArtworkGallery = () => {
                 </Typography>
                 <Typography variant="body2" color="text.secondary">{"30 X 40 inches"}</Typography>
                 <Typography variant="body2" color="text.secondary">{"Oil on Canvas"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"NFS"}</Typography>
+                <Typography variant="body2" color="text.secondary">{"Private Collection"}</Typography>
               </CardContent>
             </Card>
           </Item>
@@ -1979,7 +1979,7 @@ const ArtworkGallery = () => {
                 </Typography>
                 <Typography variant="body2" color="text.secondary">{"24 X 24 inches"}</Typography>
                 <Typography variant="body2" color="text.secondary">{"Oil on Canvas"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"NFS"}</Typography>
+                <Typography variant="body2" color="text.secondary">{"Private Collection"}</Typography>
               </CardContent>
             </Card>
           </Item>
@@ -2012,7 +2012,7 @@ const ArtworkGallery = () => {
                 </Typography>
                 <Typography variant="body2" color="text.secondary">{"22 X 28 inches"}</Typography>
                 <Typography variant="body2" color="text.secondary">{"Oil on Canvas"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"NFS"}</Typography>
+                <Typography variant="body2" color="text.secondary">{"Private Collection"}</Typography>
               </CardContent>
             </Card>
           </Item>
@@ -2042,7 +2042,7 @@ const ArtworkGallery = () => {
                 </Typography>
                 <Typography variant="body2" color="text.secondary">{"16 X 20 inches"}</Typography>
                 <Typography variant="body2" color="text.secondary">{"Oil on Canvas"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"NFS"}</Typography>
+                <Typography variant="body2" color="text.secondary">{"Private Collection"}</Typography>
               </CardContent>
             </Card>
           </Item>
@@ -2072,7 +2072,7 @@ const ArtworkGallery = () => {
                 </Typography>
                 <Typography variant="body2" color="text.secondary">{"16 X 20 inches"}</Typography>
                 <Typography variant="body2" color="text.secondary">{"Oil on Canvas"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"NFS"}</Typography>
+                <Typography variant="body2" color="text.secondary">{"Private Collection"}</Typography>
               </CardContent>
             </Card>
           </Item>
@@ -2105,7 +2105,7 @@ const ArtworkGallery = () => {
                 </Typography>
                 <Typography variant="body2" color="text.secondary">{"16 X 20 inches"}</Typography>
                 <Typography variant="body2" color="text.secondary">{"Oil on Canvas"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"NFS"}</Typography>
+                <Typography variant="body2" color="text.secondary">{"SOLD"}</Typography>
               </CardContent>
             </Card>
           </Item>
@@ -2135,7 +2135,7 @@ const ArtworkGallery = () => {
                 </Typography>
                 <Typography variant="body2" color="text.secondary">{"48 X 78 inches"}</Typography>
                 <Typography variant="body2" color="text.secondary">{"Oil on Canvas"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"NFS"}</Typography>
+                <Typography variant="body2" color="text.secondary">{"SOLD"}</Typography>
               </CardContent>
             </Card>
           </Item>
@@ -2165,7 +2165,7 @@ const ArtworkGallery = () => {
                 </Typography>
                 <Typography variant="body2" color="text.secondary">{"16 X 20 inches"}</Typography>
                 <Typography variant="body2" color="text.secondary">{"Oil on Canvas"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"NFS"}</Typography>
+                <Typography variant="body2" color="text.secondary">{"SOLD"}</Typography>
               </CardContent>
             </Card>
           </Item>
@@ -2198,7 +2198,7 @@ const ArtworkGallery = () => {
                 </Typography>
                 <Typography variant="body2" color="text.secondary">{"36 X 48 inches"}</Typography>
                 <Typography variant="body2" color="text.secondary">{"Oil on Canvas"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"NFS"}</Typography>
+                <Typography variant="body2" color="text.secondary">{"Donated"}</Typography>
               </CardContent>
             </Card>
           </Item>
@@ -2228,7 +2228,7 @@ const ArtworkGallery = () => {
                 </Typography>
                 <Typography variant="body2" color="text.secondary">{"16 X 20 inches"}</Typography>
                 <Typography variant="body2" color="text.secondary">{"Oil on Canvas"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"NFS"}</Typography>
+                <Typography variant="body2" color="text.secondary">{"SOLD"}</Typography>
               </CardContent>
             </Card>
           </Item>
@@ -2258,7 +2258,7 @@ const ArtworkGallery = () => {
                 </Typography>
                 <Typography variant="body2" color="text.secondary">{"36 X 60 inches"}</Typography>
                 <Typography variant="body2" color="text.secondary">{"Oil on Canvas"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"NFS"}</Typography>
+                <Typography variant="body2" color="text.secondary">{"Private Collection"}</Typography>
               </CardContent>
             </Card>
           </Item>
@@ -2291,7 +2291,7 @@ const ArtworkGallery = () => {
                 </Typography>
                 <Typography variant="body2" color="text.secondary">{"16 X 20 inches"}</Typography>
                 <Typography variant="body2" color="text.secondary">{"Oil and Pen on Canvas"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"NFS"}</Typography>
+                <Typography variant="body2" color="text.secondary">{"SOLD"}</Typography>
               </CardContent>
             </Card>
           </Item>
@@ -2321,7 +2321,7 @@ const ArtworkGallery = () => {
                 </Typography>
                 <Typography variant="body2" color="text.secondary">{"16 X 20 inches"}</Typography>
                 <Typography variant="body2" color="text.secondary">{"Oil and Pen on Canvas"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"NFS"}</Typography>
+                <Typography variant="body2" color="text.secondary">{"SOLD"}</Typography>
               </CardContent>
             </Card>
           </Item>
@@ -2351,7 +2351,7 @@ const ArtworkGallery = () => {
                 </Typography>
                 <Typography variant="body2" color="text.secondary">{"11 X 14 inches"}</Typography>
                 <Typography variant="body2" color="text.secondary">{"Oil and Pen on Canvas"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"NFS"}</Typography>
+                <Typography variant="body2" color="text.secondary">{"SOLD"}</Typography>
               </CardContent>
             </Card>
           </Item>
@@ -2384,7 +2384,7 @@ const ArtworkGallery = () => {
                 </Typography>
                 <Typography variant="body2" color="text.secondary">{"11 X 14 inches"}</Typography>
                 <Typography variant="body2" color="text.secondary">{"Oil and Pen on Canvas"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"NFS"}</Typography>
+                <Typography variant="body2" color="text.secondary">{"SOLD"}</Typography>
               </CardContent>
             </Card>
           </Item>
@@ -2414,7 +2414,7 @@ const ArtworkGallery = () => {
                 </Typography>
                 <Typography variant="body2" color="text.secondary">{"16 X 20 inches"}</Typography>
                 <Typography variant="body2" color="text.secondary">{"Oil on Canvas"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"NFS"}</Typography>
+                <Typography variant="body2" color="text.secondary">{"Donated"}</Typography>
               </CardContent>
             </Card>
           </Item>
@@ -2444,7 +2444,7 @@ const ArtworkGallery = () => {
                 </Typography>
                 <Typography variant="body2" color="text.secondary">{"11 X 14 inches"}</Typography>
                 <Typography variant="body2" color="text.secondary">{"Oil on Canvas"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"NFS"}</Typography>
+                <Typography variant="body2" color="text.secondary">{"Donated"}</Typography>
               </CardContent>
             </Card>
           </Item>
@@ -2477,7 +2477,7 @@ const ArtworkGallery = () => {
                 </Typography>
                 <Typography variant="body2" color="text.secondary">{"16 X 20 inches"}</Typography>
                 <Typography variant="body2" color="text.secondary">{"Oil on Canvas"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"NFS"}</Typography>
+                <Typography variant="body2" color="text.secondary">{"Donated"}</Typography>
               </CardContent>
             </Card>
           </Item>
@@ -2507,7 +2507,7 @@ const ArtworkGallery = () => {
                 </Typography>
                 <Typography variant="body2" color="text.secondary">{"22 X 28 inches"}</Typography>
                 <Typography variant="body2" color="text.secondary">{"Oil on Canvas"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"NFS"}</Typography>
+                <Typography variant="body2" color="text.secondary">{"Private Collection"}</Typography>
               </CardContent>
             </Card>
           </Item>
@@ -2537,7 +2537,7 @@ const ArtworkGallery = () => {
                 </Typography>
                 <Typography variant="body2" color="text.secondary">{"24 X 36 inches"}</Typography>
                 <Typography variant="body2" color="text.secondary">{"Oil on Canvas"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"NFS"}</Typography>
+                <Typography variant="body2" color="text.secondary">{"SOLD"}</Typography>
               </CardContent>
             </Card>
           </Item>
@@ -2570,7 +2570,7 @@ const ArtworkGallery = () => {
                 </Typography>
                 <Typography variant="body2" color="text.secondary">{"22 X 28 inches"}</Typography>
                 <Typography variant="body2" color="text.secondary">{"Oil and Pen on Canvas"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"NFS"}</Typography>
+                <Typography variant="body2" color="text.secondary">{"SOLD"}</Typography>
               </CardContent>
             </Card>
           </Item>
@@ -2600,7 +2600,7 @@ const ArtworkGallery = () => {
                 </Typography>
                 <Typography variant="body2" color="text.secondary">{"24 X 24 inches"}</Typography>
                 <Typography variant="body2" color="text.secondary">{"Oil on Canvas"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"SOLD"}</Typography>
+                <Typography variant="body2" color="text.secondary">{"Private Collection"}</Typography>
               </CardContent>
             </Card>
           </Item>
@@ -2630,7 +2630,7 @@ const ArtworkGallery = () => {
                 </Typography>
                 <Typography variant="body2" color="text.secondary">{"16 X 20 inches"}</Typography>
                 <Typography variant="body2" color="text.secondary">{"Oil and Pen on Canvas"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"NFS"}</Typography>
+                <Typography variant="body2" color="text.secondary">{"SOLD"}</Typography>
               </CardContent>
             </Card>
           </Item>
@@ -2663,7 +2663,7 @@ const ArtworkGallery = () => {
                 </Typography>
                 <Typography variant="body2" color="text.secondary">{"48 X 60 inches"}</Typography>
                 <Typography variant="body2" color="text.secondary">{"Oil on Canvas"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"NFS"}</Typography>
+                <Typography variant="body2" color="text.secondary">{"SOLD"}</Typography>
               </CardContent>
             </Card>
           </Item>
@@ -2756,37 +2756,7 @@ const ArtworkGallery = () => {
                 </Typography>
                 <Typography variant="body2" color="text.secondary">{"24 X 36 inches"}</Typography>
                 <Typography variant="body2" color="text.secondary">{"Oil on Canvas"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"NFS"}</Typography>
-              </CardContent>
-            </Card>
-          </Item>
-        </Grid>
-        <Grid size={4} item xs="auto">
-          <Item>
-            <Card>
-              {/* <Link to={`/artist/1`}> */}
-              <CardMedia
-                sx={{
-                  backgroundSize: 200,
-                  margin: 5,
-                  width: 200,
-                  height: 250,
-                  cursor: 'pointer'
-                }}
-                image={`${process.env.PUBLIC_URL}/img/artist/gaga_two.jpg`}
-                title={"Untitled 27"}
-                onClick={() => handleImageClick(
-                  `${process.env.PUBLIC_URL}/img/artist/gaga_two.jpg`
-                )}
-              />
-              {/* </Link> */}
-              <CardContent>
-                <Typography gutterBottom variant="h6" component="div">
-                  {"Untitled 27"}
-                </Typography>
-                <Typography variant="body2" color="text.secondary">{"24 X 36 inches"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"Oil on Canvas"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"NFS"}</Typography>
+                <Typography variant="body2" color="text.secondary">{"Private Collection"}</Typography>
               </CardContent>
             </Card>
           </Item>
