@@ -200,7 +200,7 @@ const ArtworkGallery = () => {
                   cursor: 'pointer'
                 }}
                 image={`${process.env.PUBLIC_URL}/img/artist/anthro_lilac.jpg`}
-                title={"Untitled"}
+                title={"Untitled 1"}
                 onClick={() => handleImageClick(
                   `${process.env.PUBLIC_URL}/img/artist/anthro_lilac.jpg`
                 )}
@@ -208,7 +208,7 @@ const ArtworkGallery = () => {
               {/* </Link> */}
               <CardContent>
                 <Typography gutterBottom variant="h6" component="div">
-                  {"Untitled"}
+                  {"Untitled 1"}
                 </Typography>
                 <Typography variant="body2" color="text.secondary">{"24 X 36 inches"}</Typography>
                 <Typography variant="body2" color="text.secondary">{"Oil and Jewels on Canvas"}</Typography>
@@ -356,7 +356,7 @@ const ArtworkGallery = () => {
                   cursor: 'pointer'
                 }}
                 image={`${process.env.PUBLIC_URL}/img/artist/nose_ring.jpg`}
-                title={"Untitled"}
+                title={"Untitled 2"}
                 onClick={() => handleImageClick(
                   `${process.env.PUBLIC_URL}/img/artist/nose_ring.jpg`
                 )}
@@ -364,7 +364,7 @@ const ArtworkGallery = () => {
               {/* </Link> */}
               <CardContent>
                 <Typography gutterBottom variant="h6" component="div">
-                  {"Untitled"}
+                  {"Untitled 2"}
                 </Typography>
                 <Typography variant="body2" color="text.secondary">{"18 X 20 inches"}</Typography>
                 <Typography variant="body2" color="text.secondary">{"Pen on Canvas"}</Typography>
@@ -386,7 +386,7 @@ const ArtworkGallery = () => {
                   cursor: 'pointer'
                 }}
                 image={`${process.env.PUBLIC_URL}/img/artist/longshore.jpg`}
-                title={"Untitled"}
+                title={"Untitled 3"}
                 onClick={() => handleImageClick(
                   `${process.env.PUBLIC_URL}/img/artist/longshore.jpg`
                 )}
@@ -394,7 +394,7 @@ const ArtworkGallery = () => {
               {/* </Link> */}
               <CardContent>
                 <Typography gutterBottom variant="h6" component="div">
-                  {"Untitled"}
+                  {"Untitled 3"}
                 </Typography>
                 <Typography variant="body2" color="text.secondary">{"48 X 48 inches"}</Typography>
                 <Typography variant="body2" color="text.secondary">{"Oil and Jewels on Canvas"}</Typography>
@@ -542,7 +542,7 @@ const ArtworkGallery = () => {
                   cursor: 'pointer'
                 }}
                 image={`${process.env.PUBLIC_URL}/img/artist/jewel_lips.jpg`}
-                title={"Untitled"}
+                title={"Untitled 4"}
                 onClick={() => handleImageClick(
                   `${process.env.PUBLIC_URL}/img/artist/jewel_lips.jpg`
                 )}
@@ -550,7 +550,7 @@ const ArtworkGallery = () => {
               {/* </Link> */}
               <CardContent>
                 <Typography gutterBottom variant="h6" component="div">
-                  {"Untitled"}
+                  {"Untitled 4"}
                 </Typography>
                 <Typography variant="body2" color="text.secondary">{"24 X 30 inches"}</Typography>
                 <Typography variant="body2" color="text.secondary">{"Oil and Jewels on Canvas"}</Typography>
@@ -605,7 +605,7 @@ const ArtworkGallery = () => {
                   cursor: 'pointer'
                 }}
                 image={`${process.env.PUBLIC_URL}/img/artist/big_twiggy.jpg`}
-                title={"Untitled"}
+                title={"Untitled 5"}
                 onClick={() => handleImageClick(
                   `${process.env.PUBLIC_URL}/img/artist/big_twiggy.jpg`
                 )}
@@ -613,7 +613,7 @@ const ArtworkGallery = () => {
               {/* </Link> */}
               <CardContent>
                 <Typography gutterBottom variant="h6" component="div">
-                  {"Untitled"}
+                  {"Untitled 5"}
                 </Typography>
                 <Typography variant="body2" color="text.secondary">{"54 X 72 inches"}</Typography>
                 <Typography variant="body2" color="text.secondary">{"Oil on Canvas"}</Typography>
@@ -728,7 +728,7 @@ const ArtworkGallery = () => {
                   cursor: 'pointer'
                 }}
                 image={`${process.env.PUBLIC_URL}/img/artist/flower4.jpg`}
-                title={"Untitled"}
+                title={"Untitled 6"}
                 onClick={() => handleImageClick(
                   `${process.env.PUBLIC_URL}/img/artist/flower4.jpg`
                 )}
@@ -736,7 +736,7 @@ const ArtworkGallery = () => {
               {/* </Link> */}
               <CardContent>
                 <Typography gutterBottom variant="h6" component="div">
-                  {"Untitled"}
+                  {"Untitled 6"}
                 </Typography>
                 <Typography variant="body2" color="text.secondary">{"16 X 20 inches"}</Typography>
                 <Typography variant="body2" color="text.secondary">{"Oil and Pen on Canvas"}</Typography>
@@ -758,7 +758,7 @@ const ArtworkGallery = () => {
                   cursor: 'pointer'
                 }}
                 image={`${process.env.PUBLIC_URL}/img/artist/rose_glasses.jpg`}
-                title={"Untitled"}
+                title={"Untitled 7"}
                 onClick={() => handleImageClick(
                   `${process.env.PUBLIC_URL}/img/artist/rose_glasses.jpg`
                 )}
@@ -766,7 +766,7 @@ const ArtworkGallery = () => {
               {/* </Link> */}
               <CardContent>
                 <Typography gutterBottom variant="h6" component="div">
-                  {"Untitled"}
+                  {"Untitled 7"}
                 </Typography>
                 <Typography variant="body2" color="text.secondary">{"16 X 20 inches"}</Typography>
                 <Typography variant="body2" color="text.secondary">{"Oil on Canvas"}</Typography>
@@ -944,7 +944,7 @@ const ArtworkGallery = () => {
                   cursor: 'pointer'
                 }}
                 image={`${process.env.PUBLIC_URL}/img/artist/gold_glasses.jpg`}
-                title={"Untitled"}
+                title={"Untitled 8"}
                 onClick={() => handleImageClick(
                   `${process.env.PUBLIC_URL}/img/artist/gold_glasses.jpg`
                 )}
@@ -952,7 +952,7 @@ const ArtworkGallery = () => {
               {/* </Link> */}
               <CardContent>
                 <Typography gutterBottom variant="h6" component="div">
-                  {"Untitled"}
+                  {"Untitled 8"}
                 </Typography>
                 <Typography variant="body2" color="text.secondary">{"12 X 16 inches"}</Typography>
                 <Typography variant="body2" color="text.secondary">{"Oil and Jewel on Canvas"}</Typography>
@@ -977,7 +977,7 @@ const ArtworkGallery = () => {
                   cursor: 'pointer'
                 }}
                 image={`${process.env.PUBLIC_URL}/img/artist/flower2.jpg`}
-                title={"Untitled"}
+                title={"Untitled 9"}
                 onClick={() => handleImageClick(
                   `${process.env.PUBLIC_URL}/img/artist/flower2.jpg`
                 )}
@@ -985,7 +985,7 @@ const ArtworkGallery = () => {
               {/* </Link> */}
               <CardContent>
                 <Typography gutterBottom variant="h6" component="div">
-                  {"Untitled"}
+                  {"Untitled 9"}
                 </Typography>
                 <Typography variant="body2" color="text.secondary">{"12 X 16 inches"}</Typography>
                 <Typography variant="body2" color="text.secondary">{"Oil on Canvas"}</Typography>
@@ -1007,7 +1007,7 @@ const ArtworkGallery = () => {
                   cursor: 'pointer'
                 }}
                 image={`${process.env.PUBLIC_URL}/img/artist/pink_head.jpg`}
-                title={"Untitled"}
+                title={"Untitled 10"}
                 onClick={() => handleImageClick(
                   `${process.env.PUBLIC_URL}/img/artist/pink_head.jpg`
                 )}
@@ -1015,7 +1015,7 @@ const ArtworkGallery = () => {
               {/* </Link> */}
               <CardContent>
                 <Typography gutterBottom variant="h6" component="div">
-                  {"Untitled"}
+                  {"Untitled 10"}
                 </Typography>
                 <Typography variant="body2" color="text.secondary">{"24 X 24 inches"}</Typography>
                 <Typography variant="body2" color="text.secondary">{"Oil on Canvas"}</Typography>
@@ -1037,7 +1037,7 @@ const ArtworkGallery = () => {
                   cursor: 'pointer'
                 }}
                 image={`${process.env.PUBLIC_URL}/img/artist/flower3.jpg`}
-                title={"Untitled"}
+                title={"Untitled 11"}
                 onClick={() => handleImageClick(
                   `${process.env.PUBLIC_URL}/img/artist/flower3.jpg`
                 )}
@@ -1045,7 +1045,7 @@ const ArtworkGallery = () => {
               {/* </Link> */}
               <CardContent>
                 <Typography gutterBottom variant="h6" component="div">
-                  {"Untitled"}
+                  {"Untitled 11"}
                 </Typography>
                 <Typography variant="body2" color="text.secondary">{"16 X 20 inches"}</Typography>
                 <Typography variant="body2" color="text.secondary">{"Oil and Pen on Canvas"}</Typography>
@@ -1070,7 +1070,7 @@ const ArtworkGallery = () => {
                   cursor: 'pointer'
                 }}
                 image={`${process.env.PUBLIC_URL}/img/artist/bored_with_pen.jpg`}
-                title={"Untitled"}
+                title={"Untitled 12"}
                 onClick={() => handleImageClick(
                   `${process.env.PUBLIC_URL}/img/artist/bored_with_pen.jpg`
                 )}
@@ -1078,7 +1078,7 @@ const ArtworkGallery = () => {
               {/* </Link> */}
               <CardContent>
                 <Typography gutterBottom variant="h6" component="div">
-                  {"Untitled"}
+                  {"Untitled 12"}
                 </Typography>
                 <Typography variant="body2" color="text.secondary">{"8 X 11 inches"}</Typography>
                 <Typography variant="body2" color="text.secondary">{"Pen on Paper"}</Typography>
@@ -1130,7 +1130,7 @@ const ArtworkGallery = () => {
                   cursor: 'pointer'
                 }}
                 image={`${process.env.PUBLIC_URL}/img/artist/eye_tattoo.jpg`}
-                title={"Untitled"}
+                title={"Untitled 13"}
                 onClick={() => handleImageClick(
                   `${process.env.PUBLIC_URL}/img/artist/eye_tattoo.jpg`
                 )}
@@ -1138,7 +1138,7 @@ const ArtworkGallery = () => {
               {/* </Link> */}
               <CardContent>
                 <Typography gutterBottom variant="h6" component="div">
-                  {"Untitled"}
+                  {"Untitled 13"}
                 </Typography>
                 <Typography variant="body2" color="text.secondary">{"12 X 16 inches"}</Typography>
                 <Typography variant="body2" color="text.secondary">{"Oil and Pen on Canvas"}</Typography>
@@ -1256,7 +1256,7 @@ const ArtworkGallery = () => {
                   cursor: 'pointer'
                 }}
                 image={`${process.env.PUBLIC_URL}/img/artist/flower1.jpg`}
-                title={"Untitled"}
+                title={"Untitled 14"}
                 onClick={() => handleImageClick(
                   `${process.env.PUBLIC_URL}/img/artist/flower1.jpg`
                 )}
@@ -1264,7 +1264,7 @@ const ArtworkGallery = () => {
               {/* </Link> */}
               <CardContent>
                 <Typography gutterBottom variant="h6" component="div">
-                  {"Untitled"}
+                  {"Untitled 14"}
                 </Typography>
                 <Typography variant="body2" color="text.secondary">{"16 X 20 inches"}</Typography>
                 <Typography variant="body2" color="text.secondary">{"Oil and Pen on Canvas"}</Typography>
@@ -1379,7 +1379,7 @@ const ArtworkGallery = () => {
                   cursor: 'pointer'
                 }}
                 image={`${process.env.PUBLIC_URL}/img/artist/worker_unite.jpg`}
-                title={"Untitled"}
+                title={"Untitled 15"}
                 onClick={() => handleImageClick(
                   `${process.env.PUBLIC_URL}/img/artist/worker_unite.jpg`
                 )}
@@ -1387,7 +1387,7 @@ const ArtworkGallery = () => {
               {/* </Link> */}
               <CardContent>
                 <Typography gutterBottom variant="h6" component="div">
-                  {"Untitled"}
+                  {"Untitled 15"}
                 </Typography>
                 <Typography variant="body2" color="text.secondary">{"18 X 24 inches"}</Typography>
                 <Typography variant="body2" color="text.secondary">{"Oil and Pen on Canvas"}</Typography>
@@ -1409,7 +1409,7 @@ const ArtworkGallery = () => {
                   cursor: 'pointer'
                 }}
                 image={`${process.env.PUBLIC_URL}/img/artist/dianes_daughter.jpg`}
-                title={"Untitled"}
+                title={"Untitled 16"}
                 onClick={() => handleImageClick(
                   `${process.env.PUBLIC_URL}/img/artist/dianes_daughter.jpg`
                 )}
@@ -1417,7 +1417,7 @@ const ArtworkGallery = () => {
               {/* </Link> */}
               <CardContent>
                 <Typography gutterBottom variant="h6" component="div">
-                  {"Untitled"}
+                  {"Untitled 16"}
                 </Typography>
                 <Typography variant="body2" color="text.secondary">{"24 X 30 inches"}</Typography>
                 <Typography variant="body2" color="text.secondary">{"Oil on Canvas"}</Typography>
@@ -1472,7 +1472,7 @@ const ArtworkGallery = () => {
                   cursor: 'pointer'
                 }}
                 image={`${process.env.PUBLIC_URL}/img/artist/brittany_daniels.jpg`}
-                title={"Untitled"}
+                title={"Untitled 17"}
                 onClick={() => handleImageClick(
                   `${process.env.PUBLIC_URL}/img/artist/brittany_daniels.jpg`
                 )}
@@ -1480,7 +1480,7 @@ const ArtworkGallery = () => {
               {/* </Link> */}
               <CardContent>
                 <Typography gutterBottom variant="h6" component="div">
-                  {"Untitled"}
+                  {"Untitled 17"}
                 </Typography>
                 <Typography variant="body2" color="text.secondary">{"24 X 30 inches"}</Typography>
                 <Typography variant="body2" color="text.secondary">{"Oil on Canvas"}</Typography>
@@ -1565,7 +1565,7 @@ const ArtworkGallery = () => {
                   cursor: 'pointer'
                 }}
                 image={`${process.env.PUBLIC_URL}/img/artist/cara_dots.jpg`}
-                title={"Untitled"}
+                title={"Untitled 18"}
                 onClick={() => handleImageClick(
                   `${process.env.PUBLIC_URL}/img/artist/cara_dots.jpg`
                 )}
@@ -1573,7 +1573,7 @@ const ArtworkGallery = () => {
               {/* </Link> */}
               <CardContent>
                 <Typography gutterBottom variant="h6" component="div">
-                  {"Untitled"}
+                  {"Untitled 18"}
                 </Typography>
                 <Typography variant="body2" color="text.secondary">{"48 X 48 inches"}</Typography>
                 <Typography variant="body2" color="text.secondary">{"Oil and Pen on paper"}</Typography>
@@ -1595,7 +1595,7 @@ const ArtworkGallery = () => {
                   cursor: 'pointer'
                 }}
                 image={`${process.env.PUBLIC_URL}/img/artist/shadow_girl.jpg`}
-                title={"Untitled"}
+                title={"Untitled 19"}
                 onClick={() => handleImageClick(
                   `${process.env.PUBLIC_URL}/img/artist/shadow_girl.jpg`
                 )}
@@ -1603,7 +1603,7 @@ const ArtworkGallery = () => {
               {/* </Link> */}
               <CardContent>
                 <Typography gutterBottom variant="h6" component="div">
-                  {"Untitled"}
+                  {"Untitled 19"}
                 </Typography>
                 <Typography variant="body2" color="text.secondary">{"12 X 16 inches"}</Typography>
                 <Typography variant="body2" color="text.secondary">{"Oil on Canvas"}</Typography>
@@ -1751,7 +1751,7 @@ const ArtworkGallery = () => {
                   cursor: 'pointer'
                 }}
                 image={`${process.env.PUBLIC_URL}/img/artist/wife.jpg`}
-                title={"Untitled"}
+                title={"Untitled 20"}
                 onClick={() => handleImageClick(
                   `${process.env.PUBLIC_URL}/img/artist/wife.jpg`
                 )}
@@ -1759,7 +1759,7 @@ const ArtworkGallery = () => {
               {/* </Link> */}
               <CardContent>
                 <Typography gutterBottom variant="h6" component="div">
-                  {"Untitled"}
+                  {"Untitled 20"}
                 </Typography>
                 <Typography variant="body2" color="text.secondary">{"24 X 30 inches"}</Typography>
                 <Typography variant="body2" color="text.secondary">{"Oil on Canvas"}</Typography>
@@ -1907,7 +1907,7 @@ const ArtworkGallery = () => {
                   cursor: 'pointer'
                 }}
                 image={`${process.env.PUBLIC_URL}/img/artist/bill.jpg`}
-                title={"Untitled"}
+                title={"Untitled 21"}
                 onClick={() => handleImageClick(
                   `${process.env.PUBLIC_URL}/img/artist/bill.jpg`
                 )}
@@ -1915,7 +1915,7 @@ const ArtworkGallery = () => {
               {/* </Link> */}
               <CardContent>
                 <Typography gutterBottom variant="h6" component="div">
-                  {"Untitled"}
+                  {"Untitled 21"}
                 </Typography>
                 <Typography variant="body2" color="text.secondary">{"24 X 36 inches"}</Typography>
                 <Typography variant="body2" color="text.secondary">{"Oil on Canvas"}</Typography>
@@ -2000,7 +2000,7 @@ const ArtworkGallery = () => {
                   cursor: 'pointer'
                 }}
                 image={`${process.env.PUBLIC_URL}/img/artist/gaga_one.jpg`}
-                title={"Untitled"}
+                title={"Untitled 22"}
                 onClick={() => handleImageClick(
                   `${process.env.PUBLIC_URL}/img/artist/gaga_one.jpg`
                 )}
@@ -2008,7 +2008,7 @@ const ArtworkGallery = () => {
               {/* </Link> */}
               <CardContent>
                 <Typography gutterBottom variant="h6" component="div">
-                  {"Untitled"}
+                  {"Untitled 22"}
                 </Typography>
                 <Typography variant="body2" color="text.secondary">{"22 X 28 inches"}</Typography>
                 <Typography variant="body2" color="text.secondary">{"Oil on Canvas"}</Typography>
@@ -2030,7 +2030,7 @@ const ArtworkGallery = () => {
                   cursor: 'pointer'
                 }}
                 image={`${process.env.PUBLIC_URL}/img/artist/imp_garden.jpg`}
-                title={"Untitled"}
+                title={"Untitled 23"}
                 onClick={() => handleImageClick(
                   `${process.env.PUBLIC_URL}/img/artist/imp_garden.jpg`
                 )}
@@ -2038,7 +2038,7 @@ const ArtworkGallery = () => {
               {/* </Link> */}
               <CardContent>
                 <Typography gutterBottom variant="h6" component="div">
-                  {"Untitled"}
+                  {"Untitled 23"}
                 </Typography>
                 <Typography variant="body2" color="text.secondary">{"16 X 20 inches"}</Typography>
                 <Typography variant="body2" color="text.secondary">{"Oil on Canvas"}</Typography>
@@ -2060,7 +2060,7 @@ const ArtworkGallery = () => {
                   cursor: 'pointer'
                 }}
                 image={`${process.env.PUBLIC_URL}/img/artist/imp_kite.jpg`}
-                title={"Untitled"}
+                title={"Untitled 24"}
                 onClick={() => handleImageClick(
                   `${process.env.PUBLIC_URL}/img/artist/imp_kite.jpg`
                 )}
@@ -2068,9 +2068,723 @@ const ArtworkGallery = () => {
               {/* </Link> */}
               <CardContent>
                 <Typography gutterBottom variant="h6" component="div">
-                  {"Untitled"}
+                  {"Untitled 24"}
                 </Typography>
                 <Typography variant="body2" color="text.secondary">{"16 X 20 inches"}</Typography>
+                <Typography variant="body2" color="text.secondary">{"Oil on Canvas"}</Typography>
+                <Typography variant="body2" color="text.secondary">{"NFS"}</Typography>
+              </CardContent>
+            </Card>
+          </Item>
+        </Grid>
+      </Grid>
+      <br />
+      <Grid container spacing={2} wrap="nowrap">
+        <Grid size={4} item xs="auto">
+          <Item>
+            <Card>
+              {/* <Link to={`/artist/1`}> */}
+              <CardMedia
+                sx={{
+                  backgroundSize: 200,
+                  margin: 5,
+                  width: 200,
+                  height: 250,
+                  cursor: 'pointer'
+                }}
+                image={`${process.env.PUBLIC_URL}/img/artist/brittany_one.jpg`}
+                title={"Brittany in Light"}
+                onClick={() => handleImageClick(
+                  `${process.env.PUBLIC_URL}/img/artist/brittany_one.jpg`
+                )}
+              />
+              {/* </Link> */}
+              <CardContent>
+                <Typography gutterBottom variant="h6" component="div">
+                  {"Brittany in Light"}
+                </Typography>
+                <Typography variant="body2" color="text.secondary">{"16 X 20 inches"}</Typography>
+                <Typography variant="body2" color="text.secondary">{"Oil on Canvas"}</Typography>
+                <Typography variant="body2" color="text.secondary">{"NFS"}</Typography>
+              </CardContent>
+            </Card>
+          </Item>
+        </Grid>
+        <Grid size={4} item xs="auto">
+          <Item>
+            <Card>
+              {/* <Link to={`/artist/1`}> */}
+              <CardMedia
+                sx={{
+                  backgroundSize: 200,
+                  margin: 5,
+                  width: 200,
+                  height: 250,
+                  cursor: 'pointer'
+                }}
+                image={`${process.env.PUBLIC_URL}/img/artist/yunis.jpg`}
+                title={"Yunis"}
+                onClick={() => handleImageClick(
+                  `${process.env.PUBLIC_URL}/img/artist/yunis.jpg`
+                )}
+              />
+              {/* </Link> */}
+              <CardContent>
+                <Typography gutterBottom variant="h6" component="div">
+                  {"Yunis"}
+                </Typography>
+                <Typography variant="body2" color="text.secondary">{"48 X 78 inches"}</Typography>
+                <Typography variant="body2" color="text.secondary">{"Oil on Canvas"}</Typography>
+                <Typography variant="body2" color="text.secondary">{"NFS"}</Typography>
+              </CardContent>
+            </Card>
+          </Item>
+        </Grid>
+        <Grid size={4} item xs="auto">
+          <Item>
+            <Card>
+              {/* <Link to={`/artist/1`}> */}
+              <CardMedia
+                sx={{
+                  backgroundSize: 200,
+                  margin: 5,
+                  width: 200,
+                  height: 250,
+                  cursor: 'pointer'
+                }}
+                image={`${process.env.PUBLIC_URL}/img/artist/brittany_two.jpg`}
+                title={"Hidden Brittany"}
+                onClick={() => handleImageClick(
+                  `${process.env.PUBLIC_URL}/img/artist/brittany_two.jpg`
+                )}
+              />
+              {/* </Link> */}
+              <CardContent>
+                <Typography gutterBottom variant="h6" component="div">
+                  {"Hidden Brittany"}
+                </Typography>
+                <Typography variant="body2" color="text.secondary">{"16 X 20 inches"}</Typography>
+                <Typography variant="body2" color="text.secondary">{"Oil on Canvas"}</Typography>
+                <Typography variant="body2" color="text.secondary">{"NFS"}</Typography>
+              </CardContent>
+            </Card>
+          </Item>
+        </Grid>
+      </Grid>
+      <br />
+      <Grid container spacing={2} wrap="nowrap">
+        <Grid size={4} item xs="auto">
+          <Item>
+            <Card>
+              {/* <Link to={`/artist/1`}> */}
+              <CardMedia
+                sx={{
+                  backgroundSize: 200,
+                  margin: 5,
+                  width: 200,
+                  height: 250,
+                  cursor: 'pointer'
+                }}
+                image={`${process.env.PUBLIC_URL}/img/artist/nude_one.jpg`}
+                title={"For Tourian"}
+                onClick={() => handleImageClick(
+                  `${process.env.PUBLIC_URL}/img/artist/nude_one.jpg`
+                )}
+              />
+              {/* </Link> */}
+              <CardContent>
+                <Typography gutterBottom variant="h6" component="div">
+                  {"For Tourian"}
+                </Typography>
+                <Typography variant="body2" color="text.secondary">{"36 X 48 inches"}</Typography>
+                <Typography variant="body2" color="text.secondary">{"Oil on Canvas"}</Typography>
+                <Typography variant="body2" color="text.secondary">{"NFS"}</Typography>
+              </CardContent>
+            </Card>
+          </Item>
+        </Grid>
+        <Grid size={4} item xs="auto">
+          <Item>
+            <Card>
+              {/* <Link to={`/artist/1`}> */}
+              <CardMedia
+                sx={{
+                  backgroundSize: 200,
+                  margin: 5,
+                  width: 200,
+                  height: 250,
+                  cursor: 'pointer'
+                }}
+                image={`${process.env.PUBLIC_URL}/img/artist/yingers.jpg`}
+                title={"Yingers"}
+                onClick={() => handleImageClick(
+                  `${process.env.PUBLIC_URL}/img/artist/yingers.jpg`
+                )}
+              />
+              {/* </Link> */}
+              <CardContent>
+                <Typography gutterBottom variant="h6" component="div">
+                  {"Yingers"}
+                </Typography>
+                <Typography variant="body2" color="text.secondary">{"16 X 20 inches"}</Typography>
+                <Typography variant="body2" color="text.secondary">{"Oil on Canvas"}</Typography>
+                <Typography variant="body2" color="text.secondary">{"NFS"}</Typography>
+              </CardContent>
+            </Card>
+          </Item>
+        </Grid>
+        <Grid size={4} item xs="auto">
+          <Item>
+            <Card>
+              {/* <Link to={`/artist/1`}> */}
+              <CardMedia
+                sx={{
+                  backgroundSize: 200,
+                  margin: 5,
+                  width: 200,
+                  height: 250,
+                  cursor: 'pointer'
+                }}
+                image={`${process.env.PUBLIC_URL}/img/artist/seether.jpg`}
+                title={"Seether"}
+                onClick={() => handleImageClick(
+                  `${process.env.PUBLIC_URL}/img/artist/seether.jpg`
+                )}
+              />
+              {/* </Link> */}
+              <CardContent>
+                <Typography gutterBottom variant="h6" component="div">
+                  {"Seether"}
+                </Typography>
+                <Typography variant="body2" color="text.secondary">{"36 X 60 inches"}</Typography>
+                <Typography variant="body2" color="text.secondary">{"Oil on Canvas"}</Typography>
+                <Typography variant="body2" color="text.secondary">{"NFS"}</Typography>
+              </CardContent>
+            </Card>
+          </Item>
+        </Grid>
+      </Grid>
+      <br />
+      <Grid container spacing={2} wrap="nowrap">
+        <Grid size={4} item xs="auto">
+          <Item>
+            <Card>
+              {/* <Link to={`/artist/1`}> */}
+              <CardMedia
+                sx={{
+                  backgroundSize: 200,
+                  margin: 5,
+                  width: 200,
+                  height: 250,
+                  cursor: 'pointer'
+                }}
+                image={`${process.env.PUBLIC_URL}/img/artist/kowalik.jpg`}
+                title={"Kowalik"}
+                onClick={() => handleImageClick(
+                  `${process.env.PUBLIC_URL}/img/artist/kowalik.jpg`
+                )}
+              />
+              {/* </Link> */}
+              <CardContent>
+                <Typography gutterBottom variant="h6" component="div">
+                  {"Kowalik"}
+                </Typography>
+                <Typography variant="body2" color="text.secondary">{"16 X 20 inches"}</Typography>
+                <Typography variant="body2" color="text.secondary">{"Oil and Pen on Canvas"}</Typography>
+                <Typography variant="body2" color="text.secondary">{"NFS"}</Typography>
+              </CardContent>
+            </Card>
+          </Item>
+        </Grid>
+        <Grid size={4} item xs="auto">
+          <Item>
+            <Card>
+              {/* <Link to={`/artist/1`}> */}
+              <CardMedia
+                sx={{
+                  backgroundSize: 200,
+                  margin: 5,
+                  width: 200,
+                  height: 250,
+                  cursor: 'pointer'
+                }}
+                image={`${process.env.PUBLIC_URL}/img/artist/hadia.jpg`}
+                title={"Hadia"}
+                onClick={() => handleImageClick(
+                  `${process.env.PUBLIC_URL}/img/artist/hadia.jpg`
+                )}
+              />
+              {/* </Link> */}
+              <CardContent>
+                <Typography gutterBottom variant="h6" component="div">
+                  {"Hadia"}
+                </Typography>
+                <Typography variant="body2" color="text.secondary">{"16 X 20 inches"}</Typography>
+                <Typography variant="body2" color="text.secondary">{"Oil and Pen on Canvas"}</Typography>
+                <Typography variant="body2" color="text.secondary">{"NFS"}</Typography>
+              </CardContent>
+            </Card>
+          </Item>
+        </Grid>
+        <Grid size={4} item xs="auto">
+          <Item>
+            <Card>
+              {/* <Link to={`/artist/1`}> */}
+              <CardMedia
+                sx={{
+                  backgroundSize: 200,
+                  margin: 5,
+                  width: 200,
+                  height: 250,
+                  cursor: 'pointer'
+                }}
+                image={`${process.env.PUBLIC_URL}/img/artist/gidget.jpg`}
+                title={"Gidget"}
+                onClick={() => handleImageClick(
+                  `${process.env.PUBLIC_URL}/img/artist/gidget.jpg`
+                )}
+              />
+              {/* </Link> */}
+              <CardContent>
+                <Typography gutterBottom variant="h6" component="div">
+                  {"Gidget"}
+                </Typography>
+                <Typography variant="body2" color="text.secondary">{"11 X 14 inches"}</Typography>
+                <Typography variant="body2" color="text.secondary">{"Oil and Pen on Canvas"}</Typography>
+                <Typography variant="body2" color="text.secondary">{"NFS"}</Typography>
+              </CardContent>
+            </Card>
+          </Item>
+        </Grid>
+      </Grid>
+      <br />
+      <Grid container spacing={2} wrap="nowrap">
+        <Grid size={4} item xs="auto">
+          <Item>
+            <Card>
+              {/* <Link to={`/artist/1`}> */}
+              <CardMedia
+                sx={{
+                  backgroundSize: 200,
+                  margin: 5,
+                  width: 200,
+                  height: 250,
+                  cursor: 'pointer'
+                }}
+                image={`${process.env.PUBLIC_URL}/img/artist/jewel.jpg`}
+                title={"Untitled 25"}
+                onClick={() => handleImageClick(
+                  `${process.env.PUBLIC_URL}/img/artist/jewel.jpg`
+                )}
+              />
+              {/* </Link> */}
+              <CardContent>
+                <Typography gutterBottom variant="h6" component="div">
+                  {"Untitled 25"}
+                </Typography>
+                <Typography variant="body2" color="text.secondary">{"11 X 14 inches"}</Typography>
+                <Typography variant="body2" color="text.secondary">{"Oil and Pen on Canvas"}</Typography>
+                <Typography variant="body2" color="text.secondary">{"NFS"}</Typography>
+              </CardContent>
+            </Card>
+          </Item>
+        </Grid>
+        <Grid size={4} item xs="auto">
+          <Item>
+            <Card>
+              {/* <Link to={`/artist/1`}> */}
+              <CardMedia
+                sx={{
+                  backgroundSize: 200,
+                  margin: 5,
+                  width: 200,
+                  height: 250,
+                  cursor: 'pointer'
+                }}
+                image={`${process.env.PUBLIC_URL}/img/artist/iris.jpg`}
+                title={"Iris"}
+                onClick={() => handleImageClick(
+                  `${process.env.PUBLIC_URL}/img/artist/iris.jpg`
+                )}
+              />
+              {/* </Link> */}
+              <CardContent>
+                <Typography gutterBottom variant="h6" component="div">
+                  {"Iris"}
+                </Typography>
+                <Typography variant="body2" color="text.secondary">{"16 X 20 inches"}</Typography>
+                <Typography variant="body2" color="text.secondary">{"Oil on Canvas"}</Typography>
+                <Typography variant="body2" color="text.secondary">{"NFS"}</Typography>
+              </CardContent>
+            </Card>
+          </Item>
+        </Grid>
+        <Grid size={4} item xs="auto">
+          <Item>
+            <Card>
+              {/* <Link to={`/artist/1`}> */}
+              <CardMedia
+                sx={{
+                  backgroundSize: 200,
+                  margin: 5,
+                  width: 200,
+                  height: 250,
+                  cursor: 'pointer'
+                }}
+                image={`${process.env.PUBLIC_URL}/img/artist/clown_contractors.jpg`}
+                title={"Clown Contractors"}
+                onClick={() => handleImageClick(
+                  `${process.env.PUBLIC_URL}/img/artist/clown_contractors.jpg`
+                )}
+              />
+              {/* </Link> */}
+              <CardContent>
+                <Typography gutterBottom variant="h6" component="div">
+                  {"Clown Contractors"}
+                </Typography>
+                <Typography variant="body2" color="text.secondary">{"11 X 14 inches"}</Typography>
+                <Typography variant="body2" color="text.secondary">{"Oil on Canvas"}</Typography>
+                <Typography variant="body2" color="text.secondary">{"NFS"}</Typography>
+              </CardContent>
+            </Card>
+          </Item>
+        </Grid>
+      </Grid>
+      <br />
+      <Grid container spacing={2} wrap="nowrap">
+        <Grid size={4} item xs="auto">
+          <Item>
+            <Card>
+              {/* <Link to={`/artist/1`}> */}
+              <CardMedia
+                sx={{
+                  backgroundSize: 200,
+                  margin: 5,
+                  width: 200,
+                  height: 250,
+                  cursor: 'pointer'
+                }}
+                image={`${process.env.PUBLIC_URL}/img/artist/bolero.jpg`}
+                title={"Bolero"}
+                onClick={() => handleImageClick(
+                  `${process.env.PUBLIC_URL}/img/artist/bolero.jpg`
+                )}
+              />
+              {/* </Link> */}
+              <CardContent>
+                <Typography gutterBottom variant="h6" component="div">
+                  {"Bolero"}
+                </Typography>
+                <Typography variant="body2" color="text.secondary">{"16 X 20 inches"}</Typography>
+                <Typography variant="body2" color="text.secondary">{"Oil on Canvas"}</Typography>
+                <Typography variant="body2" color="text.secondary">{"NFS"}</Typography>
+              </CardContent>
+            </Card>
+          </Item>
+        </Grid>
+        <Grid size={4} item xs="auto">
+          <Item>
+            <Card>
+              {/* <Link to={`/artist/1`}> */}
+              <CardMedia
+                sx={{
+                  backgroundSize: 200,
+                  margin: 5,
+                  width: 200,
+                  height: 250,
+                  cursor: 'pointer'
+                }}
+                image={`${process.env.PUBLIC_URL}/img/artist/candlelight_portrait.jpg`}
+                title={"Candlelight Portrait"}
+                onClick={() => handleImageClick(
+                  `${process.env.PUBLIC_URL}/img/artist/candlelight_portrait.jpg`
+                )}
+              />
+              {/* </Link> */}
+              <CardContent>
+                <Typography gutterBottom variant="h6" component="div">
+                  {"Candlelight Portrait"}
+                </Typography>
+                <Typography variant="body2" color="text.secondary">{"22 X 28 inches"}</Typography>
+                <Typography variant="body2" color="text.secondary">{"Oil on Canvas"}</Typography>
+                <Typography variant="body2" color="text.secondary">{"NFS"}</Typography>
+              </CardContent>
+            </Card>
+          </Item>
+        </Grid>
+        <Grid size={4} item xs="auto">
+          <Item>
+            <Card>
+              {/* <Link to={`/artist/1`}> */}
+              <CardMedia
+                sx={{
+                  backgroundSize: 200,
+                  margin: 5,
+                  width: 200,
+                  height: 250,
+                  cursor: 'pointer'
+                }}
+                image={`${process.env.PUBLIC_URL}/img/artist/koris_eyesoar.jpg`}
+                title={"Kori's Eyesoar"}
+                onClick={() => handleImageClick(
+                  `${process.env.PUBLIC_URL}/img/artist/koris_eyesoar.jpg`
+                )}
+              />
+              {/* </Link> */}
+              <CardContent>
+                <Typography gutterBottom variant="h6" component="div">
+                  {"Kori's Eyesoar"}
+                </Typography>
+                <Typography variant="body2" color="text.secondary">{"24 X 36 inches"}</Typography>
+                <Typography variant="body2" color="text.secondary">{"Oil on Canvas"}</Typography>
+                <Typography variant="body2" color="text.secondary">{"NFS"}</Typography>
+              </CardContent>
+            </Card>
+          </Item>
+        </Grid>
+      </Grid>
+      <br />
+      <Grid container spacing={2} wrap="nowrap">
+        <Grid size={4} item xs="auto">
+          <Item>
+            <Card>
+              {/* <Link to={`/artist/1`}> */}
+              <CardMedia
+                sx={{
+                  backgroundSize: 200,
+                  margin: 5,
+                  width: 200,
+                  height: 250,
+                  cursor: 'pointer'
+                }}
+                image={`${process.env.PUBLIC_URL}/img/artist/birkner.jpg`}
+                title={"Birkner"}
+                onClick={() => handleImageClick(
+                  `${process.env.PUBLIC_URL}/img/artist/birkner.jpg`
+                )}
+              />
+              {/* </Link> */}
+              <CardContent>
+                <Typography gutterBottom variant="h6" component="div">
+                  {"Birkner"}
+                </Typography>
+                <Typography variant="body2" color="text.secondary">{"22 X 28 inches"}</Typography>
+                <Typography variant="body2" color="text.secondary">{"Oil and Pen on Canvas"}</Typography>
+                <Typography variant="body2" color="text.secondary">{"NFS"}</Typography>
+              </CardContent>
+            </Card>
+          </Item>
+        </Grid>
+        <Grid size={4} item xs="auto">
+          <Item>
+            <Card>
+              {/* <Link to={`/artist/1`}> */}
+              <CardMedia
+                sx={{
+                  backgroundSize: 200,
+                  margin: 5,
+                  width: 200,
+                  height: 250,
+                  cursor: 'pointer'
+                }}
+                image={`${process.env.PUBLIC_URL}/img/artist/butterfly_eye.jpg`}
+                title={"Untitled 26"}
+                onClick={() => handleImageClick(
+                  `${process.env.PUBLIC_URL}/img/artist/butterfly_eye.jpg`
+                )}
+              />
+              {/* </Link> */}
+              <CardContent>
+                <Typography gutterBottom variant="h6" component="div">
+                  {"Untitled 26"}
+                </Typography>
+                <Typography variant="body2" color="text.secondary">{"24 X 24 inches"}</Typography>
+                <Typography variant="body2" color="text.secondary">{"Oil on Canvas"}</Typography>
+                <Typography variant="body2" color="text.secondary">{"SOLD"}</Typography>
+              </CardContent>
+            </Card>
+          </Item>
+        </Grid>
+        <Grid size={4} item xs="auto">
+          <Item>
+            <Card>
+              {/* <Link to={`/artist/1`}> */}
+              <CardMedia
+                sx={{
+                  backgroundSize: 200,
+                  margin: 5,
+                  width: 200,
+                  height: 250,
+                  cursor: 'pointer'
+                }}
+                image={`${process.env.PUBLIC_URL}/img/artist/darlington.jpg`}
+                title={"Darlington"}
+                onClick={() => handleImageClick(
+                  `${process.env.PUBLIC_URL}/img/artist/darlington.jpg`
+                )}
+              />
+              {/* </Link> */}
+              <CardContent>
+                <Typography gutterBottom variant="h6" component="div">
+                  {"Darlington"}
+                </Typography>
+                <Typography variant="body2" color="text.secondary">{"16 X 20 inches"}</Typography>
+                <Typography variant="body2" color="text.secondary">{"Oil and Pen on Canvas"}</Typography>
+                <Typography variant="body2" color="text.secondary">{"NFS"}</Typography>
+              </CardContent>
+            </Card>
+          </Item>
+        </Grid>
+      </Grid>
+      <br />
+      <Grid container spacing={2} wrap="nowrap">
+        <Grid size={4} item xs="auto">
+          <Item>
+            <Card>
+              {/* <Link to={`/artist/1`}> */}
+              <CardMedia
+                sx={{
+                  backgroundSize: 200,
+                  margin: 5,
+                  width: 200,
+                  height: 250,
+                  cursor: 'pointer'
+                }}
+                image={`${process.env.PUBLIC_URL}/img/artist/mindy.jpg`}
+                title={"Mindy"}
+                onClick={() => handleImageClick(
+                  `${process.env.PUBLIC_URL}/img/artist/mindy.jpg`
+                )}
+              />
+              {/* </Link> */}
+              <CardContent>
+                <Typography gutterBottom variant="h6" component="div">
+                  {"Mindy"}
+                </Typography>
+                <Typography variant="body2" color="text.secondary">{"48 X 60 inches"}</Typography>
+                <Typography variant="body2" color="text.secondary">{"Oil on Canvas"}</Typography>
+                <Typography variant="body2" color="text.secondary">{"NFS"}</Typography>
+              </CardContent>
+            </Card>
+          </Item>
+        </Grid>
+        <Grid size={4} item xs="auto">
+          <Item>
+            <Card>
+              {/* <Link to={`/artist/1`}> */}
+              <CardMedia
+                sx={{
+                  backgroundSize: 200,
+                  margin: 5,
+                  width: 200,
+                  height: 250,
+                  cursor: 'pointer'
+                }}
+                image={`${process.env.PUBLIC_URL}/img/artist/mark.jpg`}
+                title={"Mark"}
+                onClick={() => handleImageClick(
+                  `${process.env.PUBLIC_URL}/img/artist/mark.jpg`
+                )}
+              />
+              {/* </Link> */}
+              <CardContent>
+                <Typography gutterBottom variant="h6" component="div">
+                  {"Mark"}
+                </Typography>
+                <Typography variant="body2" color="text.secondary">{"12 X 18 inches"}</Typography>
+                <Typography variant="body2" color="text.secondary">{"Oil on Canvas"}</Typography>
+                <Typography variant="body2" color="text.secondary">{"SOLD"}</Typography>
+              </CardContent>
+            </Card>
+          </Item>
+        </Grid>
+        <Grid size={4} item xs="auto">
+          <Item>
+            <Card>
+              {/* <Link to={`/artist/1`}> */}
+              <CardMedia
+                sx={{
+                  backgroundSize: 200,
+                  margin: 5,
+                  width: 200,
+                  height: 250,
+                  cursor: 'pointer'
+                }}
+                image={`${process.env.PUBLIC_URL}/img/artist/lindsey.jpg`}
+                title={"Lindsey"}
+                onClick={() => handleImageClick(
+                  `${process.env.PUBLIC_URL}/img/artist/lindsey.jpg`
+                )}
+              />
+              {/* </Link> */}
+              <CardContent>
+                <Typography gutterBottom variant="h6" component="div">
+                  {"Lindsey"}
+                </Typography>
+                <Typography variant="body2" color="text.secondary">{"12 X 18 inches"}</Typography>
+                <Typography variant="body2" color="text.secondary">{"Oil on Canvas"}</Typography>
+                <Typography variant="body2" color="text.secondary">{"SOLD"}</Typography>
+              </CardContent>
+            </Card>
+          </Item>
+        </Grid>
+      </Grid>
+      <br />
+      <Grid container spacing={2} wrap="nowrap">
+        <Grid size={4} item xs="auto">
+          <Item>
+            <Card>
+              {/* <Link to={`/artist/1`}> */}
+              <CardMedia
+                sx={{
+                  backgroundSize: 200,
+                  margin: 5,
+                  width: 200,
+                  height: 250,
+                  cursor: 'pointer'
+                }}
+                image={`${process.env.PUBLIC_URL}/img/artist/liquor_bottles.jpg`}
+                title={"Liquor Bottles and Flowers"}
+                onClick={() => handleImageClick(
+                  `${process.env.PUBLIC_URL}/img/artist/liquor_bottles.jpg`
+                )}
+              />
+              {/* </Link> */}
+              <CardContent>
+                <Typography gutterBottom variant="h6" component="div">
+                  {"Liquor Bottles and Flowers"}
+                </Typography>
+                <Typography variant="body2" color="text.secondary">{"24 X 36 inches"}</Typography>
+                <Typography variant="body2" color="text.secondary">{"Oil on Canvas"}</Typography>
+                <Typography variant="body2" color="text.secondary">{"NFS"}</Typography>
+              </CardContent>
+            </Card>
+          </Item>
+        </Grid>
+        <Grid size={4} item xs="auto">
+          <Item>
+            <Card>
+              {/* <Link to={`/artist/1`}> */}
+              <CardMedia
+                sx={{
+                  backgroundSize: 200,
+                  margin: 5,
+                  width: 200,
+                  height: 250,
+                  cursor: 'pointer'
+                }}
+                image={`${process.env.PUBLIC_URL}/img/artist/gaga_two.jpg`}
+                title={"Untitled 27"}
+                onClick={() => handleImageClick(
+                  `${process.env.PUBLIC_URL}/img/artist/gaga_two.jpg`
+                )}
+              />
+              {/* </Link> */}
+              <CardContent>
+                <Typography gutterBottom variant="h6" component="div">
+                  {"Untitled 27"}
+                </Typography>
+                <Typography variant="body2" color="text.secondary">{"24 X 36 inches"}</Typography>
                 <Typography variant="body2" color="text.secondary">{"Oil on Canvas"}</Typography>
                 <Typography variant="body2" color="text.secondary">{"NFS"}</Typography>
               </CardContent>
