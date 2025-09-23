@@ -1545,7 +1545,533 @@ const ArtworkGallery = () => {
                 <Typography gutterBottom variant="h6" component="div">
                   {"Alice"}
                 </Typography>
+                <Typography variant="body2" color="text.secondary">{"8 X 11 inches"}</Typography>
                 <Typography variant="body2" color="text.secondary">{"Pen on paper"}</Typography>
+                <Typography variant="body2" color="text.secondary">{"NFS"}</Typography>
+              </CardContent>
+            </Card>
+          </Item>
+        </Grid>
+        <Grid size={4} item xs="auto">
+          <Item>
+            <Card>
+              {/* <Link to={`/artist/1`}> */}
+              <CardMedia
+                sx={{
+                  backgroundSize: 200,
+                  margin: 5,
+                  width: 200,
+                  height: 250,
+                  cursor: 'pointer'
+                }}
+                image={`${process.env.PUBLIC_URL}/img/artist/cara_dots.jpg`}
+                title={"Untitled"}
+                onClick={() => handleImageClick(
+                  `${process.env.PUBLIC_URL}/img/artist/cara_dots.jpg`
+                )}
+              />
+              {/* </Link> */}
+              <CardContent>
+                <Typography gutterBottom variant="h6" component="div">
+                  {"Untitled"}
+                </Typography>
+                <Typography variant="body2" color="text.secondary">{"48 X 48 inches"}</Typography>
+                <Typography variant="body2" color="text.secondary">{"Oil and Pen on paper"}</Typography>
+                <Typography variant="body2" color="text.secondary">{"NFS"}</Typography>
+              </CardContent>
+            </Card>
+          </Item>
+        </Grid>
+        <Grid size={4} item xs="auto">
+          <Item>
+            <Card>
+              {/* <Link to={`/artist/1`}> */}
+              <CardMedia
+                sx={{
+                  backgroundSize: 200,
+                  margin: 5,
+                  width: 200,
+                  height: 250,
+                  cursor: 'pointer'
+                }}
+                image={`${process.env.PUBLIC_URL}/img/artist/shadow_girl.jpg`}
+                title={"Untitled"}
+                onClick={() => handleImageClick(
+                  `${process.env.PUBLIC_URL}/img/artist/shadow_girl.jpg`
+                )}
+              />
+              {/* </Link> */}
+              <CardContent>
+                <Typography gutterBottom variant="h6" component="div">
+                  {"Untitled"}
+                </Typography>
+                <Typography variant="body2" color="text.secondary">{"12 X 16 inches"}</Typography>
+                <Typography variant="body2" color="text.secondary">{"Oil on Canvas"}</Typography>
+                <Typography variant="body2" color="text.secondary">{"NFS"}</Typography>
+              </CardContent>
+            </Card>
+          </Item>
+        </Grid>
+      </Grid>
+      <br />
+      <Grid container spacing={2} wrap="nowrap">
+        <Grid size={4} item xs="auto">
+          <Item>
+            <Card>
+              {/* <Link to={`/artist/1`}> */}
+              <CardMedia
+                sx={{
+                  backgroundSize: 200,
+                  margin: 5,
+                  width: 200,
+                  height: 250,
+                  cursor: 'pointer'
+                }}
+                image={`${process.env.PUBLIC_URL}/img/artist/cara_dots_two.jpg`}
+                title={"Cara Primer"}
+                onClick={() => handleImageClick(
+                  `${process.env.PUBLIC_URL}/img/artist/cara_dots_two.jpg`
+                )}
+              />
+              {/* </Link> */}
+              <CardContent>
+                <Typography gutterBottom variant="h6" component="div">
+                  {"Cara Primer"}
+                </Typography>
+                <Typography variant="body2" color="text.secondary">{"30 X 40 inches"}</Typography>
+                <Typography variant="body2" color="text.secondary">{"Pen on Canvas"}</Typography>
+                <Typography variant="body2" color="text.secondary">{"NFS"}</Typography>
+              </CardContent>
+            </Card>
+          </Item>
+        </Grid>
+        <Grid size={4} item xs="auto">
+          <Item>
+            <Card>
+              {/* <Link to={`/artist/1`}> */}
+              <CardMedia
+                sx={{
+                  backgroundSize: 200,
+                  margin: 5,
+                  width: 200,
+                  height: 250,
+                  cursor: 'pointer'
+                }}
+                image={`${process.env.PUBLIC_URL}/img/artist/imp_bedpost.jpg`}
+                title={"Spring Rises"}
+                onClick={() => handleImageClick(
+                  `${process.env.PUBLIC_URL}/img/artist/imp_bedpost.jpg`
+                )}
+              />
+              {/* </Link> */}
+              <CardContent>
+                <Typography gutterBottom variant="h6" component="div">
+                  {"Spring Rises"}
+                </Typography>
+                <Typography variant="body2" color="text.secondary">{"24 X 30 inches"}</Typography>
+                <Typography variant="body2" color="text.secondary">{"Oil on Canvas"}</Typography>
+                <Typography variant="body2" color="text.secondary">{"NFS"}</Typography>
+              </CardContent>
+            </Card>
+          </Item>
+        </Grid>
+        <Grid size={4} item xs="auto">
+          <Item>
+            <Card>
+              {/* <Link to={`/artist/1`}> */}
+              <CardMedia
+                sx={{
+                  backgroundSize: 200,
+                  margin: 5,
+                  width: 200,
+                  height: 250,
+                  cursor: 'pointer'
+                }}
+                image={`${process.env.PUBLIC_URL}/img/artist/heart_glasses.jpg`}
+                title={"Heart Vision"}
+                onClick={() => handleImageClick(
+                  `${process.env.PUBLIC_URL}/img/artist/heart_glasses.jpg`
+                )}
+              />
+              {/* </Link> */}
+              <CardContent>
+                <Typography gutterBottom variant="h6" component="div">
+                  {"Heart Vision"}
+                </Typography>
+                <Typography variant="body2" color="text.secondary">{"16 X 20 inches"}</Typography>
+                <Typography variant="body2" color="text.secondary">{"Oil on Canvas"}</Typography>
+                <Typography variant="body2" color="text.secondary">{"NFS"}</Typography>
+              </CardContent>
+            </Card>
+          </Item>
+        </Grid>
+      </Grid>
+      <br />
+      <Grid container spacing={2} wrap="nowrap">
+        <Grid size={4} item xs="auto">
+          <Item>
+            <Card>
+              {/* <Link to={`/artist/1`}> */}
+              <CardMedia
+                sx={{
+                  backgroundSize: 200,
+                  margin: 5,
+                  width: 200,
+                  height: 250,
+                  cursor: 'pointer'
+                }}
+                image={`${process.env.PUBLIC_URL}/img/artist/colby_mirror.jpg`}
+                title={"Seeing Through Colby"}
+                onClick={() => handleImageClick(
+                  `${process.env.PUBLIC_URL}/img/artist/colby_mirror.jpg`
+                )}
+              />
+              {/* </Link> */}
+              <CardContent>
+                <Typography gutterBottom variant="h6" component="div">
+                  {"Seeing Through Colby"}
+                </Typography>
+                <Typography variant="body2" color="text.secondary">{"24 X 36 inches"}</Typography>
+                <Typography variant="body2" color="text.secondary">{"Oil on Canvas"}</Typography>
+                <Typography variant="body2" color="text.secondary">{"SOLD"}</Typography>
+              </CardContent>
+            </Card>
+          </Item>
+        </Grid>
+        <Grid size={4} item xs="auto">
+          <Item>
+            <Card>
+              {/* <Link to={`/artist/1`}> */}
+              <CardMedia
+                sx={{
+                  backgroundSize: 200,
+                  margin: 5,
+                  width: 200,
+                  height: 250,
+                  cursor: 'pointer'
+                }}
+                image={`${process.env.PUBLIC_URL}/img/artist/wife.jpg`}
+                title={"Untitled"}
+                onClick={() => handleImageClick(
+                  `${process.env.PUBLIC_URL}/img/artist/wife.jpg`
+                )}
+              />
+              {/* </Link> */}
+              <CardContent>
+                <Typography gutterBottom variant="h6" component="div">
+                  {"Untitled"}
+                </Typography>
+                <Typography variant="body2" color="text.secondary">{"24 X 30 inches"}</Typography>
+                <Typography variant="body2" color="text.secondary">{"Oil on Canvas"}</Typography>
+                <Typography variant="body2" color="text.secondary">{"NFS"}</Typography>
+              </CardContent>
+            </Card>
+          </Item>
+        </Grid>
+        <Grid size={4} item xs="auto">
+          <Item>
+            <Card>
+              {/* <Link to={`/artist/1`}> */}
+              <CardMedia
+                sx={{
+                  backgroundSize: 200,
+                  margin: 5,
+                  width: 200,
+                  height: 250,
+                  cursor: 'pointer'
+                }}
+                image={`${process.env.PUBLIC_URL}/img/artist/smokey_eyes.jpg`}
+                title={"Smokey Eyes"}
+                onClick={() => handleImageClick(
+                  `${process.env.PUBLIC_URL}/img/artist/smokey_eyes.jpg`
+                )}
+              />
+              {/* </Link> */}
+              <CardContent>
+                <Typography gutterBottom variant="h6" component="div">
+                  {"Smokey Eyes"}
+                </Typography>
+                <Typography variant="body2" color="text.secondary">{"16 X 20 inches"}</Typography>
+                <Typography variant="body2" color="text.secondary">{"Oil on Canvas"}</Typography>
+                <Typography variant="body2" color="text.secondary">{"NFS"}</Typography>
+              </CardContent>
+            </Card>
+          </Item>
+        </Grid>
+      </Grid>
+      <br />
+      <Grid container spacing={2} wrap="nowrap">
+        <Grid size={4} item xs="auto">
+          <Item>
+            <Card>
+              {/* <Link to={`/artist/1`}> */}
+              <CardMedia
+                sx={{
+                  backgroundSize: 200,
+                  margin: 5,
+                  width: 200,
+                  height: 250,
+                  cursor: 'pointer'
+                }}
+                image={`${process.env.PUBLIC_URL}/img/artist/heart_glasses.jpg`}
+                title={"Heart Vision"}
+                onClick={() => handleImageClick(
+                  `${process.env.PUBLIC_URL}/img/artist/heart_glasses.jpg`
+                )}
+              />
+              {/* </Link> */}
+              <CardContent>
+                <Typography gutterBottom variant="h6" component="div">
+                  {"Heart Vision"}
+                </Typography>
+                <Typography variant="body2" color="text.secondary">{"16 X 20 inches"}</Typography>
+                <Typography variant="body2" color="text.secondary">{"Oil on Canvas"}</Typography>
+                <Typography variant="body2" color="text.secondary">{"NFS"}</Typography>
+              </CardContent>
+            </Card>
+          </Item>
+        </Grid>
+        <Grid size={4} item xs="auto">
+          <Item>
+            <Card>
+              {/* <Link to={`/artist/1`}> */}
+              <CardMedia
+                sx={{
+                  backgroundSize: 200,
+                  margin: 5,
+                  width: 200,
+                  height: 250,
+                  cursor: 'pointer'
+                }}
+                image={`${process.env.PUBLIC_URL}/img/artist/man_lips.jpg`}
+                title={"His Majesty the Queen"}
+                onClick={() => handleImageClick(
+                  `${process.env.PUBLIC_URL}/img/artist/man_lips.jpg`
+                )}
+              />
+              {/* </Link> */}
+              <CardContent>
+                <Typography gutterBottom variant="h6" component="div">
+                  {"His Majesty the Queen"}
+                </Typography>
+                <Typography variant="body2" color="text.secondary">{"36 X 48 inches"}</Typography>
+                <Typography variant="body2" color="text.secondary">{"Oil and Jewels on Canvas"}</Typography>
+                <Typography variant="body2" color="text.secondary">{"NFS"}</Typography>
+              </CardContent>
+            </Card>
+          </Item>
+        </Grid>
+        <Grid size={4} item xs="auto">
+          <Item>
+            <Card>
+              {/* <Link to={`/artist/1`}> */}
+              <CardMedia
+                sx={{
+                  backgroundSize: 200,
+                  margin: 5,
+                  width: 200,
+                  height: 250,
+                  cursor: 'pointer'
+                }}
+                image={`${process.env.PUBLIC_URL}/img/artist/jewel_nails.jpg`}
+                title={"Pretty Posh"}
+                onClick={() => handleImageClick(
+                  `${process.env.PUBLIC_URL}/img/artist/jewel_nails.jpg`
+                )}
+              />
+              {/* </Link> */}
+              <CardContent>
+                <Typography gutterBottom variant="h6" component="div">
+                  {"Pretty Posh"}
+                </Typography>
+                <Typography variant="body2" color="text.secondary">{"24 X 24 inches"}</Typography>
+                <Typography variant="body2" color="text.secondary">{"Oil and Jewels on Canvas"}</Typography>
+                <Typography variant="body2" color="text.secondary">{"NFS"}</Typography>
+              </CardContent>
+            </Card>
+          </Item>
+        </Grid>
+      </Grid>
+      <br />
+      <Grid container spacing={2} wrap="nowrap">
+        <Grid size={4} item xs="auto">
+          <Item>
+            <Card>
+              {/* <Link to={`/artist/1`}> */}
+              <CardMedia
+                sx={{
+                  backgroundSize: 200,
+                  margin: 5,
+                  width: 200,
+                  height: 250,
+                  cursor: 'pointer'
+                }}
+                image={`${process.env.PUBLIC_URL}/img/artist/bill.jpg`}
+                title={"Untitled"}
+                onClick={() => handleImageClick(
+                  `${process.env.PUBLIC_URL}/img/artist/bill.jpg`
+                )}
+              />
+              {/* </Link> */}
+              <CardContent>
+                <Typography gutterBottom variant="h6" component="div">
+                  {"Untitled"}
+                </Typography>
+                <Typography variant="body2" color="text.secondary">{"24 X 36 inches"}</Typography>
+                <Typography variant="body2" color="text.secondary">{"Oil on Canvas"}</Typography>
+                <Typography variant="body2" color="text.secondary">{"NFS"}</Typography>
+              </CardContent>
+            </Card>
+          </Item>
+        </Grid>
+        <Grid size={4} item xs="auto">
+          <Item>
+            <Card>
+              {/* <Link to={`/artist/1`}> */}
+              <CardMedia
+                sx={{
+                  backgroundSize: 200,
+                  margin: 5,
+                  width: 200,
+                  height: 250,
+                  cursor: 'pointer'
+                }}
+                image={`${process.env.PUBLIC_URL}/img/artist/blue_eye.jpg`}
+                title={"Lana"}
+                onClick={() => handleImageClick(
+                  `${process.env.PUBLIC_URL}/img/artist/blue_eye.jpg`
+                )}
+              />
+              {/* </Link> */}
+              <CardContent>
+                <Typography gutterBottom variant="h6" component="div">
+                  {"Lana"}
+                </Typography>
+                <Typography variant="body2" color="text.secondary">{"30 X 40 inches"}</Typography>
+                <Typography variant="body2" color="text.secondary">{"Oil on Canvas"}</Typography>
+                <Typography variant="body2" color="text.secondary">{"NFS"}</Typography>
+              </CardContent>
+            </Card>
+          </Item>
+        </Grid>
+        <Grid size={4} item xs="auto">
+          <Item>
+            <Card>
+              {/* <Link to={`/artist/1`}> */}
+              <CardMedia
+                sx={{
+                  backgroundSize: 200,
+                  margin: 5,
+                  width: 200,
+                  height: 250,
+                  cursor: 'pointer'
+                }}
+                image={`${process.env.PUBLIC_URL}/img/artist/twisted_girl.jpg`}
+                title={"Doomed"}
+                onClick={() => handleImageClick(
+                  `${process.env.PUBLIC_URL}/img/artist/twisted_girl.jpg`
+                )}
+              />
+              {/* </Link> */}
+              <CardContent>
+                <Typography gutterBottom variant="h6" component="div">
+                  {"Doomed"}
+                </Typography>
+                <Typography variant="body2" color="text.secondary">{"24 X 24 inches"}</Typography>
+                <Typography variant="body2" color="text.secondary">{"Oil on Canvas"}</Typography>
+                <Typography variant="body2" color="text.secondary">{"NFS"}</Typography>
+              </CardContent>
+            </Card>
+          </Item>
+        </Grid>
+      </Grid>
+      <br />
+      <Grid container spacing={2} wrap="nowrap">
+        <Grid size={4} item xs="auto">
+          <Item>
+            <Card>
+              {/* <Link to={`/artist/1`}> */}
+              <CardMedia
+                sx={{
+                  backgroundSize: 200,
+                  margin: 5,
+                  width: 200,
+                  height: 250,
+                  cursor: 'pointer'
+                }}
+                image={`${process.env.PUBLIC_URL}/img/artist/gaga_one.jpg`}
+                title={"Untitled"}
+                onClick={() => handleImageClick(
+                  `${process.env.PUBLIC_URL}/img/artist/gaga_one.jpg`
+                )}
+              />
+              {/* </Link> */}
+              <CardContent>
+                <Typography gutterBottom variant="h6" component="div">
+                  {"Untitled"}
+                </Typography>
+                <Typography variant="body2" color="text.secondary">{"22 X 28 inches"}</Typography>
+                <Typography variant="body2" color="text.secondary">{"Oil on Canvas"}</Typography>
+                <Typography variant="body2" color="text.secondary">{"NFS"}</Typography>
+              </CardContent>
+            </Card>
+          </Item>
+        </Grid>
+        <Grid size={4} item xs="auto">
+          <Item>
+            <Card>
+              {/* <Link to={`/artist/1`}> */}
+              <CardMedia
+                sx={{
+                  backgroundSize: 200,
+                  margin: 5,
+                  width: 200,
+                  height: 250,
+                  cursor: 'pointer'
+                }}
+                image={`${process.env.PUBLIC_URL}/img/artist/imp_garden.jpg`}
+                title={"Untitled"}
+                onClick={() => handleImageClick(
+                  `${process.env.PUBLIC_URL}/img/artist/imp_garden.jpg`
+                )}
+              />
+              {/* </Link> */}
+              <CardContent>
+                <Typography gutterBottom variant="h6" component="div">
+                  {"Untitled"}
+                </Typography>
+                <Typography variant="body2" color="text.secondary">{"16 X 20 inches"}</Typography>
+                <Typography variant="body2" color="text.secondary">{"Oil on Canvas"}</Typography>
+                <Typography variant="body2" color="text.secondary">{"NFS"}</Typography>
+              </CardContent>
+            </Card>
+          </Item>
+        </Grid>
+        <Grid size={4} item xs="auto">
+          <Item>
+            <Card>
+              {/* <Link to={`/artist/1`}> */}
+              <CardMedia
+                sx={{
+                  backgroundSize: 200,
+                  margin: 5,
+                  width: 200,
+                  height: 250,
+                  cursor: 'pointer'
+                }}
+                image={`${process.env.PUBLIC_URL}/img/artist/imp_kite.jpg`}
+                title={"Untitled"}
+                onClick={() => handleImageClick(
+                  `${process.env.PUBLIC_URL}/img/artist/imp_kite.jpg`
+                )}
+              />
+              {/* </Link> */}
+              <CardContent>
+                <Typography gutterBottom variant="h6" component="div">
+                  {"Untitled"}
+                </Typography>
+                <Typography variant="body2" color="text.secondary">{"16 X 20 inches"}</Typography>
+                <Typography variant="body2" color="text.secondary">{"Oil on Canvas"}</Typography>
                 <Typography variant="body2" color="text.secondary">{"NFS"}</Typography>
               </CardContent>
             </Card>
