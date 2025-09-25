@@ -192,7 +192,6 @@ header a {
   display: grid;
   grid-template-columns: 2fr 3fr;
   margin: 0 auto;
-  padding: 12px;
 }
 .home-two {
   display: grid;
@@ -233,16 +232,6 @@ header a {
   font-size: 1.0em;
   color: #555;
 }
-.general-details span {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  cursor: pointer;
-  background: #f1f1f1;
-  padding: 6px;
-  border-radius: 50%;
-  color: #333;
-}
 /* current skill details tab */
 .current-skill-details {
   background: #fff;
@@ -269,7 +258,6 @@ header a {
   padding: 2px;
 }
 .current-skill-details {
-  margin: 0.5rem;
   font-size: 1.0rem;
   color: #555;
 }
@@ -310,7 +298,6 @@ header a {
 .work-experience-details{
   background: #fff;
   border-radius: 4px;
-  margin: 5px;
   padding: 1rem;
   position: relative;
   box-shadow: 2px 2px 5px rgba(0,0,0,0.05);
@@ -338,7 +325,6 @@ header a {
 .education-details {
   background: #fff;
   border-radius: 4px;
-  margin: 5px;
   padding: 1rem;
   position: relative;
   box-shadow: 2px 2px 5px rgba(0,0,0,0.05);
