@@ -307,6 +307,7 @@ header a {
 .current-skill-heading h4 {
   margin: 0 0 0 0;
   color: #1976d2;
+  cursor: pointer;
 }
 .full-skill-heading {
   background: #fff;
@@ -320,6 +321,7 @@ header a {
 .full-skill-heading h4 {
   margin: 0 0 0 0;
   color: #1976d2;
+  cursor: pointer;
 }
 /* work experience details tab */
 .work-experience-details{
@@ -334,6 +336,7 @@ header a {
   margin: 0 0 0 0;
   color: #1976d2;
   font-size: larger;
+  cursor: pointer;
 }
 .work-experience-comment-list {
   list-style-type:disc;
@@ -361,6 +364,7 @@ header a {
   margin: 0 0 0 0;
   color: #1976d2;
   font-size: larger;
+  cursor: pointer;
 }
 .education-title{
   font-weight: bold;
@@ -380,6 +384,7 @@ header a {
   padding: 20px;
   position: relative;
   box-shadow: 2px 2px 5px rgba(0,0,0,0.05);
+  cursor: pointer;
 }
 /*misc*/
 .icon-text-alignment {

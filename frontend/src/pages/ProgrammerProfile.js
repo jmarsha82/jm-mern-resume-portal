@@ -138,14 +138,16 @@ const ProgrammerProfile = () => {
         <div className="home-two">
           <div>
             <div>
-              <div className="current-skill-heading"><h4>Current Project(s) Tech Stack</h4></div>
+              <div className="current-skill-heading"><h4 onClick={() => {
+                window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+              }} title="Back to Top">Current Project(s) Tech Stack</h4></div>
               <div className="current-skill-details">
                 <CurrentSkillDetails />
               </div>
             </div>
             <div id="experience-id" className="current-skill-heading"><h4 onClick={() => {
               window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
-            }}>Experience</h4></div>
+            }}title="Back to Top">Experience</h4></div>
             <div className="work-experience-details">
               <WorkExperienceDetails />
             </div>
@@ -156,7 +158,7 @@ const ProgrammerProfile = () => {
             <div id="education-id" className="current-skill-heading">
               <h4 onClick={() => {
                 window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
-              }}>Education</h4>
+              }}title="Back to Top">Education</h4>
             </div>
             <div className="education-details">
               <EducationDetails />
@@ -167,7 +169,7 @@ const ProgrammerProfile = () => {
           <div>
             <div id="extended-skills-id" className="current-skill-heading"><h4 onClick={() => {
               window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
-            }}>Extended Tech Stack</h4></div>
+            }}title="Back to Top">Extended Tech Stack</h4></div>
             <div className="current-skill-details">
               <FullSkillDetails />
             </div>
@@ -177,7 +179,7 @@ const ProgrammerProfile = () => {
           <div>
             <div id="dev-books-id" className="current-skill-heading"><h4 onClick={() => {
               window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
-            }}>Dev Books</h4></div>
+            }}title="Back to Top">Dev Books</h4></div>
             <div className="current-skill-details">
               <DevBooksDetails />
             </div>
@@ -187,7 +189,7 @@ const ProgrammerProfile = () => {
           <div>
             <div id="dev-links-id" className="current-skill-heading"><h4 onClick={() => {
               window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
-            }}>Dev Links</h4></div>
+            }}title="Back to Top">Dev Links</h4></div>
             <DevLinkDetails />
           </div>
         </div>
