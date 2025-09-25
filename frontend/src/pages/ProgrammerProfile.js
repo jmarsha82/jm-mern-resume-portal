@@ -130,7 +130,7 @@ const ProgrammerProfile = () => {
           <div>
             <GeneralDetails />
           </div>
-          <div className="full-skill-heading">
+          <div className="home-github">
             <h4>Github Contributions</h4>
             <img src="https://ghchart.rshah.org/1976d2/jmarsha82" alt="Github Profile" />
           </div>
