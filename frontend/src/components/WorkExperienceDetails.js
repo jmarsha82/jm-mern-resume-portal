@@ -11,8 +11,10 @@ const WorkExperienceDetails = () => {
       <ul className='work-experience-comment-list'>
         <li><strong>{"Developed several mod packages using C++ web assembly capable of accessing internal APIs and allowing for interaction."}</strong></li>
         <li><strong>{"Developed flight component logic using C++ for virtual versions of the 737Max8 737Max9 and 737NG planes."}</strong></li>
-        <li><strong>{"Implemented a CI/CD pipeline yaml in Azure DevOps"}</strong></li>
+        <li><strong>{"Implemented a CI/CD pipeline yaml in Azure DevOps and Gitlab which integrated automated unit tests, code scanning using Coverity and SonarQube and move code between environments."}</strong></li>
         <li><strong>{"Designed and implemented logic for the Primary Flight Display, Multifunction Flight Display and Flight Management Computer using Typescript, HTML, and CSS."}</strong></li>
+        <li><strong>{"Developed over 4000 unit test cases using Jest for supplier provided code in the span of 5 months"}</strong></li>
+        <li><strong>{"Designed and implemented a integration test application used Catch2 in C++ to test flight lessons"}</strong></li>
         <li><strong>{"Act as a Dev Lead for the 737Max8 MOD team where I am responsible for reviewing and testing all code before it is migrated to production."}</strong></li>
         <li><strong>{"Developed custom components with Boeings Common Simulation Framework and integrated Boeings SimBinary packages with the corresponding planes in ESP, Microsoft Flight Simulator X, and Microsoft Flight Simulator 2020."}</strong></li>
         <li><strong>{"Implemented a Simulation State Control Service that uses SimConnect to interact with Microsoft Flight Simulator 2020 using C++."}</strong></li>
@@ -20,11 +22,10 @@ const WorkExperienceDetails = () => {
         <li><strong>{"Assisted in Onboarding multiple resources by resolving any issues with software installation, plugin setup, plugin execution and a general explanation of the application architecture."}</strong></li>
         <li><strong>{"Developed a large-scale request and workflow tracking system for the treasury organization at Boeing using ReactJS and Kotlin."}</strong></li>
         <li><strong>{"Implemented a CI/CD pipeline in Gitlab"}</strong></li>
-        <li><strong>{"Practiced Test Driven development on a Treasury application using Enzyme and JUnit."}</strong></li>
+        <li><strong>{"Practiced Test Driven development on a Treasury application using Jest and JUnit."}</strong></li>
         <li><strong>{"Developed an interactive dashboard that allowed all Boeing employees to have a better user experience on the internal Boeing Homepage using Javascript, Thymeleaf and Java."}</strong></li>
         <li><strong>{"Used Spring Boot Framework and pushed application into Cloud based storage."}</strong></li>
         <li><strong>{"Worked in a single and paired programming environment and used Agile development standards."}</strong></li>
-        <li><strong>{"Implemented a CI/CD Pipeline to run automated tests and move our application between environments with little to no manual involvement."}</strong></li>
       </ul>
     </div>
     <div className="work-experience-details">
