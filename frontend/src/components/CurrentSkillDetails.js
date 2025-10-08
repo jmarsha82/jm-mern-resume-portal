@@ -1,11 +1,18 @@
 import * as React from 'react';
 import Button from '@mui/material/Button';
 import { Tooltip } from '@mui/material';
+import { useTheme } from '../context/ThemeContext';
 
 const CurrentSkillDetails = () => {
+  const { theme } = useTheme();
+
   return (
     <div>
-    <div className="current-skill-details">
+    <div className="current-skill-details" style={{ 
+      background: theme.cardBg, 
+      color: theme.textColor,
+      transition: 'background 0.3s ease, color 0.3s ease'
+    }}>
       <span>
         <Tooltip title={"Used Daily"} placement="top">
           <Button variant="contained" href={"https://react.dev/"} target="_blank">{"ReactJS"}</Button>
@@ -21,7 +28,11 @@ const CurrentSkillDetails = () => {
           </span>
         <div className="current-skill-details-desc">{"Machine learning projects and neural network research"}</div>
     </div>
-    <div className="current-skill-details">
+    <div className="current-skill-details" style={{ 
+      background: theme.cardBg, 
+      color: theme.textColor,
+      transition: 'background 0.3s ease, color 0.3s ease'
+    }}>
         <span>
           <Tooltip title={"Used Daily"} placement="top">
             <Button variant="contained" href={"https://isocpp.org/std/the-standard"} target="_blank">{"C++"}</Button>

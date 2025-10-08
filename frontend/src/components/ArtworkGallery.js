@@ -8,6 +8,7 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { Grid } from '@mui/material';
 import ImageModal from './ImageModal';
+import { useTheme } from '../context/ThemeContext';
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
@@ -20,6 +21,7 @@ const Item = styled(Paper)(({ theme }) => ({
 const ArtworkGallery = () => {
   const [modalOpen, setModalOpen] = React.useState(false);
   const [selectedImage, setSelectedImage] = React.useState(null);
+  const { isDarkTheme, theme } = useTheme();
 
   const handleImageClick = (imageUrl, title, description) => {
     setSelectedImage({ imageUrl, title, description });
@@ -31,12 +33,32 @@ const ArtworkGallery = () => {
     setSelectedImage(null);
   };
 
+  // Styled Item component that responds to theme
+  const StyledItem = styled(Paper)(({ theme: muiTheme }) => ({
+    backgroundColor: theme.cardBg,
+    padding: muiTheme.spacing(2),
+    textAlign: 'left',
+    color: theme.textColor,
+    transition: 'background-color 0.3s ease, color 0.3s ease',
+  }));
+
+  // Styled Card component that responds to theme
+  const StyledCard = styled(Card)(() => ({
+    backgroundColor: theme.cardBg,
+    color: theme.textColor,
+    transition: 'background-color 0.3s ease, color 0.3s ease',
+  }));
+
   return (
-    <div>
+    <div style={{ 
+      background: theme.background,
+      transition: 'background 0.3s ease',
+      padding: '20px 0'
+    }}>
       <Grid container spacing={2} wrap="nowrap">
         <Grid size={4} item xs="auto">
-          <Item>
-            <Card>
+          <StyledItem>
+            <StyledCard>
               {/* <Link to={`/artist/1`}> */}
               <CardMedia
                 sx={{
@@ -54,19 +76,19 @@ const ArtworkGallery = () => {
               />
               {/* </Link> */}
               <CardContent>
-                <Typography gutterBottom variant="h6" component="div">
+                <Typography gutterBottom variant="h6" component="div" sx={{ color: theme.textColor }}>
                   {"Beauty with Butterfly Wings"}
                 </Typography>
-                <Typography variant="body2" color="text.secondary">{"36 X 48 inches"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"Oil on Canvas"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"Private Collection"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"36 X 48 inches"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Oil on Canvas"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Private Collection"}</Typography>
               </CardContent>
-            </Card>
-          </Item>
+            </StyledCard>
+          </StyledItem>
         </Grid>
         <Grid size={4} item xs="auto">
-          <Item>
-            <Card>
+          <StyledItem>
+            <StyledCard>
               {/* <Link to={`/artist/1`}> */}
               <CardMedia
                 sx={{
@@ -84,19 +106,19 @@ const ArtworkGallery = () => {
               />
               {/* </Link> */}
               <CardContent>
-                <Typography gutterBottom variant="h6" component="div">
+                <Typography gutterBottom variant="h6" component="div" sx={{ color: theme.textColor }}>
                   {"Diamond Rimmed Dahlia"}
                 </Typography>
-                <Typography variant="body2" color="text.secondary">{"24 X 36 inches"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"Oil, Jewel, and Beads on Canvas"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"Private Collection"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"24 X 36 inches"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Oil, Jewel, and Beads on Canvas"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Private Collection"}</Typography>
               </CardContent>
-            </Card>
-          </Item>
+            </StyledCard>
+          </StyledItem>
         </Grid>
         <Grid size={4} item xs="auto">
-          <Item>
-            <Card>
+          <StyledItem>
+            <StyledCard>
               {/* <Link to={`/artist/1`}> */}
               <CardMedia
                 sx={{
@@ -114,22 +136,22 @@ const ArtworkGallery = () => {
               />
               {/* </Link> */}
               <CardContent>
-                <Typography gutterBottom variant="h6" component="div">
+                <Typography gutterBottom variant="h6" component="div" sx={{ color: theme.textColor }}>
                   {"Gaze Through Me"}
                 </Typography>
-                <Typography variant="body2" color="text.secondary">{"36 X 48 inches"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"Pen on Canvas"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"Private Collection"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"36 X 48 inches"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Pen on Canvas"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Private Collection"}</Typography>
               </CardContent>
-            </Card>
-          </Item>
+            </StyledCard>
+          </StyledItem>
         </Grid>
       </Grid>
       <br />
       <Grid container spacing={2} wrap="nowrap">
         <Grid size={4} item xs="auto">
-          <Item>
-            <Card>
+          <StyledItem>
+            <StyledCard>
               {/* <Link to={`/artist/1`}> */}
               <CardMedia
                 sx={{
@@ -147,19 +169,19 @@ const ArtworkGallery = () => {
               />
               {/* </Link> */}
               <CardContent>
-                <Typography gutterBottom variant="h6" component="div">
+                <Typography gutterBottom variant="h6" component="div" sx={{ color: theme.textColor }}>
                   {"Overglammed"}
                 </Typography>
-                <Typography variant="body2" color="text.secondary">{"36 X 36 inches"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"Oil, Jewel, and Beads on Canvas"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"Private Collection"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"36 X 36 inches"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Oil, Jewel, and Beads on Canvas"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Private Collection"}</Typography>
               </CardContent>
-            </Card>
-          </Item>
+            </StyledCard>
+          </StyledItem>
         </Grid>
         <Grid size={4} item xs="auto">
-          <Item>
-            <Card>
+          <StyledItem>
+            <StyledCard>
               {/* <Link to={`/artist/1`}> */}
               <CardMedia
                 sx={{
@@ -177,19 +199,19 @@ const ArtworkGallery = () => {
               />
               {/* </Link> */}
               <CardContent>
-                <Typography gutterBottom variant="h6" component="div">
+                <Typography gutterBottom variant="h6" component="div" sx={{ color: theme.textColor }}>
                   {"Twiggy Glasses"}
                 </Typography>
-                <Typography variant="body2" color="text.secondary">{"16 X 20 inches"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"Oil on Canvas"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"Private Collection"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"16 X 20 inches"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Oil on Canvas"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Private Collection"}</Typography>
               </CardContent>
-            </Card>
-          </Item>
+            </StyledCard>
+          </StyledItem>
         </Grid>
         <Grid size={4} item xs="auto">
-          <Item>
-            <Card>
+          <StyledItem>
+            <StyledCard>
               {/* <Link to={`/artist/1`}> */}
               <CardMedia
                 sx={{
@@ -207,22 +229,22 @@ const ArtworkGallery = () => {
               />
               {/* </Link> */}
               <CardContent>
-                <Typography gutterBottom variant="h6" component="div">
+                <Typography gutterBottom variant="h6" component="div" sx={{ color: theme.textColor }}>
                   {"Untitled 1"}
                 </Typography>
-                <Typography variant="body2" color="text.secondary">{"24 X 36 inches"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"Oil and Jewels on Canvas"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"Private Collection"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"24 X 36 inches"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Oil and Jewels on Canvas"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Private Collection"}</Typography>
               </CardContent>
-            </Card>
-          </Item>
+            </StyledCard>
+          </StyledItem>
         </Grid>
       </Grid>
       <br />
       <Grid container spacing={2} wrap="nowrap">
         <Grid size={4} item xs="auto">
-          <Item>
-            <Card>
+          <StyledItem>
+            <StyledCard>
               {/* <Link to={`/artist/1`}> */}
               <CardMedia
                 sx={{
@@ -240,19 +262,19 @@ const ArtworkGallery = () => {
               />
               {/* </Link> */}
               <CardContent>
-                <Typography gutterBottom variant="h6" component="div">
+                <Typography gutterBottom variant="h6" component="div" sx={{ color: theme.textColor }}>
                   {"King of New York"}
                 </Typography>
-                <Typography variant="body2" color="text.secondary">{"16 X 20 inches"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"Oil, Jewel, and Beads on Canvas"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"Private Collection"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"16 X 20 inches"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Oil, Jewel, and Beads on Canvas"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Private Collection"}</Typography>
               </CardContent>
-            </Card>
-          </Item>
+            </StyledCard>
+          </StyledItem>
         </Grid>
         <Grid size={4} item xs="auto">
-          <Item>
-            <Card>
+          <StyledItem>
+            <StyledCard>
               {/* <Link to={`/artist/1`}> */}
               <CardMedia
                 sx={{
@@ -270,19 +292,19 @@ const ArtworkGallery = () => {
               />
               {/* </Link> */}
               <CardContent>
-                <Typography gutterBottom variant="h6" component="div">
+                <Typography gutterBottom variant="h6" component="div" sx={{ color: theme.textColor }}>
                   {"Finishing Touch"}
                 </Typography>
-                <Typography variant="body2" color="text.secondary">{"18 X 20 inches"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"Oil and Pen on Canvas"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"Private Collection"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"18 X 20 inches"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Oil and Pen on Canvas"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Private Collection"}</Typography>
               </CardContent>
-            </Card>
-          </Item>
+            </StyledCard>
+          </StyledItem>
         </Grid>
         <Grid size={4} item xs="auto">
-          <Item>
-            <Card>
+          <StyledItem>
+            <StyledCard>
               {/* <Link to={`/artist/1`}> */}
               <CardMedia
                 sx={{
@@ -300,22 +322,22 @@ const ArtworkGallery = () => {
               />
               {/* </Link> */}
               <CardContent>
-                <Typography gutterBottom variant="h6" component="div">
+                <Typography gutterBottom variant="h6" component="div" sx={{ color: theme.textColor }}>
                   {"Karl at McDonalds"}
                 </Typography>
-                <Typography variant="body2" color="text.secondary">{"24 X 30 inches"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"Oil on Canvas"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"Private Collection"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"24 X 30 inches"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Oil on Canvas"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Private Collection"}</Typography>
               </CardContent>
-            </Card>
-          </Item>
+            </StyledCard>
+          </StyledItem>
         </Grid>
       </Grid>
       <br />
       <Grid container spacing={2} wrap="nowrap">
         <Grid size={4} item xs="auto">
-          <Item>
-            <Card>
+          <StyledItem>
+            <StyledCard>
               {/* <Link to={`/artist/1`}> */}
               <CardMedia
                 sx={{
@@ -333,19 +355,19 @@ const ArtworkGallery = () => {
               />
               {/* </Link> */}
               <CardContent>
-                <Typography gutterBottom variant="h6" component="div">
+                <Typography gutterBottom variant="h6" component="div" sx={{ color: theme.textColor }}>
                   {"Ready Set Glam"}
                 </Typography>
-                <Typography variant="body2" color="text.secondary">{"36 X 48 inches"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"Oil and Beads on Canvas"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"Private Collection"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"36 X 48 inches"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Oil and Beads on Canvas"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Private Collection"}</Typography>
               </CardContent>
-            </Card>
-          </Item>
+            </StyledCard>
+          </StyledItem>
         </Grid>
         <Grid size={4} item xs="auto">
-          <Item>
-            <Card>
+          <StyledItem>
+            <StyledCard>
               {/* <Link to={`/artist/1`}> */}
               <CardMedia
                 sx={{
@@ -363,19 +385,19 @@ const ArtworkGallery = () => {
               />
               {/* </Link> */}
               <CardContent>
-                <Typography gutterBottom variant="h6" component="div">
+                <Typography gutterBottom variant="h6" component="div" sx={{ color: theme.textColor }}>
                   {"Untitled 2"}
                 </Typography>
-                <Typography variant="body2" color="text.secondary">{"18 X 20 inches"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"Pen on Canvas"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"Private Collection"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"18 X 20 inches"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Pen on Canvas"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Private Collection"}</Typography>
               </CardContent>
-            </Card>
-          </Item>
+            </StyledCard>
+          </StyledItem>
         </Grid>
         <Grid size={4} item xs="auto">
-          <Item>
-            <Card>
+          <StyledItem>
+            <StyledCard>
               {/* <Link to={`/artist/1`}> */}
               <CardMedia
                 sx={{
@@ -393,22 +415,22 @@ const ArtworkGallery = () => {
               />
               {/* </Link> */}
               <CardContent>
-                <Typography gutterBottom variant="h6" component="div">
+                <Typography gutterBottom variant="h6" component="div" sx={{ color: theme.textColor }}>
                   {"Untitled 3"}
                 </Typography>
-                <Typography variant="body2" color="text.secondary">{"48 X 48 inches"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"Oil and Jewels on Canvas"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"Private Collection"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"48 X 48 inches"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Oil and Jewels on Canvas"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Private Collection"}</Typography>
               </CardContent>
-            </Card>
-          </Item>
+            </StyledCard>
+          </StyledItem>
         </Grid>
       </Grid>
       <br />
       <Grid container spacing={2} wrap="nowrap">
         <Grid size={4} item xs="auto">
-          <Item>
-            <Card>
+          <StyledItem>
+            <StyledCard>
               {/* <Link to={`/artist/1`}> */}
               <CardMedia
                 sx={{
@@ -426,19 +448,19 @@ const ArtworkGallery = () => {
               />
               {/* </Link> */}
               <CardContent>
-                <Typography gutterBottom variant="h6" component="div">
+                <Typography gutterBottom variant="h6" component="div" sx={{ color: theme.textColor }}>
                   {"Pill Mouth"}
                 </Typography>
-                <Typography variant="body2" color="text.secondary">{"36 X 36 inches"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"Oil on Canvas"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"Private Collection"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"36 X 36 inches"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Oil on Canvas"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Private Collection"}</Typography>
               </CardContent>
-            </Card>
-          </Item>
+            </StyledCard>
+          </StyledItem>
         </Grid>
         <Grid size={4} item xs="auto">
-          <Item>
-            <Card>
+          <StyledItem>
+            <StyledCard>
               {/* <Link to={`/artist/1`}> */}
               <CardMedia
                 sx={{
@@ -456,19 +478,19 @@ const ArtworkGallery = () => {
               />
               {/* </Link> */}
               <CardContent>
-                <Typography gutterBottom variant="h6" component="div">
+                <Typography gutterBottom variant="h6" component="div" sx={{ color: theme.textColor }}>
                   {"Keen and Sheen"}
                 </Typography>
-                <Typography variant="body2" color="text.secondary">{"36 X 48 inches"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"Oil on Canvas"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"Private Collection"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"36 X 48 inches"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Oil on Canvas"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Private Collection"}</Typography>
               </CardContent>
-            </Card>
-          </Item>
+            </StyledCard>
+          </StyledItem>
         </Grid>
         <Grid size={4} item xs="auto">
-          <Item>
-            <Card>
+          <StyledItem>
+            <StyledCard>
               {/* <Link to={`/artist/1`}> */}
               <CardMedia
                 sx={{
@@ -486,22 +508,22 @@ const ArtworkGallery = () => {
               />
               {/* </Link> */}
               <CardContent>
-                <Typography gutterBottom variant="h6" component="div">
+                <Typography gutterBottom variant="h6" component="div" sx={{ color: theme.textColor }}>
                   {"Germanotta Doll"}
                 </Typography>
-                <Typography variant="body2" color="text.secondary">{"36 X 48 inchess"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"Oil on Canvas"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"Private Collection"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"36 X 48 inchess"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Oil on Canvas"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Private Collection"}</Typography>
               </CardContent>
-            </Card>
-          </Item>
+            </StyledCard>
+          </StyledItem>
         </Grid>
       </Grid>
       <br />
       <Grid container spacing={2} wrap="nowrap">
         <Grid size={4} item xs="auto">
-          <Item>
-            <Card>
+          <StyledItem>
+            <StyledCard>
               {/* <Link to={`/artist/1`}> */}
               <CardMedia
                 sx={{
@@ -519,19 +541,19 @@ const ArtworkGallery = () => {
               />
               {/* </Link> */}
               <CardContent>
-                <Typography gutterBottom variant="h6" component="div">
+                <Typography gutterBottom variant="h6" component="div" sx={{ color: theme.textColor }}>
                   {"Stevie"}
                 </Typography>
-                <Typography variant="body2" color="text.secondary">{"54 X 72 inches"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"Oil on Canvas"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"Private Collection"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"54 X 72 inches"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Oil on Canvas"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Private Collection"}</Typography>
               </CardContent>
-            </Card>
-          </Item>
+            </StyledCard>
+          </StyledItem>
         </Grid>
         <Grid size={4} item xs="auto">
-          <Item>
-            <Card>
+          <StyledItem>
+            <StyledCard>
               {/* <Link to={`/artist/1`}> */}
               <CardMedia
                 sx={{
@@ -549,19 +571,19 @@ const ArtworkGallery = () => {
               />
               {/* </Link> */}
               <CardContent>
-                <Typography gutterBottom variant="h6" component="div">
+                <Typography gutterBottom variant="h6" component="div" sx={{ color: theme.textColor }}>
                   {"Untitled 4"}
                 </Typography>
-                <Typography variant="body2" color="text.secondary">{"24 X 30 inches"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"Oil and Jewels on Canvas"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"Private Collection"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"24 X 30 inches"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Oil and Jewels on Canvas"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Private Collection"}</Typography>
               </CardContent>
-            </Card>
-          </Item>
+            </StyledCard>
+          </StyledItem>
         </Grid>
         <Grid size={4} item xs="auto">
-          <Item>
-            <Card>
+          <StyledItem>
+            <StyledCard>
               {/* <Link to={`/artist/1`}> */}
               <CardMedia
                 sx={{
@@ -579,22 +601,22 @@ const ArtworkGallery = () => {
               />
               {/* </Link> */}
               <CardContent>
-                <Typography gutterBottom variant="h6" component="div">
+                <Typography gutterBottom variant="h6" component="div" sx={{ color: theme.textColor }}>
                   {"Audrey"}
                 </Typography>
-                <Typography variant="body2" color="text.secondary">{"48 X 72 inches"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"Oil on Canvas"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"Private Collection"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"48 X 72 inches"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Oil on Canvas"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Private Collection"}</Typography>
               </CardContent>
-            </Card>
-          </Item>
+            </StyledCard>
+          </StyledItem>
         </Grid>
       </Grid>
       <br />
       <Grid container spacing={2} wrap="nowrap">
         <Grid size={4} item xs="auto">
-          <Item>
-            <Card>
+          <StyledItem>
+            <StyledCard>
               {/* <Link to={`/artist/1`}> */}
               <CardMedia
                 sx={{
@@ -612,19 +634,19 @@ const ArtworkGallery = () => {
               />
               {/* </Link> */}
               <CardContent>
-                <Typography gutterBottom variant="h6" component="div">
+                <Typography gutterBottom variant="h6" component="div" sx={{ color: theme.textColor }}>
                   {"Untitled 5"}
                 </Typography>
-                <Typography variant="body2" color="text.secondary">{"54 X 72 inches"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"Oil on Canvas"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"Private Collection"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"54 X 72 inches"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Oil on Canvas"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Private Collection"}</Typography>
               </CardContent>
-            </Card>
-          </Item>
+            </StyledCard>
+          </StyledItem>
         </Grid>
         <Grid size={4} item xs="auto">
-          <Item>
-            <Card>
+          <StyledItem>
+            <StyledCard>
               {/* <Link to={`/artist/1`}> */}
               <CardMedia
                 sx={{
@@ -642,19 +664,19 @@ const ArtworkGallery = () => {
               />
               {/* </Link> */}
               <CardContent>
-                <Typography gutterBottom variant="h6" component="div">
+                <Typography gutterBottom variant="h6" component="div" sx={{ color: theme.textColor }}>
                   {"Retrovision"}
                 </Typography>
-                <Typography variant="body2" color="text.secondary">{"24 X 24 inches"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"Oil and Jewels on Canvas"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"Private Collection"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"24 X 24 inches"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Oil and Jewels on Canvas"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Private Collection"}</Typography>
               </CardContent>
-            </Card>
-          </Item>
+            </StyledCard>
+          </StyledItem>
         </Grid>
         <Grid size={4} item xs="auto">
-          <Item>
-            <Card>
+          <StyledItem>
+            <StyledCard>
               {/* <Link to={`/artist/1`}> */}
               <CardMedia
                 sx={{
@@ -672,22 +694,22 @@ const ArtworkGallery = () => {
               />
               {/* </Link> */}
               <CardContent>
-                <Typography gutterBottom variant="h6" component="div">
+                <Typography gutterBottom variant="h6" component="div" sx={{ color: theme.textColor }}>
                   {"Audrey"}
                 </Typography>
-                <Typography variant="body2" color="text.secondary">{"12 X 18 inches"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"Oil and Pen on Canvas"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"Private Collection"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"12 X 18 inches"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Oil and Pen on Canvas"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Private Collection"}</Typography>
               </CardContent>
-            </Card>
-          </Item>
+            </StyledCard>
+          </StyledItem>
         </Grid>
       </Grid>
       <br />
       <Grid container spacing={2} wrap="nowrap">
         <Grid size={4} item xs="auto">
-          <Item>
-            <Card>
+          <StyledItem>
+            <StyledCard>
               {/* <Link to={`/artist/1`}> */}
               <CardMedia
                 sx={{
@@ -705,19 +727,19 @@ const ArtworkGallery = () => {
               />
               {/* </Link> */}
               <CardContent>
-                <Typography gutterBottom variant="h6" component="div">
+                <Typography gutterBottom variant="h6" component="div" sx={{ color: theme.textColor }}>
                   {"Evelyn Clown"}
                 </Typography>
-                <Typography variant="body2" color="text.secondary">{"30 X 36 inches"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"Oil on Canvas"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"Private Collection"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"30 X 36 inches"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Oil on Canvas"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Private Collection"}</Typography>
               </CardContent>
-            </Card>
-          </Item>
+            </StyledCard>
+          </StyledItem>
         </Grid>
         <Grid size={4} item xs="auto">
-          <Item>
-            <Card>
+          <StyledItem>
+            <StyledCard>
               {/* <Link to={`/artist/1`}> */}
               <CardMedia
                 sx={{
@@ -735,19 +757,19 @@ const ArtworkGallery = () => {
               />
               {/* </Link> */}
               <CardContent>
-                <Typography gutterBottom variant="h6" component="div">
+                <Typography gutterBottom variant="h6" component="div" sx={{ color: theme.textColor }}>
                   {"Untitled 6"}
                 </Typography>
-                <Typography variant="body2" color="text.secondary">{"16 X 20 inches"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"Oil and Pen on Canvas"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"SOLD"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"16 X 20 inches"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Oil and Pen on Canvas"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"SOLD"}</Typography>
               </CardContent>
-            </Card>
-          </Item>
+            </StyledCard>
+          </StyledItem>
         </Grid>
         <Grid size={4} item xs="auto">
-          <Item>
-            <Card>
+          <StyledItem>
+            <StyledCard>
               {/* <Link to={`/artist/1`}> */}
               <CardMedia
                 sx={{
@@ -765,22 +787,22 @@ const ArtworkGallery = () => {
               />
               {/* </Link> */}
               <CardContent>
-                <Typography gutterBottom variant="h6" component="div">
+                <Typography gutterBottom variant="h6" component="div" sx={{ color: theme.textColor }}>
                   {"Untitled 7"}
                 </Typography>
-                <Typography variant="body2" color="text.secondary">{"16 X 20 inches"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"Oil on Canvas"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"Private Collection"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"16 X 20 inches"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Oil on Canvas"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Private Collection"}</Typography>
               </CardContent>
-            </Card>
-          </Item>
+            </StyledCard>
+          </StyledItem>
         </Grid>
       </Grid>
       <br />
       <Grid container spacing={2} wrap="nowrap">
         <Grid size={4} item xs="auto">
-          <Item>
-            <Card>
+          <StyledItem>
+            <StyledCard>
               {/* <Link to={`/artist/1`}> */}
               <CardMedia
                 sx={{
@@ -798,19 +820,19 @@ const ArtworkGallery = () => {
               />
               {/* </Link> */}
               <CardContent>
-                <Typography gutterBottom variant="h6" component="div">
+                <Typography gutterBottom variant="h6" component="div" sx={{ color: theme.textColor }}>
                   {"Aeris"}
                 </Typography>
-                <Typography variant="body2" color="text.secondary">{"16 X 20 inches"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"Oil and Pen on Canvas"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"SOLD"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"16 X 20 inches"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Oil and Pen on Canvas"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"SOLD"}</Typography>
               </CardContent>
-            </Card>
-          </Item>
+            </StyledCard>
+          </StyledItem>
         </Grid>
         <Grid size={4} item xs="auto">
-          <Item>
-            <Card>
+          <StyledItem>
+            <StyledCard>
               {/* <Link to={`/artist/1`}> */}
               <CardMedia
                 sx={{
@@ -828,19 +850,19 @@ const ArtworkGallery = () => {
               />
               {/* </Link> */}
               <CardContent>
-                <Typography gutterBottom variant="h6" component="div">
+                <Typography gutterBottom variant="h6" component="div" sx={{ color: theme.textColor }}>
                   {"Blue Brittany"}
                 </Typography>
-                <Typography variant="body2" color="text.secondary">{"36 X 48 inches"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"Pen on Canvas"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"Private Collection"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"36 X 48 inches"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Pen on Canvas"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Private Collection"}</Typography>
               </CardContent>
-            </Card>
-          </Item>
+            </StyledCard>
+          </StyledItem>
         </Grid>
         <Grid size={4} item xs="auto">
-          <Item>
-            <Card>
+          <StyledItem>
+            <StyledCard>
               {/* <Link to={`/artist/1`}> */}
               <CardMedia
                 sx={{
@@ -858,22 +880,22 @@ const ArtworkGallery = () => {
               />
               {/* </Link> */}
               <CardContent>
-                <Typography gutterBottom variant="h6" component="div">
+                <Typography gutterBottom variant="h6" component="div" sx={{ color: theme.textColor }}>
                   {"Crawford"}
                 </Typography>
-                <Typography variant="body2" color="text.secondary">{"12 X 16 inches"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"Oil and Pen on Canvas"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"SOLD"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"12 X 16 inches"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Oil and Pen on Canvas"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"SOLD"}</Typography>
               </CardContent>
-            </Card>
-          </Item>
+            </StyledCard>
+          </StyledItem>
         </Grid>
       </Grid>
       <br />
       <Grid container spacing={2} wrap="nowrap">
         <Grid size={4} item xs="auto">
-          <Item>
-            <Card>
+          <StyledItem>
+            <StyledCard>
               {/* <Link to={`/artist/1`}> */}
               <CardMedia
                 sx={{
@@ -891,19 +913,19 @@ const ArtworkGallery = () => {
               />
               {/* </Link> */}
               <CardContent>
-                <Typography gutterBottom variant="h6" component="div">
+                <Typography gutterBottom variant="h6" component="div" sx={{ color: theme.textColor }}>
                   {"Hindu Shocker"}
                 </Typography>
-                <Typography variant="body2" color="text.secondary">{"24 X 36 inches"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"Oil on Canvas"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"Private Collection"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"24 X 36 inches"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Oil on Canvas"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Private Collection"}</Typography>
               </CardContent>
-            </Card>
-          </Item>
+            </StyledCard>
+          </StyledItem>
         </Grid>
         <Grid size={4} item xs="auto">
-          <Item>
-            <Card>
+          <StyledItem>
+            <StyledCard>
               {/* <Link to={`/artist/1`}> */}
               <CardMedia
                 sx={{
@@ -921,19 +943,19 @@ const ArtworkGallery = () => {
               />
               {/* </Link> */}
               <CardContent>
-                <Typography gutterBottom variant="h6" component="div">
+                <Typography gutterBottom variant="h6" component="div" sx={{ color: theme.textColor }}>
                   {"Layla"}
                 </Typography>
-                <Typography variant="body2" color="text.secondary">{"16 X 20 inches"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"Oil and Pen on Canvas"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"SOLD"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"16 X 20 inches"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Oil and Pen on Canvas"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"SOLD"}</Typography>
               </CardContent>
-            </Card>
-          </Item>
+            </StyledCard>
+          </StyledItem>
         </Grid>
         <Grid size={4} item xs="auto">
-          <Item>
-            <Card>
+          <StyledItem>
+            <StyledCard>
               {/* <Link to={`/artist/1`}> */}
               <CardMedia
                 sx={{
@@ -951,22 +973,22 @@ const ArtworkGallery = () => {
               />
               {/* </Link> */}
               <CardContent>
-                <Typography gutterBottom variant="h6" component="div">
+                <Typography gutterBottom variant="h6" component="div" sx={{ color: theme.textColor }}>
                   {"Untitled 8"}
                 </Typography>
-                <Typography variant="body2" color="text.secondary">{"12 X 16 inches"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"Oil and Jewel on Canvas"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"Private Collection"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"12 X 16 inches"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Oil and Jewel on Canvas"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Private Collection"}</Typography>
               </CardContent>
-            </Card>
-          </Item>
+            </StyledCard>
+          </StyledItem>
         </Grid>
       </Grid>
       <br />
       <Grid container spacing={2} wrap="nowrap">
         <Grid size={4} item xs="auto">
-          <Item>
-            <Card>
+          <StyledItem>
+            <StyledCard>
               {/* <Link to={`/artist/1`}> */}
               <CardMedia
                 sx={{
@@ -984,19 +1006,19 @@ const ArtworkGallery = () => {
               />
               {/* </Link> */}
               <CardContent>
-                <Typography gutterBottom variant="h6" component="div">
+                <Typography gutterBottom variant="h6" component="div" sx={{ color: theme.textColor }}>
                   {"Untitled 9"}
                 </Typography>
-                <Typography variant="body2" color="text.secondary">{"12 X 16 inches"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"Oil on Canvas"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"SOLD"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"12 X 16 inches"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Oil on Canvas"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"SOLD"}</Typography>
               </CardContent>
-            </Card>
-          </Item>
+            </StyledCard>
+          </StyledItem>
         </Grid>
         <Grid size={4} item xs="auto">
-          <Item>
-            <Card>
+          <StyledItem>
+            <StyledCard>
               {/* <Link to={`/artist/1`}> */}
               <CardMedia
                 sx={{
@@ -1014,19 +1036,19 @@ const ArtworkGallery = () => {
               />
               {/* </Link> */}
               <CardContent>
-                <Typography gutterBottom variant="h6" component="div">
+                <Typography gutterBottom variant="h6" component="div" sx={{ color: theme.textColor }}>
                   {"Untitled 10"}
                 </Typography>
-                <Typography variant="body2" color="text.secondary">{"24 X 24 inches"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"Oil on Canvas"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"Private Collection"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"24 X 24 inches"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Oil on Canvas"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Private Collection"}</Typography>
               </CardContent>
-            </Card>
-          </Item>
+            </StyledCard>
+          </StyledItem>
         </Grid>
         <Grid size={4} item xs="auto">
-          <Item>
-            <Card>
+          <StyledItem>
+            <StyledCard>
               {/* <Link to={`/artist/1`}> */}
               <CardMedia
                 sx={{
@@ -1044,22 +1066,22 @@ const ArtworkGallery = () => {
               />
               {/* </Link> */}
               <CardContent>
-                <Typography gutterBottom variant="h6" component="div">
+                <Typography gutterBottom variant="h6" component="div" sx={{ color: theme.textColor }}>
                   {"Untitled 11"}
                 </Typography>
-                <Typography variant="body2" color="text.secondary">{"16 X 20 inches"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"Oil and Pen on Canvas"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"SOLD"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"16 X 20 inches"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Oil and Pen on Canvas"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"SOLD"}</Typography>
               </CardContent>
-            </Card>
-          </Item>
+            </StyledCard>
+          </StyledItem>
         </Grid>
       </Grid>
       <br />
       <Grid container spacing={2} wrap="nowrap">
         <Grid size={4} item xs="auto">
-          <Item>
-            <Card>
+          <StyledItem>
+            <StyledCard>
               {/* <Link to={`/artist/1`}> */}
               <CardMedia
                 sx={{
@@ -1077,19 +1099,19 @@ const ArtworkGallery = () => {
               />
               {/* </Link> */}
               <CardContent>
-                <Typography gutterBottom variant="h6" component="div">
+                <Typography gutterBottom variant="h6" component="div" sx={{ color: theme.textColor }}>
                   {"Untitled 12"}
                 </Typography>
-                <Typography variant="body2" color="text.secondary">{"8 X 11 inches"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"Pen on Paper"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"Private Collection"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"8 X 11 inches"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Pen on Paper"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Private Collection"}</Typography>
               </CardContent>
-            </Card>
-          </Item>
+            </StyledCard>
+          </StyledItem>
         </Grid>
         <Grid size={4} item xs="auto">
-          <Item>
-            <Card>
+          <StyledItem>
+            <StyledCard>
               {/* <Link to={`/artist/1`}> */}
               <CardMedia
                 sx={{
@@ -1107,19 +1129,19 @@ const ArtworkGallery = () => {
               />
               {/* </Link> */}
               <CardContent>
-                <Typography gutterBottom variant="h6" component="div">
+                <Typography gutterBottom variant="h6" component="div" sx={{ color: theme.textColor }}>
                   {"Knowles"}
                 </Typography>
-                <Typography variant="body2" color="text.secondary">{"20 X 30 inches"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"Oil on Canvas"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"SOLD"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"20 X 30 inches"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Oil on Canvas"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"SOLD"}</Typography>
               </CardContent>
-            </Card>
-          </Item>
+            </StyledCard>
+          </StyledItem>
         </Grid>
         <Grid size={4} item xs="auto">
-          <Item>
-            <Card>
+          <StyledItem>
+            <StyledCard>
               {/* <Link to={`/artist/1`}> */}
               <CardMedia
                 sx={{
@@ -1137,22 +1159,22 @@ const ArtworkGallery = () => {
               />
               {/* </Link> */}
               <CardContent>
-                <Typography gutterBottom variant="h6" component="div">
+                <Typography gutterBottom variant="h6" component="div" sx={{ color: theme.textColor }}>
                   {"Untitled 13"}
                 </Typography>
-                <Typography variant="body2" color="text.secondary">{"12 X 16 inches"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"Oil and Pen on Canvas"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"Private Collection"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"12 X 16 inches"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Oil and Pen on Canvas"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Private Collection"}</Typography>
               </CardContent>
-            </Card>
-          </Item>
+            </StyledCard>
+          </StyledItem>
         </Grid>
       </Grid>
       <br />
       <Grid container spacing={2} wrap="nowrap">
         <Grid size={4} item xs="auto">
-          <Item>
-            <Card>
+          <StyledItem>
+            <StyledCard>
               {/* <Link to={`/artist/1`}> */}
               <CardMedia
                 sx={{
@@ -1170,19 +1192,19 @@ const ArtworkGallery = () => {
               />
               {/* </Link> */}
               <CardContent>
-                <Typography gutterBottom variant="h6" component="div">
+                <Typography gutterBottom variant="h6" component="div" sx={{ color: theme.textColor }}>
                   {"For Alex"}
                 </Typography>
-                <Typography variant="body2" color="text.secondary">{"24 X 30 inches"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"Oil on Canvas"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"Private Collection"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"24 X 30 inches"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Oil on Canvas"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Private Collection"}</Typography>
               </CardContent>
-            </Card>
-          </Item>
+            </StyledCard>
+          </StyledItem>
         </Grid>
         <Grid size={4} item xs="auto">
-          <Item>
-            <Card>
+          <StyledItem>
+            <StyledCard>
               {/* <Link to={`/artist/1`}> */}
               <CardMedia
                 sx={{
@@ -1200,19 +1222,19 @@ const ArtworkGallery = () => {
               />
               {/* </Link> */}
               <CardContent>
-                <Typography gutterBottom variant="h6" component="div">
+                <Typography gutterBottom variant="h6" component="div" sx={{ color: theme.textColor }}>
                   {"Brother"}
                 </Typography>
-                <Typography variant="body2" color="text.secondary">{"16 X 20 inches"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"Oil on Canvas"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"SOLD"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"16 X 20 inches"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Oil on Canvas"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"SOLD"}</Typography>
               </CardContent>
-            </Card>
-          </Item>
+            </StyledCard>
+          </StyledItem>
         </Grid>
         <Grid size={4} item xs="auto">
-          <Item>
-            <Card>
+          <StyledItem>
+            <StyledCard>
               {/* <Link to={`/artist/1`}> */}
               <CardMedia
                 sx={{
@@ -1230,22 +1252,22 @@ const ArtworkGallery = () => {
               />
               {/* </Link> */}
               <CardContent>
-                <Typography gutterBottom variant="h6" component="div">
+                <Typography gutterBottom variant="h6" component="div" sx={{ color: theme.textColor }}>
                   {"LaRoux"}
                 </Typography>
-                <Typography variant="body2" color="text.secondary">{"8 X 11 inches"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"Pen on paper"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"Private Collection"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"8 X 11 inches"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Pen on paper"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Private Collection"}</Typography>
               </CardContent>
-            </Card>
-          </Item>
+            </StyledCard>
+          </StyledItem>
         </Grid>
       </Grid>
       <br />
       <Grid container spacing={2} wrap="nowrap">
         <Grid size={4} item xs="auto">
-          <Item>
-            <Card>
+          <StyledItem>
+            <StyledCard>
               {/* <Link to={`/artist/1`}> */}
               <CardMedia
                 sx={{
@@ -1263,19 +1285,19 @@ const ArtworkGallery = () => {
               />
               {/* </Link> */}
               <CardContent>
-                <Typography gutterBottom variant="h6" component="div">
+                <Typography gutterBottom variant="h6" component="div" sx={{ color: theme.textColor }}>
                   {"Untitled 14"}
                 </Typography>
-                <Typography variant="body2" color="text.secondary">{"16 X 20 inches"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"Oil and Pen on Canvas"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"SOLD"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"16 X 20 inches"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Oil and Pen on Canvas"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"SOLD"}</Typography>
               </CardContent>
-            </Card>
-          </Item>
+            </StyledCard>
+          </StyledItem>
         </Grid>
         <Grid size={4} item xs="auto">
-          <Item>
-            <Card>
+          <StyledItem>
+            <StyledCard>
               {/* <Link to={`/artist/1`}> */}
               <CardMedia
                 sx={{
@@ -1293,19 +1315,19 @@ const ArtworkGallery = () => {
               />
               {/* </Link> */}
               <CardContent>
-                <Typography gutterBottom variant="h6" component="div">
+                <Typography gutterBottom variant="h6" component="div" sx={{ color: theme.textColor }}>
                   {"Highland Trucks"}
                 </Typography>
-                <Typography variant="body2" color="text.secondary">{"24 X 30 inches"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"Oil on Canvas"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"SOLD"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"24 X 30 inches"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Oil on Canvas"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"SOLD"}</Typography>
               </CardContent>
-            </Card>
-          </Item>
+            </StyledCard>
+          </StyledItem>
         </Grid>
         <Grid size={4} item xs="auto">
-          <Item>
-            <Card>
+          <StyledItem>
+            <StyledCard>
               {/* <Link to={`/artist/1`}> */}
               <CardMedia
                 sx={{
@@ -1323,22 +1345,22 @@ const ArtworkGallery = () => {
               />
               {/* </Link> */}
               <CardContent>
-                <Typography gutterBottom variant="h6" component="div">
+                <Typography gutterBottom variant="h6" component="div" sx={{ color: theme.textColor }}>
                   {"Where's Eric"}
                 </Typography>
-                <Typography variant="body2" color="text.secondary">{"16 X 20 inches"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"Oil on Canvas"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"SOLD"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"16 X 20 inches"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Oil on Canvas"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"SOLD"}</Typography>
               </CardContent>
-            </Card>
-          </Item>
+            </StyledCard>
+          </StyledItem>
         </Grid>
       </Grid>
       <br />
       <Grid container spacing={2} wrap="nowrap">
         <Grid size={4} item xs="auto">
-          <Item>
-            <Card>
+          <StyledItem>
+            <StyledCard>
               {/* <Link to={`/artist/1`}> */}
               <CardMedia
                 sx={{
@@ -1356,19 +1378,19 @@ const ArtworkGallery = () => {
               />
               {/* </Link> */}
               <CardContent>
-                <Typography gutterBottom variant="h6" component="div">
+                <Typography gutterBottom variant="h6" component="div" sx={{ color: theme.textColor }}>
                   {"Steph's Tree"}
                 </Typography>
-                <Typography variant="body2" color="text.secondary">{"16 X 20 inches"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"Oil on Canvas"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"SOLD"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"16 X 20 inches"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Oil on Canvas"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"SOLD"}</Typography>
               </CardContent>
-            </Card>
-          </Item>
+            </StyledCard>
+          </StyledItem>
         </Grid>
         <Grid size={4} item xs="auto">
-          <Item>
-            <Card>
+          <StyledItem>
+            <StyledCard>
               {/* <Link to={`/artist/1`}> */}
               <CardMedia
                 sx={{
@@ -1386,19 +1408,19 @@ const ArtworkGallery = () => {
               />
               {/* </Link> */}
               <CardContent>
-                <Typography gutterBottom variant="h6" component="div">
+                <Typography gutterBottom variant="h6" component="div" sx={{ color: theme.textColor }}>
                   {"Untitled 15"}
                 </Typography>
-                <Typography variant="body2" color="text.secondary">{"18 X 24 inches"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"Oil and Pen on Canvas"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"Private Collection"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"18 X 24 inches"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Oil and Pen on Canvas"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Private Collection"}</Typography>
               </CardContent>
-            </Card>
-          </Item>
+            </StyledCard>
+          </StyledItem>
         </Grid>
         <Grid size={4} item xs="auto">
-          <Item>
-            <Card>
+          <StyledItem>
+            <StyledCard>
               {/* <Link to={`/artist/1`}> */}
               <CardMedia
                 sx={{
@@ -1416,22 +1438,22 @@ const ArtworkGallery = () => {
               />
               {/* </Link> */}
               <CardContent>
-                <Typography gutterBottom variant="h6" component="div">
+                <Typography gutterBottom variant="h6" component="div" sx={{ color: theme.textColor }}>
                   {"Untitled 16"}
                 </Typography>
-                <Typography variant="body2" color="text.secondary">{"24 X 30 inches"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"Oil on Canvas"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"SOLD"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"24 X 30 inches"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Oil on Canvas"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"SOLD"}</Typography>
               </CardContent>
-            </Card>
-          </Item>
+            </StyledCard>
+          </StyledItem>
         </Grid>
       </Grid>
       <br />
       <Grid container spacing={2} wrap="nowrap">
         <Grid size={4} item xs="auto">
-          <Item>
-            <Card>
+          <StyledItem>
+            <StyledCard>
               {/* <Link to={`/artist/1`}> */}
               <CardMedia
                 sx={{
@@ -1449,19 +1471,19 @@ const ArtworkGallery = () => {
               />
               {/* </Link> */}
               <CardContent>
-                <Typography gutterBottom variant="h6" component="div">
+                <Typography gutterBottom variant="h6" component="div" sx={{ color: theme.textColor }}>
                   {"Lydia"}
                 </Typography>
-                <Typography variant="body2" color="text.secondary">{"36 X 60 inches"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"Oil on Canvas"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"SOLD"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"36 X 60 inches"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Oil on Canvas"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"SOLD"}</Typography>
               </CardContent>
-            </Card>
-          </Item>
+            </StyledCard>
+          </StyledItem>
         </Grid>
         <Grid size={4} item xs="auto">
-          <Item>
-            <Card>
+          <StyledItem>
+            <StyledCard>
               {/* <Link to={`/artist/1`}> */}
               <CardMedia
                 sx={{
@@ -1479,19 +1501,19 @@ const ArtworkGallery = () => {
               />
               {/* </Link> */}
               <CardContent>
-                <Typography gutterBottom variant="h6" component="div">
+                <Typography gutterBottom variant="h6" component="div" sx={{ color: theme.textColor }}>
                   {"Untitled 17"}
                 </Typography>
-                <Typography variant="body2" color="text.secondary">{"24 X 30 inches"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"Oil on Canvas"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"SOLD"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"24 X 30 inches"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Oil on Canvas"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"SOLD"}</Typography>
               </CardContent>
-            </Card>
-          </Item>
+            </StyledCard>
+          </StyledItem>
         </Grid>
         <Grid size={4} item xs="auto">
-          <Item>
-            <Card>
+          <StyledItem>
+            <StyledCard>
               {/* <Link to={`/artist/1`}> */}
               <CardMedia
                 sx={{
@@ -1509,22 +1531,22 @@ const ArtworkGallery = () => {
               />
               {/* </Link> */}
               <CardContent>
-                <Typography gutterBottom variant="h6" component="div">
+                <Typography gutterBottom variant="h6" component="div" sx={{ color: theme.textColor }}>
                   {"Laekyn"}
                 </Typography>
-                <Typography variant="body2" color="text.secondary">{"16 X 20 inches"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"Oil and Pen on Canvas"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"SOLD"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"16 X 20 inches"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Oil and Pen on Canvas"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"SOLD"}</Typography>
               </CardContent>
-            </Card>
-          </Item>
+            </StyledCard>
+          </StyledItem>
         </Grid>
       </Grid>
       <br />
       <Grid container spacing={2} wrap="nowrap">
         <Grid size={4} item xs="auto">
-          <Item>
-            <Card>
+          <StyledItem>
+            <StyledCard>
               {/* <Link to={`/artist/1`}> */}
               <CardMedia
                 sx={{
@@ -1542,19 +1564,19 @@ const ArtworkGallery = () => {
               />
               {/* </Link> */}
               <CardContent>
-                <Typography gutterBottom variant="h6" component="div">
+                <Typography gutterBottom variant="h6" component="div" sx={{ color: theme.textColor }}>
                   {"Alice"}
                 </Typography>
-                <Typography variant="body2" color="text.secondary">{"8 X 11 inches"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"Pen on paper"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"Private Collection"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"8 X 11 inches"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Pen on paper"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Private Collection"}</Typography>
               </CardContent>
-            </Card>
-          </Item>
+            </StyledCard>
+          </StyledItem>
         </Grid>
         <Grid size={4} item xs="auto">
-          <Item>
-            <Card>
+          <StyledItem>
+            <StyledCard>
               {/* <Link to={`/artist/1`}> */}
               <CardMedia
                 sx={{
@@ -1572,19 +1594,19 @@ const ArtworkGallery = () => {
               />
               {/* </Link> */}
               <CardContent>
-                <Typography gutterBottom variant="h6" component="div">
+                <Typography gutterBottom variant="h6" component="div" sx={{ color: theme.textColor }}>
                   {"Untitled 18"}
                 </Typography>
-                <Typography variant="body2" color="text.secondary">{"48 X 48 inches"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"Oil and Pen on paper"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"Private Collection"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"48 X 48 inches"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Oil and Pen on paper"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Private Collection"}</Typography>
               </CardContent>
-            </Card>
-          </Item>
+            </StyledCard>
+          </StyledItem>
         </Grid>
         <Grid size={4} item xs="auto">
-          <Item>
-            <Card>
+          <StyledItem>
+            <StyledCard>
               {/* <Link to={`/artist/1`}> */}
               <CardMedia
                 sx={{
@@ -1602,22 +1624,22 @@ const ArtworkGallery = () => {
               />
               {/* </Link> */}
               <CardContent>
-                <Typography gutterBottom variant="h6" component="div">
+                <Typography gutterBottom variant="h6" component="div" sx={{ color: theme.textColor }}>
                   {"Untitled 19"}
                 </Typography>
-                <Typography variant="body2" color="text.secondary">{"12 X 16 inches"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"Oil on Canvas"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"Private Collection"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"12 X 16 inches"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Oil on Canvas"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Private Collection"}</Typography>
               </CardContent>
-            </Card>
-          </Item>
+            </StyledCard>
+          </StyledItem>
         </Grid>
       </Grid>
       <br />
       <Grid container spacing={2} wrap="nowrap">
         <Grid size={4} item xs="auto">
-          <Item>
-            <Card>
+          <StyledItem>
+            <StyledCard>
               {/* <Link to={`/artist/1`}> */}
               <CardMedia
                 sx={{
@@ -1635,19 +1657,19 @@ const ArtworkGallery = () => {
               />
               {/* </Link> */}
               <CardContent>
-                <Typography gutterBottom variant="h6" component="div">
+                <Typography gutterBottom variant="h6" component="div" sx={{ color: theme.textColor }}>
                   {"Cara Primer"}
                 </Typography>
-                <Typography variant="body2" color="text.secondary">{"30 X 40 inches"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"Pen on Canvas"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"Private Collection"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"30 X 40 inches"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Pen on Canvas"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Private Collection"}</Typography>
               </CardContent>
-            </Card>
-          </Item>
+            </StyledCard>
+          </StyledItem>
         </Grid>
         <Grid size={4} item xs="auto">
-          <Item>
-            <Card>
+          <StyledItem>
+            <StyledCard>
               {/* <Link to={`/artist/1`}> */}
               <CardMedia
                 sx={{
@@ -1665,19 +1687,19 @@ const ArtworkGallery = () => {
               />
               {/* </Link> */}
               <CardContent>
-                <Typography gutterBottom variant="h6" component="div">
+                <Typography gutterBottom variant="h6" component="div" sx={{ color: theme.textColor }}>
                   {"Spring Rises"}
                 </Typography>
-                <Typography variant="body2" color="text.secondary">{"24 X 30 inches"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"Oil on Canvas"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"Private Collection"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"24 X 30 inches"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Oil on Canvas"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Private Collection"}</Typography>
               </CardContent>
-            </Card>
-          </Item>
+            </StyledCard>
+          </StyledItem>
         </Grid>
         <Grid size={4} item xs="auto">
-          <Item>
-            <Card>
+          <StyledItem>
+            <StyledCard>
               {/* <Link to={`/artist/1`}> */}
               <CardMedia
                 sx={{
@@ -1695,22 +1717,22 @@ const ArtworkGallery = () => {
               />
               {/* </Link> */}
               <CardContent>
-                <Typography gutterBottom variant="h6" component="div">
+                <Typography gutterBottom variant="h6" component="div" sx={{ color: theme.textColor }}>
                   {"Heart Vision"}
                 </Typography>
-                <Typography variant="body2" color="text.secondary">{"16 X 20 inches"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"Oil on Canvas"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"Private Collection"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"16 X 20 inches"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Oil on Canvas"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Private Collection"}</Typography>
               </CardContent>
-            </Card>
-          </Item>
+            </StyledCard>
+          </StyledItem>
         </Grid>
       </Grid>
       <br />
       <Grid container spacing={2} wrap="nowrap">
         <Grid size={4} item xs="auto">
-          <Item>
-            <Card>
+          <StyledItem>
+            <StyledCard>
               {/* <Link to={`/artist/1`}> */}
               <CardMedia
                 sx={{
@@ -1728,19 +1750,19 @@ const ArtworkGallery = () => {
               />
               {/* </Link> */}
               <CardContent>
-                <Typography gutterBottom variant="h6" component="div">
+                <Typography gutterBottom variant="h6" component="div" sx={{ color: theme.textColor }}>
                   {"Seeing Through Colby"}
                 </Typography>
-                <Typography variant="body2" color="text.secondary">{"24 X 36 inches"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"Oil on Canvas"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"SOLD"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"24 X 36 inches"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Oil on Canvas"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"SOLD"}</Typography>
               </CardContent>
-            </Card>
-          </Item>
+            </StyledCard>
+          </StyledItem>
         </Grid>
         <Grid size={4} item xs="auto">
-          <Item>
-            <Card>
+          <StyledItem>
+            <StyledCard>
               {/* <Link to={`/artist/1`}> */}
               <CardMedia
                 sx={{
@@ -1758,19 +1780,19 @@ const ArtworkGallery = () => {
               />
               {/* </Link> */}
               <CardContent>
-                <Typography gutterBottom variant="h6" component="div">
+                <Typography gutterBottom variant="h6" component="div" sx={{ color: theme.textColor }}>
                   {"Untitled 20"}
                 </Typography>
-                <Typography variant="body2" color="text.secondary">{"24 X 30 inches"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"Oil on Canvas"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"SOLD"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"24 X 30 inches"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Oil on Canvas"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"SOLD"}</Typography>
               </CardContent>
-            </Card>
-          </Item>
+            </StyledCard>
+          </StyledItem>
         </Grid>
         <Grid size={4} item xs="auto">
-          <Item>
-            <Card>
+          <StyledItem>
+            <StyledCard>
               {/* <Link to={`/artist/1`}> */}
               <CardMedia
                 sx={{
@@ -1788,22 +1810,22 @@ const ArtworkGallery = () => {
               />
               {/* </Link> */}
               <CardContent>
-                <Typography gutterBottom variant="h6" component="div">
+                <Typography gutterBottom variant="h6" component="div" sx={{ color: theme.textColor }}>
                   {"Smokey Eyes"}
                 </Typography>
-                <Typography variant="body2" color="text.secondary">{"16 X 20 inches"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"Oil on Canvas"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"Private Collection"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"16 X 20 inches"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Oil on Canvas"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Private Collection"}</Typography>
               </CardContent>
-            </Card>
-          </Item>
+            </StyledCard>
+          </StyledItem>
         </Grid>
       </Grid>
       <br />
       <Grid container spacing={2} wrap="nowrap">
         <Grid size={4} item xs="auto">
-          <Item>
-            <Card>
+          <StyledItem>
+            <StyledCard>
               {/* <Link to={`/artist/1`}> */}
               <CardMedia
                 sx={{
@@ -1821,19 +1843,19 @@ const ArtworkGallery = () => {
               />
               {/* </Link> */}
               <CardContent>
-                <Typography gutterBottom variant="h6" component="div">
+                <Typography gutterBottom variant="h6" component="div" sx={{ color: theme.textColor }}>
                   {"Untitled 27"}
                 </Typography>
-                <Typography variant="body2" color="text.secondary">{"24 X 36 inches"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"Oil on Canvas"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"Private Collection"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"24 X 36 inches"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Oil on Canvas"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Private Collection"}</Typography>
               </CardContent>
-            </Card>
-          </Item>
+            </StyledCard>
+          </StyledItem>
         </Grid>
         <Grid size={4} item xs="auto">
-          <Item>
-            <Card>
+          <StyledItem>
+            <StyledCard>
               {/* <Link to={`/artist/1`}> */}
               <CardMedia
                 sx={{
@@ -1851,19 +1873,19 @@ const ArtworkGallery = () => {
               />
               {/* </Link> */}
               <CardContent>
-                <Typography gutterBottom variant="h6" component="div">
+                <Typography gutterBottom variant="h6" component="div" sx={{ color: theme.textColor }}>
                   {"His Majesty the Queen"}
                 </Typography>
-                <Typography variant="body2" color="text.secondary">{"36 X 48 inches"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"Oil and Jewels on Canvas"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"Private Collection"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"36 X 48 inches"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Oil and Jewels on Canvas"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Private Collection"}</Typography>
               </CardContent>
-            </Card>
-          </Item>
+            </StyledCard>
+          </StyledItem>
         </Grid>
         <Grid size={4} item xs="auto">
-          <Item>
-            <Card>
+          <StyledItem>
+            <StyledCard>
               {/* <Link to={`/artist/1`}> */}
               <CardMedia
                 sx={{
@@ -1881,22 +1903,22 @@ const ArtworkGallery = () => {
               />
               {/* </Link> */}
               <CardContent>
-                <Typography gutterBottom variant="h6" component="div">
+                <Typography gutterBottom variant="h6" component="div" sx={{ color: theme.textColor }}>
                   {"Pretty Posh"}
                 </Typography>
-                <Typography variant="body2" color="text.secondary">{"24 X 24 inches"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"Oil and Jewels on Canvas"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"Private Collection"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"24 X 24 inches"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Oil and Jewels on Canvas"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Private Collection"}</Typography>
               </CardContent>
-            </Card>
-          </Item>
+            </StyledCard>
+          </StyledItem>
         </Grid>
       </Grid>
       <br />
       <Grid container spacing={2} wrap="nowrap">
         <Grid size={4} item xs="auto">
-          <Item>
-            <Card>
+          <StyledItem>
+            <StyledCard>
               {/* <Link to={`/artist/1`}> */}
               <CardMedia
                 sx={{
@@ -1914,19 +1936,19 @@ const ArtworkGallery = () => {
               />
               {/* </Link> */}
               <CardContent>
-                <Typography gutterBottom variant="h6" component="div">
+                <Typography gutterBottom variant="h6" component="div" sx={{ color: theme.textColor }}>
                   {"Untitled 21"}
                 </Typography>
-                <Typography variant="body2" color="text.secondary">{"24 X 36 inches"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"Oil on Canvas"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"Private Collection"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"24 X 36 inches"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Oil on Canvas"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Private Collection"}</Typography>
               </CardContent>
-            </Card>
-          </Item>
+            </StyledCard>
+          </StyledItem>
         </Grid>
         <Grid size={4} item xs="auto">
-          <Item>
-            <Card>
+          <StyledItem>
+            <StyledCard>
               {/* <Link to={`/artist/1`}> */}
               <CardMedia
                 sx={{
@@ -1944,19 +1966,19 @@ const ArtworkGallery = () => {
               />
               {/* </Link> */}
               <CardContent>
-                <Typography gutterBottom variant="h6" component="div">
+                <Typography gutterBottom variant="h6" component="div" sx={{ color: theme.textColor }}>
                   {"Lana"}
                 </Typography>
-                <Typography variant="body2" color="text.secondary">{"30 X 40 inches"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"Oil on Canvas"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"Private Collection"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"30 X 40 inches"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Oil on Canvas"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Private Collection"}</Typography>
               </CardContent>
-            </Card>
-          </Item>
+            </StyledCard>
+          </StyledItem>
         </Grid>
         <Grid size={4} item xs="auto">
-          <Item>
-            <Card>
+          <StyledItem>
+            <StyledCard>
               {/* <Link to={`/artist/1`}> */}
               <CardMedia
                 sx={{
@@ -1974,22 +1996,22 @@ const ArtworkGallery = () => {
               />
               {/* </Link> */}
               <CardContent>
-                <Typography gutterBottom variant="h6" component="div">
+                <Typography gutterBottom variant="h6" component="div" sx={{ color: theme.textColor }}>
                   {"Doomed"}
                 </Typography>
-                <Typography variant="body2" color="text.secondary">{"24 X 24 inches"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"Oil on Canvas"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"Private Collection"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"24 X 24 inches"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Oil on Canvas"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Private Collection"}</Typography>
               </CardContent>
-            </Card>
-          </Item>
+            </StyledCard>
+          </StyledItem>
         </Grid>
       </Grid>
       <br />
       <Grid container spacing={2} wrap="nowrap">
         <Grid size={4} item xs="auto">
-          <Item>
-            <Card>
+          <StyledItem>
+            <StyledCard>
               {/* <Link to={`/artist/1`}> */}
               <CardMedia
                 sx={{
@@ -2007,19 +2029,19 @@ const ArtworkGallery = () => {
               />
               {/* </Link> */}
               <CardContent>
-                <Typography gutterBottom variant="h6" component="div">
+                <Typography gutterBottom variant="h6" component="div" sx={{ color: theme.textColor }}>
                   {"Untitled 22"}
                 </Typography>
-                <Typography variant="body2" color="text.secondary">{"22 X 28 inches"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"Oil on Canvas"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"Private Collection"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"22 X 28 inches"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Oil on Canvas"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Private Collection"}</Typography>
               </CardContent>
-            </Card>
-          </Item>
+            </StyledCard>
+          </StyledItem>
         </Grid>
         <Grid size={4} item xs="auto">
-          <Item>
-            <Card>
+          <StyledItem>
+            <StyledCard>
               {/* <Link to={`/artist/1`}> */}
               <CardMedia
                 sx={{
@@ -2037,19 +2059,19 @@ const ArtworkGallery = () => {
               />
               {/* </Link> */}
               <CardContent>
-                <Typography gutterBottom variant="h6" component="div">
+                <Typography gutterBottom variant="h6" component="div" sx={{ color: theme.textColor }}>
                   {"Untitled 23"}
                 </Typography>
-                <Typography variant="body2" color="text.secondary">{"16 X 20 inches"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"Oil on Canvas"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"Private Collection"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"16 X 20 inches"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Oil on Canvas"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Private Collection"}</Typography>
               </CardContent>
-            </Card>
-          </Item>
+            </StyledCard>
+          </StyledItem>
         </Grid>
         <Grid size={4} item xs="auto">
-          <Item>
-            <Card>
+          <StyledItem>
+            <StyledCard>
               {/* <Link to={`/artist/1`}> */}
               <CardMedia
                 sx={{
@@ -2067,22 +2089,22 @@ const ArtworkGallery = () => {
               />
               {/* </Link> */}
               <CardContent>
-                <Typography gutterBottom variant="h6" component="div">
+                <Typography gutterBottom variant="h6" component="div" sx={{ color: theme.textColor }}>
                   {"Untitled 24"}
                 </Typography>
-                <Typography variant="body2" color="text.secondary">{"16 X 20 inches"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"Oil on Canvas"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"Private Collection"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"16 X 20 inches"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Oil on Canvas"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Private Collection"}</Typography>
               </CardContent>
-            </Card>
-          </Item>
+            </StyledCard>
+          </StyledItem>
         </Grid>
       </Grid>
       <br />
       <Grid container spacing={2} wrap="nowrap">
         <Grid size={4} item xs="auto">
-          <Item>
-            <Card>
+          <StyledItem>
+            <StyledCard>
               {/* <Link to={`/artist/1`}> */}
               <CardMedia
                 sx={{
@@ -2100,19 +2122,19 @@ const ArtworkGallery = () => {
               />
               {/* </Link> */}
               <CardContent>
-                <Typography gutterBottom variant="h6" component="div">
+                <Typography gutterBottom variant="h6" component="div" sx={{ color: theme.textColor }}>
                   {"Brittany in Light"}
                 </Typography>
-                <Typography variant="body2" color="text.secondary">{"16 X 20 inches"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"Oil on Canvas"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"SOLD"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"16 X 20 inches"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Oil on Canvas"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"SOLD"}</Typography>
               </CardContent>
-            </Card>
-          </Item>
+            </StyledCard>
+          </StyledItem>
         </Grid>
         <Grid size={4} item xs="auto">
-          <Item>
-            <Card>
+          <StyledItem>
+            <StyledCard>
               {/* <Link to={`/artist/1`}> */}
               <CardMedia
                 sx={{
@@ -2130,19 +2152,19 @@ const ArtworkGallery = () => {
               />
               {/* </Link> */}
               <CardContent>
-                <Typography gutterBottom variant="h6" component="div">
+                <Typography gutterBottom variant="h6" component="div" sx={{ color: theme.textColor }}>
                   {"Yunis"}
                 </Typography>
-                <Typography variant="body2" color="text.secondary">{"48 X 78 inches"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"Oil on Canvas"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"SOLD"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"48 X 78 inches"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Oil on Canvas"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"SOLD"}</Typography>
               </CardContent>
-            </Card>
-          </Item>
+            </StyledCard>
+          </StyledItem>
         </Grid>
         <Grid size={4} item xs="auto">
-          <Item>
-            <Card>
+          <StyledItem>
+            <StyledCard>
               {/* <Link to={`/artist/1`}> */}
               <CardMedia
                 sx={{
@@ -2160,22 +2182,22 @@ const ArtworkGallery = () => {
               />
               {/* </Link> */}
               <CardContent>
-                <Typography gutterBottom variant="h6" component="div">
+                <Typography gutterBottom variant="h6" component="div" sx={{ color: theme.textColor }}>
                   {"Hidden Brittany"}
                 </Typography>
-                <Typography variant="body2" color="text.secondary">{"16 X 20 inches"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"Oil on Canvas"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"SOLD"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"16 X 20 inches"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Oil on Canvas"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"SOLD"}</Typography>
               </CardContent>
-            </Card>
-          </Item>
+            </StyledCard>
+          </StyledItem>
         </Grid>
       </Grid>
       <br />
       <Grid container spacing={2} wrap="nowrap">
         <Grid size={4} item xs="auto">
-          <Item>
-            <Card>
+          <StyledItem>
+            <StyledCard>
               {/* <Link to={`/artist/1`}> */}
               <CardMedia
                 sx={{
@@ -2193,19 +2215,19 @@ const ArtworkGallery = () => {
               />
               {/* </Link> */}
               <CardContent>
-                <Typography gutterBottom variant="h6" component="div">
+                <Typography gutterBottom variant="h6" component="div" sx={{ color: theme.textColor }}>
                   {"For Tourian"}
                 </Typography>
-                <Typography variant="body2" color="text.secondary">{"36 X 48 inches"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"Oil on Canvas"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"Donated"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"36 X 48 inches"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Oil on Canvas"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Donated"}</Typography>
               </CardContent>
-            </Card>
-          </Item>
+            </StyledCard>
+          </StyledItem>
         </Grid>
         <Grid size={4} item xs="auto">
-          <Item>
-            <Card>
+          <StyledItem>
+            <StyledCard>
               {/* <Link to={`/artist/1`}> */}
               <CardMedia
                 sx={{
@@ -2223,19 +2245,19 @@ const ArtworkGallery = () => {
               />
               {/* </Link> */}
               <CardContent>
-                <Typography gutterBottom variant="h6" component="div">
+                <Typography gutterBottom variant="h6" component="div" sx={{ color: theme.textColor }}>
                   {"Yingers"}
                 </Typography>
-                <Typography variant="body2" color="text.secondary">{"16 X 20 inches"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"Oil on Canvas"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"SOLD"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"16 X 20 inches"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Oil on Canvas"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"SOLD"}</Typography>
               </CardContent>
-            </Card>
-          </Item>
+            </StyledCard>
+          </StyledItem>
         </Grid>
         <Grid size={4} item xs="auto">
-          <Item>
-            <Card>
+          <StyledItem>
+            <StyledCard>
               {/* <Link to={`/artist/1`}> */}
               <CardMedia
                 sx={{
@@ -2253,22 +2275,22 @@ const ArtworkGallery = () => {
               />
               {/* </Link> */}
               <CardContent>
-                <Typography gutterBottom variant="h6" component="div">
+                <Typography gutterBottom variant="h6" component="div" sx={{ color: theme.textColor }}>
                   {"Seether"}
                 </Typography>
-                <Typography variant="body2" color="text.secondary">{"36 X 60 inches"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"Oil on Canvas"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"Private Collection"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"36 X 60 inches"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Oil on Canvas"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Private Collection"}</Typography>
               </CardContent>
-            </Card>
-          </Item>
+            </StyledCard>
+          </StyledItem>
         </Grid>
       </Grid>
       <br />
       <Grid container spacing={2} wrap="nowrap">
         <Grid size={4} item xs="auto">
-          <Item>
-            <Card>
+          <StyledItem>
+            <StyledCard>
               {/* <Link to={`/artist/1`}> */}
               <CardMedia
                 sx={{
@@ -2286,19 +2308,19 @@ const ArtworkGallery = () => {
               />
               {/* </Link> */}
               <CardContent>
-                <Typography gutterBottom variant="h6" component="div">
+                <Typography gutterBottom variant="h6" component="div" sx={{ color: theme.textColor }}>
                   {"Kowalik"}
                 </Typography>
-                <Typography variant="body2" color="text.secondary">{"16 X 20 inches"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"Oil and Pen on Canvas"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"SOLD"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"16 X 20 inches"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Oil and Pen on Canvas"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"SOLD"}</Typography>
               </CardContent>
-            </Card>
-          </Item>
+            </StyledCard>
+          </StyledItem>
         </Grid>
         <Grid size={4} item xs="auto">
-          <Item>
-            <Card>
+          <StyledItem>
+            <StyledCard>
               {/* <Link to={`/artist/1`}> */}
               <CardMedia
                 sx={{
@@ -2316,19 +2338,19 @@ const ArtworkGallery = () => {
               />
               {/* </Link> */}
               <CardContent>
-                <Typography gutterBottom variant="h6" component="div">
+                <Typography gutterBottom variant="h6" component="div" sx={{ color: theme.textColor }}>
                   {"Hadia"}
                 </Typography>
-                <Typography variant="body2" color="text.secondary">{"16 X 20 inches"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"Oil and Pen on Canvas"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"SOLD"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"16 X 20 inches"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Oil and Pen on Canvas"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"SOLD"}</Typography>
               </CardContent>
-            </Card>
-          </Item>
+            </StyledCard>
+          </StyledItem>
         </Grid>
         <Grid size={4} item xs="auto">
-          <Item>
-            <Card>
+          <StyledItem>
+            <StyledCard>
               {/* <Link to={`/artist/1`}> */}
               <CardMedia
                 sx={{
@@ -2346,22 +2368,22 @@ const ArtworkGallery = () => {
               />
               {/* </Link> */}
               <CardContent>
-                <Typography gutterBottom variant="h6" component="div">
+                <Typography gutterBottom variant="h6" component="div" sx={{ color: theme.textColor }}>
                   {"Gidget"}
                 </Typography>
-                <Typography variant="body2" color="text.secondary">{"11 X 14 inches"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"Oil and Pen on Canvas"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"SOLD"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"11 X 14 inches"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Oil and Pen on Canvas"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"SOLD"}</Typography>
               </CardContent>
-            </Card>
-          </Item>
+            </StyledCard>
+          </StyledItem>
         </Grid>
       </Grid>
       <br />
       <Grid container spacing={2} wrap="nowrap">
         <Grid size={4} item xs="auto">
-          <Item>
-            <Card>
+          <StyledItem>
+            <StyledCard>
               {/* <Link to={`/artist/1`}> */}
               <CardMedia
                 sx={{
@@ -2379,19 +2401,19 @@ const ArtworkGallery = () => {
               />
               {/* </Link> */}
               <CardContent>
-                <Typography gutterBottom variant="h6" component="div">
+                <Typography gutterBottom variant="h6" component="div" sx={{ color: theme.textColor }}>
                   {"Untitled 25"}
                 </Typography>
-                <Typography variant="body2" color="text.secondary">{"11 X 14 inches"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"Oil and Pen on Canvas"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"SOLD"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"11 X 14 inches"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Oil and Pen on Canvas"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"SOLD"}</Typography>
               </CardContent>
-            </Card>
-          </Item>
+            </StyledCard>
+          </StyledItem>
         </Grid>
         <Grid size={4} item xs="auto">
-          <Item>
-            <Card>
+          <StyledItem>
+            <StyledCard>
               {/* <Link to={`/artist/1`}> */}
               <CardMedia
                 sx={{
@@ -2409,19 +2431,19 @@ const ArtworkGallery = () => {
               />
               {/* </Link> */}
               <CardContent>
-                <Typography gutterBottom variant="h6" component="div">
+                <Typography gutterBottom variant="h6" component="div" sx={{ color: theme.textColor }}>
                   {"Iris"}
                 </Typography>
-                <Typography variant="body2" color="text.secondary">{"16 X 20 inches"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"Oil on Canvas"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"Donated"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"16 X 20 inches"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Oil on Canvas"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Donated"}</Typography>
               </CardContent>
-            </Card>
-          </Item>
+            </StyledCard>
+          </StyledItem>
         </Grid>
         <Grid size={4} item xs="auto">
-          <Item>
-            <Card>
+          <StyledItem>
+            <StyledCard>
               {/* <Link to={`/artist/1`}> */}
               <CardMedia
                 sx={{
@@ -2439,22 +2461,22 @@ const ArtworkGallery = () => {
               />
               {/* </Link> */}
               <CardContent>
-                <Typography gutterBottom variant="h6" component="div">
+                <Typography gutterBottom variant="h6" component="div" sx={{ color: theme.textColor }}>
                   {"Clown Contractors"}
                 </Typography>
-                <Typography variant="body2" color="text.secondary">{"11 X 14 inches"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"Oil on Canvas"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"Donated"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"11 X 14 inches"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Oil on Canvas"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Donated"}</Typography>
               </CardContent>
-            </Card>
-          </Item>
+            </StyledCard>
+          </StyledItem>
         </Grid>
       </Grid>
       <br />
       <Grid container spacing={2} wrap="nowrap">
         <Grid size={4} item xs="auto">
-          <Item>
-            <Card>
+          <StyledItem>
+            <StyledCard>
               {/* <Link to={`/artist/1`}> */}
               <CardMedia
                 sx={{
@@ -2472,19 +2494,19 @@ const ArtworkGallery = () => {
               />
               {/* </Link> */}
               <CardContent>
-                <Typography gutterBottom variant="h6" component="div">
+                <Typography gutterBottom variant="h6" component="div" sx={{ color: theme.textColor }}>
                   {"Bolero"}
                 </Typography>
-                <Typography variant="body2" color="text.secondary">{"16 X 20 inches"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"Oil on Canvas"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"Donated"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"16 X 20 inches"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Oil on Canvas"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Donated"}</Typography>
               </CardContent>
-            </Card>
-          </Item>
+            </StyledCard>
+          </StyledItem>
         </Grid>
         <Grid size={4} item xs="auto">
-          <Item>
-            <Card>
+          <StyledItem>
+            <StyledCard>
               {/* <Link to={`/artist/1`}> */}
               <CardMedia
                 sx={{
@@ -2502,19 +2524,19 @@ const ArtworkGallery = () => {
               />
               {/* </Link> */}
               <CardContent>
-                <Typography gutterBottom variant="h6" component="div">
+                <Typography gutterBottom variant="h6" component="div" sx={{ color: theme.textColor }}>
                   {"Candlelight Portrait"}
                 </Typography>
-                <Typography variant="body2" color="text.secondary">{"22 X 28 inches"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"Oil on Canvas"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"Private Collection"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"22 X 28 inches"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Oil on Canvas"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Private Collection"}</Typography>
               </CardContent>
-            </Card>
-          </Item>
+            </StyledCard>
+          </StyledItem>
         </Grid>
         <Grid size={4} item xs="auto">
-          <Item>
-            <Card>
+          <StyledItem>
+            <StyledCard>
               {/* <Link to={`/artist/1`}> */}
               <CardMedia
                 sx={{
@@ -2532,22 +2554,22 @@ const ArtworkGallery = () => {
               />
               {/* </Link> */}
               <CardContent>
-                <Typography gutterBottom variant="h6" component="div">
+                <Typography gutterBottom variant="h6" component="div" sx={{ color: theme.textColor }}>
                   {"Kori's Eyesoar"}
                 </Typography>
-                <Typography variant="body2" color="text.secondary">{"24 X 36 inches"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"Oil on Canvas"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"SOLD"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"24 X 36 inches"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Oil on Canvas"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"SOLD"}</Typography>
               </CardContent>
-            </Card>
-          </Item>
+            </StyledCard>
+          </StyledItem>
         </Grid>
       </Grid>
       <br />
       <Grid container spacing={2} wrap="nowrap">
         <Grid size={4} item xs="auto">
-          <Item>
-            <Card>
+          <StyledItem>
+            <StyledCard>
               {/* <Link to={`/artist/1`}> */}
               <CardMedia
                 sx={{
@@ -2565,19 +2587,19 @@ const ArtworkGallery = () => {
               />
               {/* </Link> */}
               <CardContent>
-                <Typography gutterBottom variant="h6" component="div">
+                <Typography gutterBottom variant="h6" component="div" sx={{ color: theme.textColor }}>
                   {"Birkner"}
                 </Typography>
-                <Typography variant="body2" color="text.secondary">{"22 X 28 inches"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"Oil and Pen on Canvas"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"SOLD"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"22 X 28 inches"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Oil and Pen on Canvas"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"SOLD"}</Typography>
               </CardContent>
-            </Card>
-          </Item>
+            </StyledCard>
+          </StyledItem>
         </Grid>
         <Grid size={4} item xs="auto">
-          <Item>
-            <Card>
+          <StyledItem>
+            <StyledCard>
               {/* <Link to={`/artist/1`}> */}
               <CardMedia
                 sx={{
@@ -2595,19 +2617,19 @@ const ArtworkGallery = () => {
               />
               {/* </Link> */}
               <CardContent>
-                <Typography gutterBottom variant="h6" component="div">
+                <Typography gutterBottom variant="h6" component="div" sx={{ color: theme.textColor }}>
                   {"Untitled 26"}
                 </Typography>
-                <Typography variant="body2" color="text.secondary">{"24 X 24 inches"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"Oil on Canvas"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"Private Collection"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"24 X 24 inches"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Oil on Canvas"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Private Collection"}</Typography>
               </CardContent>
-            </Card>
-          </Item>
+            </StyledCard>
+          </StyledItem>
         </Grid>
         <Grid size={4} item xs="auto">
-          <Item>
-            <Card>
+          <StyledItem>
+            <StyledCard>
               {/* <Link to={`/artist/1`}> */}
               <CardMedia
                 sx={{
@@ -2625,22 +2647,22 @@ const ArtworkGallery = () => {
               />
               {/* </Link> */}
               <CardContent>
-                <Typography gutterBottom variant="h6" component="div">
+                <Typography gutterBottom variant="h6" component="div" sx={{ color: theme.textColor }}>
                   {"Darlington"}
                 </Typography>
-                <Typography variant="body2" color="text.secondary">{"16 X 20 inches"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"Oil and Pen on Canvas"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"SOLD"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"16 X 20 inches"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Oil and Pen on Canvas"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"SOLD"}</Typography>
               </CardContent>
-            </Card>
-          </Item>
+            </StyledCard>
+          </StyledItem>
         </Grid>
       </Grid>
       <br />
       <Grid container spacing={2} wrap="nowrap">
         <Grid size={4} item xs="auto">
-          <Item>
-            <Card>
+          <StyledItem>
+            <StyledCard>
               {/* <Link to={`/artist/1`}> */}
               <CardMedia
                 sx={{
@@ -2658,19 +2680,19 @@ const ArtworkGallery = () => {
               />
               {/* </Link> */}
               <CardContent>
-                <Typography gutterBottom variant="h6" component="div">
+                <Typography gutterBottom variant="h6" component="div" sx={{ color: theme.textColor }}>
                   {"Mindy"}
                 </Typography>
-                <Typography variant="body2" color="text.secondary">{"48 X 60 inches"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"Oil on Canvas"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"SOLD"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"48 X 60 inches"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Oil on Canvas"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"SOLD"}</Typography>
               </CardContent>
-            </Card>
-          </Item>
+            </StyledCard>
+          </StyledItem>
         </Grid>
         <Grid size={4} item xs="auto">
-          <Item>
-            <Card>
+          <StyledItem>
+            <StyledCard>
               {/* <Link to={`/artist/1`}> */}
               <CardMedia
                 sx={{
@@ -2688,19 +2710,19 @@ const ArtworkGallery = () => {
               />
               {/* </Link> */}
               <CardContent>
-                <Typography gutterBottom variant="h6" component="div">
+                <Typography gutterBottom variant="h6" component="div" sx={{ color: theme.textColor }}>
                   {"Mark"}
                 </Typography>
-                <Typography variant="body2" color="text.secondary">{"12 X 18 inches"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"Oil on Canvas"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"SOLD"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"12 X 18 inches"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Oil on Canvas"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"SOLD"}</Typography>
               </CardContent>
-            </Card>
-          </Item>
+            </StyledCard>
+          </StyledItem>
         </Grid>
         <Grid size={4} item xs="auto">
-          <Item>
-            <Card>
+          <StyledItem>
+            <StyledCard>
               {/* <Link to={`/artist/1`}> */}
               <CardMedia
                 sx={{
@@ -2718,22 +2740,22 @@ const ArtworkGallery = () => {
               />
               {/* </Link> */}
               <CardContent>
-                <Typography gutterBottom variant="h6" component="div">
+                <Typography gutterBottom variant="h6" component="div" sx={{ color: theme.textColor }}>
                   {"Lindsey"}
                 </Typography>
-                <Typography variant="body2" color="text.secondary">{"12 X 18 inches"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"Oil on Canvas"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"SOLD"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"12 X 18 inches"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Oil on Canvas"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"SOLD"}</Typography>
               </CardContent>
-            </Card>
-          </Item>
+            </StyledCard>
+          </StyledItem>
         </Grid>
       </Grid>
       <br />
       <Grid container spacing={2} wrap="nowrap">
         <Grid size={4} item xs="auto">
-          <Item>
-            <Card>
+          <StyledItem>
+            <StyledCard>
               {/* <Link to={`/artist/1`}> */}
               <CardMedia
                 sx={{
@@ -2751,15 +2773,15 @@ const ArtworkGallery = () => {
               />
               {/* </Link> */}
               <CardContent>
-                <Typography gutterBottom variant="h6" component="div">
+                <Typography gutterBottom variant="h6" component="div" sx={{ color: theme.textColor }}>
                   {"Liquor Bottles and Flowers"}
                 </Typography>
-                <Typography variant="body2" color="text.secondary">{"24 X 36 inches"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"Oil on Canvas"}</Typography>
-                <Typography variant="body2" color="text.secondary">{"Private Collection"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"24 X 36 inches"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Oil on Canvas"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Private Collection"}</Typography>
               </CardContent>
-            </Card>
-          </Item>
+            </StyledCard>
+          </StyledItem>
         </Grid>
       </Grid>
 

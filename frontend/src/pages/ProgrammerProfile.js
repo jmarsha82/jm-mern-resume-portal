@@ -15,137 +15,51 @@ import DevBooksDetails from "../components/DevBooksDetails"
 import DevLinkDetails from "../components/DevLinkDetails"
 import { Grid } from "@mui/material"
 import ProgrammerNavbar from "../components/ProgrammerNavbar"
+import { useTheme } from "../context/ThemeContext"
 
 const ProgrammerProfile = () => {
-  const { generals, dispatchGeneral } = useGeneralsContext()
-
-  useEffect(() => {
-    const fetchGenerals = async () => {
-      const response = await fetch('/api/generals')
-      const json = await response.json()
-
-      if (response.ok) {
-        dispatchGeneral({ type: 'SET_GENERALS', payload: json })
-      }
-    }
-
-    fetchGenerals()
-  }, [dispatchGeneral])
-
-  const { currentSkills, dispatchSkills } = useCurrentSkillsContext()
-
-  useEffect(() => {
-    const fetchCurrentSkills = async () => {
-      const response = await fetch('/api/currentSkill')
-      const json = await response.json()
-
-      if (response.ok) {
-        dispatchSkills({ type: 'SET_CURRENT_SKILLS', payload: json })
-      }
-    }
-
-    fetchCurrentSkills()
-  }, [dispatchSkills])
-
-  const { workExperiences, dispatchExperience } = useWorkExperiencesContext()
-
-  useEffect(() => {
-    const fetchWorkExperiences = async () => {
-      const response = await fetch('/api/workExperience')
-      const json = await response.json()
-
-      if (response.ok) {
-        dispatchExperience({ type: 'SET_WORK_EXPERIENCE', payload: json })
-      }
-    }
-
-    fetchWorkExperiences()
-  }, [dispatchExperience])
-
-  const { educations, dispatchEducation } = useEducationsContext()
-
-  useEffect(() => {
-    const fetchEducation = async () => {
-      const response = await fetch('/api/education')
-      const json = await response.json()
-
-      if (response.ok) {
-        dispatchEducation({ type: 'SET_EDUCATIONS', payload: json })
-      }
-    }
-
-    fetchEducation()
-  }, [dispatchEducation])
-
-  const { fullSkills, dispatchFullSkills } = useFullSkillsContext()
-
-  useEffect(() => {
-    const fetchFullSkills = async () => {
-      const response = await fetch('/api/fullSkill')
-      const json = await response.json()
-
-      if (response.ok) {
-        dispatchFullSkills({ type: 'SET_FULL_SKILLS', payload: json })
-      }
-    }
-
-    fetchFullSkills()
-  }, [dispatchFullSkills])
-
-  const { devBooks, dispatchDevBooks } = useDevBooksContext()
-
-  useEffect(() => {
-    const fetchDevBooks = async () => {
-      const response = await fetch('/api/devBook')
-      const json = await response.json()
-
-      if (response.ok) {
-        dispatchDevBooks({ type: 'SET_DEVBOOKS', payload: json })
-      }
-    }
-
-    fetchDevBooks()
-  }, [dispatchDevBooks])
-
-  const { devLinks, dispatchDevLink } = useDevLinksContext()
-
-  useEffect(() => {
-    const fetchDevLinks = async () => {
-      const response = await fetch('/api/devLink')
-      const json = await response.json()
-
-      if (response.ok) {
-        dispatchDevLink({ type: 'SET_DEVLINKS', payload: json })
-      }
-    }
-
-    fetchDevLinks()
-  }, [dispatchDevLink])
+  const { isDarkTheme, theme } = useTheme()
 
   return (
-    <div>
+    <div style={{ 
+      background: theme.background, 
+      minHeight: '100vh',
+      transition: 'background 0.3s ease'
+    }}>
       <ProgrammerNavbar className="navbar-background" />
-      <div className="pages">
+          <div className="pages" style={{ background: theme.background }}>
         <div className="home-one">
           <div>
             <GeneralDetails />
           </div>
-          <div className="home-github">
-            <h4>Github Contributions</h4>
+          <div className="home-github" style={{ 
+            background: theme.cardBg, 
+            color: theme.textColor,
+            transition: 'background 0.3s ease, color 0.3s ease'
+          }}>
+            <h4 style={{ color: theme.textSecondary }}>Github Contributions</h4>
             <img src="https://ghchart.rshah.org/1976d2/jmarsha82" alt="Github Profile" />
           </div>
         </div>
         <div className="home-two">
           <div>
             <div>
-              <div className="current-skill-heading"><h4 onClick={() => {
+              <div className="current-skill-heading" style={{ 
+                background: theme.cardBg, 
+                color: theme.textColor,
+                transition: 'background 0.3s ease, color 0.3s ease'
+              }}><h4 style={{ color: theme.accent1 }} onClick={() => {
                 window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
               }} title="Back to Top">Current Project(s) Tech Stack</h4></div>
               <div className="current-skill-details">
                 <CurrentSkillDetails />
               </div>
             </div>
-            <div id="experience-id" className="current-skill-heading"><h4 onClick={() => {
+            <div id="experience-id" className="current-skill-heading" style={{ 
+              background: theme.cardBg, 
+              color: theme.textColor,
+              transition: 'background 0.3s ease, color 0.3s ease'
+            }}><h4 style={{ color: theme.accent2 }} onClick={() => {
               window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
             }}title="Back to Top">Experience</h4></div>
             <div className="work-experience-details">
@@ -155,8 +69,12 @@ const ProgrammerProfile = () => {
         </div>
         <div className="home-three">
           <div>
-            <div id="education-id" className="current-skill-heading">
-              <h4 onClick={() => {
+            <div id="education-id" className="current-skill-heading" style={{ 
+              background: theme.cardBg, 
+              color: theme.textColor,
+              transition: 'background 0.3s ease, color 0.3s ease'
+            }}>
+              <h4 style={{ color: theme.accent3 }} onClick={() => {
                 window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
               }}title="Back to Top">Education</h4>
             </div>
@@ -167,7 +85,11 @@ const ProgrammerProfile = () => {
         </div>
         <div className="home-three">
           <div>
-            <div id="extended-skills-id" className="current-skill-heading"><h4 onClick={() => {
+            <div id="extended-skills-id" className="current-skill-heading" style={{ 
+              background: theme.cardBg, 
+              color: theme.textColor,
+              transition: 'background 0.3s ease, color 0.3s ease'
+            }}><h4 style={{ color: theme.accent1 }} onClick={() => {
               window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
             }}title="Back to Top">Extended Tech Stack</h4></div>
             <div className="current-skill-details">
@@ -177,7 +99,11 @@ const ProgrammerProfile = () => {
         </div>
         <div className="home-three">
           <div>
-            <div id="dev-books-id" className="current-skill-heading"><h4 onClick={() => {
+            <div id="dev-books-id" className="current-skill-heading" style={{ 
+              background: theme.cardBg, 
+              color: theme.textColor,
+              transition: 'background 0.3s ease, color 0.3s ease'
+            }}><h4 style={{ color: theme.accent3 }} onClick={() => {
               window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
             }}title="Back to Top">Dev Books</h4></div>
             <div className="current-skill-details">
@@ -187,7 +113,11 @@ const ProgrammerProfile = () => {
         </div>
         <div className="home-three">
           <div>
-            <div id="dev-links-id" className="current-skill-heading"><h4 onClick={() => {
+            <div id="dev-links-id" className="current-skill-heading" style={{ 
+              background: theme.cardBg, 
+              color: theme.textColor,
+              transition: 'background 0.3s ease, color 0.3s ease'
+            }}><h4 style={{ color: theme.accent2 }} onClick={() => {
               window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
             }}title="Back to Top">Dev Links</h4></div>
             <DevLinkDetails />

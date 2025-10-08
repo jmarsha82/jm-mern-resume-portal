@@ -392,8 +392,10 @@ header a {
 }
 .navbar-site-buttons {
   margin: 4px;
+
 }
 .navbar-button-color {
   color: #111 !important;
   font-weight: 700 !important;
+  font-size: large;
 }

@@ -1,10 +1,17 @@
 import * as React from 'react';
+import { useTheme } from '../context/ThemeContext';
 
 const WorkExperienceDetails = () => {
+  const { theme } = useTheme();
+
   return (
     <div>
-    <div className="work-experience-details">
-      <h4>{"Boeing"}</h4>
+    <div className="work-experience-details" style={{ 
+      background: theme.cardBg, 
+      color: theme.textColor,
+      transition: 'background 0.3s ease, color 0.3s ease'
+    }}>
+      <h4 style={{ color: theme.accent2 }}>{"Boeing"}</h4>
       <div className="work-experience-title">{"Senior Programmer"}</div>
       <div className="work-experience-misc">{"June 2019 – Present"}</div>
       <div className="work-experience-misc">{"St. Louis MO"}</div>
@@ -28,8 +35,12 @@ const WorkExperienceDetails = () => {
         <li><strong>{"Worked in a single and paired programming environment and used Agile development standards."}</strong></li>
       </ul>
     </div>
-    <div className="work-experience-details">
-      <h4>{"Boeing"}</h4>
+    <div className="work-experience-details" style={{ 
+      background: theme.cardBg, 
+      color: theme.textColor,
+      transition: 'background 0.3s ease, color 0.3s ease'
+    }}>
+      <h4 style={{ color: theme.accent2 }}>{"Boeing"}</h4>
       <div className="work-experience-title">{"System and Data Analyst"}</div>
       <div className="work-experience-misc">{"July 2015 - June 2019"}</div>
       <div className="work-experience-misc">{"St. Louis MO"}</div>
@@ -46,8 +57,12 @@ const WorkExperienceDetails = () => {
         <li><strong>{"Transitioned from an analyst to developer role in the creation of an application which interfaces with several other apps and improves user experience using an interactive desktop."}</strong></li>
       </ul>
     </div>
-    <div className="work-experience-details">
-      <h4>{"Accenture"}</h4>
+    <div className="work-experience-details" style={{ 
+      background: theme.cardBg, 
+      color: theme.textColor,
+      transition: 'background 0.3s ease, color 0.3s ease'
+    }}>
+      <h4 style={{ color: theme.accent2 }}>{"Accenture"}</h4>
       <div className="work-experience-title">{"Senior Systems Specialist"}</div>
       <div className="work-experience-misc">{"June 2013 - July 2015"}</div>
       <div className="work-experience-misc">{"St. Louis MO"}</div>
@@ -68,8 +83,12 @@ const WorkExperienceDetails = () => {
         <li><strong>{"Created and maintained relationships with Product Owners and business representatives of the United States Postal Service in Washington D.C. to clarify issues with requirements."}</strong></li>
       </ul>
     </div>
-    <div className="work-experience-details">
-      <h4>{"Phillips 66"}</h4>
+    <div className="work-experience-details" style={{ 
+      background: theme.cardBg, 
+      color: theme.textColor,
+      transition: 'background 0.3s ease, color 0.3s ease'
+    }}>
+      <h4 style={{ color: theme.accent2 }}>{"Phillips 66"}</h4>
       <div className="work-experience-title">{"Production Associate"}</div>
       <div className="work-experience-misc">{"August 2008 - June 2013"}</div>
       <div className="work-experience-misc">{"Hartford IL"}</div>
