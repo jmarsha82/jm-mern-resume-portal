@@ -199,11 +199,11 @@ header a {
   display: grid;
   grid-template-columns: 2fr 3fr;
   grid-template-rows: auto 1fr;
-  margin: 20px auto;
+  margin: 0px auto;
   background: #fff;
   font-size: 1.2rem;
   border-radius: 4px;
-  padding: 18px;
+  padding: 28px;
   position: relative;
   box-shadow: 2px 2px 5px rgba(0,0,0,0.05);
   min-height: 140px;
@@ -234,8 +234,8 @@ header a {
 .general-details {
   background: #fff;
   border-radius: 4px;
-  margin: 20px auto;
-  padding: 20px;
+  margin: 40px auto;
+  padding: 40px;
   position: relative;
   box-shadow: 2px 2px 5px rgba(0,0,0,0.05);
   min-height: 120px;

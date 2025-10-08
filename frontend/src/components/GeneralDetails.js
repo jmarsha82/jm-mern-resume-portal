@@ -14,9 +14,9 @@ const GeneralDetails = ({ general }) => {
       transition: 'background 0.3s ease, color 0.3s ease'
     }}>
       <h4 style={{ color: theme.accent1 }}>Current Role : Programmer at Boeing</h4>
-      <p><PhoneAndroidIcon className='icon-text-alignment' /><strong>     (618)-978-1469</strong></p>
-      <p><EmailIcon className='icon-text-alignment' /><strong>       jmarsha82@yahoo.com</strong></p>
-      <p><strong>Last updated : </strong>{formatDistanceToNow(new Date("2025-09-19T16:09:38.349+00:00"), { addSuffix: true })}</p>
+      <div><PhoneAndroidIcon className='icon-text-alignment' />&nbsp;(618)-978-1469</div>
+      <div><EmailIcon className='icon-text-alignment' />   jmarsha82@yahoo.com</div>
+      <div><strong>Last updated : </strong>{formatDistanceToNow(new Date("2025-09-19T16:09:38.349+00:00"), { addSuffix: true })}</div>
     </div>
   )
 }

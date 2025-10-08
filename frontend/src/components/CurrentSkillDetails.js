@@ -20,7 +20,11 @@ const CurrentSkillDetails = () => {
         </span>
       <div className="current-skill-details-desc">{"Assorted personal projects including uses in the MERN Stack and implementation using java Spring Framework"}</div>
     </div>
-    <div className="current-skill-details">
+    <div className="current-skill-details" style={{ 
+      background: theme.cardBg, 
+      color: theme.textColor,
+      transition: 'background 0.3s ease, color 0.3s ease'
+    }}>
         <span>
           <Tooltip title={"Used Daily"} placement="top">
             <Button variant="contained" href={"https://www.python.org/"} target="_blank">{"Python"}</Button>

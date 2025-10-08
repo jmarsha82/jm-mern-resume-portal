@@ -21,105 +21,125 @@ const ProgrammerProfile = () => {
   const { isDarkTheme, theme } = useTheme()
 
   return (
-    <div style={{ 
-      background: theme.background, 
+    <div style={{
+      background: theme.background,
       minHeight: '100vh',
       transition: 'background 0.3s ease'
     }}>
       <ProgrammerNavbar className="navbar-background" />
-          <div className="pages" style={{ background: theme.background }}>
+      <div className="pages" style={{ background: theme.background }}>
         <div className="home-one">
           <div>
             <GeneralDetails />
           </div>
-          <div className="home-github" style={{ 
-            background: theme.cardBg, 
+          <div className="home-github" style={{
+            background: theme.cardBg,
             color: theme.textColor,
             transition: 'background 0.3s ease, color 0.3s ease'
           }}>
-            <h4 style={{ color: theme.textSecondary }}>Github Contributions</h4>
+            <h4 style={{ color: theme.accent1 }}>Github Contributions</h4>
             <img src="https://ghchart.rshah.org/1976d2/jmarsha82" alt="Github Profile" />
           </div>
         </div>
         <div className="home-two">
           <div>
             <div>
-              <div className="current-skill-heading" style={{ 
-                background: theme.cardBg, 
+              <div className="current-skill-heading" style={{
+                background: theme.cardBg,
                 color: theme.textColor,
                 transition: 'background 0.3s ease, color 0.3s ease'
               }}><h4 style={{ color: theme.accent1 }} onClick={() => {
                 window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
               }} title="Back to Top">Current Project(s) Tech Stack</h4></div>
-              <div className="current-skill-details">
+              <div className="current-skill-details" style={{
+                background: theme.cardBg,
+                color: theme.textColor,
+                transition: 'background 0.3s ease, color 0.3s ease'
+              }}>
                 <CurrentSkillDetails />
               </div>
             </div>
-            <div id="experience-id" className="current-skill-heading" style={{ 
-              background: theme.cardBg, 
+            <div id="experience-id" className="current-skill-heading" style={{
+              background: theme.cardBg,
               color: theme.textColor,
               transition: 'background 0.3s ease, color 0.3s ease'
             }}><h4 style={{ color: theme.accent2 }} onClick={() => {
               window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
-            }}title="Back to Top">Experience</h4></div>
-            <div className="work-experience-details">
+            }} title="Back to Top">Experience</h4></div>
+            <div className="work-experience-details" style={{
+              background: theme.cardBg,
+              color: theme.textColor,
+              transition: 'background 0.3s ease, color 0.3s ease'
+            }}>
               <WorkExperienceDetails />
             </div>
           </div>
         </div>
         <div className="home-three">
           <div>
-            <div id="education-id" className="current-skill-heading" style={{ 
-              background: theme.cardBg, 
+            <div id="education-id" className="current-skill-heading" style={{
+              background: theme.cardBg,
               color: theme.textColor,
               transition: 'background 0.3s ease, color 0.3s ease'
             }}>
               <h4 style={{ color: theme.accent3 }} onClick={() => {
                 window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
-              }}title="Back to Top">Education</h4>
+              }} title="Back to Top">Education</h4>
             </div>
-            <div className="education-details">
+            <div className="education-details" style={{
+              background: theme.cardBg,
+              color: theme.textColor,
+              transition: 'background 0.3s ease, color 0.3s ease'
+            }}>
               <EducationDetails />
             </div>
           </div>
         </div>
         <div className="home-three">
           <div>
-            <div id="extended-skills-id" className="current-skill-heading" style={{ 
-              background: theme.cardBg, 
+            <div id="extended-skills-id" className="current-skill-heading" style={{
+              background: theme.cardBg,
               color: theme.textColor,
               transition: 'background 0.3s ease, color 0.3s ease'
             }}><h4 style={{ color: theme.accent1 }} onClick={() => {
               window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
-            }}title="Back to Top">Extended Tech Stack</h4></div>
-            <div className="current-skill-details">
+            }} title="Back to Top">Extended Tech Stack</h4></div>
+            <div className="current-skill-details" style={{
+              background: theme.cardBg,
+              color: theme.textColor,
+              transition: 'background 0.3s ease, color 0.3s ease'
+            }}>
               <FullSkillDetails />
             </div>
           </div>
         </div>
         <div className="home-three">
           <div>
-            <div id="dev-books-id" className="current-skill-heading" style={{ 
-              background: theme.cardBg, 
+            <div id="dev-books-id" className="current-skill-heading" style={{
+              background: theme.cardBg,
               color: theme.textColor,
               transition: 'background 0.3s ease, color 0.3s ease'
             }}><h4 style={{ color: theme.accent3 }} onClick={() => {
               window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
-            }}title="Back to Top">Dev Books</h4></div>
-            <div className="current-skill-details">
+            }} title="Back to Top">Dev Books</h4></div>
+            <div className="current-skill-details" style={{
+              background: theme.cardBg,
+              color: theme.textColor,
+              transition: 'background 0.3s ease, color 0.3s ease'
+            }}>
               <DevBooksDetails />
             </div>
           </div>
         </div>
         <div className="home-three">
           <div>
-            <div id="dev-links-id" className="current-skill-heading" style={{ 
-              background: theme.cardBg, 
+            <div id="dev-links-id" className="current-skill-heading" style={{
+              background: theme.cardBg,
               color: theme.textColor,
               transition: 'background 0.3s ease, color 0.3s ease'
             }}><h4 style={{ color: theme.accent2 }} onClick={() => {
               window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
-            }}title="Back to Top">Dev Links</h4></div>
+            }} title="Back to Top">Dev Links</h4></div>
             <DevLinkDetails />
           </div>
         </div>
