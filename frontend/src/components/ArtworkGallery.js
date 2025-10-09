@@ -50,11 +50,18 @@ const ArtworkGallery = () => {
   }));
 
   return (
-    <div style={{ 
+    <div style={{
       background: theme.background,
       transition: 'background 0.3s ease',
       padding: '20px 0'
     }}>
+      <div id="portraits-id" className="artwork-heading" style={{
+        background: theme.cardBg,
+        color: theme.textColor,
+        transition: 'background 0.3s ease, color 0.3s ease'
+      }}><h4 style={{ color: theme.accent1 }} onClick={() => {
+        window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+      }} title="Back to Top">Portraits</h4></div>
       <Grid container spacing={2} wrap="nowrap">
         <Grid size={4} item xs="auto">
           <StyledItem>
@@ -687,7 +694,7 @@ const ArtworkGallery = () => {
                   cursor: 'pointer'
                 }}
                 image={`${process.env.PUBLIC_URL}/img/artist/fake_eyelashes.jpg`}
-                title={"Audrey"}
+                title={"Eyelashes"}
                 onClick={() => handleImageClick(
                   `${process.env.PUBLIC_URL}/img/artist/fake_eyelashes.jpg`
                 )}
@@ -695,7 +702,7 @@ const ArtworkGallery = () => {
               {/* </Link> */}
               <CardContent>
                 <Typography gutterBottom variant="h6" component="div" sx={{ color: theme.textColor }}>
-                  {"Audrey"}
+                  {"Eyelashes"}
                 </Typography>
                 <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"12 X 18 inches"}</Typography>
                 <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Oil and Pen on Canvas"}</Typography>
@@ -749,36 +756,6 @@ const ArtworkGallery = () => {
                   height: 250,
                   cursor: 'pointer'
                 }}
-                image={`${process.env.PUBLIC_URL}/img/artist/flower4.jpg`}
-                title={"Untitled 6"}
-                onClick={() => handleImageClick(
-                  `${process.env.PUBLIC_URL}/img/artist/flower4.jpg`
-                )}
-              />
-              {/* </Link> */}
-              <CardContent>
-                <Typography gutterBottom variant="h6" component="div" sx={{ color: theme.textColor }}>
-                  {"Untitled 6"}
-                </Typography>
-                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"16 X 20 inches"}</Typography>
-                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Oil and Pen on Canvas"}</Typography>
-                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"SOLD"}</Typography>
-              </CardContent>
-            </StyledCard>
-          </StyledItem>
-        </Grid>
-        <Grid size={4} item xs="auto">
-          <StyledItem>
-            <StyledCard>
-              {/* <Link to={`/artist/1`}> */}
-              <CardMedia
-                sx={{
-                  backgroundSize: 200,
-                  margin: 5,
-                  width: 200,
-                  height: 250,
-                  cursor: 'pointer'
-                }}
                 image={`${process.env.PUBLIC_URL}/img/artist/rose_glasses.jpg`}
                 title={"Untitled 7"}
                 onClick={() => handleImageClick(
@@ -793,39 +770,6 @@ const ArtworkGallery = () => {
                 <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"16 X 20 inches"}</Typography>
                 <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Oil on Canvas"}</Typography>
                 <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Private Collection"}</Typography>
-              </CardContent>
-            </StyledCard>
-          </StyledItem>
-        </Grid>
-      </Grid>
-      <br />
-      <Grid container spacing={2} wrap="nowrap">
-        <Grid size={4} item xs="auto">
-          <StyledItem>
-            <StyledCard>
-              {/* <Link to={`/artist/1`}> */}
-              <CardMedia
-                sx={{
-                  backgroundSize: 200,
-                  margin: 5,
-                  width: 200,
-                  height: 250,
-                  cursor: 'pointer'
-                }}
-                image={`${process.env.PUBLIC_URL}/img/artist/aeris.jpg`}
-                title={"Aeris"}
-                onClick={() => handleImageClick(
-                  `${process.env.PUBLIC_URL}/img/artist/aeris.jpg`
-                )}
-              />
-              {/* </Link> */}
-              <CardContent>
-                <Typography gutterBottom variant="h6" component="div" sx={{ color: theme.textColor }}>
-                  {"Aeris"}
-                </Typography>
-                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"16 X 20 inches"}</Typography>
-                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Oil and Pen on Canvas"}</Typography>
-                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"SOLD"}</Typography>
               </CardContent>
             </StyledCard>
           </StyledItem>
@@ -856,36 +800,6 @@ const ArtworkGallery = () => {
                 <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"36 X 48 inches"}</Typography>
                 <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Pen on Canvas"}</Typography>
                 <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Private Collection"}</Typography>
-              </CardContent>
-            </StyledCard>
-          </StyledItem>
-        </Grid>
-        <Grid size={4} item xs="auto">
-          <StyledItem>
-            <StyledCard>
-              {/* <Link to={`/artist/1`}> */}
-              <CardMedia
-                sx={{
-                  backgroundSize: 200,
-                  margin: 5,
-                  width: 200,
-                  height: 250,
-                  cursor: 'pointer'
-                }}
-                image={`${process.env.PUBLIC_URL}/img/artist/crawford.jpg`}
-                title={"Crawford"}
-                onClick={() => handleImageClick(
-                  `${process.env.PUBLIC_URL}/img/artist/crawford.jpg`
-                )}
-              />
-              {/* </Link> */}
-              <CardContent>
-                <Typography gutterBottom variant="h6" component="div" sx={{ color: theme.textColor }}>
-                  {"Crawford"}
-                </Typography>
-                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"12 X 16 inches"}</Typography>
-                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Oil and Pen on Canvas"}</Typography>
-                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"SOLD"}</Typography>
               </CardContent>
             </StyledCard>
           </StyledItem>
@@ -935,36 +849,6 @@ const ArtworkGallery = () => {
                   height: 250,
                   cursor: 'pointer'
                 }}
-                image={`${process.env.PUBLIC_URL}/img/artist/layla.jpg`}
-                title={"Layla"}
-                onClick={() => handleImageClick(
-                  `${process.env.PUBLIC_URL}/img/artist/layla.jpg`
-                )}
-              />
-              {/* </Link> */}
-              <CardContent>
-                <Typography gutterBottom variant="h6" component="div" sx={{ color: theme.textColor }}>
-                  {"Layla"}
-                </Typography>
-                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"16 X 20 inches"}</Typography>
-                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Oil and Pen on Canvas"}</Typography>
-                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"SOLD"}</Typography>
-              </CardContent>
-            </StyledCard>
-          </StyledItem>
-        </Grid>
-        <Grid size={4} item xs="auto">
-          <StyledItem>
-            <StyledCard>
-              {/* <Link to={`/artist/1`}> */}
-              <CardMedia
-                sx={{
-                  backgroundSize: 200,
-                  margin: 5,
-                  width: 200,
-                  height: 250,
-                  cursor: 'pointer'
-                }}
                 image={`${process.env.PUBLIC_URL}/img/artist/gold_glasses.jpg`}
                 title={"Untitled 8"}
                 onClick={() => handleImageClick(
@@ -979,39 +863,6 @@ const ArtworkGallery = () => {
                 <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"12 X 16 inches"}</Typography>
                 <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Oil and Jewel on Canvas"}</Typography>
                 <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Private Collection"}</Typography>
-              </CardContent>
-            </StyledCard>
-          </StyledItem>
-        </Grid>
-      </Grid>
-      <br />
-      <Grid container spacing={2} wrap="nowrap">
-        <Grid size={4} item xs="auto">
-          <StyledItem>
-            <StyledCard>
-              {/* <Link to={`/artist/1`}> */}
-              <CardMedia
-                sx={{
-                  backgroundSize: 200,
-                  margin: 5,
-                  width: 200,
-                  height: 250,
-                  cursor: 'pointer'
-                }}
-                image={`${process.env.PUBLIC_URL}/img/artist/flower2.jpg`}
-                title={"Untitled 9"}
-                onClick={() => handleImageClick(
-                  `${process.env.PUBLIC_URL}/img/artist/flower2.jpg`
-                )}
-              />
-              {/* </Link> */}
-              <CardContent>
-                <Typography gutterBottom variant="h6" component="div" sx={{ color: theme.textColor }}>
-                  {"Untitled 9"}
-                </Typography>
-                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"12 X 16 inches"}</Typography>
-                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Oil on Canvas"}</Typography>
-                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"SOLD"}</Typography>
               </CardContent>
             </StyledCard>
           </StyledItem>
@@ -1042,36 +893,6 @@ const ArtworkGallery = () => {
                 <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"24 X 24 inches"}</Typography>
                 <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Oil on Canvas"}</Typography>
                 <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Private Collection"}</Typography>
-              </CardContent>
-            </StyledCard>
-          </StyledItem>
-        </Grid>
-        <Grid size={4} item xs="auto">
-          <StyledItem>
-            <StyledCard>
-              {/* <Link to={`/artist/1`}> */}
-              <CardMedia
-                sx={{
-                  backgroundSize: 200,
-                  margin: 5,
-                  width: 200,
-                  height: 250,
-                  cursor: 'pointer'
-                }}
-                image={`${process.env.PUBLIC_URL}/img/artist/flower3.jpg`}
-                title={"Untitled 11"}
-                onClick={() => handleImageClick(
-                  `${process.env.PUBLIC_URL}/img/artist/flower3.jpg`
-                )}
-              />
-              {/* </Link> */}
-              <CardContent>
-                <Typography gutterBottom variant="h6" component="div" sx={{ color: theme.textColor }}>
-                  {"Untitled 11"}
-                </Typography>
-                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"16 X 20 inches"}</Typography>
-                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Oil and Pen on Canvas"}</Typography>
-                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"SOLD"}</Typography>
               </CardContent>
             </StyledCard>
           </StyledItem>
@@ -1121,36 +942,6 @@ const ArtworkGallery = () => {
                   height: 250,
                   cursor: 'pointer'
                 }}
-                image={`${process.env.PUBLIC_URL}/img/artist/knowles.jpg`}
-                title={"Knowles"}
-                onClick={() => handleImageClick(
-                  `${process.env.PUBLIC_URL}/img/artist/knowles.jpg`
-                )}
-              />
-              {/* </Link> */}
-              <CardContent>
-                <Typography gutterBottom variant="h6" component="div" sx={{ color: theme.textColor }}>
-                  {"Knowles"}
-                </Typography>
-                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"20 X 30 inches"}</Typography>
-                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Oil on Canvas"}</Typography>
-                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"SOLD"}</Typography>
-              </CardContent>
-            </StyledCard>
-          </StyledItem>
-        </Grid>
-        <Grid size={4} item xs="auto">
-          <StyledItem>
-            <StyledCard>
-              {/* <Link to={`/artist/1`}> */}
-              <CardMedia
-                sx={{
-                  backgroundSize: 200,
-                  margin: 5,
-                  width: 200,
-                  height: 250,
-                  cursor: 'pointer'
-                }}
                 image={`${process.env.PUBLIC_URL}/img/artist/eye_tattoo.jpg`}
                 title={"Untitled 13"}
                 onClick={() => handleImageClick(
@@ -1169,9 +960,6 @@ const ArtworkGallery = () => {
             </StyledCard>
           </StyledItem>
         </Grid>
-      </Grid>
-      <br />
-      <Grid container spacing={2} wrap="nowrap">
         <Grid size={4} item xs="auto">
           <StyledItem>
             <StyledCard>
@@ -1202,6 +990,9 @@ const ArtworkGallery = () => {
             </StyledCard>
           </StyledItem>
         </Grid>
+      </Grid>
+      <br />
+      <Grid container spacing={2} wrap="nowrap">
         <Grid size={4} item xs="auto">
           <StyledItem>
             <StyledCard>
@@ -1262,69 +1053,6 @@ const ArtworkGallery = () => {
             </StyledCard>
           </StyledItem>
         </Grid>
-      </Grid>
-      <br />
-      <Grid container spacing={2} wrap="nowrap">
-        <Grid size={4} item xs="auto">
-          <StyledItem>
-            <StyledCard>
-              {/* <Link to={`/artist/1`}> */}
-              <CardMedia
-                sx={{
-                  backgroundSize: 200,
-                  margin: 5,
-                  width: 200,
-                  height: 250,
-                  cursor: 'pointer'
-                }}
-                image={`${process.env.PUBLIC_URL}/img/artist/flower1.jpg`}
-                title={"Untitled 14"}
-                onClick={() => handleImageClick(
-                  `${process.env.PUBLIC_URL}/img/artist/flower1.jpg`
-                )}
-              />
-              {/* </Link> */}
-              <CardContent>
-                <Typography gutterBottom variant="h6" component="div" sx={{ color: theme.textColor }}>
-                  {"Untitled 14"}
-                </Typography>
-                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"16 X 20 inches"}</Typography>
-                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Oil and Pen on Canvas"}</Typography>
-                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"SOLD"}</Typography>
-              </CardContent>
-            </StyledCard>
-          </StyledItem>
-        </Grid>
-        <Grid size={4} item xs="auto">
-          <StyledItem>
-            <StyledCard>
-              {/* <Link to={`/artist/1`}> */}
-              <CardMedia
-                sx={{
-                  backgroundSize: 200,
-                  margin: 5,
-                  width: 200,
-                  height: 250,
-                  cursor: 'pointer'
-                }}
-                image={`${process.env.PUBLIC_URL}/img/artist/highland_trucks.jpg`}
-                title={"Highland Trucks"}
-                onClick={() => handleImageClick(
-                  `${process.env.PUBLIC_URL}/img/artist/highland_trucks.jpg`
-                )}
-              />
-              {/* </Link> */}
-              <CardContent>
-                <Typography gutterBottom variant="h6" component="div" sx={{ color: theme.textColor }}>
-                  {"Highland Trucks"}
-                </Typography>
-                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"24 X 30 inches"}</Typography>
-                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Oil on Canvas"}</Typography>
-                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"SOLD"}</Typography>
-              </CardContent>
-            </StyledCard>
-          </StyledItem>
-        </Grid>
         <Grid size={4} item xs="auto">
           <StyledItem>
             <StyledCard>
@@ -1358,36 +1086,6 @@ const ArtworkGallery = () => {
       </Grid>
       <br />
       <Grid container spacing={2} wrap="nowrap">
-        <Grid size={4} item xs="auto">
-          <StyledItem>
-            <StyledCard>
-              {/* <Link to={`/artist/1`}> */}
-              <CardMedia
-                sx={{
-                  backgroundSize: 200,
-                  margin: 5,
-                  width: 200,
-                  height: 250,
-                  cursor: 'pointer'
-                }}
-                image={`${process.env.PUBLIC_URL}/img/artist/stephs_tree.jpg`}
-                title={"Steph's Tree"}
-                onClick={() => handleImageClick(
-                  `${process.env.PUBLIC_URL}/img/artist/stephs_tree.jpg`
-                )}
-              />
-              {/* </Link> */}
-              <CardContent>
-                <Typography gutterBottom variant="h6" component="div" sx={{ color: theme.textColor }}>
-                  {"Steph's Tree"}
-                </Typography>
-                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"16 X 20 inches"}</Typography>
-                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Oil on Canvas"}</Typography>
-                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"SOLD"}</Typography>
-              </CardContent>
-            </StyledCard>
-          </StyledItem>
-        </Grid>
         <Grid size={4} item xs="auto">
           <StyledItem>
             <StyledCard>
@@ -1448,102 +1146,6 @@ const ArtworkGallery = () => {
             </StyledCard>
           </StyledItem>
         </Grid>
-      </Grid>
-      <br />
-      <Grid container spacing={2} wrap="nowrap">
-        <Grid size={4} item xs="auto">
-          <StyledItem>
-            <StyledCard>
-              {/* <Link to={`/artist/1`}> */}
-              <CardMedia
-                sx={{
-                  backgroundSize: 200,
-                  margin: 5,
-                  width: 200,
-                  height: 250,
-                  cursor: 'pointer'
-                }}
-                image={`${process.env.PUBLIC_URL}/img/artist/lydia.jpg`}
-                title={"Lydia"}
-                onClick={() => handleImageClick(
-                  `${process.env.PUBLIC_URL}/img/artist/lydia.jpg`
-                )}
-              />
-              {/* </Link> */}
-              <CardContent>
-                <Typography gutterBottom variant="h6" component="div" sx={{ color: theme.textColor }}>
-                  {"Lydia"}
-                </Typography>
-                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"36 X 60 inches"}</Typography>
-                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Oil on Canvas"}</Typography>
-                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"SOLD"}</Typography>
-              </CardContent>
-            </StyledCard>
-          </StyledItem>
-        </Grid>
-        <Grid size={4} item xs="auto">
-          <StyledItem>
-            <StyledCard>
-              {/* <Link to={`/artist/1`}> */}
-              <CardMedia
-                sx={{
-                  backgroundSize: 200,
-                  margin: 5,
-                  width: 200,
-                  height: 250,
-                  cursor: 'pointer'
-                }}
-                image={`${process.env.PUBLIC_URL}/img/artist/brittany_daniels.jpg`}
-                title={"Untitled 17"}
-                onClick={() => handleImageClick(
-                  `${process.env.PUBLIC_URL}/img/artist/brittany_daniels.jpg`
-                )}
-              />
-              {/* </Link> */}
-              <CardContent>
-                <Typography gutterBottom variant="h6" component="div" sx={{ color: theme.textColor }}>
-                  {"Untitled 17"}
-                </Typography>
-                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"24 X 30 inches"}</Typography>
-                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Oil on Canvas"}</Typography>
-                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"SOLD"}</Typography>
-              </CardContent>
-            </StyledCard>
-          </StyledItem>
-        </Grid>
-        <Grid size={4} item xs="auto">
-          <StyledItem>
-            <StyledCard>
-              {/* <Link to={`/artist/1`}> */}
-              <CardMedia
-                sx={{
-                  backgroundSize: 200,
-                  margin: 5,
-                  width: 200,
-                  height: 250,
-                  cursor: 'pointer'
-                }}
-                image={`${process.env.PUBLIC_URL}/img/artist/laekyn.jpg`}
-                title={"Laekyn"}
-                onClick={() => handleImageClick(
-                  `${process.env.PUBLIC_URL}/img/artist/laekyn.jpg`
-                )}
-              />
-              {/* </Link> */}
-              <CardContent>
-                <Typography gutterBottom variant="h6" component="div" sx={{ color: theme.textColor }}>
-                  {"Laekyn"}
-                </Typography>
-                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"16 X 20 inches"}</Typography>
-                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Oil and Pen on Canvas"}</Typography>
-                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"SOLD"}</Typography>
-              </CardContent>
-            </StyledCard>
-          </StyledItem>
-        </Grid>
-      </Grid>
-      <br />
-      <Grid container spacing={2} wrap="nowrap">
         <Grid size={4} item xs="auto">
           <StyledItem>
             <StyledCard>
@@ -1574,6 +1176,9 @@ const ArtworkGallery = () => {
             </StyledCard>
           </StyledItem>
         </Grid>
+      </Grid>
+      <br />
+      <Grid container spacing={2} wrap="nowrap">
         <Grid size={4} item xs="auto">
           <StyledItem>
             <StyledCard>
@@ -1634,9 +1239,6 @@ const ArtworkGallery = () => {
             </StyledCard>
           </StyledItem>
         </Grid>
-      </Grid>
-      <br />
-      <Grid container spacing={2} wrap="nowrap">
         <Grid size={4} item xs="auto">
           <StyledItem>
             <StyledCard>
@@ -1667,6 +1269,9 @@ const ArtworkGallery = () => {
             </StyledCard>
           </StyledItem>
         </Grid>
+      </Grid>
+      <br />
+      <Grid container spacing={2} wrap="nowrap">
         <Grid size={4} item xs="auto">
           <StyledItem>
             <StyledCard>
@@ -1727,9 +1332,6 @@ const ArtworkGallery = () => {
             </StyledCard>
           </StyledItem>
         </Grid>
-      </Grid>
-      <br />
-      <Grid container spacing={2} wrap="nowrap">
         <Grid size={4} item xs="auto">
           <StyledItem>
             <StyledCard>
@@ -1760,6 +1362,9 @@ const ArtworkGallery = () => {
             </StyledCard>
           </StyledItem>
         </Grid>
+      </Grid>
+      <br />
+      <Grid container spacing={2} wrap="nowrap">
         <Grid size={4} item xs="auto">
           <StyledItem>
             <StyledCard>
@@ -1820,9 +1425,6 @@ const ArtworkGallery = () => {
             </StyledCard>
           </StyledItem>
         </Grid>
-      </Grid>
-      <br />
-      <Grid container spacing={2} wrap="nowrap">
         <Grid size={4} item xs="auto">
           <StyledItem>
             <StyledCard>
@@ -1853,6 +1455,9 @@ const ArtworkGallery = () => {
             </StyledCard>
           </StyledItem>
         </Grid>
+      </Grid>
+      <br />
+      <Grid container spacing={2} wrap="nowrap">
         <Grid size={4} item xs="auto">
           <StyledItem>
             <StyledCard>
@@ -1913,9 +1518,6 @@ const ArtworkGallery = () => {
             </StyledCard>
           </StyledItem>
         </Grid>
-      </Grid>
-      <br />
-      <Grid container spacing={2} wrap="nowrap">
         <Grid size={4} item xs="auto">
           <StyledItem>
             <StyledCard>
@@ -1946,6 +1548,9 @@ const ArtworkGallery = () => {
             </StyledCard>
           </StyledItem>
         </Grid>
+      </Grid>
+      <br />
+      <Grid container spacing={2} wrap="nowrap">
         <Grid size={4} item xs="auto">
           <StyledItem>
             <StyledCard>
@@ -2006,9 +1611,6 @@ const ArtworkGallery = () => {
             </StyledCard>
           </StyledItem>
         </Grid>
-      </Grid>
-      <br />
-      <Grid container spacing={2} wrap="nowrap">
         <Grid size={4} item xs="auto">
           <StyledItem>
             <StyledCard>
@@ -2039,6 +1641,9 @@ const ArtworkGallery = () => {
             </StyledCard>
           </StyledItem>
         </Grid>
+      </Grid>
+      <br />
+      <Grid container spacing={2} wrap="nowrap">
         <Grid size={4} item xs="auto">
           <StyledItem>
             <StyledCard>
@@ -2099,9 +1704,6 @@ const ArtworkGallery = () => {
             </StyledCard>
           </StyledItem>
         </Grid>
-      </Grid>
-      <br />
-      <Grid container spacing={2} wrap="nowrap">
         <Grid size={4} item xs="auto">
           <StyledItem>
             <StyledCard>
@@ -2132,6 +1734,9 @@ const ArtworkGallery = () => {
             </StyledCard>
           </StyledItem>
         </Grid>
+      </Grid>
+      <br />
+      <Grid container spacing={2} wrap="nowrap">
         <Grid size={4} item xs="auto">
           <StyledItem>
             <StyledCard>
@@ -2192,9 +1797,6 @@ const ArtworkGallery = () => {
             </StyledCard>
           </StyledItem>
         </Grid>
-      </Grid>
-      <br />
-      <Grid container spacing={2} wrap="nowrap">
         <Grid size={4} item xs="auto">
           <StyledItem>
             <StyledCard>
@@ -2221,6 +1823,481 @@ const ArtworkGallery = () => {
                 <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"36 X 48 inches"}</Typography>
                 <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Oil on Canvas"}</Typography>
                 <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Donated"}</Typography>
+              </CardContent>
+            </StyledCard>
+          </StyledItem>
+        </Grid>
+      </Grid>
+      <br />
+      <Grid container spacing={2} wrap="nowrap">
+        <Grid size={4} item xs="auto">
+          <StyledItem>
+            <StyledCard>
+              {/* <Link to={`/artist/1`}> */}
+              <CardMedia
+                sx={{
+                  backgroundSize: 200,
+                  margin: 5,
+                  width: 200,
+                  height: 250,
+                  cursor: 'pointer'
+                }}
+                image={`${process.env.PUBLIC_URL}/img/artist/brittany_daniels.jpg`}
+                title={"Untitled 17"}
+                onClick={() => handleImageClick(
+                  `${process.env.PUBLIC_URL}/img/artist/brittany_daniels.jpg`
+                )}
+              />
+              {/* </Link> */}
+              <CardContent>
+                <Typography gutterBottom variant="h6" component="div" sx={{ color: theme.textColor }}>
+                  {"Untitled 17"}
+                </Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"24 X 30 inches"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Oil on Canvas"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"SOLD"}</Typography>
+              </CardContent>
+            </StyledCard>
+          </StyledItem>
+        </Grid>
+        <Grid size={4} item xs="auto">
+          <StyledItem>
+            <StyledCard>
+              {/* <Link to={`/artist/1`}> */}
+              <CardMedia
+                sx={{
+                  backgroundSize: 200,
+                  margin: 5,
+                  width: 200,
+                  height: 250,
+                  cursor: 'pointer'
+                }}
+                image={`${process.env.PUBLIC_URL}/img/artist/seether.jpg`}
+                title={"Seether"}
+                onClick={() => handleImageClick(
+                  `${process.env.PUBLIC_URL}/img/artist/seether.jpg`
+                )}
+              />
+              {/* </Link> */}
+              <CardContent>
+                <Typography gutterBottom variant="h6" component="div" sx={{ color: theme.textColor }}>
+                  {"Seether"}
+                </Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"36 X 60 inches"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Oil on Canvas"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Private Collection"}</Typography>
+              </CardContent>
+            </StyledCard>
+          </StyledItem>
+        </Grid>
+        <Grid size={4} item xs="auto">
+          <StyledItem>
+            <StyledCard>
+              {/* <Link to={`/artist/1`}> */}
+              <CardMedia
+                sx={{
+                  backgroundSize: 200,
+                  margin: 5,
+                  width: 200,
+                  height: 250,
+                  cursor: 'pointer'
+                }}
+                image={`${process.env.PUBLIC_URL}/img/artist/candlelight_portrait.jpg`}
+                title={"Candlelight Portrait"}
+                onClick={() => handleImageClick(
+                  `${process.env.PUBLIC_URL}/img/artist/candlelight_portrait.jpg`
+                )}
+              />
+              {/* </Link> */}
+              <CardContent>
+                <Typography gutterBottom variant="h6" component="div" sx={{ color: theme.textColor }}>
+                  {"Candlelight Portrait"}
+                </Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"22 X 28 inches"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Oil on Canvas"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Private Collection"}</Typography>
+              </CardContent>
+            </StyledCard>
+          </StyledItem>
+        </Grid>
+      </Grid>
+      <br />
+      <Grid container spacing={2} wrap="nowrap">
+        <Grid size={4} item xs="auto">
+          <StyledItem>
+            <StyledCard>
+              {/* <Link to={`/artist/1`}> */}
+              <CardMedia
+                sx={{
+                  backgroundSize: 200,
+                  margin: 5,
+                  width: 200,
+                  height: 250,
+                  cursor: 'pointer'
+                }}
+                image={`${process.env.PUBLIC_URL}/img/artist/mark.jpg`}
+                title={"Mark"}
+                onClick={() => handleImageClick(
+                  `${process.env.PUBLIC_URL}/img/artist/mark.jpg`
+                )}
+              />
+              {/* </Link> */}
+              <CardContent>
+                <Typography gutterBottom variant="h6" component="div" sx={{ color: theme.textColor }}>
+                  {"Mark"}
+                </Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"12 X 18 inches"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Oil on Canvas"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"SOLD"}</Typography>
+              </CardContent>
+            </StyledCard>
+          </StyledItem>
+        </Grid>
+        <Grid size={4} item xs="auto">
+          <StyledItem>
+            <StyledCard>
+              {/* <Link to={`/artist/1`}> */}
+              <CardMedia
+                sx={{
+                  backgroundSize: 200,
+                  margin: 5,
+                  width: 200,
+                  height: 250,
+                  cursor: 'pointer'
+                }}
+                image={`${process.env.PUBLIC_URL}/img/artist/lindsey.jpg`}
+                title={"Lindsey"}
+                onClick={() => handleImageClick(
+                  `${process.env.PUBLIC_URL}/img/artist/lindsey.jpg`
+                )}
+              />
+              {/* </Link> */}
+              <CardContent>
+                <Typography gutterBottom variant="h6" component="div" sx={{ color: theme.textColor }}>
+                  {"Lindsey"}
+                </Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"12 X 18 inches"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Oil on Canvas"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"SOLD"}</Typography>
+              </CardContent>
+            </StyledCard>
+          </StyledItem>
+        </Grid>
+      </Grid>
+      <br />
+      <div id="flowers-id" className="artwork-heading" style={{
+        background: theme.cardBg,
+        color: theme.textColor,
+        transition: 'background 0.3s ease, color 0.3s ease'
+      }}><h4 style={{ color: theme.accent1 }} onClick={() => {
+        window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+      }} title="Back to Top">Flowers</h4></div>
+      <Grid container spacing={2} wrap="nowrap">
+        <Grid size={4} item xs="auto">
+          <StyledItem>
+            <StyledCard>
+              {/* <Link to={`/artist/1`}> */}
+              <CardMedia
+                sx={{
+                  backgroundSize: 200,
+                  margin: 5,
+                  width: 200,
+                  height: 250,
+                  cursor: 'pointer'
+                }}
+                image={`${process.env.PUBLIC_URL}/img/artist/flower4.jpg`}
+                title={"Untitled 6"}
+                onClick={() => handleImageClick(
+                  `${process.env.PUBLIC_URL}/img/artist/flower4.jpg`
+                )}
+              />
+              {/* </Link> */}
+              <CardContent>
+                <Typography gutterBottom variant="h6" component="div" sx={{ color: theme.textColor }}>
+                  {"Untitled 6"}
+                </Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"16 X 20 inches"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Oil and Pen on Canvas"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"SOLD"}</Typography>
+              </CardContent>
+            </StyledCard>
+          </StyledItem>
+        </Grid>
+        <Grid size={4} item xs="auto">
+          <StyledItem>
+            <StyledCard>
+              {/* <Link to={`/artist/1`}> */}
+              <CardMedia
+                sx={{
+                  backgroundSize: 200,
+                  margin: 5,
+                  width: 200,
+                  height: 250,
+                  cursor: 'pointer'
+                }}
+                image={`${process.env.PUBLIC_URL}/img/artist/aeris.jpg`}
+                title={"Aeris"}
+                onClick={() => handleImageClick(
+                  `${process.env.PUBLIC_URL}/img/artist/aeris.jpg`
+                )}
+              />
+              {/* </Link> */}
+              <CardContent>
+                <Typography gutterBottom variant="h6" component="div" sx={{ color: theme.textColor }}>
+                  {"Aeris"}
+                </Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"16 X 20 inches"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Oil and Pen on Canvas"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"SOLD"}</Typography>
+              </CardContent>
+            </StyledCard>
+          </StyledItem>
+        </Grid>
+        <Grid size={4} item xs="auto">
+          <StyledItem>
+            <StyledCard>
+              {/* <Link to={`/artist/1`}> */}
+              <CardMedia
+                sx={{
+                  backgroundSize: 200,
+                  margin: 5,
+                  width: 200,
+                  height: 250,
+                  cursor: 'pointer'
+                }}
+                image={`${process.env.PUBLIC_URL}/img/artist/crawford.jpg`}
+                title={"Crawford"}
+                onClick={() => handleImageClick(
+                  `${process.env.PUBLIC_URL}/img/artist/crawford.jpg`
+                )}
+              />
+              {/* </Link> */}
+              <CardContent>
+                <Typography gutterBottom variant="h6" component="div" sx={{ color: theme.textColor }}>
+                  {"Crawford"}
+                </Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"12 X 16 inches"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Oil and Pen on Canvas"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"SOLD"}</Typography>
+              </CardContent>
+            </StyledCard>
+          </StyledItem>
+        </Grid>
+      </Grid>
+      <br />
+      <Grid container spacing={2} wrap="nowrap">
+        <Grid size={4} item xs="auto">
+          <StyledItem>
+            <StyledCard>
+              {/* <Link to={`/artist/1`}> */}
+              <CardMedia
+                sx={{
+                  backgroundSize: 200,
+                  margin: 5,
+                  width: 200,
+                  height: 250,
+                  cursor: 'pointer'
+                }}
+                image={`${process.env.PUBLIC_URL}/img/artist/layla.jpg`}
+                title={"Layla"}
+                onClick={() => handleImageClick(
+                  `${process.env.PUBLIC_URL}/img/artist/layla.jpg`
+                )}
+              />
+              {/* </Link> */}
+              <CardContent>
+                <Typography gutterBottom variant="h6" component="div" sx={{ color: theme.textColor }}>
+                  {"Layla"}
+                </Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"16 X 20 inches"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Oil and Pen on Canvas"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"SOLD"}</Typography>
+              </CardContent>
+            </StyledCard>
+          </StyledItem>
+        </Grid>
+        <Grid size={4} item xs="auto">
+          <StyledItem>
+            <StyledCard>
+              {/* <Link to={`/artist/1`}> */}
+              <CardMedia
+                sx={{
+                  backgroundSize: 200,
+                  margin: 5,
+                  width: 200,
+                  height: 250,
+                  cursor: 'pointer'
+                }}
+                image={`${process.env.PUBLIC_URL}/img/artist/flower2.jpg`}
+                title={"Untitled 9"}
+                onClick={() => handleImageClick(
+                  `${process.env.PUBLIC_URL}/img/artist/flower2.jpg`
+                )}
+              />
+              {/* </Link> */}
+              <CardContent>
+                <Typography gutterBottom variant="h6" component="div" sx={{ color: theme.textColor }}>
+                  {"Untitled 9"}
+                </Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"12 X 16 inches"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Oil on Canvas"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"SOLD"}</Typography>
+              </CardContent>
+            </StyledCard>
+          </StyledItem>
+        </Grid>
+        <Grid size={4} item xs="auto">
+          <StyledItem>
+            <StyledCard>
+              {/* <Link to={`/artist/1`}> */}
+              <CardMedia
+                sx={{
+                  backgroundSize: 200,
+                  margin: 5,
+                  width: 200,
+                  height: 250,
+                  cursor: 'pointer'
+                }}
+                image={`${process.env.PUBLIC_URL}/img/artist/flower3.jpg`}
+                title={"Untitled 11"}
+                onClick={() => handleImageClick(
+                  `${process.env.PUBLIC_URL}/img/artist/flower3.jpg`
+                )}
+              />
+              {/* </Link> */}
+              <CardContent>
+                <Typography gutterBottom variant="h6" component="div" sx={{ color: theme.textColor }}>
+                  {"Untitled 11"}
+                </Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"16 X 20 inches"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Oil and Pen on Canvas"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"SOLD"}</Typography>
+              </CardContent>
+            </StyledCard>
+          </StyledItem>
+        </Grid>
+      </Grid>
+      <br />
+      <Grid container spacing={2} wrap="nowrap">
+        <Grid size={4} item xs="auto">
+          <StyledItem>
+            <StyledCard>
+              {/* <Link to={`/artist/1`}> */}
+              <CardMedia
+                sx={{
+                  backgroundSize: 200,
+                  margin: 5,
+                  width: 200,
+                  height: 250,
+                  cursor: 'pointer'
+                }}
+                image={`${process.env.PUBLIC_URL}/img/artist/knowles.jpg`}
+                title={"Knowles"}
+                onClick={() => handleImageClick(
+                  `${process.env.PUBLIC_URL}/img/artist/knowles.jpg`
+                )}
+              />
+              {/* </Link> */}
+              <CardContent>
+                <Typography gutterBottom variant="h6" component="div" sx={{ color: theme.textColor }}>
+                  {"Knowles"}
+                </Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"20 X 30 inches"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Oil on Canvas"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"SOLD"}</Typography>
+              </CardContent>
+            </StyledCard>
+          </StyledItem>
+        </Grid>
+        <Grid size={4} item xs="auto">
+          <StyledItem>
+            <StyledCard>
+              {/* <Link to={`/artist/1`}> */}
+              <CardMedia
+                sx={{
+                  backgroundSize: 200,
+                  margin: 5,
+                  width: 200,
+                  height: 250,
+                  cursor: 'pointer'
+                }}
+                image={`${process.env.PUBLIC_URL}/img/artist/flower1.jpg`}
+                title={"Untitled 14"}
+                onClick={() => handleImageClick(
+                  `${process.env.PUBLIC_URL}/img/artist/flower1.jpg`
+                )}
+              />
+              {/* </Link> */}
+              <CardContent>
+                <Typography gutterBottom variant="h6" component="div" sx={{ color: theme.textColor }}>
+                  {"Untitled 14"}
+                </Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"16 X 20 inches"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Oil and Pen on Canvas"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"SOLD"}</Typography>
+              </CardContent>
+            </StyledCard>
+          </StyledItem>
+        </Grid>
+        <Grid size={4} item xs="auto">
+          <StyledItem>
+            <StyledCard>
+              {/* <Link to={`/artist/1`}> */}
+              <CardMedia
+                sx={{
+                  backgroundSize: 200,
+                  margin: 5,
+                  width: 200,
+                  height: 250,
+                  cursor: 'pointer'
+                }}
+                image={`${process.env.PUBLIC_URL}/img/artist/lydia.jpg`}
+                title={"Lydia"}
+                onClick={() => handleImageClick(
+                  `${process.env.PUBLIC_URL}/img/artist/lydia.jpg`
+                )}
+              />
+              {/* </Link> */}
+              <CardContent>
+                <Typography gutterBottom variant="h6" component="div" sx={{ color: theme.textColor }}>
+                  {"Lydia"}
+                </Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"36 X 60 inches"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Oil on Canvas"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"SOLD"}</Typography>
+              </CardContent>
+            </StyledCard>
+          </StyledItem>
+        </Grid>
+      </Grid>
+      <br />
+      <Grid container spacing={2} wrap="nowrap">
+        <Grid size={4} item xs="auto">
+          <StyledItem>
+            <StyledCard>
+              {/* <Link to={`/artist/1`}> */}
+              <CardMedia
+                sx={{
+                  backgroundSize: 200,
+                  margin: 5,
+                  width: 200,
+                  height: 250,
+                  cursor: 'pointer'
+                }}
+                image={`${process.env.PUBLIC_URL}/img/artist/laekyn.jpg`}
+                title={"Laekyn"}
+                onClick={() => handleImageClick(
+                  `${process.env.PUBLIC_URL}/img/artist/laekyn.jpg`
+                )}
+              />
+              {/* </Link> */}
+              <CardContent>
+                <Typography gutterBottom variant="h6" component="div" sx={{ color: theme.textColor }}>
+                  {"Laekyn"}
+                </Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"16 X 20 inches"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Oil and Pen on Canvas"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"SOLD"}</Typography>
               </CardContent>
             </StyledCard>
           </StyledItem>
@@ -2267,39 +2344,6 @@ const ArtworkGallery = () => {
                   height: 250,
                   cursor: 'pointer'
                 }}
-                image={`${process.env.PUBLIC_URL}/img/artist/seether.jpg`}
-                title={"Seether"}
-                onClick={() => handleImageClick(
-                  `${process.env.PUBLIC_URL}/img/artist/seether.jpg`
-                )}
-              />
-              {/* </Link> */}
-              <CardContent>
-                <Typography gutterBottom variant="h6" component="div" sx={{ color: theme.textColor }}>
-                  {"Seether"}
-                </Typography>
-                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"36 X 60 inches"}</Typography>
-                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Oil on Canvas"}</Typography>
-                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Private Collection"}</Typography>
-              </CardContent>
-            </StyledCard>
-          </StyledItem>
-        </Grid>
-      </Grid>
-      <br />
-      <Grid container spacing={2} wrap="nowrap">
-        <Grid size={4} item xs="auto">
-          <StyledItem>
-            <StyledCard>
-              {/* <Link to={`/artist/1`}> */}
-              <CardMedia
-                sx={{
-                  backgroundSize: 200,
-                  margin: 5,
-                  width: 200,
-                  height: 250,
-                  cursor: 'pointer'
-                }}
                 image={`${process.env.PUBLIC_URL}/img/artist/kowalik.jpg`}
                 title={"Kowalik"}
                 onClick={() => handleImageClick(
@@ -2318,6 +2362,9 @@ const ArtworkGallery = () => {
             </StyledCard>
           </StyledItem>
         </Grid>
+      </Grid>
+      <br />
+      <Grid container spacing={2} wrap="nowrap">
         <Grid size={4} item xs="auto">
           <StyledItem>
             <StyledCard>
@@ -2378,9 +2425,6 @@ const ArtworkGallery = () => {
             </StyledCard>
           </StyledItem>
         </Grid>
-      </Grid>
-      <br />
-      <Grid container spacing={2} wrap="nowrap">
         <Grid size={4} item xs="auto">
           <StyledItem>
             <StyledCard>
@@ -2406,6 +2450,179 @@ const ArtworkGallery = () => {
                 </Typography>
                 <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"11 X 14 inches"}</Typography>
                 <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Oil and Pen on Canvas"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"SOLD"}</Typography>
+              </CardContent>
+            </StyledCard>
+          </StyledItem>
+        </Grid>
+      </Grid>
+      <br />
+      <Grid container spacing={2} wrap="nowrap">
+        <Grid size={4} item xs="auto">
+          <StyledItem>
+            <StyledCard>
+              {/* <Link to={`/artist/1`}> */}
+              <CardMedia
+                sx={{
+                  backgroundSize: 200,
+                  margin: 5,
+                  width: 200,
+                  height: 250,
+                  cursor: 'pointer'
+                }}
+                image={`${process.env.PUBLIC_URL}/img/artist/birkner.jpg`}
+                title={"Birkner"}
+                onClick={() => handleImageClick(
+                  `${process.env.PUBLIC_URL}/img/artist/birkner.jpg`
+                )}
+              />
+              {/* </Link> */}
+              <CardContent>
+                <Typography gutterBottom variant="h6" component="div" sx={{ color: theme.textColor }}>
+                  {"Birkner"}
+                </Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"22 X 28 inches"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Oil and Pen on Canvas"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"SOLD"}</Typography>
+              </CardContent>
+            </StyledCard>
+          </StyledItem>
+        </Grid>
+        <Grid size={4} item xs="auto">
+          <StyledItem>
+            <StyledCard>
+              {/* <Link to={`/artist/1`}> */}
+              <CardMedia
+                sx={{
+                  backgroundSize: 200,
+                  margin: 5,
+                  width: 200,
+                  height: 250,
+                  cursor: 'pointer'
+                }}
+                image={`${process.env.PUBLIC_URL}/img/artist/darlington.jpg`}
+                title={"Darlington"}
+                onClick={() => handleImageClick(
+                  `${process.env.PUBLIC_URL}/img/artist/darlington.jpg`
+                )}
+              />
+              {/* </Link> */}
+              <CardContent>
+                <Typography gutterBottom variant="h6" component="div" sx={{ color: theme.textColor }}>
+                  {"Darlington"}
+                </Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"16 X 20 inches"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Oil and Pen on Canvas"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"SOLD"}</Typography>
+              </CardContent>
+            </StyledCard>
+          </StyledItem>
+        </Grid>
+      </Grid>
+      <br />
+      <div id="landscapes-id" className="artwork-heading" style={{
+        background: theme.cardBg,
+        color: theme.textColor,
+        transition: 'background 0.3s ease, color 0.3s ease'
+      }}><h4 style={{ color: theme.accent1 }} onClick={() => {
+        window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+      }} title="Back to Top">Landscapes/Still Life</h4></div>
+      <Grid container spacing={2} wrap="nowrap">
+        <Grid size={4} item xs="auto">
+          <StyledItem>
+            <StyledCard>
+              {/* <Link to={`/artist/1`}> */}
+              <CardMedia
+                sx={{
+                  backgroundSize: 200,
+                  margin: 5,
+                  width: 200,
+                  height: 250,
+                  cursor: 'pointer'
+                }}
+                image={`${process.env.PUBLIC_URL}/img/artist/highland_trucks.jpg`}
+                title={"Highland Trucks"}
+                onClick={() => handleImageClick(
+                  `${process.env.PUBLIC_URL}/img/artist/highland_trucks.jpg`
+                )}
+              />
+              {/* </Link> */}
+              <CardContent>
+                <Typography gutterBottom variant="h6" component="div" sx={{ color: theme.textColor }}>
+                  {"Highland Trucks"}
+                </Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"24 X 30 inches"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Oil on Canvas"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"SOLD"}</Typography>
+              </CardContent>
+            </StyledCard>
+          </StyledItem>
+        </Grid>
+        <Grid size={4} item xs="auto">
+          <StyledItem>
+            <StyledCard>
+              {/* <Link to={`/artist/1`}> */}
+              <CardMedia
+                sx={{
+                  backgroundSize: 200,
+                  margin: 5,
+                  width: 200,
+                  height: 250,
+                  cursor: 'pointer'
+                }}
+                image={`${process.env.PUBLIC_URL}/img/artist/liquor_bottles.jpg`}
+                title={"Liquor Bottles and Flowers"}
+                onClick={() => handleImageClick(
+                  `${process.env.PUBLIC_URL}/img/artist/liquor_bottles.jpg`
+                )}
+              />
+              {/* </Link> */}
+              <CardContent>
+                <Typography gutterBottom variant="h6" component="div" sx={{ color: theme.textColor }}>
+                  {"Liquor Bottles and Flowers"}
+                </Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"24 X 36 inches"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Oil on Canvas"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Private Collection"}</Typography>
+              </CardContent>
+            </StyledCard>
+          </StyledItem>
+        </Grid>
+      </Grid>
+      <div id="abstract-id" className="artwork-heading" style={{
+        background: theme.cardBg,
+        color: theme.textColor,
+        transition: 'background 0.3s ease, color 0.3s ease'
+      }}><h4 style={{ color: theme.accent1 }} onClick={() => {
+        window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+      }} title="Back to Top">Abstract</h4></div>
+      <br />
+      <Grid container spacing={2} wrap="nowrap">
+        <Grid size={4} item xs="auto">
+          <StyledItem>
+            <StyledCard>
+              {/* <Link to={`/artist/1`}> */}
+              <CardMedia
+                sx={{
+                  backgroundSize: 200,
+                  margin: 5,
+                  width: 200,
+                  height: 250,
+                  cursor: 'pointer'
+                }}
+                image={`${process.env.PUBLIC_URL}/img/artist/stephs_tree.jpg`}
+                title={"Steph's Tree"}
+                onClick={() => handleImageClick(
+                  `${process.env.PUBLIC_URL}/img/artist/stephs_tree.jpg`
+                )}
+              />
+              {/* </Link> */}
+              <CardContent>
+                <Typography gutterBottom variant="h6" component="div" sx={{ color: theme.textColor }}>
+                  {"Steph's Tree"}
+                </Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"16 X 20 inches"}</Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Oil on Canvas"}</Typography>
                 <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"SOLD"}</Typography>
               </CardContent>
             </StyledCard>
@@ -2504,36 +2721,7 @@ const ArtworkGallery = () => {
             </StyledCard>
           </StyledItem>
         </Grid>
-        <Grid size={4} item xs="auto">
-          <StyledItem>
-            <StyledCard>
-              {/* <Link to={`/artist/1`}> */}
-              <CardMedia
-                sx={{
-                  backgroundSize: 200,
-                  margin: 5,
-                  width: 200,
-                  height: 250,
-                  cursor: 'pointer'
-                }}
-                image={`${process.env.PUBLIC_URL}/img/artist/candlelight_portrait.jpg`}
-                title={"Candlelight Portrait"}
-                onClick={() => handleImageClick(
-                  `${process.env.PUBLIC_URL}/img/artist/candlelight_portrait.jpg`
-                )}
-              />
-              {/* </Link> */}
-              <CardContent>
-                <Typography gutterBottom variant="h6" component="div" sx={{ color: theme.textColor }}>
-                  {"Candlelight Portrait"}
-                </Typography>
-                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"22 X 28 inches"}</Typography>
-                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Oil on Canvas"}</Typography>
-                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Private Collection"}</Typography>
-              </CardContent>
-            </StyledCard>
-          </StyledItem>
-        </Grid>
+
         <Grid size={4} item xs="auto">
           <StyledItem>
             <StyledCard>
@@ -2559,39 +2747,6 @@ const ArtworkGallery = () => {
                 </Typography>
                 <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"24 X 36 inches"}</Typography>
                 <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Oil on Canvas"}</Typography>
-                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"SOLD"}</Typography>
-              </CardContent>
-            </StyledCard>
-          </StyledItem>
-        </Grid>
-      </Grid>
-      <br />
-      <Grid container spacing={2} wrap="nowrap">
-        <Grid size={4} item xs="auto">
-          <StyledItem>
-            <StyledCard>
-              {/* <Link to={`/artist/1`}> */}
-              <CardMedia
-                sx={{
-                  backgroundSize: 200,
-                  margin: 5,
-                  width: 200,
-                  height: 250,
-                  cursor: 'pointer'
-                }}
-                image={`${process.env.PUBLIC_URL}/img/artist/birkner.jpg`}
-                title={"Birkner"}
-                onClick={() => handleImageClick(
-                  `${process.env.PUBLIC_URL}/img/artist/birkner.jpg`
-                )}
-              />
-              {/* </Link> */}
-              <CardContent>
-                <Typography gutterBottom variant="h6" component="div" sx={{ color: theme.textColor }}>
-                  {"Birkner"}
-                </Typography>
-                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"22 X 28 inches"}</Typography>
-                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Oil and Pen on Canvas"}</Typography>
                 <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"SOLD"}</Typography>
               </CardContent>
             </StyledCard>
@@ -2623,36 +2778,6 @@ const ArtworkGallery = () => {
                 <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"24 X 24 inches"}</Typography>
                 <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Oil on Canvas"}</Typography>
                 <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Private Collection"}</Typography>
-              </CardContent>
-            </StyledCard>
-          </StyledItem>
-        </Grid>
-        <Grid size={4} item xs="auto">
-          <StyledItem>
-            <StyledCard>
-              {/* <Link to={`/artist/1`}> */}
-              <CardMedia
-                sx={{
-                  backgroundSize: 200,
-                  margin: 5,
-                  width: 200,
-                  height: 250,
-                  cursor: 'pointer'
-                }}
-                image={`${process.env.PUBLIC_URL}/img/artist/darlington.jpg`}
-                title={"Darlington"}
-                onClick={() => handleImageClick(
-                  `${process.env.PUBLIC_URL}/img/artist/darlington.jpg`
-                )}
-              />
-              {/* </Link> */}
-              <CardContent>
-                <Typography gutterBottom variant="h6" component="div" sx={{ color: theme.textColor }}>
-                  {"Darlington"}
-                </Typography>
-                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"16 X 20 inches"}</Typography>
-                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Oil and Pen on Canvas"}</Typography>
-                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"SOLD"}</Typography>
               </CardContent>
             </StyledCard>
           </StyledItem>
@@ -2690,101 +2815,7 @@ const ArtworkGallery = () => {
             </StyledCard>
           </StyledItem>
         </Grid>
-        <Grid size={4} item xs="auto">
-          <StyledItem>
-            <StyledCard>
-              {/* <Link to={`/artist/1`}> */}
-              <CardMedia
-                sx={{
-                  backgroundSize: 200,
-                  margin: 5,
-                  width: 200,
-                  height: 250,
-                  cursor: 'pointer'
-                }}
-                image={`${process.env.PUBLIC_URL}/img/artist/mark.jpg`}
-                title={"Mark"}
-                onClick={() => handleImageClick(
-                  `${process.env.PUBLIC_URL}/img/artist/mark.jpg`
-                )}
-              />
-              {/* </Link> */}
-              <CardContent>
-                <Typography gutterBottom variant="h6" component="div" sx={{ color: theme.textColor }}>
-                  {"Mark"}
-                </Typography>
-                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"12 X 18 inches"}</Typography>
-                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Oil on Canvas"}</Typography>
-                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"SOLD"}</Typography>
-              </CardContent>
-            </StyledCard>
-          </StyledItem>
-        </Grid>
-        <Grid size={4} item xs="auto">
-          <StyledItem>
-            <StyledCard>
-              {/* <Link to={`/artist/1`}> */}
-              <CardMedia
-                sx={{
-                  backgroundSize: 200,
-                  margin: 5,
-                  width: 200,
-                  height: 250,
-                  cursor: 'pointer'
-                }}
-                image={`${process.env.PUBLIC_URL}/img/artist/lindsey.jpg`}
-                title={"Lindsey"}
-                onClick={() => handleImageClick(
-                  `${process.env.PUBLIC_URL}/img/artist/lindsey.jpg`
-                )}
-              />
-              {/* </Link> */}
-              <CardContent>
-                <Typography gutterBottom variant="h6" component="div" sx={{ color: theme.textColor }}>
-                  {"Lindsey"}
-                </Typography>
-                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"12 X 18 inches"}</Typography>
-                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Oil on Canvas"}</Typography>
-                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"SOLD"}</Typography>
-              </CardContent>
-            </StyledCard>
-          </StyledItem>
-        </Grid>
       </Grid>
-      <br />
-      <Grid container spacing={2} wrap="nowrap">
-        <Grid size={4} item xs="auto">
-          <StyledItem>
-            <StyledCard>
-              {/* <Link to={`/artist/1`}> */}
-              <CardMedia
-                sx={{
-                  backgroundSize: 200,
-                  margin: 5,
-                  width: 200,
-                  height: 250,
-                  cursor: 'pointer'
-                }}
-                image={`${process.env.PUBLIC_URL}/img/artist/liquor_bottles.jpg`}
-                title={"Liquor Bottles and Flowers"}
-                onClick={() => handleImageClick(
-                  `${process.env.PUBLIC_URL}/img/artist/liquor_bottles.jpg`
-                )}
-              />
-              {/* </Link> */}
-              <CardContent>
-                <Typography gutterBottom variant="h6" component="div" sx={{ color: theme.textColor }}>
-                  {"Liquor Bottles and Flowers"}
-                </Typography>
-                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"24 X 36 inches"}</Typography>
-                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Oil on Canvas"}</Typography>
-                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Private Collection"}</Typography>
-              </CardContent>
-            </StyledCard>
-          </StyledItem>
-        </Grid>
-      </Grid>
-
       <ImageModal
         open={modalOpen}
         onClose={handleCloseModal}

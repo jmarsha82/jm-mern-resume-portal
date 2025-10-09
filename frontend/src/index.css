@@ -295,6 +295,21 @@ header a {
   border-radius: 50%;
   color: #333;
 }
+.artwork-heading {
+  background: #fff;
+  font-size: 1.2rem;
+  border-radius: 4px;
+  margin: 10px 0;
+  padding: 20px;
+  position: relative;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.05);
+  width: 58rem;
+}
+.artwork-heading h4 {
+  margin: 0;
+  color: #1976d2;
+  cursor: pointer;
+}
 .current-skill-heading {
   background: #fff;
   font-size: 1.2rem;
