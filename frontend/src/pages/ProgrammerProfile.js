@@ -18,7 +18,7 @@ import ProgrammerNavbar from "../components/ProgrammerNavbar"
 import { useTheme } from "../context/ThemeContext"
 
 const ProgrammerProfile = () => {
-  const { isDarkTheme, theme } = useTheme()
+  const { theme } = useTheme()
 
   return (
     <div style={{
@@ -26,7 +26,7 @@ const ProgrammerProfile = () => {
       minHeight: '100vh',
       transition: 'background 0.3s ease'
     }}>
-      <ProgrammerNavbar className="navbar-background" />
+      <ProgrammerNavbar/>
       <div className="pages" style={{ background: theme.background }}>
         <div className="home-one">
           <div>
@@ -37,7 +37,7 @@ const ProgrammerProfile = () => {
             color: theme.textColor,
             transition: 'background 0.3s ease, color 0.3s ease'
           }}>
-            <h4 style={{ color: theme.accent1 }}>Github Contributions</h4>
+            <h4 style={{ color: theme.accent4 }}>Github Contributions</h4>
             <img src="https://ghchart.rshah.org/1976d2/jmarsha82" alt="Github Profile" />
           </div>
         </div>
@@ -48,7 +48,7 @@ const ProgrammerProfile = () => {
                 background: theme.cardBg,
                 color: theme.textColor,
                 transition: 'background 0.3s ease, color 0.3s ease'
-              }}><h4 style={{ color: theme.accent1 }} onClick={() => {
+              }}><h4 style={{ color: theme.accent4 }} onClick={() => {
                 window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
               }} title="Back to Top">Current Project(s) Tech Stack</h4></div>
               <div className="current-skill-details" style={{
@@ -63,7 +63,7 @@ const ProgrammerProfile = () => {
               background: theme.cardBg,
               color: theme.textColor,
               transition: 'background 0.3s ease, color 0.3s ease'
-            }}><h4 style={{ color: theme.accent2 }} onClick={() => {
+            }}><h4 style={{ color: theme.accent4 }} onClick={() => {
               window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
             }} title="Back to Top">Experience</h4></div>
             <div className="work-experience-details" style={{
@@ -82,7 +82,7 @@ const ProgrammerProfile = () => {
               color: theme.textColor,
               transition: 'background 0.3s ease, color 0.3s ease'
             }}>
-              <h4 style={{ color: theme.accent3 }} onClick={() => {
+              <h4 style={{ color: theme.accent4 }} onClick={() => {
                 window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
               }} title="Back to Top">Education</h4>
             </div>
@@ -101,7 +101,7 @@ const ProgrammerProfile = () => {
               background: theme.cardBg,
               color: theme.textColor,
               transition: 'background 0.3s ease, color 0.3s ease'
-            }}><h4 style={{ color: theme.accent1 }} onClick={() => {
+            }}><h4 style={{ color: theme.accent4 }} onClick={() => {
               window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
             }} title="Back to Top">Extended Tech Stack</h4></div>
             <div className="current-skill-details" style={{
@@ -119,7 +119,7 @@ const ProgrammerProfile = () => {
               background: theme.cardBg,
               color: theme.textColor,
               transition: 'background 0.3s ease, color 0.3s ease'
-            }}><h4 style={{ color: theme.accent3 }} onClick={() => {
+            }}><h4 style={{ color: theme.accent4 }} onClick={() => {
               window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
             }} title="Back to Top">Dev Books</h4></div>
             <div className="current-skill-details" style={{
@@ -137,7 +137,7 @@ const ProgrammerProfile = () => {
               background: theme.cardBg,
               color: theme.textColor,
               transition: 'background 0.3s ease, color 0.3s ease'
-            }}><h4 style={{ color: theme.accent2 }} onClick={() => {
+            }}><h4 style={{ color: theme.accent4 }} onClick={() => {
               window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
             }} title="Back to Top">Dev Links</h4></div>
             <DevLinkDetails />

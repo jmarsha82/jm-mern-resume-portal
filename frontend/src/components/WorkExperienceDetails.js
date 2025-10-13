@@ -11,7 +11,7 @@ const WorkExperienceDetails = () => {
       color: theme.textColor,
       transition: 'background 0.3s ease, color 0.3s ease'
     }}>
-      <h4 style={{ color: theme.accent2 }}>{"Boeing"}</h4>
+      <h4 style={{ color: theme.accent4 }}>{"Boeing"}</h4>
       <div className="work-experience-title">{"Senior Programmer"}</div>
       <div className="work-experience-misc">{"June 2019 – Present"}</div>
       <div className="work-experience-misc">{"St. Louis MO"}</div>
@@ -40,7 +40,7 @@ const WorkExperienceDetails = () => {
       color: theme.textColor,
       transition: 'background 0.3s ease, color 0.3s ease'
     }}>
-      <h4 style={{ color: theme.accent2 }}>{"Boeing"}</h4>
+      <h4 style={{ color: theme.accent4 }}>{"Boeing"}</h4>
       <div className="work-experience-title">{"System and Data Analyst"}</div>
       <div className="work-experience-misc">{"July 2015 - June 2019"}</div>
       <div className="work-experience-misc">{"St. Louis MO"}</div>
@@ -62,7 +62,7 @@ const WorkExperienceDetails = () => {
       color: theme.textColor,
       transition: 'background 0.3s ease, color 0.3s ease'
     }}>
-      <h4 style={{ color: theme.accent2 }}>{"Accenture"}</h4>
+      <h4 style={{ color: theme.accent4 }}>{"Accenture"}</h4>
       <div className="work-experience-title">{"Senior Systems Specialist"}</div>
       <div className="work-experience-misc">{"June 2013 - July 2015"}</div>
       <div className="work-experience-misc">{"St. Louis MO"}</div>
@@ -88,7 +88,7 @@ const WorkExperienceDetails = () => {
       color: theme.textColor,
       transition: 'background 0.3s ease, color 0.3s ease'
     }}>
-      <h4 style={{ color: theme.accent2 }}>{"Phillips 66"}</h4>
+      <h4 style={{ color: theme.accent4 }}>{"Phillips 66"}</h4>
       <div className="work-experience-title">{"Production Associate"}</div>
       <div className="work-experience-misc">{"August 2008 - June 2013"}</div>
       <div className="work-experience-misc">{"Hartford IL"}</div>

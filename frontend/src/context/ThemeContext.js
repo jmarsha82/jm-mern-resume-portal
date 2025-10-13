@@ -28,8 +28,10 @@ const lightTheme = {
   cardBg: '#fff',
   shadowColor: 'rgba(0, 0, 0, 0.1)',
   accent1: '#1976d2',
-  accent2: '#2196f3',
-  accent3: '#42a5f5',
+  accent2: 'rgb(25, 118, 210)',
+  accent3: 'rgb(25, 118, 210)',
+  accent4: 'rgba(15, 52, 96, 0.75)',
+  accent5: '#ffffff',
 }
 
 const darkTheme = {
@@ -43,6 +45,8 @@ const darkTheme = {
   accent1: '#64b5f6',
   accent2: '#90caf9',
   accent3: '#bbdefb',
+  accent4: 'rgb(0, 255, 255)',
+  accent5: '#000000',
 }
 
 // Initialize theme from localStorage or default to dark theme

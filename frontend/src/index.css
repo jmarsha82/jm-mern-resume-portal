@@ -12,7 +12,6 @@ body {
   font-family: "Poppins";
 }
 header {
-  background: #1976d2;
   height: 2.5rem;
   position: sticky;
   top: 0;
@@ -23,6 +22,8 @@ header .container {
   margin: auto;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  height: 2.5rem;
 }
 header .lower-container {
   max-width: 1400px;
@@ -412,7 +413,29 @@ header a {
 
 }
 .navbar-button-color {
-  color: #111 !important;
   font-weight: 700 !important;
   font-size: large;
+}
+
+.navbar-right-section {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.navbar-download-resume-btn {
+  background: #333 !important;
+  color: white !important;
+  font-weight: 600 !important;
+  font-size: 0.75rem !important;
+  padding: 4px 10px !important;
+  margin-left: 10px !important;
+  border-radius: 4px !important;
+  transition: all 0.3s ease !important;
+}
+
+.navbar-download-resume-btn:hover {
+  background: #555 !important;
+  transform: translateY(-1px) !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2) !important;
 }

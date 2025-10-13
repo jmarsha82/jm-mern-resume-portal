@@ -21,7 +21,7 @@ const Item = styled(Paper)(({ theme }) => ({
 const ArtworkGallery = () => {
   const [modalOpen, setModalOpen] = React.useState(false);
   const [selectedImage, setSelectedImage] = React.useState(null);
-  const { isDarkTheme, theme } = useTheme();
+  const { theme } = useTheme();
 
   const handleImageClick = (imageUrl, title, description) => {
     setSelectedImage({ imageUrl, title, description });
@@ -59,7 +59,7 @@ const ArtworkGallery = () => {
         background: theme.cardBg,
         color: theme.textColor,
         transition: 'background 0.3s ease, color 0.3s ease'
-      }}><h4 style={{ color: theme.accent1 }} onClick={() => {
+      }}><h4 style={{ color: theme.accent4 }} onClick={() => {
         window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
       }} title="Back to Top">Portraits</h4></div>
       <Grid container spacing={2} wrap="nowrap">
@@ -1989,7 +1989,7 @@ const ArtworkGallery = () => {
         background: theme.cardBg,
         color: theme.textColor,
         transition: 'background 0.3s ease, color 0.3s ease'
-      }}><h4 style={{ color: theme.accent1 }} onClick={() => {
+      }}><h4 style={{ color: theme.accent4 }} onClick={() => {
         window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
       }} title="Back to Top">Flowers</h4></div>
       <Grid container spacing={2} wrap="nowrap">
@@ -2524,7 +2524,7 @@ const ArtworkGallery = () => {
         background: theme.cardBg,
         color: theme.textColor,
         transition: 'background 0.3s ease, color 0.3s ease'
-      }}><h4 style={{ color: theme.accent1 }} onClick={() => {
+      }}><h4 style={{ color: theme.accent4 }} onClick={() => {
         window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
       }} title="Back to Top">Landscapes/Still Life</h4></div>
       <Grid container spacing={2} wrap="nowrap">
@@ -2593,7 +2593,7 @@ const ArtworkGallery = () => {
         background: theme.cardBg,
         color: theme.textColor,
         transition: 'background 0.3s ease, color 0.3s ease'
-      }}><h4 style={{ color: theme.accent1 }} onClick={() => {
+      }}><h4 style={{ color: theme.accent4 }} onClick={() => {
         window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
       }} title="Back to Top">Abstract</h4></div>
       <br />
