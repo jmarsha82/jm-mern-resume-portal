@@ -14,6 +14,7 @@ const Home = () => {
     nameGradient: 'linear-gradient(45deg, #00ffff, #ff00ff, #00ff00)',
     button1: 'linear-gradient(45deg, #ff00ff, #00ffff)',
     button2: 'linear-gradient(45deg, #00ff00, #00ffff)',
+    button3: 'linear-gradient(45deg, #ffff00, #ff00ff)',
     avatarRing: 'conic-gradient(from 0deg, #00ffff, #ff00ff, #00ff00, #ffff00, #00ffff)',
     floatingOrbs: [
       { bg: 'radial-gradient(circle, rgba(0,255,255,0.1) 0%, transparent 70%)', anim: 'float 6s ease-in-out infinite' },
@@ -30,6 +31,7 @@ const Home = () => {
     nameGradient: 'linear-gradient(45deg, #3b82f6, #8b5cf6, #10b981)',
     button1: 'linear-gradient(45deg, #3b82f6, #8b5cf6)',
     button2: 'linear-gradient(45deg, #10b981, #3b82f6)',
+    button3: 'linear-gradient(45deg, #f59e0b, #8b5cf6)',
     avatarRing: 'conic-gradient(from 0deg, #3b82f6, #8b5cf6, #10b981, #f59e0b, #3b82f6)',
     floatingOrbs: [
       { bg: 'radial-gradient(circle, rgba(59,130,246,0.1) 0%, transparent 70%)', anim: 'float 6s ease-in-out infinite' },
@@ -256,6 +258,29 @@ const Home = () => {
             }}
           >
             DEV PROFILE
+          </Button>
+          <Button
+            variant="contained"
+            href="/contact"
+            style={{
+              padding: '16px 32px',
+              borderRadius: 25,
+              background: theme.button3,
+              textTransform: 'none',
+              fontWeight: 800,
+              color: '#000',
+              fontSize: '16px',
+              letterSpacing: 1,
+              border: isDarkTheme 
+                ? '2px solid rgba(255,255,0,0.5)'
+                : '2px solid rgba(245,158,11,0.5)',
+              boxShadow: isDarkTheme 
+                ? '0 0 30px rgba(255,255,0,0.4), inset 0 0 20px rgba(255,255,255,0.1)'
+                : '0 0 30px rgba(245,158,11,0.4), inset 0 0 20px rgba(255,255,255,0.1)',
+              transition: 'all 0.3s ease'
+            }}
+          >
+            CONTACT ME
           </Button>
         </Box>
       </Box>
