@@ -3,6 +3,7 @@ import Home from './pages/Home';
 import ProgrammerProfile from './pages/ProgrammerProfile';
 import ArtistProfile from './pages/ArtistProfile';
 import Contact from './pages/Contact';
+import About from './pages/About';
 import { ThemeContextProvider } from './context/ThemeContext';
 
 function App() {
@@ -26,6 +27,10 @@ function App() {
                         <Route 
                         path="contact"
                         element={<Contact />}
+                        />
+                        <Route 
+                        path="about"
+                        element={<About />}
                         />
                     </Routes>
             </BrowserRouter>

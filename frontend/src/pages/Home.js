@@ -261,6 +261,31 @@ const Home = () => {
           </Button>
           <Button
             variant="contained"
+            href="/about"
+            style={{
+              padding: '16px 32px',
+              borderRadius: 25,
+              background: isDarkTheme 
+                ? 'linear-gradient(45deg, #00ff00, #ff00ff)'
+                : 'linear-gradient(45deg, #10b981, #8b5cf6)',
+              textTransform: 'none',
+              fontWeight: 800,
+              color: '#000',
+              fontSize: '16px',
+              letterSpacing: 1,
+              border: isDarkTheme 
+                ? '2px solid rgba(0,255,0,0.5)'
+                : '2px solid rgba(16,185,129,0.5)',
+              boxShadow: isDarkTheme 
+                ? '0 0 30px rgba(0,255,0,0.4), inset 0 0 20px rgba(255,255,255,0.1)'
+                : '0 0 30px rgba(16,185,129,0.4), inset 0 0 20px rgba(255,255,255,0.1)',
+              transition: 'all 0.3s ease'
+            }}
+          >
+            ABOUT
+          </Button>
+          <Button
+            variant="contained"
             href="/contact"
             style={{
               padding: '16px 32px',
