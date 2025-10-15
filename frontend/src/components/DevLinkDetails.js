@@ -31,7 +31,7 @@ const DevLinkDetails = () => {
   return (
     <div>
       <Grid container spacing={2} wrap="nowrap">
-      <Grid size={4} item xs={12}>
+        <Grid size={4} item xs={12}>
           <StyledItem>
             <StyledCard>
               <a href={"https://www.codingame.com/start"} target="_blank">
@@ -82,7 +82,7 @@ const DevLinkDetails = () => {
       </Grid>
       <br />
       <Grid container spacing={2} wrap="nowrap">
-      <Grid size={4} item xs={12}>
+        <Grid size={4} item xs={12}>
           <StyledItem>
             <StyledCard>
               <a href={"https://www.cs.usfca.edu/~galles/visualization/"} target="_blank">
@@ -133,7 +133,7 @@ const DevLinkDetails = () => {
       </Grid>
       <br />
       <Grid container spacing={2} wrap="nowrap">
-      <Grid size={4} item xs={12}>
+        <Grid size={4} item xs={12}>
           <StyledItem>
             <StyledCard>
               <a href={"https://replit.com/"} target="_blank">
@@ -184,7 +184,7 @@ const DevLinkDetails = () => {
       </Grid>
       <br />
       <Grid container spacing={2} wrap="nowrap">
-      <Grid size={4} item xs={12}>
+        <Grid size={4} item xs={12}>
           <StyledItem>
             <StyledCard>
               <a href={"https://ninjamock.com/"} target="_blank">
@@ -235,7 +235,7 @@ const DevLinkDetails = () => {
       </Grid>
       <br />
       <Grid container spacing={2} wrap="nowrap">
-      <Grid size={4} item xs={12}>
+        <Grid size={4} item xs={12}>
           <StyledItem>
             <StyledCard>
               <a href={"https://www.hackerrank.com/dashboard"} target="_blank">
@@ -286,7 +286,7 @@ const DevLinkDetails = () => {
       </Grid>
       <br />
       <Grid container spacing={2} wrap="nowrap">
-      <Grid size={4} item xs={12}>
+        <Grid size={4} item xs={12}>
           <StyledItem>
             <StyledCard>
               <a href={"https://react.dev/"} target="_blank">
@@ -330,6 +330,57 @@ const DevLinkDetails = () => {
                   {"Angular"}
                 </Typography>
                 <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Starting point for implementing Angular Framework"}</Typography>
+              </CardContent>
+            </StyledCard>
+          </StyledItem>
+        </Grid>
+      </Grid>
+      <br />
+      <Grid container spacing={2} wrap="nowrap">
+        <Grid size={4} item xs={12}>
+          <StyledItem>
+            <StyledCard>
+              <a href={"https://leetcode.com/"} target="_blank">
+                <CardMedia
+                  sx={{
+                    backgroundSize: 200,
+                    margin: 5,
+                    width: 200,
+                    height: 60
+                  }}
+                  image={`${process.env.PUBLIC_URL}/img/developer/leetcode.jpg`}
+                  title={"LeetCode"}
+                />
+              </a>
+              <CardContent>
+                <Typography gutterBottom variant="h6" component="div" sx={{ color: theme.textColor }}>
+                  {"LeetCode"}
+                </Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Great way to practice coding problems and interview questions"}</Typography>
+              </CardContent>
+            </StyledCard>
+          </StyledItem>
+        </Grid>
+        <Grid size={4} item xs={12}>
+          <StyledItem>
+            <StyledCard>
+              <a href={"https://claude.ai/"} target="_blank">
+                <CardMedia
+                  sx={{
+                    backgroundSize: 200,
+                    margin: 5,
+                    width: 200,
+                    height: 60
+                  }}
+                  image={`${process.env.PUBLIC_URL}/img/developer/claudeai.jpg`}
+                  title={"Claude AI"}
+                />
+              </a>
+              <CardContent>
+                <Typography gutterBottom variant="h6" component="div" sx={{ color: theme.textColor }}>
+                  {"Claude AI"}
+                </Typography>
+                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Great AI tool for answering coding questions"}</Typography>
               </CardContent>
             </StyledCard>
           </StyledItem>
