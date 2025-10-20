@@ -1,8 +1,8 @@
 # Justin Marshall Personal Website
 ### App Tech Stack
-    - Express(.js) — Node.js web framework
-    - React(.js) — a client-side JavaScript framework
-    - Node(.js) — the premier JavaScript web server
+- Express(.js) — Node.js web framework
+- React(.js) — a client-side JavaScript framework
+- Node(.js) — the premier JavaScript web server
 
 ## Starting the App
 
@@ -24,14 +24,14 @@ npm run dev
  - This will turn on the nodemailer service for the Contact Me page
 
 ## Testing
-    - Navigate to jm-mern-resume-portal/frontend
-    - Run the following command
+- Navigate to jm-mern-resume-portal/frontend
+- Run the following command
 
 ```
 npm run test:all
 ```
-    - This will trigger the jest test suites to run
-    - These tests will also run as part of the workflow when pushed up to github
+- This will trigger the jest test suites to run
+- These tests will also run as part of the workflow when pushed up to github
 
 ## App Structure
 ### Programmer Persona
@@ -63,7 +63,7 @@ npm run test:all
     - A collection of my abstract art
 
 ### About
-    - A section of my website that talks about me and my history in development and art
+- A section of my website that talks about me and my history in development and art
 
 ### Contact Me
-    - A form to send emails to my private account so that I may correspond with users inquiring about my development work or art portfolio.
+- A form to send emails to my private account so that I may correspond with users inquiring about my development work or art portfolio.
