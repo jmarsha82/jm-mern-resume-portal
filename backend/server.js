@@ -41,7 +41,7 @@ function sendEmail(email, subject, message) {
     });
     const mail_config = {
       from: process.env.EMAIL_USER,
-      to: 'jmarsha82@yahoo.com',
+      to: 'jmitchum80@outlook.com',
       subject,
       text: 'From: ' + email + '\n\nMessage:\n' + message
     }
