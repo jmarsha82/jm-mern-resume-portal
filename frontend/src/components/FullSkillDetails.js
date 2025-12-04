@@ -124,7 +124,7 @@ const FullSkillDetails = () => {
         transition: 'background 0.3s ease, color 0.3s ease'
       }}>
         <Tooltip title={"Used Occasionally"} placement="top">
-          <Button style={{ background: theme.accent4, color: theme.accent5 }} variant="contained" href={"https://www.java.com/en/"} target="_blank">{"Java"}</Button>
+          <Button style={{ background: theme.accent4, color: theme.accent5 }} variant="contained" href={"hhttps://github.com/jmarsha82/cse-530s-databases"} target="_blank">{"Java"}</Button>
         </Tooltip>
         <div className="current-skill-details-desc">{"Used on multiple applications and all throughout schooling.  Like riding a bike"}</div>
       </div>
@@ -164,7 +164,7 @@ const FullSkillDetails = () => {
         transition: 'background 0.3s ease, color 0.3s ease'
       }}>
         <Tooltip title={"Used Rarely"} placement="top">
-          <Button style={{ background: theme.accent4, color: theme.accent5 }} variant="contained" href={"https://developer.apple.com/swift/"} target="_blank">{"Swift"}</Button>
+          <Button style={{ background: theme.accent4, color: theme.accent5 }} variant="contained" href={"https://github.com/jmarsha82/smart-shopper-mobile-app"} target="_blank">{"Swift"}</Button>
         </Tooltip>
         <div className="current-skill-details-desc">{"Used on mulitple mobile apps for the iPhone"}</div>
       </div>

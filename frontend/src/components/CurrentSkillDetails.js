@@ -15,10 +15,10 @@ const CurrentSkillDetails = () => {
     }}>
       <span>
         <Tooltip title={"Used Daily"} placement="top">
-          <Button style={{ background: theme.accent4, color: theme.accent5 }} variant="contained" href={"https://react.dev/"} target="_blank">{"ReactJS"}</Button>
+          <Button style={{ background: theme.accent4, color: theme.accent5 }} variant="contained" href={"https://github.com/jmarsha82/jm-mern-resume-portal"} target="_blank">{"ReactJS"}</Button>
         </Tooltip>
         </span>
-      <div className="current-skill-details-desc">{"Assorted personal projects including uses in the MERN Stack and implementation using java Spring Framework"}</div>
+      <div className="current-skill-details-desc">{"Assorted personal projects including uses in website and implementation using java Spring Framework"}</div>
     </div>
     <div className="current-skill-details" style={{ 
       background: theme.cardBg, 
@@ -27,7 +27,7 @@ const CurrentSkillDetails = () => {
     }}>
         <span>
           <Tooltip title={"Used Daily"} placement="top">
-            <Button style={{ background: theme.accent4, color: theme.accent5 }} variant="contained" href={"https://www.python.org/"} target="_blank">{"Python"}</Button>
+            <Button style={{ background: theme.accent4, color: theme.accent5 }} variant="contained" href={"https://github.com/jmarsha82/cse-511a-pacman-ai"} target="_blank">{"Python"}</Button>
           </Tooltip>
           </span>
         <div className="current-skill-details-desc">{"Machine learning projects and neural network research"}</div>
@@ -51,7 +51,7 @@ const CurrentSkillDetails = () => {
     }}>
         <span>
           <Tooltip title={"Used Daily"} placement="top">
-            <Button style={{ background: theme.accent4, color: theme.accent5 }} variant="contained" href={"https://jestjs.io/"} target="_blank">{"Jest"}</Button>
+            <Button style={{ background: theme.accent4, color: theme.accent5 }} variant="contained" href={"https://github.com/jmarsha82/jm-mern-resume-portal/tree/master/frontend/src/test"} target="_blank">{"Jest"}</Button>
           </Tooltip>
           </span>
         <div className="current-skill-details-desc">{"Used to test javascript code in both work and personal projects"}</div>
