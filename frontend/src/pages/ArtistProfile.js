@@ -1,26 +1,10 @@
-import { useEffect } from "react"
 import ArtistNavbar from "../components/ArtistNavbar"
-import { useArtworksContext } from "../hooks/useArtworksContext"
 import ArtworkGallery from "../components/ArtworkGallery"
 import { Grid } from "@mui/material"
 import { useTheme } from "../context/ThemeContext"
 
 const ArtistProfile = () => {
-  const {dispatchArtwork } = useArtworksContext()
-  const { isDarkTheme, theme } = useTheme()
-
-  useEffect(() => {
-    const fetchArtworks = async () => {
-      const response = await fetch('/api/artwork')
-      const json = await response.json()
-
-      if (response.ok) {
-        dispatchArtwork({type: 'SET_ARTWORKS', payload: json})
-      }
-    }
-
-    fetchArtworks()
-  }, [dispatchArtwork])
+  const { theme } = useTheme()
 
   return (
     <div style={{ 

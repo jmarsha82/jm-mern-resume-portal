@@ -4,7 +4,7 @@ import { useState } from "react";
 import axios from "axios";
 
 const Contact = () => {
-    const { isDarkTheme, theme: globalTheme } = useTheme();
+    const { isDarkTheme } = useTheme();
     const [email, setEmail] = useState("");
     const [subject, setSubject] = useState("");
     const [message, setMessage] = useState("");
@@ -40,7 +40,7 @@ const Contact = () => {
 
     const theme = isDarkTheme ? darkTheme : lightTheme;
 
-    const sendEmail = () => {
+    const sendEmail = async () => {
         if (!email || !subject || !message) {
             setSubmitStatus("Please fill in all fields");
             return;
@@ -49,28 +49,24 @@ const Contact = () => {
         setIsSubmitting(true);
         setSubmitStatus("");
 
-        axios
-            .get(`http://localhost:4000/`, {
-                params: {
+        try {
+            await axios.post(
+                process.env.REACT_APP_CONTACT_API_URL || "/api/contact",
+                {
                     email,
                     subject,
                     message
-                },
-            })
-            .then(() => {
-                console.log("Success");
-                setSubmitStatus("Email sent successfully!");
-                setEmail("");
-                setSubject("");
-                setMessage("");
-            })
-            .catch(() => {
-                console.log("Failure");
-                setSubmitStatus("Failed to send email. Please try again.");
-            })
-            .finally(() => {
-                setIsSubmitting(false);
-            });
+                }
+            );
+            setSubmitStatus("Email sent successfully!");
+            setEmail("");
+            setSubject("");
+            setMessage("");
+        } catch (error) {
+            setSubmitStatus("Failed to send email. Please try again.");
+        } finally {
+            setIsSubmitting(false);
+        }
     };
 
     return (
@@ -178,14 +174,6 @@ const Contact = () => {
                         onChange={(e) => setEmail(e.target.value)}
                         variant="outlined"
                         fullWidth
-                        style={{
-                            '& .MuiOutlinedInput-root': {
-                                color: theme.textColor,
-                                '& fieldset': {
-                                    borderColor: theme.textColor,
-                                },
-                            }
-                        }}
                         sx={{
                             '& .MuiOutlinedInput-root': {
                                 color: theme.textColor,
@@ -332,7 +320,7 @@ const Contact = () => {
                 )}
             </Box>
 
-            <style jsx>{`
+            <style>{`
                 @keyframes float {
                     0%, 100% { transform: translateY(0px) rotate(0deg); }
                     50% { transform: translateY(-20px) rotate(180deg); }
