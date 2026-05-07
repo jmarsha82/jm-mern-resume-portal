@@ -1,7 +1,34 @@
 import { Box, Typography, TextField, Button } from "@mui/material";
 import { useTheme } from "../context/ThemeContext";
 import { useState } from "react";
-import axios from "axios";
+import emailjs from "@emailjs/browser";
+
+const getEmailJsConfig = () => ({
+    serviceId: process.env.REACT_APP_EMAILJS_SERVICE_ID,
+    templateId: process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
+    publicKey: process.env.REACT_APP_EMAILJS_PUBLIC_KEY,
+    toEmail: process.env.REACT_APP_EMAILJS_TO_EMAIL,
+});
+
+const getEmailJsErrorMessage = (error) => {
+    if (!error) {
+        return "Unknown EmailJS error";
+    }
+
+    if (typeof error === "string") {
+        return error;
+    }
+
+    if (error.text) {
+        return error.text;
+    }
+
+    if (error.message) {
+        return error.message;
+    }
+
+    return "Unknown EmailJS error";
+};
 
 const Contact = () => {
     const { isDarkTheme } = useTheme();
@@ -41,8 +68,18 @@ const Contact = () => {
     const theme = isDarkTheme ? darkTheme : lightTheme;
 
     const sendEmail = async () => {
-        if (!email || !subject || !message) {
+        const { serviceId, templateId, publicKey, toEmail } = getEmailJsConfig();
+        const trimmedEmail = email.trim();
+        const trimmedSubject = subject.trim();
+        const trimmedMessage = message.trim();
+
+        if (!trimmedEmail || !trimmedSubject || !trimmedMessage) {
             setSubmitStatus("Please fill in all fields");
+            return;
+        }
+
+        if (!serviceId || !templateId || !publicKey || !toEmail) {
+            setSubmitStatus("Contact form is not configured yet.");
             return;
         }
 
@@ -50,20 +87,27 @@ const Contact = () => {
         setSubmitStatus("");
 
         try {
-            await axios.post(
-                process.env.REACT_APP_CONTACT_API_URL || "/api/contact",
+            await emailjs.send(
+                serviceId,
+                templateId,
                 {
-                    email,
-                    subject,
-                    message
-                }
+                    from_email: trimmedEmail,
+                    from_name: trimmedEmail,
+                    reply_to: trimmedEmail,
+                    subject: trimmedSubject,
+                    message: trimmedMessage,
+                    to_email: toEmail,
+                },
+                publicKey
             );
             setSubmitStatus("Email sent successfully!");
             setEmail("");
             setSubject("");
             setMessage("");
         } catch (error) {
-            setSubmitStatus("Failed to send email. Please try again.");
+            const errorMessage = getEmailJsErrorMessage(error);
+            console.error("EmailJS send failed:", error);
+            setSubmitStatus(`Failed to send email: ${errorMessage}`);
         } finally {
             setIsSubmitting(false);
         }
