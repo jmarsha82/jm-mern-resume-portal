@@ -14,9 +14,19 @@ const FullSkillDetails = () => {
         transition: 'background 0.3s ease, color 0.3s ease'
       }}>
         <Tooltip title={"Used Daily"} placement="top">
-          <Button style={{ background: theme.accent4, color: theme.accent5 }} variant="contained" href={"https://cursor.com/"} target="_blank">{"Cursor"}</Button>
+          <Button style={{ background: theme.accent4, color: theme.accent5 }} variant="contained" href={"https://openai.com/codex/"} target="_blank">{"Codex"}</Button>
         </Tooltip>
-        <div className="current-skill-details-desc">{"Go to IDE for coding in React and Python on personal projects"}</div>
+        <div className="current-skill-details-desc">{"Go to CLI for coding assitance for both work and personal projects.  Use of hooks and skills daily"}</div>
+      </div>
+      <div className="current-skill-details" style={{
+        background: theme.cardBg,
+        color: theme.textColor,
+        transition: 'background 0.3s ease, color 0.3s ease'
+      }}>
+        <Tooltip title={"Used Daily"} placement="top">
+          <Button style={{ background: theme.accent4, color: theme.accent5 }} variant="contained" href={"https://kiro.dev/"} target="_blank">{"Kiro"}</Button>
+        </Tooltip>
+        <div className="current-skill-details-desc">{"Use IDE and built in features for work projects"}</div>
       </div>
       <div className="current-skill-details" style={{
         background: theme.cardBg,
