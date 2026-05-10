@@ -31,6 +31,25 @@ const renderWithProviders = (component) => {
 };
 
 describe('ArtworkGallery Component', () => {
+  const setMatchMedia = (matches) => {
+    Object.defineProperty(window, 'matchMedia', {
+      writable: true,
+      value: jest.fn().mockImplementation((query) => ({
+        matches,
+        media: query,
+        onchange: null,
+        addListener: jest.fn(),
+        removeListener: jest.fn(),
+        addEventListener: jest.fn(),
+        removeEventListener: jest.fn(),
+        dispatchEvent: jest.fn(),
+      })),
+    });
+  };
+
+  beforeEach(() => {
+    setMatchMedia(false);
+  });
   
   describe('Component Rendering', () => {
     test('renders ArtworkGallery component without crashing', () => {
@@ -296,6 +315,19 @@ describe('ArtworkGallery Component', () => {
       const portraitsHeading = screen.getByText('Portraits');
       expect(portraitsHeading).toHaveAttribute('title', 'Back to Top');
     });
+
+    test('all category headings trigger scroll to top', () => {
+      const mockScrollTo = jest.fn();
+      window.scrollTo = mockScrollTo;
+
+      renderWithProviders(<ArtworkGallery />);
+
+      screen.getAllByTitle('Back to Top').forEach((heading) => {
+        fireEvent.click(heading);
+      });
+
+      expect(mockScrollTo).toHaveBeenCalledTimes(4);
+    });
   });
 
   describe('Image Modal Integration', () => {
@@ -384,5 +416,37 @@ describe('ArtworkGallery Component', () => {
       const images = screen.getAllByRole('img');
       expect(images.length).toBeGreaterThan(4); // Should have multiple artworks across categories
     });
+
+    test('renders in a mobile single-column layout when the viewport is small', () => {
+      setMatchMedia(true);
+      renderWithProviders(<ArtworkGallery />);
+
+      const firstRow = document.querySelector('.artwork-gallery-row');
+      const firstItem = firstRow.querySelector('[class*="MuiGrid-item"]');
+
+      expect(firstRow).toHaveStyle('flex-direction: column');
+      expect(firstItem).toHaveStyle('width: 100%');
+      expect(firstItem).toHaveStyle('flex-basis: 100%');
+    });
+
+    test('every artwork image can be opened and closed without breaking the gallery state', async () => {
+      renderWithProviders(<ArtworkGallery />);
+
+      const imageCount = screen.getAllByRole('img').length;
+
+      for (let index = 0; index < imageCount; index += 1) {
+        fireEvent.click(screen.getAllByRole('img')[index]);
+
+        await waitFor(() => {
+          expect(screen.getByTestId('image-modal')).toBeInTheDocument();
+        });
+
+        fireEvent.click(screen.getByTestId('close-modal'));
+
+        await waitFor(() => {
+          expect(screen.queryByTestId('image-modal')).not.toBeInTheDocument();
+        });
+      }
+    }, 120000);
   });
 });

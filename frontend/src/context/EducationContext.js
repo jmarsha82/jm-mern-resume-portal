@@ -10,11 +10,11 @@ export const educationsReducer = (state, action) => {
       }
     case 'CREATE_EDUCATION':
       return { 
-        educations: [action.payload, ...state.education] 
+        educations: [action.payload, ...state.educations] 
       }
     case 'DELETE_EDUCATION':
       return { 
-        educations: state.education.filter(w => w._id !== action.payload._id) 
+        educations: state.educations.filter(w => w._id !== action.payload._id) 
       }
     default:
       return state

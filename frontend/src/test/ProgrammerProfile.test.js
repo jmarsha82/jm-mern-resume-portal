@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, screen } from '@testing-library/react';
+import { fireEvent, render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import ProgrammerProfile from '../pages/ProgrammerProfile';
 import { ThemeContextProvider } from '../context/ThemeContext';
@@ -538,6 +538,46 @@ describe('ProgrammerProfile Component', () => {
       
       // Clean up mock
       mockScrollTo.mockRestore();
+    });
+
+    test('all section headings scroll back to the top when clicked', () => {
+      const mockScrollTo = jest.fn();
+      Object.defineProperty(window, 'scrollTo', {
+        value: mockScrollTo,
+        writable: true
+      });
+
+      renderProgrammerProfileWithContexts();
+
+      [
+        'Current Project(s) Tech Stack',
+        'Experience',
+        'Education',
+        'Extended Tech Stack',
+        'Dev Books',
+        'Dev Links'
+      ].forEach((heading) => {
+        fireEvent.click(screen.getByText(heading));
+      });
+
+      expect(mockScrollTo).toHaveBeenCalledTimes(6);
+      expect(mockScrollTo).toHaveBeenNthCalledWith(1, { top: 0, left: 0, behavior: 'smooth' });
+    });
+  });
+
+  describe('Desktop Layout Styles', () => {
+    test('keeps the programmer profile wrappers centered and prevents horizontal overflow', () => {
+      renderProgrammerProfileWithContexts();
+
+      const mainContainer = screen.getByTestId('programmer-navbar').parentElement;
+      const pagesContainer = document.querySelector('.programmer-profile-pages');
+      const githubPanel = screen.getByText('Github Contributions').closest('.home-github');
+      const githubImage = screen.getByAltText('Github Profile');
+
+      expect(mainContainer).toHaveStyle('overflow-x: hidden');
+      expect(pagesContainer).toHaveStyle('overflow-x: hidden');
+      expect(githubPanel).toBeInTheDocument();
+      expect(githubImage).toHaveClass('github-chart-image');
     });
   });
 });

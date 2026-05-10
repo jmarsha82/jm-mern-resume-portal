@@ -4,14 +4,14 @@ import { useTheme } from "../context/ThemeContext";
 import { useState } from "react";
 import emailjs from "@emailjs/browser";
 
-const getEmailJsConfig = () => ({
+export const getEmailJsConfig = () => ({
     serviceId: process.env.REACT_APP_EMAILJS_SERVICE_ID,
     templateId: process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
     publicKey: process.env.REACT_APP_EMAILJS_PUBLIC_KEY,
     toEmail: process.env.REACT_APP_EMAILJS_TO_EMAIL,
 });
 
-const getEmailJsErrorMessage = (error) => {
+export const getEmailJsErrorMessage = (error) => {
     if (!error) {
         return "Unknown EmailJS error";
     }

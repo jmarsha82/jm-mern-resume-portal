@@ -7,7 +7,7 @@ const useFetch = (url) => {
 
     useEffect(() => {
         const abortCont = new AbortController();
-        setTimeout(() => {
+        const timeoutId = setTimeout(() => {
         fetch(url, { signal: abortCont.signal })
         .then(res => {
             if(!res.ok){
@@ -28,11 +28,12 @@ const useFetch = (url) => {
                 setIsPending(false);
                 setError(err.message);
             }
-            setIsPending(false);
-            setError(err.message);
         },)
     }, 200)
-        return () => abortCont.abort();
+        return () => {
+            clearTimeout(timeoutId);
+            abortCont.abort();
+        };
     }, [url]);
     return { data, isPending, error}
 }
