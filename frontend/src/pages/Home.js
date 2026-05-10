@@ -1,10 +1,14 @@
-import { Button, Typography, Box, Avatar, IconButton } from "@mui/material";
+import { Button, Typography, Box, Avatar, IconButton, useMediaQuery } from "@mui/material";
+import { useTheme as useMuiTheme } from "@mui/material/styles";
 import LightModeIcon from '@mui/icons-material/LightMode';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
 import { useTheme } from "../context/ThemeContext";
 
 const Home = () => {
   const { isDarkTheme, toggleTheme } = useTheme();
+  const muiTheme = useMuiTheme();
+  const isMobile = useMediaQuery(muiTheme.breakpoints.down('sm'));
+  const isTablet = useMediaQuery(muiTheme.breakpoints.down('md'));
 
   const darkTheme = {
     background: 'linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 25%, #16213e 50%, #0f3460 75%, #0a0a0a 100%)',
@@ -41,9 +45,15 @@ const Home = () => {
   };
 
   const theme = isDarkTheme ? darkTheme : lightTheme;
+  const heroPadding = isMobile ? '88px 16px 24px' : isTablet ? '72px 24px 32px' : '40px 20px';
+  const cardPadding = isMobile ? '32px 18px' : isTablet ? '48px 28px' : '60px 40px';
+  const avatarFrameSize = isMobile ? 220 : isTablet ? 250 : 280;
+  const avatarSize = isMobile ? 190 : isTablet ? 220 : 250;
+  const orbSizes = isMobile ? ['180px', '110px', '140px'] : ['300px', '150px', '200px'];
 
   return (
     <Box
+      className="home-mobile-shell"
       style={{
         minHeight: '100vh',
         background: theme.background,
@@ -52,7 +62,7 @@ const Home = () => {
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        padding: '40px 20px'
+        padding: heroPadding
       }}
     >
       {/* Theme Toggle Button */}
@@ -60,8 +70,8 @@ const Home = () => {
         onClick={toggleTheme}
         style={{
           position: 'absolute',
-          top: 7,
-          left: 20,
+          top: isMobile ? 12 : 7,
+          left: isMobile ? 12 : 20,
           zIndex: 10,
           background: theme.containerBg,
           backdropFilter: 'blur(10px)',
@@ -80,8 +90,8 @@ const Home = () => {
           left: ['10%', '5%', '5%'][index],
           bottom: index === 1 ? '20%' : undefined,
           right: index === 1 ? '15%' : undefined,
-          width: ['300px', '150px', '200px'][index],
-          height: ['300px', '150px', '200px'][index],
+          width: orbSizes[index],
+          height: orbSizes[index],
           background: orb.bg,
           borderRadius: '50%',
           animation: orb.anim
@@ -89,6 +99,7 @@ const Home = () => {
       ))}
 
       <Box
+        className="home-mobile-card"
         style={{
           width: '100%',
           maxWidth: 1000,
@@ -99,7 +110,7 @@ const Home = () => {
           boxShadow: isDarkTheme 
             ? '0 0 50px rgba(0,255,255,0.1), inset 0 0 50px rgba(0,255,255,0.05)'
             : '0 0 50px rgba(59,130,246,0.1), inset 0 0 50px rgba(59,130,246,0.05)',
-          padding: '60px 40px',
+          padding: cardPadding,
           textAlign: 'center',
           position: 'relative',
           zIndex: 1
@@ -125,8 +136,8 @@ const Home = () => {
         <Box style={{ display: 'flex', justifyContent: 'center', marginBottom: 30 }}>
           <Box style={{
             position: 'relative',
-            width: 280,
-            height: 280,
+            width: avatarFrameSize,
+            height: avatarFrameSize,
             borderRadius: '50%',
             padding: 8,
             background: theme.avatarRing,
@@ -164,8 +175,8 @@ const Home = () => {
                 src={`${process.env.PUBLIC_URL}/img/profile_picture.jpg`}
                 alt="Justin Marshall"
                 style={{ 
-                  width: 250, 
-                  height: 250,
+                  width: avatarSize, 
+                  height: avatarSize,
                   border: isDarkTheme 
                     ? '3px solid rgba(0,255,255,0.4)'
                     : '3px solid rgba(59,130,246,0.4)',
@@ -179,15 +190,17 @@ const Home = () => {
         </Box>
 
         <Typography
-          variant="h2"
+          variant={isMobile ? "h3" : "h2"}
           style={{
             marginBottom: 16,
             fontWeight: 900,
-            letterSpacing: 2,
+            letterSpacing: isMobile ? 1 : 2,
             background: theme.nameGradient,
             WebkitBackgroundClip: 'text',
             backgroundClip: 'text',
             color: theme.textColor,
+            fontSize: isMobile ? '2.4rem' : undefined,
+            lineHeight: isMobile ? 1.05 : undefined,
             textShadow: isDarkTheme 
               ? '0 0 30px rgba(0,255,255,0.5)'
               : '0 0 30px rgba(59,130,246,0.5)',
@@ -198,12 +211,13 @@ const Home = () => {
         </Typography>
         
         <Typography
-          variant="h5"
+          variant={isMobile ? "h6" : "h5"}
           style={{
             marginBottom: 40,
             color: theme.textColor,
             fontWeight: 600,
-            letterSpacing: 1,
+            letterSpacing: isMobile ? 0.5 : 1,
+            fontSize: isMobile ? '1rem' : undefined,
             textShadow: isDarkTheme 
               ? '0 0 20px rgba(0,255,255,0.3)'
               : '0 0 20px rgba(59,130,246,0.3)'
@@ -212,19 +226,22 @@ const Home = () => {
           SOFTWARE ENGINEER & ARTIST
         </Typography>
 
-        <Box style={{ display: 'flex', gap: 24, justifyContent: 'center', flexWrap: 'wrap' }}>
+        <Box style={{ display: 'flex', gap: isMobile ? 14 : 24, justifyContent: 'center', flexWrap: 'wrap' }}>
           <Button
             variant="contained"
             href="/artist"
+            fullWidth={isMobile}
             style={{
-              padding: '16px 32px',
+              padding: isMobile ? '14px 24px' : '16px 32px',
               borderRadius: 25,
               background: theme.button1,
               textTransform: 'none',
               fontWeight: 800,
               color: '#000',
-              fontSize: '16px',
+              fontSize: isMobile ? '14px' : '16px',
               letterSpacing: 1,
+              width: isMobile ? '100%' : undefined,
+              maxWidth: isMobile ? 320 : undefined,
               border: isDarkTheme 
                 ? '2px solid rgba(255,0,255,0.5)'
                 : '2px solid rgba(59,130,246,0.5)',
@@ -239,15 +256,18 @@ const Home = () => {
           <Button
             variant="contained"
             href="/programmer"
+            fullWidth={isMobile}
             style={{
-              padding: '16px 32px',
+              padding: isMobile ? '14px 24px' : '16px 32px',
               borderRadius: 25,
               background: theme.button2,
               textTransform: 'none',
               fontWeight: 800,
               color: '#000',
-              fontSize: '16px',
+              fontSize: isMobile ? '14px' : '16px',
               letterSpacing: 1,
+              width: isMobile ? '100%' : undefined,
+              maxWidth: isMobile ? 320 : undefined,
               border: isDarkTheme 
                 ? '2px solid rgba(0,255,0,0.5)'
                 : '2px solid rgba(16,185,129,0.5)',
@@ -262,8 +282,9 @@ const Home = () => {
           <Button
             variant="contained"
             href="/about"
+            fullWidth={isMobile}
             style={{
-              padding: '16px 32px',
+              padding: isMobile ? '14px 24px' : '16px 32px',
               borderRadius: 25,
               background: isDarkTheme 
                 ? 'linear-gradient(45deg, #00ff00, #ff00ff)'
@@ -271,8 +292,10 @@ const Home = () => {
               textTransform: 'none',
               fontWeight: 800,
               color: '#000',
-              fontSize: '16px',
+              fontSize: isMobile ? '14px' : '16px',
               letterSpacing: 1,
+              width: isMobile ? '100%' : undefined,
+              maxWidth: isMobile ? 320 : undefined,
               border: isDarkTheme 
                 ? '2px solid rgba(0,255,0,0.5)'
                 : '2px solid rgba(16,185,129,0.5)',
@@ -287,15 +310,18 @@ const Home = () => {
           <Button
             variant="contained"
             href="/contact"
+            fullWidth={isMobile}
             style={{
-              padding: '16px 32px',
+              padding: isMobile ? '14px 24px' : '16px 32px',
               borderRadius: 25,
               background: theme.button3,
               textTransform: 'none',
               fontWeight: 800,
               color: '#000',
-              fontSize: '16px',
+              fontSize: isMobile ? '14px' : '16px',
               letterSpacing: 1,
+              width: isMobile ? '100%' : undefined,
+              maxWidth: isMobile ? 320 : undefined,
               border: isDarkTheme 
                 ? '2px solid rgba(255,255,0,0.5)'
                 : '2px solid rgba(245,158,11,0.5)',
@@ -310,7 +336,7 @@ const Home = () => {
         </Box>
       </Box>
 
-      <style jsx>{`
+      <style>{`
         @keyframes float {
           0%, 100% { transform: translateY(0px) rotate(0deg); }
           50% { transform: translateY(-20px) rotate(180deg); }

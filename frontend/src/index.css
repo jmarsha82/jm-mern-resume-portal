@@ -11,8 +11,18 @@ body {
   margin: 0;
   font-family: "Poppins";
 }
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 header {
-  height: 2.5rem;
+  min-height: 2.5rem;
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -23,7 +33,10 @@ header .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 2.5rem;
+  min-height: 2.5rem;
+  gap: 12px;
+  padding: 6px 16px;
+  flex-wrap: wrap;
 }
 header .lower-container {
   max-width: 1400px;
@@ -40,6 +53,11 @@ header a {
   max-width: 1400px;
   padding: 20px;
   margin: 0 auto;
+  width: 100%;
+}
+
+.programmer-profile-pages {
+  max-width: 1240px;
 }
 /* homepage */
 .home-banner {
@@ -200,7 +218,7 @@ header a {
 
 .home-github {
   display: grid;
-  grid-template-columns: 2fr 3fr;
+  grid-template-columns: minmax(180px, 1fr) minmax(0, 3.4fr);
   grid-template-rows: auto 1fr;
   margin: 0px auto;
   background: #fff;
@@ -211,6 +229,18 @@ header a {
   box-shadow: 2px 2px 5px rgba(0,0,0,0.05);
   min-height: 140px;
   align-content: flex-start;
+  width: 100%;
+}
+
+.github-chart-image {
+  grid-column: 1 / -1;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  display: block;
+  justify-self: stretch;
+  align-self: stretch;
+  object-fit: fill;
 }
 
 .home-github h4 {
@@ -306,7 +336,8 @@ header a {
   padding: 20px;
   position: relative;
   box-shadow: 2px 2px 5px rgba(0,0,0,0.05);
-  width: 58rem;
+  width: 100%;
+  max-width: 100%;
 }
 .artwork-heading h4 {
   margin: 0;
@@ -421,6 +452,41 @@ header a {
   display: flex;
   align-items: center;
   gap: 8px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.navbar-mobile-container {
+  display: flex !important;
+  flex-wrap: nowrap !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 8px !important;
+}
+
+.navbar-mobile-left,
+.navbar-mobile-center,
+.navbar-mobile-right {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-mobile-left,
+.navbar-mobile-right {
+  flex: 1 1 0;
+}
+
+.navbar-mobile-center {
+  justify-content: center;
+}
+
+.navbar-mobile-right {
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.navbar-mobile-menu-btn {
+  padding: 6px !important;
 }
 
 .navbar-download-resume-btn {
@@ -438,4 +504,186 @@ header a {
   background: #555 !important;
   transform: translateY(-1px) !important;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2) !important;
+}
+
+.artwork-gallery {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.artwork-gallery .MuiGrid-container {
+  margin-left: 0;
+  width: 100%;
+  max-width: 100%;
+  justify-content: center;
+}
+
+.artwork-gallery .MuiGrid-item {
+  display: flex;
+  min-width: 0;
+}
+
+.artwork-gallery .MuiPaper-root,
+.artwork-gallery .MuiCard-root {
+  width: 100%;
+  max-width: 100%;
+}
+
+@media (min-width: 901px) {
+  .artwork-gallery-row {
+    align-items: stretch;
+  }
+
+  .artwork-gallery-row > * {
+    display: flex;
+    flex: 1 1 0;
+    max-width: none !important;
+    min-width: 0;
+  }
+
+  .artwork-gallery .MuiPaper-root,
+  .artwork-gallery .MuiCard-root {
+    height: 100%;
+  }
+
+  .artwork-gallery .MuiCardMedia-root {
+    width: 100% !important;
+    height: clamp(260px, 24vw, 360px) !important;
+    margin: 0 !important;
+    background-size: cover !important;
+    background-position: center !important;
+  }
+
+  .artwork-gallery .MuiCardContent-root {
+    padding: 16px 16px 20px;
+  }
+}
+
+@media (max-width: 900px) {
+  .home-one {
+    grid-template-columns: 1fr;
+  }
+
+  .pages {
+    padding: 16px;
+  }
+
+  .programmer-profile-pages {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  header .container {
+    justify-content: center;
+    padding: 10px 12px;
+  }
+
+  .navbar-button-color {
+    font-size: 0.85rem;
+  }
+
+  .navbar-download-resume-btn {
+    margin-left: 0 !important;
+  }
+
+  .general-details,
+  .work-experience-details,
+  .education-details,
+  .current-skill-heading,
+  .current-skill-details,
+  .full-skill-heading,
+  .devlink-heading,
+  .responsive-panel {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+@media (max-width: 900px) {
+  .pages {
+    padding: 12px;
+  }
+
+  .artwork-gallery {
+    padding: 12px 0 !important;
+  }
+
+  .artwork-gallery-row {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-bottom: 8px;
+  }
+
+  .artwork-gallery-row > * {
+    display: block !important;
+    flex: 0 0 100% !important;
+    flex-basis: 100% !important;
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+
+  .artwork-gallery-row > * + * {
+    margin-top: 16px;
+  }
+
+  .artwork-gallery .MuiPaper-root,
+  .artwork-gallery .MuiCard-root {
+    padding: 12px;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .artwork-gallery .MuiCardMedia-root {
+    width: min(100%, calc(100vw - 72px)) !important;
+    max-width: calc(100vw - 72px) !important;
+    height: min(70vw, 380px) !important;
+    margin: 8px auto !important;
+    background-size: cover !important;
+    background-position: center !important;
+  }
+
+  .artwork-gallery .MuiCardContent-root {
+    padding-top: 0;
+    overflow-wrap: anywhere;
+  }
+
+  .artwork-heading {
+    padding: 16px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  header .container {
+    align-items: center;
+    text-align: left;
+  }
+
+  .navbar-right-section {
+    justify-content: center;
+  }
+
+  .navbar-mobile-container {
+    min-height: 56px;
+    padding: 8px 12px !important;
+  }
+
+  .navbar-download-resume-btn-mobile {
+    min-width: auto !important;
+    padding: 4px 10px !important;
+    font-size: 0.7rem !important;
+    line-height: 1.1 !important;
+  }
+
+  .navbar-download-resume-btn-mobile .MuiButton-startIcon {
+    margin-right: 4px !important;
+  }
+
+  .home-github {
+    grid-template-columns: 1fr;
+    padding: 18px;
+  }
 }

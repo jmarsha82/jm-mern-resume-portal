@@ -6,7 +6,8 @@ import Paper from '@mui/material/Paper';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
-import { Grid } from '@mui/material';
+import { Grid, useMediaQuery } from '@mui/material';
+import { useTheme as useMuiTheme } from '@mui/material/styles';
 import ImageModal from './ImageModal';
 import { useTheme } from '../context/ThemeContext';
 
@@ -22,6 +23,50 @@ const ArtworkGallery = () => {
   const [modalOpen, setModalOpen] = React.useState(false);
   const [selectedImage, setSelectedImage] = React.useState(null);
   const { theme } = useTheme();
+  const muiTheme = useMuiTheme();
+  const isMobile = useMediaQuery(muiTheme.breakpoints.down('md'));
+  const galleryRowProps = isMobile
+    ? {
+        wrap: 'nowrap',
+        sx: {
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'flex-start',
+          alignItems: 'stretch',
+          width: '100%',
+          maxWidth: '100%'
+        }
+      }
+    : {
+        wrap: 'nowrap',
+        sx: {
+          display: 'flex',
+          flexDirection: 'row',
+          justifyContent: 'center',
+          alignItems: 'stretch',
+          width: '100%',
+          maxWidth: '100%'
+        }
+      };
+  const galleryItemProps = isMobile
+    ? {
+        item: true,
+        sx: {
+          width: '100%',
+          maxWidth: '100%',
+          flexBasis: '100%'
+        }
+      }
+    : {
+        item: true,
+        sx: {
+          width: '100%',
+          maxWidth: '100%',
+          flexBasis: 0,
+          flexGrow: 1,
+          flexShrink: 1
+        }
+      };
 
   const handleImageClick = (imageUrl, title, description) => {
     setSelectedImage({ imageUrl, title, description });
@@ -50,10 +95,12 @@ const ArtworkGallery = () => {
   }));
 
   return (
-    <div style={{
+    <div className="artwork-gallery" style={{
       background: theme.background,
       transition: 'background 0.3s ease',
-      padding: '20px 0'
+      padding: '20px 0',
+      maxWidth: '100%',
+      overflowX: 'hidden'
     }}>
       <div id="portraits-id" className="artwork-heading" style={{
         background: theme.cardBg,
@@ -62,8 +109,8 @@ const ArtworkGallery = () => {
       }}><h4 style={{ color: theme.accent4 }} onClick={() => {
         window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
       }} title="Back to Top">Portraits</h4></div>
-      <Grid container spacing={2} wrap="nowrap">
-        <Grid size={4} item xs="auto">
+      <Grid className="artwork-gallery-row" container spacing={2} {...galleryRowProps}>
+        <Grid {...galleryItemProps}>
           <StyledItem>
             <StyledCard>
               {/* <Link to={`/artist/1`}> */}
@@ -93,7 +140,7 @@ const ArtworkGallery = () => {
             </StyledCard>
           </StyledItem>
         </Grid>
-        <Grid size={4} item xs="auto">
+        <Grid {...galleryItemProps}>
           <StyledItem>
             <StyledCard>
               {/* <Link to={`/artist/1`}> */}
@@ -123,7 +170,7 @@ const ArtworkGallery = () => {
             </StyledCard>
           </StyledItem>
         </Grid>
-        <Grid size={4} item xs="auto">
+        <Grid {...galleryItemProps}>
           <StyledItem>
             <StyledCard>
               {/* <Link to={`/artist/1`}> */}
@@ -155,8 +202,8 @@ const ArtworkGallery = () => {
         </Grid>
       </Grid>
       <br />
-      <Grid container spacing={2} wrap="nowrap">
-        <Grid size={4} item xs="auto">
+      <Grid className="artwork-gallery-row" container spacing={2} {...galleryRowProps}>
+        <Grid {...galleryItemProps}>
           <StyledItem>
             <StyledCard>
               {/* <Link to={`/artist/1`}> */}
@@ -186,7 +233,7 @@ const ArtworkGallery = () => {
             </StyledCard>
           </StyledItem>
         </Grid>
-        <Grid size={4} item xs="auto">
+        <Grid {...galleryItemProps}>
           <StyledItem>
             <StyledCard>
               {/* <Link to={`/artist/1`}> */}
@@ -216,7 +263,7 @@ const ArtworkGallery = () => {
             </StyledCard>
           </StyledItem>
         </Grid>
-        <Grid size={4} item xs="auto">
+        <Grid {...galleryItemProps}>
           <StyledItem>
             <StyledCard>
               {/* <Link to={`/artist/1`}> */}
@@ -248,8 +295,8 @@ const ArtworkGallery = () => {
         </Grid>
       </Grid>
       <br />
-      <Grid container spacing={2} wrap="nowrap">
-        <Grid size={4} item xs="auto">
+      <Grid className="artwork-gallery-row" container spacing={2} {...galleryRowProps}>
+        <Grid {...galleryItemProps}>
           <StyledItem>
             <StyledCard>
               {/* <Link to={`/artist/1`}> */}
@@ -279,7 +326,7 @@ const ArtworkGallery = () => {
             </StyledCard>
           </StyledItem>
         </Grid>
-        <Grid size={4} item xs="auto">
+        <Grid {...galleryItemProps}>
           <StyledItem>
             <StyledCard>
               {/* <Link to={`/artist/1`}> */}
@@ -309,7 +356,7 @@ const ArtworkGallery = () => {
             </StyledCard>
           </StyledItem>
         </Grid>
-        <Grid size={4} item xs="auto">
+        <Grid {...galleryItemProps}>
           <StyledItem>
             <StyledCard>
               {/* <Link to={`/artist/1`}> */}
@@ -341,8 +388,8 @@ const ArtworkGallery = () => {
         </Grid>
       </Grid>
       <br />
-      <Grid container spacing={2} wrap="nowrap">
-        <Grid size={4} item xs="auto">
+      <Grid className="artwork-gallery-row" container spacing={2} {...galleryRowProps}>
+        <Grid {...galleryItemProps}>
           <StyledItem>
             <StyledCard>
               {/* <Link to={`/artist/1`}> */}
@@ -372,7 +419,7 @@ const ArtworkGallery = () => {
             </StyledCard>
           </StyledItem>
         </Grid>
-        <Grid size={4} item xs="auto">
+        <Grid {...galleryItemProps}>
           <StyledItem>
             <StyledCard>
               {/* <Link to={`/artist/1`}> */}
@@ -402,7 +449,7 @@ const ArtworkGallery = () => {
             </StyledCard>
           </StyledItem>
         </Grid>
-        <Grid size={4} item xs="auto">
+        <Grid {...galleryItemProps}>
           <StyledItem>
             <StyledCard>
               {/* <Link to={`/artist/1`}> */}
@@ -434,8 +481,8 @@ const ArtworkGallery = () => {
         </Grid>
       </Grid>
       <br />
-      <Grid container spacing={2} wrap="nowrap">
-        <Grid size={4} item xs="auto">
+      <Grid className="artwork-gallery-row" container spacing={2} {...galleryRowProps}>
+        <Grid {...galleryItemProps}>
           <StyledItem>
             <StyledCard>
               {/* <Link to={`/artist/1`}> */}
@@ -465,7 +512,7 @@ const ArtworkGallery = () => {
             </StyledCard>
           </StyledItem>
         </Grid>
-        <Grid size={4} item xs="auto">
+        <Grid {...galleryItemProps}>
           <StyledItem>
             <StyledCard>
               {/* <Link to={`/artist/1`}> */}
@@ -495,7 +542,7 @@ const ArtworkGallery = () => {
             </StyledCard>
           </StyledItem>
         </Grid>
-        <Grid size={4} item xs="auto">
+        <Grid {...galleryItemProps}>
           <StyledItem>
             <StyledCard>
               {/* <Link to={`/artist/1`}> */}
@@ -527,8 +574,8 @@ const ArtworkGallery = () => {
         </Grid>
       </Grid>
       <br />
-      <Grid container spacing={2} wrap="nowrap">
-        <Grid size={4} item xs="auto">
+      <Grid className="artwork-gallery-row" container spacing={2} {...galleryRowProps}>
+        <Grid {...galleryItemProps}>
           <StyledItem>
             <StyledCard>
               {/* <Link to={`/artist/1`}> */}
@@ -558,7 +605,7 @@ const ArtworkGallery = () => {
             </StyledCard>
           </StyledItem>
         </Grid>
-        <Grid size={4} item xs="auto">
+        <Grid {...galleryItemProps}>
           <StyledItem>
             <StyledCard>
               {/* <Link to={`/artist/1`}> */}
@@ -588,7 +635,7 @@ const ArtworkGallery = () => {
             </StyledCard>
           </StyledItem>
         </Grid>
-        <Grid size={4} item xs="auto">
+        <Grid {...galleryItemProps}>
           <StyledItem>
             <StyledCard>
               {/* <Link to={`/artist/1`}> */}
@@ -620,8 +667,8 @@ const ArtworkGallery = () => {
         </Grid>
       </Grid>
       <br />
-      <Grid container spacing={2} wrap="nowrap">
-        <Grid size={4} item xs="auto">
+      <Grid className="artwork-gallery-row" container spacing={2} {...galleryRowProps}>
+        <Grid {...galleryItemProps}>
           <StyledItem>
             <StyledCard>
               {/* <Link to={`/artist/1`}> */}
@@ -651,7 +698,7 @@ const ArtworkGallery = () => {
             </StyledCard>
           </StyledItem>
         </Grid>
-        <Grid size={4} item xs="auto">
+        <Grid {...galleryItemProps}>
           <StyledItem>
             <StyledCard>
               {/* <Link to={`/artist/1`}> */}
@@ -681,7 +728,7 @@ const ArtworkGallery = () => {
             </StyledCard>
           </StyledItem>
         </Grid>
-        <Grid size={4} item xs="auto">
+        <Grid {...galleryItemProps}>
           <StyledItem>
             <StyledCard>
               {/* <Link to={`/artist/1`}> */}
@@ -713,8 +760,8 @@ const ArtworkGallery = () => {
         </Grid>
       </Grid>
       <br />
-      <Grid container spacing={2} wrap="nowrap">
-        <Grid size={4} item xs="auto">
+      <Grid className="artwork-gallery-row" container spacing={2} {...galleryRowProps}>
+        <Grid {...galleryItemProps}>
           <StyledItem>
             <StyledCard>
               {/* <Link to={`/artist/1`}> */}
@@ -744,7 +791,7 @@ const ArtworkGallery = () => {
             </StyledCard>
           </StyledItem>
         </Grid>
-        <Grid size={4} item xs="auto">
+        <Grid {...galleryItemProps}>
           <StyledItem>
             <StyledCard>
               {/* <Link to={`/artist/1`}> */}
@@ -774,7 +821,7 @@ const ArtworkGallery = () => {
             </StyledCard>
           </StyledItem>
         </Grid>
-        <Grid size={4} item xs="auto">
+        <Grid {...galleryItemProps}>
           <StyledItem>
             <StyledCard>
               {/* <Link to={`/artist/1`}> */}
@@ -806,8 +853,8 @@ const ArtworkGallery = () => {
         </Grid>
       </Grid>
       <br />
-      <Grid container spacing={2} wrap="nowrap">
-        <Grid size={4} item xs="auto">
+      <Grid className="artwork-gallery-row" container spacing={2} {...galleryRowProps}>
+        <Grid {...galleryItemProps}>
           <StyledItem>
             <StyledCard>
               {/* <Link to={`/artist/1`}> */}
@@ -837,7 +884,7 @@ const ArtworkGallery = () => {
             </StyledCard>
           </StyledItem>
         </Grid>
-        <Grid size={4} item xs="auto">
+        <Grid {...galleryItemProps}>
           <StyledItem>
             <StyledCard>
               {/* <Link to={`/artist/1`}> */}
@@ -867,7 +914,7 @@ const ArtworkGallery = () => {
             </StyledCard>
           </StyledItem>
         </Grid>
-        <Grid size={4} item xs="auto">
+        <Grid {...galleryItemProps}>
           <StyledItem>
             <StyledCard>
               {/* <Link to={`/artist/1`}> */}
@@ -899,8 +946,8 @@ const ArtworkGallery = () => {
         </Grid>
       </Grid>
       <br />
-      <Grid container spacing={2} wrap="nowrap">
-        <Grid size={4} item xs="auto">
+      <Grid className="artwork-gallery-row" container spacing={2} {...galleryRowProps}>
+        <Grid {...galleryItemProps}>
           <StyledItem>
             <StyledCard>
               {/* <Link to={`/artist/1`}> */}
@@ -930,7 +977,7 @@ const ArtworkGallery = () => {
             </StyledCard>
           </StyledItem>
         </Grid>
-        <Grid size={4} item xs="auto">
+        <Grid {...galleryItemProps}>
           <StyledItem>
             <StyledCard>
               {/* <Link to={`/artist/1`}> */}
@@ -960,7 +1007,7 @@ const ArtworkGallery = () => {
             </StyledCard>
           </StyledItem>
         </Grid>
-        <Grid size={4} item xs="auto">
+        <Grid {...galleryItemProps}>
           <StyledItem>
             <StyledCard>
               {/* <Link to={`/artist/1`}> */}
@@ -992,8 +1039,8 @@ const ArtworkGallery = () => {
         </Grid>
       </Grid>
       <br />
-      <Grid container spacing={2} wrap="nowrap">
-        <Grid size={4} item xs="auto">
+      <Grid className="artwork-gallery-row" container spacing={2} {...galleryRowProps}>
+        <Grid {...galleryItemProps}>
           <StyledItem>
             <StyledCard>
               {/* <Link to={`/artist/1`}> */}
@@ -1023,7 +1070,7 @@ const ArtworkGallery = () => {
             </StyledCard>
           </StyledItem>
         </Grid>
-        <Grid size={4} item xs="auto">
+        <Grid {...galleryItemProps}>
           <StyledItem>
             <StyledCard>
               {/* <Link to={`/artist/1`}> */}
@@ -1053,7 +1100,7 @@ const ArtworkGallery = () => {
             </StyledCard>
           </StyledItem>
         </Grid>
-        <Grid size={4} item xs="auto">
+        <Grid {...galleryItemProps}>
           <StyledItem>
             <StyledCard>
               {/* <Link to={`/artist/1`}> */}
@@ -1085,8 +1132,8 @@ const ArtworkGallery = () => {
         </Grid>
       </Grid>
       <br />
-      <Grid container spacing={2} wrap="nowrap">
-        <Grid size={4} item xs="auto">
+      <Grid className="artwork-gallery-row" container spacing={2} {...galleryRowProps}>
+        <Grid {...galleryItemProps}>
           <StyledItem>
             <StyledCard>
               {/* <Link to={`/artist/1`}> */}
@@ -1116,7 +1163,7 @@ const ArtworkGallery = () => {
             </StyledCard>
           </StyledItem>
         </Grid>
-        <Grid size={4} item xs="auto">
+        <Grid {...galleryItemProps}>
           <StyledItem>
             <StyledCard>
               {/* <Link to={`/artist/1`}> */}
@@ -1146,7 +1193,7 @@ const ArtworkGallery = () => {
             </StyledCard>
           </StyledItem>
         </Grid>
-        <Grid size={4} item xs="auto">
+        <Grid {...galleryItemProps}>
           <StyledItem>
             <StyledCard>
               {/* <Link to={`/artist/1`}> */}
@@ -1178,8 +1225,8 @@ const ArtworkGallery = () => {
         </Grid>
       </Grid>
       <br />
-      <Grid container spacing={2} wrap="nowrap">
-        <Grid size={4} item xs="auto">
+      <Grid className="artwork-gallery-row" container spacing={2} {...galleryRowProps}>
+        <Grid {...galleryItemProps}>
           <StyledItem>
             <StyledCard>
               {/* <Link to={`/artist/1`}> */}
@@ -1209,7 +1256,7 @@ const ArtworkGallery = () => {
             </StyledCard>
           </StyledItem>
         </Grid>
-        <Grid size={4} item xs="auto">
+        <Grid {...galleryItemProps}>
           <StyledItem>
             <StyledCard>
               {/* <Link to={`/artist/1`}> */}
@@ -1239,7 +1286,7 @@ const ArtworkGallery = () => {
             </StyledCard>
           </StyledItem>
         </Grid>
-        <Grid size={4} item xs="auto">
+        <Grid {...galleryItemProps}>
           <StyledItem>
             <StyledCard>
               {/* <Link to={`/artist/1`}> */}
@@ -1271,8 +1318,8 @@ const ArtworkGallery = () => {
         </Grid>
       </Grid>
       <br />
-      <Grid container spacing={2} wrap="nowrap">
-        <Grid size={4} item xs="auto">
+      <Grid className="artwork-gallery-row" container spacing={2} {...galleryRowProps}>
+        <Grid {...galleryItemProps}>
           <StyledItem>
             <StyledCard>
               {/* <Link to={`/artist/1`}> */}
@@ -1302,7 +1349,7 @@ const ArtworkGallery = () => {
             </StyledCard>
           </StyledItem>
         </Grid>
-        <Grid size={4} item xs="auto">
+        <Grid {...galleryItemProps}>
           <StyledItem>
             <StyledCard>
               {/* <Link to={`/artist/1`}> */}
@@ -1332,7 +1379,7 @@ const ArtworkGallery = () => {
             </StyledCard>
           </StyledItem>
         </Grid>
-        <Grid size={4} item xs="auto">
+        <Grid {...galleryItemProps}>
           <StyledItem>
             <StyledCard>
               {/* <Link to={`/artist/1`}> */}
@@ -1364,8 +1411,8 @@ const ArtworkGallery = () => {
         </Grid>
       </Grid>
       <br />
-      <Grid container spacing={2} wrap="nowrap">
-        <Grid size={4} item xs="auto">
+      <Grid className="artwork-gallery-row" container spacing={2} {...galleryRowProps}>
+        <Grid {...galleryItemProps}>
           <StyledItem>
             <StyledCard>
               {/* <Link to={`/artist/1`}> */}
@@ -1395,7 +1442,7 @@ const ArtworkGallery = () => {
             </StyledCard>
           </StyledItem>
         </Grid>
-        <Grid size={4} item xs="auto">
+        <Grid {...galleryItemProps}>
           <StyledItem>
             <StyledCard>
               {/* <Link to={`/artist/1`}> */}
@@ -1425,7 +1472,7 @@ const ArtworkGallery = () => {
             </StyledCard>
           </StyledItem>
         </Grid>
-        <Grid size={4} item xs="auto">
+        <Grid {...galleryItemProps}>
           <StyledItem>
             <StyledCard>
               {/* <Link to={`/artist/1`}> */}
@@ -1457,8 +1504,8 @@ const ArtworkGallery = () => {
         </Grid>
       </Grid>
       <br />
-      <Grid container spacing={2} wrap="nowrap">
-        <Grid size={4} item xs="auto">
+      <Grid className="artwork-gallery-row" container spacing={2} {...galleryRowProps}>
+        <Grid {...galleryItemProps}>
           <StyledItem>
             <StyledCard>
               {/* <Link to={`/artist/1`}> */}
@@ -1488,7 +1535,7 @@ const ArtworkGallery = () => {
             </StyledCard>
           </StyledItem>
         </Grid>
-        <Grid size={4} item xs="auto">
+        <Grid {...galleryItemProps}>
           <StyledItem>
             <StyledCard>
               {/* <Link to={`/artist/1`}> */}
@@ -1518,7 +1565,7 @@ const ArtworkGallery = () => {
             </StyledCard>
           </StyledItem>
         </Grid>
-        <Grid size={4} item xs="auto">
+        <Grid {...galleryItemProps}>
           <StyledItem>
             <StyledCard>
               {/* <Link to={`/artist/1`}> */}
@@ -1550,8 +1597,8 @@ const ArtworkGallery = () => {
         </Grid>
       </Grid>
       <br />
-      <Grid container spacing={2} wrap="nowrap">
-        <Grid size={4} item xs="auto">
+      <Grid className="artwork-gallery-row" container spacing={2} {...galleryRowProps}>
+        <Grid {...galleryItemProps}>
           <StyledItem>
             <StyledCard>
               {/* <Link to={`/artist/1`}> */}
@@ -1581,7 +1628,7 @@ const ArtworkGallery = () => {
             </StyledCard>
           </StyledItem>
         </Grid>
-        <Grid size={4} item xs="auto">
+        <Grid {...galleryItemProps}>
           <StyledItem>
             <StyledCard>
               {/* <Link to={`/artist/1`}> */}
@@ -1611,7 +1658,7 @@ const ArtworkGallery = () => {
             </StyledCard>
           </StyledItem>
         </Grid>
-        <Grid size={4} item xs="auto">
+        <Grid {...galleryItemProps}>
           <StyledItem>
             <StyledCard>
               {/* <Link to={`/artist/1`}> */}
@@ -1643,8 +1690,8 @@ const ArtworkGallery = () => {
         </Grid>
       </Grid>
       <br />
-      <Grid container spacing={2} wrap="nowrap">
-        <Grid size={4} item xs="auto">
+      <Grid className="artwork-gallery-row" container spacing={2} {...galleryRowProps}>
+        <Grid {...galleryItemProps}>
           <StyledItem>
             <StyledCard>
               {/* <Link to={`/artist/1`}> */}
@@ -1674,7 +1721,7 @@ const ArtworkGallery = () => {
             </StyledCard>
           </StyledItem>
         </Grid>
-        <Grid size={4} item xs="auto">
+        <Grid {...galleryItemProps}>
           <StyledItem>
             <StyledCard>
               {/* <Link to={`/artist/1`}> */}
@@ -1704,7 +1751,7 @@ const ArtworkGallery = () => {
             </StyledCard>
           </StyledItem>
         </Grid>
-        <Grid size={4} item xs="auto">
+        <Grid {...galleryItemProps}>
           <StyledItem>
             <StyledCard>
               {/* <Link to={`/artist/1`}> */}
@@ -1736,8 +1783,8 @@ const ArtworkGallery = () => {
         </Grid>
       </Grid>
       <br />
-      <Grid container spacing={2} wrap="nowrap">
-        <Grid size={4} item xs="auto">
+      <Grid className="artwork-gallery-row" container spacing={2} {...galleryRowProps}>
+        <Grid {...galleryItemProps}>
           <StyledItem>
             <StyledCard>
               {/* <Link to={`/artist/1`}> */}
@@ -1767,7 +1814,7 @@ const ArtworkGallery = () => {
             </StyledCard>
           </StyledItem>
         </Grid>
-        <Grid size={4} item xs="auto">
+        <Grid {...galleryItemProps}>
           <StyledItem>
             <StyledCard>
               {/* <Link to={`/artist/1`}> */}
@@ -1797,7 +1844,7 @@ const ArtworkGallery = () => {
             </StyledCard>
           </StyledItem>
         </Grid>
-        <Grid size={4} item xs="auto">
+        <Grid {...galleryItemProps}>
           <StyledItem>
             <StyledCard>
               {/* <Link to={`/artist/1`}> */}
@@ -1829,8 +1876,8 @@ const ArtworkGallery = () => {
         </Grid>
       </Grid>
       <br />
-      <Grid container spacing={2} wrap="nowrap">
-        <Grid size={4} item xs="auto">
+      <Grid className="artwork-gallery-row" container spacing={2} {...galleryRowProps}>
+        <Grid {...galleryItemProps}>
           <StyledItem>
             <StyledCard>
               {/* <Link to={`/artist/1`}> */}
@@ -1860,7 +1907,7 @@ const ArtworkGallery = () => {
             </StyledCard>
           </StyledItem>
         </Grid>
-        <Grid size={4} item xs="auto">
+        <Grid {...galleryItemProps}>
           <StyledItem>
             <StyledCard>
               {/* <Link to={`/artist/1`}> */}
@@ -1890,7 +1937,7 @@ const ArtworkGallery = () => {
             </StyledCard>
           </StyledItem>
         </Grid>
-        <Grid size={4} item xs="auto">
+        <Grid {...galleryItemProps}>
           <StyledItem>
             <StyledCard>
               {/* <Link to={`/artist/1`}> */}
@@ -1922,8 +1969,8 @@ const ArtworkGallery = () => {
         </Grid>
       </Grid>
       <br />
-      <Grid container spacing={2} wrap="nowrap">
-        <Grid size={4} item xs="auto">
+      <Grid className="artwork-gallery-row" container spacing={2} {...galleryRowProps}>
+        <Grid {...galleryItemProps}>
           <StyledItem>
             <StyledCard>
               {/* <Link to={`/artist/1`}> */}
@@ -1953,7 +2000,7 @@ const ArtworkGallery = () => {
             </StyledCard>
           </StyledItem>
         </Grid>
-        <Grid size={4} item xs="auto">
+        <Grid {...galleryItemProps}>
           <StyledItem>
             <StyledCard>
               {/* <Link to={`/artist/1`}> */}
@@ -1992,8 +2039,8 @@ const ArtworkGallery = () => {
       }}><h4 style={{ color: theme.accent4 }} onClick={() => {
         window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
       }} title="Back to Top">Flowers</h4></div>
-      <Grid container spacing={2} wrap="nowrap">
-        <Grid size={4} item xs="auto">
+      <Grid className="artwork-gallery-row" container spacing={2} {...galleryRowProps}>
+        <Grid {...galleryItemProps}>
           <StyledItem>
             <StyledCard>
               {/* <Link to={`/artist/1`}> */}
@@ -2023,7 +2070,7 @@ const ArtworkGallery = () => {
             </StyledCard>
           </StyledItem>
         </Grid>
-        <Grid size={4} item xs="auto">
+        <Grid {...galleryItemProps}>
           <StyledItem>
             <StyledCard>
               {/* <Link to={`/artist/1`}> */}
@@ -2053,7 +2100,7 @@ const ArtworkGallery = () => {
             </StyledCard>
           </StyledItem>
         </Grid>
-        <Grid size={4} item xs="auto">
+        <Grid {...galleryItemProps}>
           <StyledItem>
             <StyledCard>
               {/* <Link to={`/artist/1`}> */}
@@ -2085,8 +2132,8 @@ const ArtworkGallery = () => {
         </Grid>
       </Grid>
       <br />
-      <Grid container spacing={2} wrap="nowrap">
-        <Grid size={4} item xs="auto">
+      <Grid className="artwork-gallery-row" container spacing={2} {...galleryRowProps}>
+        <Grid {...galleryItemProps}>
           <StyledItem>
             <StyledCard>
               {/* <Link to={`/artist/1`}> */}
@@ -2116,7 +2163,7 @@ const ArtworkGallery = () => {
             </StyledCard>
           </StyledItem>
         </Grid>
-        <Grid size={4} item xs="auto">
+        <Grid {...galleryItemProps}>
           <StyledItem>
             <StyledCard>
               {/* <Link to={`/artist/1`}> */}
@@ -2146,7 +2193,7 @@ const ArtworkGallery = () => {
             </StyledCard>
           </StyledItem>
         </Grid>
-        <Grid size={4} item xs="auto">
+        <Grid {...galleryItemProps}>
           <StyledItem>
             <StyledCard>
               {/* <Link to={`/artist/1`}> */}
@@ -2178,8 +2225,8 @@ const ArtworkGallery = () => {
         </Grid>
       </Grid>
       <br />
-      <Grid container spacing={2} wrap="nowrap">
-        <Grid size={4} item xs="auto">
+      <Grid className="artwork-gallery-row" container spacing={2} {...galleryRowProps}>
+        <Grid {...galleryItemProps}>
           <StyledItem>
             <StyledCard>
               {/* <Link to={`/artist/1`}> */}
@@ -2209,7 +2256,7 @@ const ArtworkGallery = () => {
             </StyledCard>
           </StyledItem>
         </Grid>
-        <Grid size={4} item xs="auto">
+        <Grid {...galleryItemProps}>
           <StyledItem>
             <StyledCard>
               {/* <Link to={`/artist/1`}> */}
@@ -2239,7 +2286,7 @@ const ArtworkGallery = () => {
             </StyledCard>
           </StyledItem>
         </Grid>
-        <Grid size={4} item xs="auto">
+        <Grid {...galleryItemProps}>
           <StyledItem>
             <StyledCard>
               {/* <Link to={`/artist/1`}> */}
@@ -2271,8 +2318,8 @@ const ArtworkGallery = () => {
         </Grid>
       </Grid>
       <br />
-      <Grid container spacing={2} wrap="nowrap">
-        <Grid size={4} item xs="auto">
+      <Grid className="artwork-gallery-row" container spacing={2} {...galleryRowProps}>
+        <Grid {...galleryItemProps}>
           <StyledItem>
             <StyledCard>
               {/* <Link to={`/artist/1`}> */}
@@ -2302,7 +2349,7 @@ const ArtworkGallery = () => {
             </StyledCard>
           </StyledItem>
         </Grid>
-        <Grid size={4} item xs="auto">
+        <Grid {...galleryItemProps}>
           <StyledItem>
             <StyledCard>
               {/* <Link to={`/artist/1`}> */}
@@ -2332,7 +2379,7 @@ const ArtworkGallery = () => {
             </StyledCard>
           </StyledItem>
         </Grid>
-        <Grid size={4} item xs="auto">
+        <Grid {...galleryItemProps}>
           <StyledItem>
             <StyledCard>
               {/* <Link to={`/artist/1`}> */}
@@ -2364,8 +2411,8 @@ const ArtworkGallery = () => {
         </Grid>
       </Grid>
       <br />
-      <Grid container spacing={2} wrap="nowrap">
-        <Grid size={4} item xs="auto">
+      <Grid className="artwork-gallery-row" container spacing={2} {...galleryRowProps}>
+        <Grid {...galleryItemProps}>
           <StyledItem>
             <StyledCard>
               {/* <Link to={`/artist/1`}> */}
@@ -2395,7 +2442,7 @@ const ArtworkGallery = () => {
             </StyledCard>
           </StyledItem>
         </Grid>
-        <Grid size={4} item xs="auto">
+        <Grid {...galleryItemProps}>
           <StyledItem>
             <StyledCard>
               {/* <Link to={`/artist/1`}> */}
@@ -2425,7 +2472,7 @@ const ArtworkGallery = () => {
             </StyledCard>
           </StyledItem>
         </Grid>
-        <Grid size={4} item xs="auto">
+        <Grid {...galleryItemProps}>
           <StyledItem>
             <StyledCard>
               {/* <Link to={`/artist/1`}> */}
@@ -2457,8 +2504,8 @@ const ArtworkGallery = () => {
         </Grid>
       </Grid>
       <br />
-      <Grid container spacing={2} wrap="nowrap">
-        <Grid size={4} item xs="auto">
+      <Grid className="artwork-gallery-row" container spacing={2} {...galleryRowProps}>
+        <Grid {...galleryItemProps}>
           <StyledItem>
             <StyledCard>
               {/* <Link to={`/artist/1`}> */}
@@ -2488,7 +2535,7 @@ const ArtworkGallery = () => {
             </StyledCard>
           </StyledItem>
         </Grid>
-        <Grid size={4} item xs="auto">
+        <Grid {...galleryItemProps}>
           <StyledItem>
             <StyledCard>
               {/* <Link to={`/artist/1`}> */}
@@ -2527,8 +2574,8 @@ const ArtworkGallery = () => {
       }}><h4 style={{ color: theme.accent4 }} onClick={() => {
         window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
       }} title="Back to Top">Landscapes/Still Life</h4></div>
-      <Grid container spacing={2} wrap="nowrap">
-        <Grid size={4} item xs="auto">
+      <Grid className="artwork-gallery-row" container spacing={2} {...galleryRowProps}>
+        <Grid {...galleryItemProps}>
           <StyledItem>
             <StyledCard>
               {/* <Link to={`/artist/1`}> */}
@@ -2558,7 +2605,7 @@ const ArtworkGallery = () => {
             </StyledCard>
           </StyledItem>
         </Grid>
-        <Grid size={4} item xs="auto">
+        <Grid {...galleryItemProps}>
           <StyledItem>
             <StyledCard>
               {/* <Link to={`/artist/1`}> */}
@@ -2597,8 +2644,8 @@ const ArtworkGallery = () => {
         window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
       }} title="Back to Top">Abstract</h4></div>
       <br />
-      <Grid container spacing={2} wrap="nowrap">
-        <Grid size={4} item xs="auto">
+      <Grid className="artwork-gallery-row" container spacing={2} {...galleryRowProps}>
+        <Grid {...galleryItemProps}>
           <StyledItem>
             <StyledCard>
               {/* <Link to={`/artist/1`}> */}
@@ -2628,7 +2675,7 @@ const ArtworkGallery = () => {
             </StyledCard>
           </StyledItem>
         </Grid>
-        <Grid size={4} item xs="auto">
+        <Grid {...galleryItemProps}>
           <StyledItem>
             <StyledCard>
               {/* <Link to={`/artist/1`}> */}
@@ -2658,7 +2705,7 @@ const ArtworkGallery = () => {
             </StyledCard>
           </StyledItem>
         </Grid>
-        <Grid size={4} item xs="auto">
+        <Grid {...galleryItemProps}>
           <StyledItem>
             <StyledCard>
               {/* <Link to={`/artist/1`}> */}
@@ -2690,8 +2737,8 @@ const ArtworkGallery = () => {
         </Grid>
       </Grid>
       <br />
-      <Grid container spacing={2} wrap="nowrap">
-        <Grid size={4} item xs="auto">
+      <Grid className="artwork-gallery-row" container spacing={2} {...galleryRowProps}>
+        <Grid {...galleryItemProps}>
           <StyledItem>
             <StyledCard>
               {/* <Link to={`/artist/1`}> */}
@@ -2722,7 +2769,7 @@ const ArtworkGallery = () => {
           </StyledItem>
         </Grid>
 
-        <Grid size={4} item xs="auto">
+        <Grid {...galleryItemProps}>
           <StyledItem>
             <StyledCard>
               {/* <Link to={`/artist/1`}> */}
@@ -2752,7 +2799,7 @@ const ArtworkGallery = () => {
             </StyledCard>
           </StyledItem>
         </Grid>
-        <Grid size={4} item xs="auto">
+        <Grid {...galleryItemProps}>
           <StyledItem>
             <StyledCard>
               {/* <Link to={`/artist/1`}> */}
@@ -2784,8 +2831,8 @@ const ArtworkGallery = () => {
         </Grid>
       </Grid>
       <br />
-      <Grid container spacing={2} wrap="nowrap">
-        <Grid size={4} item xs="auto">
+      <Grid className="artwork-gallery-row" container spacing={2} {...galleryRowProps}>
+        <Grid {...galleryItemProps}>
           <StyledItem>
             <StyledCard>
               {/* <Link to={`/artist/1`}> */}
@@ -2828,3 +2875,5 @@ const ArtworkGallery = () => {
 }
 
 export default ArtworkGallery
+
+

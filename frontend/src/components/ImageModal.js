@@ -25,7 +25,11 @@ const ImageModal = ({ open, onClose, imageUrl, title, description }) => {
       PaperProps={{
         sx: {
           backgroundColor: 'rgba(0, 0, 0, 0.9)',
-          color: 'white'
+          color: 'white',
+          margin: { xs: 0, sm: 2 },
+          width: { xs: '100%', sm: 'auto' },
+          maxWidth: { xs: '100vw', sm: 'calc(100vw - 32px)' },
+          overflowX: 'hidden'
         }
       }}
     >
@@ -46,16 +50,19 @@ const ImageModal = ({ open, onClose, imageUrl, title, description }) => {
           <CloseIcon />
         </IconButton>
       </DialogTitle>
-      <DialogContent sx={{ padding: 2, textAlign: 'center' }}>
+      <DialogContent sx={{ padding: { xs: 1.5, sm: 2 }, textAlign: 'center', overflowX: 'hidden' }}>
         <Box
           component="img"
           src={imageUrl}
           alt={title}
           sx={{
             maxWidth: '100%',
+            width: '100%',
             maxHeight: '80vh',
             objectFit: 'contain',
-            borderRadius: 1
+            borderRadius: 1,
+            display: 'block',
+            margin: '0 auto'
           }}
         />
         {description && (

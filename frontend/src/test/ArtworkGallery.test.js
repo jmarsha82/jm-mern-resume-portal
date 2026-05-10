@@ -266,6 +266,14 @@ describe('ArtworkGallery Component', () => {
         expect(container).toBeVisible();
       });
     });
+
+    test('gallery container prevents horizontal scrolling in mobile layout', () => {
+      renderWithProviders(<ArtworkGallery />);
+
+      const galleryContainer = screen.getByText('Portraits').closest('.artwork-gallery');
+      expect(galleryContainer).toHaveStyle('overflow-x: hidden');
+      expect(galleryContainer).toHaveStyle('max-width: 100%');
+    });
   });
 
   describe('Navigation and Scroll', () => {
@@ -324,6 +332,20 @@ describe('ArtworkGallery Component', () => {
       await waitFor(() => {
         expect(screen.queryByTestId('image-modal')).not.toBeInTheDocument();
       });
+    });
+
+    test('opened modal does not introduce horizontal scrolling helpers in the gallery', async () => {
+      renderWithProviders(<ArtworkGallery />);
+
+      const firstImage = screen.getAllByRole('img')[0];
+      fireEvent.click(firstImage);
+
+      await waitFor(() => {
+        expect(screen.getByTestId('image-modal')).toBeInTheDocument();
+      });
+
+      const galleryContainer = screen.getByText('Portraits').closest('.artwork-gallery');
+      expect(galleryContainer).toHaveStyle('overflow-x: hidden');
     });
   });
 

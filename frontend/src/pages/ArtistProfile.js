@@ -16,7 +16,7 @@ const ArtistProfile = () => {
       <div className = "home-three" style={{ background: theme.background }}>
         <div className="pages" style={{ background: theme.background }}>
           <Grid container spacing={0}>              
-          <Grid item xs={3}>
+          <Grid item xs={12}>
           <ArtworkGallery/>
           </Grid>
           </Grid>

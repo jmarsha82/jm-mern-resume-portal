@@ -1,4 +1,5 @@
-import { Box, Typography, TextField, Button } from "@mui/material";
+import { Box, Typography, TextField, Button, useMediaQuery } from "@mui/material";
+import { useTheme as useMuiTheme } from "@mui/material/styles";
 import { useTheme } from "../context/ThemeContext";
 import { useState } from "react";
 import emailjs from "@emailjs/browser";
@@ -32,6 +33,8 @@ const getEmailJsErrorMessage = (error) => {
 
 const Contact = () => {
     const { isDarkTheme } = useTheme();
+    const muiTheme = useMuiTheme();
+    const isMobile = useMediaQuery(muiTheme.breakpoints.down('sm'));
     const [email, setEmail] = useState("");
     const [subject, setSubject] = useState("");
     const [message, setMessage] = useState("");
@@ -177,15 +180,17 @@ const Contact = () => {
                 }} />
 
                 <Typography
-                    variant="h2"
+                    variant={isMobile ? "h4" : "h2"}
                     style={{
                         marginBottom: 16,
                         fontWeight: 900,
-                        letterSpacing: 2,
+                        letterSpacing: isMobile ? 1 : 2,
                         background: theme.nameGradient,
                         WebkitBackgroundClip: 'text',
                         backgroundClip: 'text',
                         color: theme.textColor,
+                        fontSize: isMobile ? '1.9rem' : undefined,
+                        lineHeight: isMobile ? 1.1 : undefined,
                         textShadow: isDarkTheme 
                             ? '0 0 30px rgba(0,255,255,0.5)'
                             : '0 0 30px rgba(59,130,246,0.5)',

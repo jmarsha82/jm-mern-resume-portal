@@ -1,8 +1,11 @@
-import { Button, Typography, Box, Avatar } from "@mui/material";
+import { Button, Typography, Box, Avatar, useMediaQuery } from "@mui/material";
+import { useTheme as useMuiTheme } from "@mui/material/styles";
 import { useTheme } from "../context/ThemeContext";
 
 const About = () => {
     const { isDarkTheme } = useTheme();
+    const muiTheme = useMuiTheme();
+    const isMobile = useMediaQuery(muiTheme.breakpoints.down('sm'));
 
     const darkTheme = {
         background: 'linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 25%, #16213e 50%, #0f3460 75%, #0a0a0a 100%)',
@@ -162,15 +165,17 @@ const About = () => {
                 </Box>
 
                 <Typography
-                    variant="h2"
+                    variant={isMobile ? "h4" : "h2"}
                     style={{
                         marginBottom: 16,
                         fontWeight: 900,
-                        letterSpacing: 2,
+                        letterSpacing: isMobile ? 1 : 2,
                         background: theme.nameGradient,
                         WebkitBackgroundClip: 'text',
                         backgroundClip: 'text',
                         color: theme.textColor,
+                        fontSize: isMobile ? '1.9rem' : undefined,
+                        lineHeight: isMobile ? 1.1 : undefined,
                         textShadow: isDarkTheme
                             ? '0 0 30px rgba(0,255,255,0.5)'
                             : '0 0 30px rgba(59,130,246,0.5)',

@@ -5,12 +5,69 @@ import Paper from '@mui/material/Paper';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
-import { Grid } from '@mui/material';
+import { Grid, useMediaQuery } from '@mui/material';
+import { useTheme as useMuiTheme } from '@mui/material/styles';
 import { useTheme } from '../context/ThemeContext';
 
 
 const DevLinkDetails = () => {
   const { theme } = useTheme();
+  const muiTheme = useMuiTheme();
+  const isMobile = useMediaQuery(muiTheme.breakpoints.down('md'));
+  const rowProps = isMobile
+    ? {
+        wrap: 'nowrap',
+        sx: {
+          display: 'flex',
+          flexDirection: 'column',
+          width: '100%',
+          maxWidth: '100%'
+        }
+      }
+    : {
+        wrap: 'nowrap',
+        sx: {
+          display: 'flex',
+          flexDirection: 'row',
+          width: '100%',
+          maxWidth: '100%'
+        }
+      };
+  const itemProps = isMobile
+    ? {
+        item: true,
+        sx: {
+          width: '100%',
+          maxWidth: '100%',
+          flexBasis: '100%'
+        }
+      }
+    : {
+        item: true,
+        size: 4,
+        xs: 12,
+        sx: {
+          width: 'auto',
+          maxWidth: 'none',
+          flexBasis: 'auto'
+        }
+      };
+  const mediaSx = isMobile
+    ? {
+        backgroundSize: 'contain',
+        backgroundRepeat: 'no-repeat',
+        backgroundPosition: 'center',
+        margin: '8px auto',
+        width: 'min(100%, calc(100vw - 96px))',
+        maxWidth: 'calc(100vw - 96px)',
+        height: '72px'
+      }
+    : {
+        backgroundSize: 200,
+        margin: 5,
+        width: 200,
+        height: 60
+      };
 
   // Styled Item component that responds to theme
   const StyledItem = styled(Paper)(({ theme: muiTheme }) => ({
@@ -29,19 +86,14 @@ const DevLinkDetails = () => {
   }));
 
   return (
-    <div>
-      <Grid container spacing={2} wrap="nowrap">
-        <Grid size={4} item xs={12}>
+    <div className="programmer-card-gallery" style={{ width: '100%', maxWidth: '100%', overflowX: 'hidden' }}>
+      <Grid className="programmer-card-gallery-row" container spacing={2} {...rowProps}>
+        <Grid {...itemProps}>
           <StyledItem>
             <StyledCard>
               <a href={"https://www.codingame.com/start"} target="_blank">
                 <CardMedia
-                  sx={{
-                    backgroundSize: 200,
-                    margin: 5,
-                    width: 200,
-                    height: 60
-                  }}
+                  sx={mediaSx}
                   image={`${process.env.PUBLIC_URL}/img/developer/codin_game.jpg`}
                   title={"CodinGame"}
                 />
@@ -55,17 +107,12 @@ const DevLinkDetails = () => {
             </StyledCard>
           </StyledItem>
         </Grid>
-        <Grid size={4} item xs={12}>
+        <Grid {...itemProps}>
           <StyledItem>
             <StyledCard>
               <a href={"https://learning.oreilly.com/home/"} target="_blank">
                 <CardMedia
-                  sx={{
-                    backgroundSize: 200,
-                    margin: 5,
-                    width: 200,
-                    height: 60
-                  }}
+                  sx={mediaSx}
                   image={`${process.env.PUBLIC_URL}/img/developer/o_reilly.jpg`}
                   title={"O'Reilly"}
                 />
@@ -81,18 +128,13 @@ const DevLinkDetails = () => {
         </Grid>
       </Grid>
       <br />
-      <Grid container spacing={2} wrap="nowrap">
-        <Grid size={4} item xs={12}>
+      <Grid className="programmer-card-gallery-row" container spacing={2} {...rowProps}>
+        <Grid {...itemProps}>
           <StyledItem>
             <StyledCard>
               <a href={"https://www.cs.usfca.edu/~galles/visualization/"} target="_blank">
                 <CardMedia
-                  sx={{
-                    backgroundSize: 200,
-                    margin: 5,
-                    width: 200,
-                    height: 60
-                  }}
+                  sx={mediaSx}
                   image={`${process.env.PUBLIC_URL}/img/developer/data_stuct_visual.jpg`}
                   title={"Data Structure Visualizations"}
                 />
@@ -106,17 +148,12 @@ const DevLinkDetails = () => {
             </StyledCard>
           </StyledItem>
         </Grid>
-        <Grid size={4} item xs={12}>
+        <Grid {...itemProps}>
           <StyledItem>
             <StyledCard>
               <a href={"https://jsonplaceholder.typicode.com/"} target="_blank">
                 <CardMedia
-                  sx={{
-                    backgroundSize: 200,
-                    margin: 5,
-                    width: 200,
-                    height: 60
-                  }}
+                  sx={mediaSx}
                   image={`${process.env.PUBLIC_URL}/img/developer/json_placeholder.jpg`}
                   title={"JSON Placeholder"}
                 />
@@ -132,18 +169,13 @@ const DevLinkDetails = () => {
         </Grid>
       </Grid>
       <br />
-      <Grid container spacing={2} wrap="nowrap">
-        <Grid size={4} item xs={12}>
+      <Grid className="programmer-card-gallery-row" container spacing={2} {...rowProps}>
+        <Grid {...itemProps}>
           <StyledItem>
             <StyledCard>
               <a href={"https://replit.com/"} target="_blank">
                 <CardMedia
-                  sx={{
-                    backgroundSize: 200,
-                    margin: 5,
-                    width: 200,
-                    height: 60
-                  }}
+                  sx={mediaSx}
                   image={`${process.env.PUBLIC_URL}/img/developer/replit.jpg`}
                   title={"Replit"}
                 />
@@ -157,17 +189,12 @@ const DevLinkDetails = () => {
             </StyledCard>
           </StyledItem>
         </Grid>
-        <Grid size={4} item xs={12}>
+        <Grid {...itemProps}>
           <StyledItem>
             <StyledCard>
               <a href={"https://www.w3schools.com/default.asp"} target="_blank">
                 <CardMedia
-                  sx={{
-                    backgroundSize: 200,
-                    margin: 5,
-                    width: 200,
-                    height: 60
-                  }}
+                  sx={mediaSx}
                   image={`${process.env.PUBLIC_URL}/img/developer/w3_schools.jpg`}
                   title={"W3 Schools"}
                 />
@@ -183,18 +210,13 @@ const DevLinkDetails = () => {
         </Grid>
       </Grid>
       <br />
-      <Grid container spacing={2} wrap="nowrap">
-        <Grid size={4} item xs={12}>
+      <Grid className="programmer-card-gallery-row" container spacing={2} {...rowProps}>
+        <Grid {...itemProps}>
           <StyledItem>
             <StyledCard>
               <a href={"https://ninjamock.com/"} target="_blank">
                 <CardMedia
-                  sx={{
-                    backgroundSize: 200,
-                    margin: 5,
-                    width: 200,
-                    height: 60
-                  }}
+                  sx={mediaSx}
                   image={`${process.env.PUBLIC_URL}/img/developer/ninjamock.jpg`}
                   title={"NinjaMock"}
                 />
@@ -208,17 +230,12 @@ const DevLinkDetails = () => {
             </StyledCard>
           </StyledItem>
         </Grid>
-        <Grid size={4} item xs={12}>
+        <Grid {...itemProps}>
           <StyledItem>
             <StyledCard>
               <a href={"https://trello.com/en"} target="_blank">
                 <CardMedia
-                  sx={{
-                    backgroundSize: 200,
-                    margin: 5,
-                    width: 200,
-                    height: 60
-                  }}
+                  sx={mediaSx}
                   image={`${process.env.PUBLIC_URL}/img/developer/trello.jpg`}
                   title={"Trello"}
                 />
@@ -234,18 +251,13 @@ const DevLinkDetails = () => {
         </Grid>
       </Grid>
       <br />
-      <Grid container spacing={2} wrap="nowrap">
-        <Grid size={4} item xs={12}>
+      <Grid className="programmer-card-gallery-row" container spacing={2} {...rowProps}>
+        <Grid {...itemProps}>
           <StyledItem>
             <StyledCard>
               <a href={"https://www.hackerrank.com/dashboard"} target="_blank">
                 <CardMedia
-                  sx={{
-                    backgroundSize: 200,
-                    margin: 5,
-                    width: 200,
-                    height: 60
-                  }}
+                  sx={mediaSx}
                   image={`${process.env.PUBLIC_URL}/img/developer/hackerrank.jpg`}
                   title={"HackerRank"}
                 />
@@ -259,17 +271,12 @@ const DevLinkDetails = () => {
             </StyledCard>
           </StyledItem>
         </Grid>
-        <Grid size={4} item xs={12}>
+        <Grid {...itemProps}>
           <StyledItem>
             <StyledCard>
               <a href={"https://spring.io/guides"} target="_blank">
                 <CardMedia
-                  sx={{
-                    backgroundSize: 200,
-                    margin: 5,
-                    width: 200,
-                    height: 60
-                  }}
+                  sx={mediaSx}
                   image={`${process.env.PUBLIC_URL}/img/developer/spring.jpg`}
                   title={"Spring"}
                 />
@@ -285,18 +292,13 @@ const DevLinkDetails = () => {
         </Grid>
       </Grid>
       <br />
-      <Grid container spacing={2} wrap="nowrap">
-        <Grid size={4} item xs={12}>
+      <Grid className="programmer-card-gallery-row" container spacing={2} {...rowProps}>
+        <Grid {...itemProps}>
           <StyledItem>
             <StyledCard>
               <a href={"https://react.dev/"} target="_blank">
                 <CardMedia
-                  sx={{
-                    backgroundSize: 200,
-                    margin: 5,
-                    width: 200,
-                    height: 60
-                  }}
+                  sx={mediaSx}
                   image={`${process.env.PUBLIC_URL}/img/developer/react.jpg`}
                   title={"React"}
                 />
@@ -310,17 +312,12 @@ const DevLinkDetails = () => {
             </StyledCard>
           </StyledItem>
         </Grid>
-        <Grid size={4} item xs={12}>
+        <Grid {...itemProps}>
           <StyledItem>
             <StyledCard>
               <a href={"https://angular.io/"} target="_blank">
                 <CardMedia
-                  sx={{
-                    backgroundSize: 200,
-                    margin: 5,
-                    width: 200,
-                    height: 60
-                  }}
+                  sx={mediaSx}
                   image={`${process.env.PUBLIC_URL}/img/developer/angular.jpg`}
                   title={"Angular"}
                 />
@@ -336,18 +333,13 @@ const DevLinkDetails = () => {
         </Grid>
       </Grid>
       <br />
-      <Grid container spacing={2} wrap="nowrap">
-        <Grid size={4} item xs={12}>
+      <Grid className="programmer-card-gallery-row" container spacing={2} {...rowProps}>
+        <Grid {...itemProps}>
           <StyledItem>
             <StyledCard>
               <a href={"https://leetcode.com/"} target="_blank">
                 <CardMedia
-                  sx={{
-                    backgroundSize: 200,
-                    margin: 5,
-                    width: 200,
-                    height: 60
-                  }}
+                  sx={mediaSx}
                   image={`${process.env.PUBLIC_URL}/img/developer/leetcode.jpg`}
                   title={"LeetCode"}
                 />
@@ -361,17 +353,12 @@ const DevLinkDetails = () => {
             </StyledCard>
           </StyledItem>
         </Grid>
-        <Grid size={4} item xs={12}>
+        <Grid {...itemProps}>
           <StyledItem>
             <StyledCard>
               <a href={"https://claude.ai/"} target="_blank">
                 <CardMedia
-                  sx={{
-                    backgroundSize: 200,
-                    margin: 5,
-                    width: 200,
-                    height: 60
-                  }}
+                  sx={mediaSx}
                   image={`${process.env.PUBLIC_URL}/img/developer/claudeai.jpg`}
                   title={"Claude AI"}
                 />

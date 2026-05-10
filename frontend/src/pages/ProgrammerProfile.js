@@ -24,21 +24,22 @@ const ProgrammerProfile = () => {
     <div style={{
       background: theme.background,
       minHeight: '100vh',
+      overflowX: 'hidden',
       transition: 'background 0.3s ease'
     }}>
       <ProgrammerNavbar/>
-      <div className="pages" style={{ background: theme.background }}>
+      <div className="pages programmer-profile-pages" style={{ background: theme.background, overflowX: 'hidden' }}>
         <div className="home-one">
           <div>
             <GeneralDetails />
           </div>
-          <div className="home-github" style={{
+          <div className="home-github responsive-panel" style={{
             background: theme.cardBg,
             color: theme.textColor,
             transition: 'background 0.3s ease, color 0.3s ease'
           }}>
             <h4 style={{ color: theme.accent4 }}>Github Contributions</h4>
-            <img src="https://ghchart.rshah.org/1976d2/jmarsha82" alt="Github Profile" />
+            <img className="github-chart-image" src="https://ghchart.rshah.org/1976d2/jmarsha82" alt="Github Profile" />
           </div>
         </div>
         <div className="home-two">
