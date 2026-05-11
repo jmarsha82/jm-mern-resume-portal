@@ -60,8 +60,19 @@ const ArtworkGallery = () => {
         }
       };
 
-  const handleImageClick = (imageUrl, title, description) => {
-    setSelectedImage({ imageUrl, title, description });
+  const handleImageClick = (event, imageUrl) => {
+    const card = event.currentTarget.closest('.MuiCard-root');
+    const typographyNodes = card?.querySelectorAll('.MuiCardContent-root .MuiTypography-root') ?? [];
+    const textValues = Array.from(typographyNodes)
+      .map((node) => node.textContent?.trim())
+      .filter(Boolean);
+    const [title, ...details] = textValues;
+
+    setSelectedImage({
+      imageUrl,
+      title: title || event.currentTarget.getAttribute('title') || '',
+      details
+    });
     setModalOpen(true);
   };
 
@@ -116,7 +127,7 @@ const ArtworkGallery = () => {
                 }}
                 image={`${process.env.PUBLIC_URL}/img/artist/beauty_with_butterfly_wings.jpg`}
                 title={"Beauty with Butterfly Wings"}
-                onClick={() => handleImageClick(
+                onClick={(event) => handleImageClick(event, 
                   `${process.env.PUBLIC_URL}/img/artist/beauty_with_butterfly_wings.jpg`
                 )}
               />
@@ -146,7 +157,7 @@ const ArtworkGallery = () => {
                 }}
                 image={`${process.env.PUBLIC_URL}/img/artist/diamond_rimmed_dahlia.jpg`}
                 title={"Diamond Rimmed Dahlia"}
-                onClick={() => handleImageClick(
+                onClick={(event) => handleImageClick(event, 
                   `${process.env.PUBLIC_URL}/img/artist/diamond_rimmed_dahlia.jpg`
                 )}
               />
@@ -176,7 +187,7 @@ const ArtworkGallery = () => {
                 }}
                 image={`${process.env.PUBLIC_URL}/img/artist/gaze_through_me.jpg`}
                 title={"Gaze Through Me"}
-                onClick={() => handleImageClick(
+                onClick={(event) => handleImageClick(event, 
                   `${process.env.PUBLIC_URL}/img/artist/gaze_through_me.jpg`
                 )}
               />
@@ -209,7 +220,7 @@ const ArtworkGallery = () => {
                 }}
                 image={`${process.env.PUBLIC_URL}/img/artist/overglammed.jpg`}
                 title={"Overglammed"}
-                onClick={() => handleImageClick(
+                onClick={(event) => handleImageClick(event, 
                   `${process.env.PUBLIC_URL}/img/artist/overglammed.jpg`
                 )}
               />
@@ -239,7 +250,7 @@ const ArtworkGallery = () => {
                 }}
                 image={`${process.env.PUBLIC_URL}/img/artist/twiggy_glasses.jpg`}
                 title={"Twiggy Glasses"}
-                onClick={() => handleImageClick(
+                onClick={(event) => handleImageClick(event, 
                   `${process.env.PUBLIC_URL}/img/artist/twiggy_glasses.jpg`
                 )}
               />
@@ -269,7 +280,7 @@ const ArtworkGallery = () => {
                 }}
                 image={`${process.env.PUBLIC_URL}/img/artist/anthro_lilac.JPG`}
                 title={"Untitled 1"}
-                onClick={() => handleImageClick(
+                onClick={(event) => handleImageClick(event, 
                   `${process.env.PUBLIC_URL}/img/artist/anthro_lilac.JPG`
                 )}
               />
@@ -302,7 +313,7 @@ const ArtworkGallery = () => {
                 }}
                 image={`${process.env.PUBLIC_URL}/img/artist/king_of_new_york.jpg`}
                 title={"King of New York"}
-                onClick={() => handleImageClick(
+                onClick={(event) => handleImageClick(event, 
                   `${process.env.PUBLIC_URL}/img/artist/king_of_new_york.jpg`
                 )}
               />
@@ -332,7 +343,7 @@ const ArtworkGallery = () => {
                 }}
                 image={`${process.env.PUBLIC_URL}/img/artist/finishing_touch.jpg`}
                 title={"Finishing Touch"}
-                onClick={() => handleImageClick(
+                onClick={(event) => handleImageClick(event, 
                   `${process.env.PUBLIC_URL}/img/artist/finishing_touch.jpg`
                 )}
               />
@@ -362,7 +373,7 @@ const ArtworkGallery = () => {
                 }}
                 image={`${process.env.PUBLIC_URL}/img/artist/karl.jpg`}
                 title={"Karl at McDonalds"}
-                onClick={() => handleImageClick(
+                onClick={(event) => handleImageClick(event, 
                   `${process.env.PUBLIC_URL}/img/artist/karl.jpg`
                 )}
               />
@@ -395,7 +406,7 @@ const ArtworkGallery = () => {
                 }}
                 image={`${process.env.PUBLIC_URL}/img/artist/ready_set_glam.jpg`}
                 title={"Ready Set Glam"}
-                onClick={() => handleImageClick(
+                onClick={(event) => handleImageClick(event, 
                   `${process.env.PUBLIC_URL}/img/artist/ready_set_glam.jpg`
                 )}
               />
@@ -425,7 +436,7 @@ const ArtworkGallery = () => {
                 }}
                 image={`${process.env.PUBLIC_URL}/img/artist/nose_ring.jpg`}
                 title={"Untitled 2"}
-                onClick={() => handleImageClick(
+                onClick={(event) => handleImageClick(event, 
                   `${process.env.PUBLIC_URL}/img/artist/nose_ring.jpg`
                 )}
               />
@@ -455,7 +466,7 @@ const ArtworkGallery = () => {
                 }}
                 image={`${process.env.PUBLIC_URL}/img/artist/longshore.jpg`}
                 title={"Untitled 3"}
-                onClick={() => handleImageClick(
+                onClick={(event) => handleImageClick(event, 
                   `${process.env.PUBLIC_URL}/img/artist/longshore.jpg`
                 )}
               />
@@ -488,7 +499,7 @@ const ArtworkGallery = () => {
                 }}
                 image={`${process.env.PUBLIC_URL}/img/artist/pill_mouth.jpg`}
                 title={"Pill Mouth"}
-                onClick={() => handleImageClick(
+                onClick={(event) => handleImageClick(event, 
                   `${process.env.PUBLIC_URL}/img/artist/pill_mouth.jpg`
                 )}
               />
@@ -518,7 +529,7 @@ const ArtworkGallery = () => {
                 }}
                 image={`${process.env.PUBLIC_URL}/img/artist/keen_and_sheen.jpg`}
                 title={"Keen and Sheen"}
-                onClick={() => handleImageClick(
+                onClick={(event) => handleImageClick(event, 
                   `${process.env.PUBLIC_URL}/img/artist/keen_and_sheen.jpg`
                 )}
               />
@@ -548,7 +559,7 @@ const ArtworkGallery = () => {
                 }}
                 image={`${process.env.PUBLIC_URL}/img/artist/germanotta_doll.jpg`}
                 title={"Germanotta Doll"}
-                onClick={() => handleImageClick(
+                onClick={(event) => handleImageClick(event, 
                   `${process.env.PUBLIC_URL}/img/artist/germanotta_doll.jpg`
                 )}
               />
@@ -581,7 +592,7 @@ const ArtworkGallery = () => {
                 }}
                 image={`${process.env.PUBLIC_URL}/img/artist/stevie.jpg`}
                 title={"Stevie"}
-                onClick={() => handleImageClick(
+                onClick={(event) => handleImageClick(event, 
                   `${process.env.PUBLIC_URL}/img/artist/stevie.jpg`
                 )}
               />
@@ -611,7 +622,7 @@ const ArtworkGallery = () => {
                 }}
                 image={`${process.env.PUBLIC_URL}/img/artist/jewel_lips.jpg`}
                 title={"Untitled 4"}
-                onClick={() => handleImageClick(
+                onClick={(event) => handleImageClick(event, 
                   `${process.env.PUBLIC_URL}/img/artist/jewel_lips.jpg`
                 )}
               />
@@ -641,7 +652,7 @@ const ArtworkGallery = () => {
                 }}
                 image={`${process.env.PUBLIC_URL}/img/artist/audrey.JPG`}
                 title={"Audrey"}
-                onClick={() => handleImageClick(
+                onClick={(event) => handleImageClick(event, 
                   `${process.env.PUBLIC_URL}/img/artist/audrey.JPG`
                 )}
               />
@@ -674,7 +685,7 @@ const ArtworkGallery = () => {
                 }}
                 image={`${process.env.PUBLIC_URL}/img/artist/big_twiggy.JPG`}
                 title={"Untitled 5"}
-                onClick={() => handleImageClick(
+                onClick={(event) => handleImageClick(event, 
                   `${process.env.PUBLIC_URL}/img/artist/big_twiggy.JPG`
                 )}
               />
@@ -704,7 +715,7 @@ const ArtworkGallery = () => {
                 }}
                 image={`${process.env.PUBLIC_URL}/img/artist/jewel_glasses.jpg`}
                 title={"Retrovision"}
-                onClick={() => handleImageClick(
+                onClick={(event) => handleImageClick(event, 
                   `${process.env.PUBLIC_URL}/img/artist/jewel_glasses.jpg`
                 )}
               />
@@ -734,7 +745,7 @@ const ArtworkGallery = () => {
                 }}
                 image={`${process.env.PUBLIC_URL}/img/artist/fake_eyelashes.jpg`}
                 title={"Eyelashes"}
-                onClick={() => handleImageClick(
+                onClick={(event) => handleImageClick(event, 
                   `${process.env.PUBLIC_URL}/img/artist/fake_eyelashes.jpg`
                 )}
               />
@@ -767,7 +778,7 @@ const ArtworkGallery = () => {
                 }}
                 image={`${process.env.PUBLIC_URL}/img/artist/evelyn_clown.jpg`}
                 title={"Evelyn Clown"}
-                onClick={() => handleImageClick(
+                onClick={(event) => handleImageClick(event, 
                   `${process.env.PUBLIC_URL}/img/artist/evelyn_clown.jpg`
                 )}
               />
@@ -797,7 +808,7 @@ const ArtworkGallery = () => {
                 }}
                 image={`${process.env.PUBLIC_URL}/img/artist/rose_glasses.jpg`}
                 title={"Untitled 7"}
-                onClick={() => handleImageClick(
+                onClick={(event) => handleImageClick(event, 
                   `${process.env.PUBLIC_URL}/img/artist/rose_glasses.jpg`
                 )}
               />
@@ -827,7 +838,7 @@ const ArtworkGallery = () => {
                 }}
                 image={`${process.env.PUBLIC_URL}/img/artist/blue_brittany.jpg`}
                 title={"Blue Brittany"}
-                onClick={() => handleImageClick(
+                onClick={(event) => handleImageClick(event, 
                   `${process.env.PUBLIC_URL}/img/artist/blue_brittany.jpg`
                 )}
               />
@@ -860,7 +871,7 @@ const ArtworkGallery = () => {
                 }}
                 image={`${process.env.PUBLIC_URL}/img/artist/hindu_shocker.JPG`}
                 title={"Hindu Shocker"}
-                onClick={() => handleImageClick(
+                onClick={(event) => handleImageClick(event, 
                   `${process.env.PUBLIC_URL}/img/artist/hindu_shocker.JPG`
                 )}
               />
@@ -890,7 +901,7 @@ const ArtworkGallery = () => {
                 }}
                 image={`${process.env.PUBLIC_URL}/img/artist/gold_glasses.jpg`}
                 title={"Untitled 8"}
-                onClick={() => handleImageClick(
+                onClick={(event) => handleImageClick(event, 
                   `${process.env.PUBLIC_URL}/img/artist/gold_glasses.jpg`
                 )}
               />
@@ -920,7 +931,7 @@ const ArtworkGallery = () => {
                 }}
                 image={`${process.env.PUBLIC_URL}/img/artist/pink_head.jpg`}
                 title={"Untitled 10"}
-                onClick={() => handleImageClick(
+                onClick={(event) => handleImageClick(event, 
                   `${process.env.PUBLIC_URL}/img/artist/pink_head.jpg`
                 )}
               />
@@ -953,7 +964,7 @@ const ArtworkGallery = () => {
                 }}
                 image={`${process.env.PUBLIC_URL}/img/artist/bored_with_pen.jpg`}
                 title={"Untitled 12"}
-                onClick={() => handleImageClick(
+                onClick={(event) => handleImageClick(event, 
                   `${process.env.PUBLIC_URL}/img/artist/bored_with_pen.jpg`
                 )}
               />
@@ -983,7 +994,7 @@ const ArtworkGallery = () => {
                 }}
                 image={`${process.env.PUBLIC_URL}/img/artist/eye_tattoo.jpg`}
                 title={"Untitled 13"}
-                onClick={() => handleImageClick(
+                onClick={(event) => handleImageClick(event, 
                   `${process.env.PUBLIC_URL}/img/artist/eye_tattoo.jpg`
                 )}
               />
@@ -1013,7 +1024,7 @@ const ArtworkGallery = () => {
                 }}
                 image={`${process.env.PUBLIC_URL}/img/artist/for_alex.jpg`}
                 title={"For Alex"}
-                onClick={() => handleImageClick(
+                onClick={(event) => handleImageClick(event, 
                   `${process.env.PUBLIC_URL}/img/artist/for_alex.jpg`
                 )}
               />
@@ -1046,7 +1057,7 @@ const ArtworkGallery = () => {
                 }}
                 image={`${process.env.PUBLIC_URL}/img/artist/joe.jpg`}
                 title={"Brother"}
-                onClick={() => handleImageClick(
+                onClick={(event) => handleImageClick(event, 
                   `${process.env.PUBLIC_URL}/img/artist/joe.jpg`
                 )}
               />
@@ -1076,7 +1087,7 @@ const ArtworkGallery = () => {
                 }}
                 image={`${process.env.PUBLIC_URL}/img/artist/laroux.jpg`}
                 title={"LaRoux"}
-                onClick={() => handleImageClick(
+                onClick={(event) => handleImageClick(event, 
                   `${process.env.PUBLIC_URL}/img/artist/laroux.jpg`
                 )}
               />
@@ -1106,7 +1117,7 @@ const ArtworkGallery = () => {
                 }}
                 image={`${process.env.PUBLIC_URL}/img/artist/wheres_eric.JPG`}
                 title={"Where's Eric"}
-                onClick={() => handleImageClick(
+                onClick={(event) => handleImageClick(event, 
                   `${process.env.PUBLIC_URL}/img/artist/wheres_eric.JPG`
                 )}
               />
@@ -1139,7 +1150,7 @@ const ArtworkGallery = () => {
                 }}
                 image={`${process.env.PUBLIC_URL}/img/artist/worker_unite.jpg`}
                 title={"Untitled 15"}
-                onClick={() => handleImageClick(
+                onClick={(event) => handleImageClick(event, 
                   `${process.env.PUBLIC_URL}/img/artist/worker_unite.jpg`
                 )}
               />
@@ -1169,7 +1180,7 @@ const ArtworkGallery = () => {
                 }}
                 image={`${process.env.PUBLIC_URL}/img/artist/dianes_daughter.jpg`}
                 title={"Untitled 16"}
-                onClick={() => handleImageClick(
+                onClick={(event) => handleImageClick(event, 
                   `${process.env.PUBLIC_URL}/img/artist/dianes_daughter.jpg`
                 )}
               />
@@ -1199,7 +1210,7 @@ const ArtworkGallery = () => {
                 }}
                 image={`${process.env.PUBLIC_URL}/img/artist/alice.jpg`}
                 title={"Alice"}
-                onClick={() => handleImageClick(
+                onClick={(event) => handleImageClick(event, 
                   `${process.env.PUBLIC_URL}/img/artist/alice.jpg`
                 )}
               />
@@ -1232,7 +1243,7 @@ const ArtworkGallery = () => {
                 }}
                 image={`${process.env.PUBLIC_URL}/img/artist/cara_dots.jpg`}
                 title={"Untitled 18"}
-                onClick={() => handleImageClick(
+                onClick={(event) => handleImageClick(event, 
                   `${process.env.PUBLIC_URL}/img/artist/cara_dots.jpg`
                 )}
               />
@@ -1262,7 +1273,7 @@ const ArtworkGallery = () => {
                 }}
                 image={`${process.env.PUBLIC_URL}/img/artist/shadow_girl.jpg`}
                 title={"Untitled 19"}
-                onClick={() => handleImageClick(
+                onClick={(event) => handleImageClick(event, 
                   `${process.env.PUBLIC_URL}/img/artist/shadow_girl.jpg`
                 )}
               />
@@ -1292,7 +1303,7 @@ const ArtworkGallery = () => {
                 }}
                 image={`${process.env.PUBLIC_URL}/img/artist/cara_dots_two.jpg`}
                 title={"Cara Primer"}
-                onClick={() => handleImageClick(
+                onClick={(event) => handleImageClick(event, 
                   `${process.env.PUBLIC_URL}/img/artist/cara_dots_two.jpg`
                 )}
               />
@@ -1325,7 +1336,7 @@ const ArtworkGallery = () => {
                 }}
                 image={`${process.env.PUBLIC_URL}/img/artist/imp_bedpost.jpg`}
                 title={"Spring Rises"}
-                onClick={() => handleImageClick(
+                onClick={(event) => handleImageClick(event, 
                   `${process.env.PUBLIC_URL}/img/artist/imp_bedpost.jpg`
                 )}
               />
@@ -1355,7 +1366,7 @@ const ArtworkGallery = () => {
                 }}
                 image={`${process.env.PUBLIC_URL}/img/artist/heart_glasses.jpg`}
                 title={"Heart Vision"}
-                onClick={() => handleImageClick(
+                onClick={(event) => handleImageClick(event, 
                   `${process.env.PUBLIC_URL}/img/artist/heart_glasses.jpg`
                 )}
               />
@@ -1385,7 +1396,7 @@ const ArtworkGallery = () => {
                 }}
                 image={`${process.env.PUBLIC_URL}/img/artist/colby_mirror.jpg`}
                 title={"Seeing Through Colby"}
-                onClick={() => handleImageClick(
+                onClick={(event) => handleImageClick(event, 
                   `${process.env.PUBLIC_URL}/img/artist/colby_mirror.jpg`
                 )}
               />
@@ -1418,7 +1429,7 @@ const ArtworkGallery = () => {
                 }}
                 image={`${process.env.PUBLIC_URL}/img/artist/wife.jpg`}
                 title={"Untitled 20"}
-                onClick={() => handleImageClick(
+                onClick={(event) => handleImageClick(event, 
                   `${process.env.PUBLIC_URL}/img/artist/wife.jpg`
                 )}
               />
@@ -1448,7 +1459,7 @@ const ArtworkGallery = () => {
                 }}
                 image={`${process.env.PUBLIC_URL}/img/artist/smokey_eyes.jpg`}
                 title={"Smokey Eyes"}
-                onClick={() => handleImageClick(
+                onClick={(event) => handleImageClick(event, 
                   `${process.env.PUBLIC_URL}/img/artist/smokey_eyes.jpg`
                 )}
               />
@@ -1478,7 +1489,7 @@ const ArtworkGallery = () => {
                 }}
                 image={`${process.env.PUBLIC_URL}/img/artist/gaga_two.jpg`}
                 title={"Untitled 27"}
-                onClick={() => handleImageClick(
+                onClick={(event) => handleImageClick(event, 
                   `${process.env.PUBLIC_URL}/img/artist/gaga_two.jpg`
                 )}
               />
@@ -1511,7 +1522,7 @@ const ArtworkGallery = () => {
                 }}
                 image={`${process.env.PUBLIC_URL}/img/artist/man_lips.jpg`}
                 title={"His Majesty the Queen"}
-                onClick={() => handleImageClick(
+                onClick={(event) => handleImageClick(event, 
                   `${process.env.PUBLIC_URL}/img/artist/man_lips.jpg`
                 )}
               />
@@ -1541,7 +1552,7 @@ const ArtworkGallery = () => {
                 }}
                 image={`${process.env.PUBLIC_URL}/img/artist/jewel_nails.jpg`}
                 title={"Pretty Posh"}
-                onClick={() => handleImageClick(
+                onClick={(event) => handleImageClick(event, 
                   `${process.env.PUBLIC_URL}/img/artist/jewel_nails.jpg`
                 )}
               />
@@ -1571,7 +1582,7 @@ const ArtworkGallery = () => {
                 }}
                 image={`${process.env.PUBLIC_URL}/img/artist/bill.jpg`}
                 title={"Untitled 21"}
-                onClick={() => handleImageClick(
+                onClick={(event) => handleImageClick(event, 
                   `${process.env.PUBLIC_URL}/img/artist/bill.jpg`
                 )}
               />
@@ -1604,7 +1615,7 @@ const ArtworkGallery = () => {
                 }}
                 image={`${process.env.PUBLIC_URL}/img/artist/blue_eye.jpg`}
                 title={"Lana"}
-                onClick={() => handleImageClick(
+                onClick={(event) => handleImageClick(event, 
                   `${process.env.PUBLIC_URL}/img/artist/blue_eye.jpg`
                 )}
               />
@@ -1634,7 +1645,7 @@ const ArtworkGallery = () => {
                 }}
                 image={`${process.env.PUBLIC_URL}/img/artist/twisted_girl.jpg`}
                 title={"Doomed"}
-                onClick={() => handleImageClick(
+                onClick={(event) => handleImageClick(event, 
                   `${process.env.PUBLIC_URL}/img/artist/twisted_girl.jpg`
                 )}
               />
@@ -1664,7 +1675,7 @@ const ArtworkGallery = () => {
                 }}
                 image={`${process.env.PUBLIC_URL}/img/artist/gaga_one.jpg`}
                 title={"Untitled 22"}
-                onClick={() => handleImageClick(
+                onClick={(event) => handleImageClick(event, 
                   `${process.env.PUBLIC_URL}/img/artist/gaga_one.jpg`
                 )}
               />
@@ -1697,7 +1708,7 @@ const ArtworkGallery = () => {
                 }}
                 image={`${process.env.PUBLIC_URL}/img/artist/imp_garden.jpg`}
                 title={"Untitled 23"}
-                onClick={() => handleImageClick(
+                onClick={(event) => handleImageClick(event, 
                   `${process.env.PUBLIC_URL}/img/artist/imp_garden.jpg`
                 )}
               />
@@ -1727,7 +1738,7 @@ const ArtworkGallery = () => {
                 }}
                 image={`${process.env.PUBLIC_URL}/img/artist/imp_kite.jpg`}
                 title={"Untitled 24"}
-                onClick={() => handleImageClick(
+                onClick={(event) => handleImageClick(event, 
                   `${process.env.PUBLIC_URL}/img/artist/imp_kite.jpg`
                 )}
               />
@@ -1757,7 +1768,7 @@ const ArtworkGallery = () => {
                 }}
                 image={`${process.env.PUBLIC_URL}/img/artist/brittany_one.jpg`}
                 title={"Brittany in Light"}
-                onClick={() => handleImageClick(
+                onClick={(event) => handleImageClick(event, 
                   `${process.env.PUBLIC_URL}/img/artist/brittany_one.jpg`
                 )}
               />
@@ -1790,7 +1801,7 @@ const ArtworkGallery = () => {
                 }}
                 image={`${process.env.PUBLIC_URL}/img/artist/yunis.jpg`}
                 title={"Yunis"}
-                onClick={() => handleImageClick(
+                onClick={(event) => handleImageClick(event, 
                   `${process.env.PUBLIC_URL}/img/artist/yunis.jpg`
                 )}
               />
@@ -1820,7 +1831,7 @@ const ArtworkGallery = () => {
                 }}
                 image={`${process.env.PUBLIC_URL}/img/artist/brittany_two.jpg`}
                 title={"Hidden Brittany"}
-                onClick={() => handleImageClick(
+                onClick={(event) => handleImageClick(event, 
                   `${process.env.PUBLIC_URL}/img/artist/brittany_two.jpg`
                 )}
               />
@@ -1850,7 +1861,7 @@ const ArtworkGallery = () => {
                 }}
                 image={`${process.env.PUBLIC_URL}/img/artist/nude_one.jpg`}
                 title={"For Tourian"}
-                onClick={() => handleImageClick(
+                onClick={(event) => handleImageClick(event, 
                   `${process.env.PUBLIC_URL}/img/artist/nude_one.jpg`
                 )}
               />
@@ -1883,7 +1894,7 @@ const ArtworkGallery = () => {
                 }}
                 image={`${process.env.PUBLIC_URL}/img/artist/brittany_daniels.JPG`}
                 title={"Untitled 17"}
-                onClick={() => handleImageClick(
+                onClick={(event) => handleImageClick(event, 
                   `${process.env.PUBLIC_URL}/img/artist/brittany_daniels.JPG`
                 )}
               />
@@ -1913,7 +1924,7 @@ const ArtworkGallery = () => {
                 }}
                 image={`${process.env.PUBLIC_URL}/img/artist/seether.jpg`}
                 title={"Seether"}
-                onClick={() => handleImageClick(
+                onClick={(event) => handleImageClick(event, 
                   `${process.env.PUBLIC_URL}/img/artist/seether.jpg`
                 )}
               />
@@ -1943,7 +1954,7 @@ const ArtworkGallery = () => {
                 }}
                 image={`${process.env.PUBLIC_URL}/img/artist/candlelight_portrait.jpg`}
                 title={"Candlelight Portrait"}
-                onClick={() => handleImageClick(
+                onClick={(event) => handleImageClick(event, 
                   `${process.env.PUBLIC_URL}/img/artist/candlelight_portrait.jpg`
                 )}
               />
@@ -1976,7 +1987,7 @@ const ArtworkGallery = () => {
                 }}
                 image={`${process.env.PUBLIC_URL}/img/artist/mark.jpg`}
                 title={"Mark"}
-                onClick={() => handleImageClick(
+                onClick={(event) => handleImageClick(event, 
                   `${process.env.PUBLIC_URL}/img/artist/mark.jpg`
                 )}
               />
@@ -2006,7 +2017,7 @@ const ArtworkGallery = () => {
                 }}
                 image={`${process.env.PUBLIC_URL}/img/artist/lindsey.jpg`}
                 title={"Lindsey"}
-                onClick={() => handleImageClick(
+                onClick={(event) => handleImageClick(event, 
                   `${process.env.PUBLIC_URL}/img/artist/lindsey.jpg`
                 )}
               />
@@ -2046,7 +2057,7 @@ const ArtworkGallery = () => {
                 }}
                 image={`${process.env.PUBLIC_URL}/img/artist/flower4.JPG`}
                 title={"Untitled 6"}
-                onClick={() => handleImageClick(
+                onClick={(event) => handleImageClick(event, 
                   `${process.env.PUBLIC_URL}/img/artist/flower4.JPG`
                 )}
               />
@@ -2076,7 +2087,7 @@ const ArtworkGallery = () => {
                 }}
                 image={`${process.env.PUBLIC_URL}/img/artist/aeris.JPG`}
                 title={"Aeris"}
-                onClick={() => handleImageClick(
+                onClick={(event) => handleImageClick(event, 
                   `${process.env.PUBLIC_URL}/img/artist/aeris.JPG`
                 )}
               />
@@ -2106,7 +2117,7 @@ const ArtworkGallery = () => {
                 }}
                 image={`${process.env.PUBLIC_URL}/img/artist/crawford.jpg`}
                 title={"Crawford"}
-                onClick={() => handleImageClick(
+                onClick={(event) => handleImageClick(event, 
                   `${process.env.PUBLIC_URL}/img/artist/crawford.jpg`
                 )}
               />
@@ -2139,7 +2150,7 @@ const ArtworkGallery = () => {
                 }}
                 image={`${process.env.PUBLIC_URL}/img/artist/layla.JPG`}
                 title={"Layla"}
-                onClick={() => handleImageClick(
+                onClick={(event) => handleImageClick(event, 
                   `${process.env.PUBLIC_URL}/img/artist/layla.JPG`
                 )}
               />
@@ -2169,7 +2180,7 @@ const ArtworkGallery = () => {
                 }}
                 image={`${process.env.PUBLIC_URL}/img/artist/flower2.JPG`}
                 title={"Untitled 9"}
-                onClick={() => handleImageClick(
+                onClick={(event) => handleImageClick(event, 
                   `${process.env.PUBLIC_URL}/img/artist/flower2.JPG`
                 )}
               />
@@ -2199,7 +2210,7 @@ const ArtworkGallery = () => {
                 }}
                 image={`${process.env.PUBLIC_URL}/img/artist/flower3.JPG`}
                 title={"Untitled 11"}
-                onClick={() => handleImageClick(
+                onClick={(event) => handleImageClick(event, 
                   `${process.env.PUBLIC_URL}/img/artist/flower3.JPG`
                 )}
               />
@@ -2232,7 +2243,7 @@ const ArtworkGallery = () => {
                 }}
                 image={`${process.env.PUBLIC_URL}/img/artist/knowles.JPG`}
                 title={"Knowles"}
-                onClick={() => handleImageClick(
+                onClick={(event) => handleImageClick(event, 
                   `${process.env.PUBLIC_URL}/img/artist/knowles.JPG`
                 )}
               />
@@ -2262,7 +2273,7 @@ const ArtworkGallery = () => {
                 }}
                 image={`${process.env.PUBLIC_URL}/img/artist/flower1.jpg`}
                 title={"Untitled 14"}
-                onClick={() => handleImageClick(
+                onClick={(event) => handleImageClick(event, 
                   `${process.env.PUBLIC_URL}/img/artist/flower1.jpg`
                 )}
               />
@@ -2292,7 +2303,7 @@ const ArtworkGallery = () => {
                 }}
                 image={`${process.env.PUBLIC_URL}/img/artist/lydia.JPG`}
                 title={"Lydia"}
-                onClick={() => handleImageClick(
+                onClick={(event) => handleImageClick(event, 
                   `${process.env.PUBLIC_URL}/img/artist/lydia.JPG`
                 )}
               />
@@ -2325,7 +2336,7 @@ const ArtworkGallery = () => {
                 }}
                 image={`${process.env.PUBLIC_URL}/img/artist/laekyn.JPG`}
                 title={"Laekyn"}
-                onClick={() => handleImageClick(
+                onClick={(event) => handleImageClick(event, 
                   `${process.env.PUBLIC_URL}/img/artist/laekyn.JPG`
                 )}
               />
@@ -2355,7 +2366,7 @@ const ArtworkGallery = () => {
                 }}
                 image={`${process.env.PUBLIC_URL}/img/artist/yingers.jpg`}
                 title={"Yingers"}
-                onClick={() => handleImageClick(
+                onClick={(event) => handleImageClick(event, 
                   `${process.env.PUBLIC_URL}/img/artist/yingers.jpg`
                 )}
               />
@@ -2385,7 +2396,7 @@ const ArtworkGallery = () => {
                 }}
                 image={`${process.env.PUBLIC_URL}/img/artist/kowalik.jpg`}
                 title={"Kowalik"}
-                onClick={() => handleImageClick(
+                onClick={(event) => handleImageClick(event, 
                   `${process.env.PUBLIC_URL}/img/artist/kowalik.jpg`
                 )}
               />
@@ -2418,7 +2429,7 @@ const ArtworkGallery = () => {
                 }}
                 image={`${process.env.PUBLIC_URL}/img/artist/hadia.jpg`}
                 title={"Hadia"}
-                onClick={() => handleImageClick(
+                onClick={(event) => handleImageClick(event, 
                   `${process.env.PUBLIC_URL}/img/artist/hadia.jpg`
                 )}
               />
@@ -2448,7 +2459,7 @@ const ArtworkGallery = () => {
                 }}
                 image={`${process.env.PUBLIC_URL}/img/artist/gidget.jpg`}
                 title={"Gidget"}
-                onClick={() => handleImageClick(
+                onClick={(event) => handleImageClick(event, 
                   `${process.env.PUBLIC_URL}/img/artist/gidget.jpg`
                 )}
               />
@@ -2478,7 +2489,7 @@ const ArtworkGallery = () => {
                 }}
                 image={`${process.env.PUBLIC_URL}/img/artist/jewel.jpg`}
                 title={"Untitled 25"}
-                onClick={() => handleImageClick(
+                onClick={(event) => handleImageClick(event, 
                   `${process.env.PUBLIC_URL}/img/artist/jewel.jpg`
                 )}
               />
@@ -2511,7 +2522,7 @@ const ArtworkGallery = () => {
                 }}
                 image={`${process.env.PUBLIC_URL}/img/artist/birkner.jpg`}
                 title={"Birkner"}
-                onClick={() => handleImageClick(
+                onClick={(event) => handleImageClick(event, 
                   `${process.env.PUBLIC_URL}/img/artist/birkner.jpg`
                 )}
               />
@@ -2541,7 +2552,7 @@ const ArtworkGallery = () => {
                 }}
                 image={`${process.env.PUBLIC_URL}/img/artist/darlington.jpg`}
                 title={"Darlington"}
-                onClick={() => handleImageClick(
+                onClick={(event) => handleImageClick(event, 
                   `${process.env.PUBLIC_URL}/img/artist/darlington.jpg`
                 )}
               />
@@ -2581,7 +2592,7 @@ const ArtworkGallery = () => {
                 }}
                 image={`${process.env.PUBLIC_URL}/img/artist/highland_trucks.JPG`}
                 title={"Highland Trucks"}
-                onClick={() => handleImageClick(
+                onClick={(event) => handleImageClick(event, 
                   `${process.env.PUBLIC_URL}/img/artist/highland_trucks.JPG`
                 )}
               />
@@ -2611,7 +2622,7 @@ const ArtworkGallery = () => {
                 }}
                 image={`${process.env.PUBLIC_URL}/img/artist/liquor_bottles.jpg`}
                 title={"Liquor Bottles and Flowers"}
-                onClick={() => handleImageClick(
+                onClick={(event) => handleImageClick(event, 
                   `${process.env.PUBLIC_URL}/img/artist/liquor_bottles.jpg`
                 )}
               />
@@ -2651,7 +2662,7 @@ const ArtworkGallery = () => {
                 }}
                 image={`${process.env.PUBLIC_URL}/img/artist/stephs_tree.JPG`}
                 title={"Steph's Tree"}
-                onClick={() => handleImageClick(
+                onClick={(event) => handleImageClick(event, 
                   `${process.env.PUBLIC_URL}/img/artist/stephs_tree.JPG`
                 )}
               />
@@ -2681,7 +2692,7 @@ const ArtworkGallery = () => {
                 }}
                 image={`${process.env.PUBLIC_URL}/img/artist/iris.jpg`}
                 title={"Iris"}
-                onClick={() => handleImageClick(
+                onClick={(event) => handleImageClick(event, 
                   `${process.env.PUBLIC_URL}/img/artist/iris.jpg`
                 )}
               />
@@ -2711,7 +2722,7 @@ const ArtworkGallery = () => {
                 }}
                 image={`${process.env.PUBLIC_URL}/img/artist/clown_contractors.jpg`}
                 title={"Clown Contractors"}
-                onClick={() => handleImageClick(
+                onClick={(event) => handleImageClick(event, 
                   `${process.env.PUBLIC_URL}/img/artist/clown_contractors.jpg`
                 )}
               />
@@ -2744,7 +2755,7 @@ const ArtworkGallery = () => {
                 }}
                 image={`${process.env.PUBLIC_URL}/img/artist/bolero.jpg`}
                 title={"Bolero"}
-                onClick={() => handleImageClick(
+                onClick={(event) => handleImageClick(event, 
                   `${process.env.PUBLIC_URL}/img/artist/bolero.jpg`
                 )}
               />
@@ -2775,7 +2786,7 @@ const ArtworkGallery = () => {
                 }}
                 image={`${process.env.PUBLIC_URL}/img/artist/koris_eyesoar.jpg`}
                 title={"Kori's Eyesoar"}
-                onClick={() => handleImageClick(
+                onClick={(event) => handleImageClick(event, 
                   `${process.env.PUBLIC_URL}/img/artist/koris_eyesoar.jpg`
                 )}
               />
@@ -2805,7 +2816,7 @@ const ArtworkGallery = () => {
                 }}
                 image={`${process.env.PUBLIC_URL}/img/artist/butterfly_eye.jpg`}
                 title={"Untitled 26"}
-                onClick={() => handleImageClick(
+                onClick={(event) => handleImageClick(event, 
                   `${process.env.PUBLIC_URL}/img/artist/butterfly_eye.jpg`
                 )}
               />
@@ -2838,7 +2849,7 @@ const ArtworkGallery = () => {
                 }}
                 image={`${process.env.PUBLIC_URL}/img/artist/mindy.jpg`}
                 title={"Mindy"}
-                onClick={() => handleImageClick(
+                onClick={(event) => handleImageClick(event, 
                   `${process.env.PUBLIC_URL}/img/artist/mindy.jpg`
                 )}
               />
@@ -2860,12 +2871,13 @@ const ArtworkGallery = () => {
         onClose={handleCloseModal}
         imageUrl={selectedImage?.imageUrl}
         title={selectedImage?.title}
-        description={selectedImage?.description}
+        details={selectedImage?.details}
       />
     </div>
   )
 }
 
 export default ArtworkGallery
+
 
 

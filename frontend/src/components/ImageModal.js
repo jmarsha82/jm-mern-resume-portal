@@ -11,7 +11,7 @@ import {
 } from '@mui/material';
 import CloseIcon from '@mui/icons-material/Close';
 
-const ImageModal = ({ open, onClose, imageUrl, title, description }) => {
+const ImageModal = ({ open, onClose, imageUrl, title, details = [] }) => {
   const theme = useTheme();
   const fullScreen = useMediaQuery(theme.breakpoints.down('md'));
 
@@ -35,13 +35,10 @@ const ImageModal = ({ open, onClose, imageUrl, title, description }) => {
     >
       <DialogTitle sx={{ 
         display: 'flex', 
-        justifyContent: 'space-between', 
+        justifyContent: 'flex-end', 
         alignItems: 'center',
         padding: 2
       }}>
-        <Typography variant="h6" component="div">
-          {title}
-        </Typography>
         <IconButton
           onClick={onClose}
           sx={{ color: 'white' }}
@@ -65,10 +62,24 @@ const ImageModal = ({ open, onClose, imageUrl, title, description }) => {
             margin: '0 auto'
           }}
         />
-        {description && (
-          <Typography variant="body2" sx={{ marginTop: 2, opacity: 0.8 }}>
-            {description}
-          </Typography>
+        {(title || details.length > 0) && (
+          <Box
+            sx={{
+              marginTop: 2,
+              textAlign: 'left'
+            }}
+          >
+            {[title, ...details].filter(Boolean).map((detail, index) => (
+              <Typography
+                key={`${detail}-${index}`}
+                variant="caption"
+                component="div"
+                sx={{ display: 'block', opacity: 0.8 }}
+              >
+                {detail}
+              </Typography>
+            ))}
+          </Box>
         )}
       </DialogContent>
     </Dialog>
