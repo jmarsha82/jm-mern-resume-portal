@@ -76,8 +76,11 @@ describe('Contact Component', () => {
         reply_to: 'test@example.com',
         subject: 'Test Subject',
         message: 'Test message content',
-        to_email: 'recipient@example.com'
-      }, 'public_test');
+        to_email: 'recipient@example.com',
+        toEmail: 'recipient@example.com',
+        recipient_email: 'recipient@example.com',
+        recipient: 'recipient@example.com'
+      }, { publicKey: 'public_test' });
     });
 
     expect(await screen.findByText('Email sent successfully!')).toBeInTheDocument();

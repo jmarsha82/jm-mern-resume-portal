@@ -1,4 +1,4 @@
-import { getEmailJsConfig, getEmailJsErrorMessage } from '../pages/Contact';
+import { getEmailJsConfig, getEmailJsErrorMessage, buildEmailJsTemplateParams } from '../pages/Contact';
 
 describe('Contact helper functions', () => {
   const originalEnv = process.env;
@@ -32,5 +32,24 @@ describe('Contact helper functions', () => {
     expect(getEmailJsErrorMessage({ text: 'text error' })).toBe('text error');
     expect(getEmailJsErrorMessage({ message: 'message error' })).toBe('message error');
     expect(getEmailJsErrorMessage({})).toBe('Unknown EmailJS error');
+  });
+
+  test('builds template params including recipient aliases', () => {
+    expect(buildEmailJsTemplateParams({
+      email: 'sender@example.com',
+      subject: 'Hello',
+      message: 'Testing',
+      toEmail: 'to@example.com',
+    })).toEqual({
+      from_email: 'sender@example.com',
+      from_name: 'sender@example.com',
+      reply_to: 'sender@example.com',
+      subject: 'Hello',
+      message: 'Testing',
+      to_email: 'to@example.com',
+      toEmail: 'to@example.com',
+      recipient_email: 'to@example.com',
+      recipient: 'to@example.com',
+    });
   });
 });

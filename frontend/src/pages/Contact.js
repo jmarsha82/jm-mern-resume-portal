@@ -11,6 +11,20 @@ export const getEmailJsConfig = () => ({
     toEmail: process.env.REACT_APP_EMAILJS_TO_EMAIL,
 });
 
+export const buildEmailJsTemplateParams = ({ email, subject, message, toEmail }) => ({
+    from_email: email,
+    from_name: email,
+    reply_to: email,
+    subject,
+    message,
+    // EmailJS only routes to a dynamic recipient if the template uses this variable.
+    to_email: toEmail,
+    // Common aliases so existing templates can bind to the same value without code changes.
+    toEmail,
+    recipient_email: toEmail,
+    recipient: toEmail,
+});
+
 export const getEmailJsErrorMessage = (error) => {
     if (!error) {
         return "Unknown EmailJS error";
@@ -90,18 +104,18 @@ const Contact = () => {
         setSubmitStatus("");
 
         try {
+            const templateParams = buildEmailJsTemplateParams({
+                email: trimmedEmail,
+                subject: trimmedSubject,
+                message: trimmedMessage,
+                toEmail,
+            });
+
             await emailjs.send(
                 serviceId,
                 templateId,
-                {
-                    from_email: trimmedEmail,
-                    from_name: trimmedEmail,
-                    reply_to: trimmedEmail,
-                    subject: trimmedSubject,
-                    message: trimmedMessage,
-                    to_email: toEmail,
-                },
-                publicKey
+                templateParams,
+                { publicKey }
             );
             setSubmitStatus("Email sent successfully!");
             setEmail("");
