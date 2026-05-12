@@ -18,7 +18,7 @@ const SKILLS = [
   { name: 'Virtual Box', href: 'https://www.virtualbox.org/', aria: 'Used Ocassionally', description: /VM images/i },
   { name: 'Spring Framework', href: 'https://spring.io/guides', aria: 'Used Ocassionally', description: /java and kotlin/i },
   { name: 'JUnit', href: 'https://junit.org/', aria: 'Used Ocassionally', description: /testing Java backends/i },
-  { name: 'Java', href: 'hhttps://github.com/jmarsha82/cse-530s-databases', aria: 'Used Occasionally', description: /Like riding a bike/i },
+  { name: 'Java', href: 'https://github.com/jmarsha82/cse-530s-databases', aria: 'Used Occasionally', description: /Like riding a bike/i },
   { name: 'AWS', href: 'https://aws.amazon.com/', aria: 'Used Occasionally', description: /EC2 for machine learning IoT/i },
   { name: 'IntelliJ', href: 'https://www.jetbrains.com/idea/', aria: 'Used Occasionally', description: /Preferred IDE when working in Java/i },
   { name: 'Thymeleaf', href: 'https://www.thymeleaf.org/', aria: 'Used Rarely', description: /Use with Javascript and a java Spring Framework/i },
