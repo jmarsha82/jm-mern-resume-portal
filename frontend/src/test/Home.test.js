@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, screen, fireEvent, waitFor } from '@testing-library/react';
+import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import Home from '../pages/Home';
 import { ThemeContextProvider } from '../context/ThemeContext';
@@ -192,12 +192,12 @@ describe('Home Component', () => {
       expect(aboutButton.closest('a')).toHaveAttribute('href', '/about');
     });
 
-    test('CONTACT ME button has correct href', () => {
+    test('CONTACT ME button opens a mailto link with default subject', () => {
       renderHomeWithTheme();
       
       const contactButton = screen.getByText('CONTACT ME');
       expect(contactButton).toBeInTheDocument();
-      expect(contactButton.closest('a')).toHaveAttribute('href', '/contact');
+      expect(contactButton.closest('a')).toHaveAttribute('href', 'mailto:jmarsha82@yahoo.com?subject=From%20Website');
     });
 
     test('all buttons have correct styling classes', () => {
@@ -522,7 +522,7 @@ describe('Home Component', () => {
       expect(screen.getByText('ART PORTFOLIO').closest('a')).toHaveAttribute('href', '/artist');
       expect(screen.getByText('DEV PROFILE').closest('a')).toHaveAttribute('href', '/programmer');
       expect(screen.getByText('ABOUT').closest('a')).toHaveAttribute('href', '/about');
-      expect(screen.getByText('CONTACT ME').closest('a')).toHaveAttribute('href', '/contact');
+      expect(screen.getByText('CONTACT ME').closest('a')).toHaveAttribute('href', 'mailto:jmarsha82@yahoo.com?subject=From%20Website');
     });
   });
 

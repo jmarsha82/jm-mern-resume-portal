@@ -39,7 +39,7 @@ describe('useFetch', () => {
     });
 
     expect(global.fetch).toHaveBeenCalledWith('/api/data', expect.objectContaining({ signal: expect.any(AbortSignal) }));
-    expect(console.log).toHaveBeenCalledWith(payload);
+    expect(console.log).not.toHaveBeenCalled();
   });
 
   test('sets error when the response is not ok', async () => {
@@ -91,7 +91,7 @@ describe('useFetch', () => {
     unmount();
 
     await waitFor(() => {
-      expect(console.log).toHaveBeenCalledWith('fetch aborted');
+      expect(console.log).not.toHaveBeenCalled();
     });
   });
 });

@@ -9,6 +9,7 @@ const Home = () => {
   const muiTheme = useMuiTheme();
   const isMobile = useMediaQuery(muiTheme.breakpoints.down('sm'));
   const isTablet = useMediaQuery(muiTheme.breakpoints.down('md'));
+  const contactHref = 'mailto:jmarsha82@yahoo.com?subject=From%20Website';
 
   const darkTheme = {
     background: 'linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 25%, #16213e 50%, #0f3460 75%, #0a0a0a 100%)',
@@ -309,7 +310,7 @@ const Home = () => {
           </Button>
           <Button
             variant="contained"
-            href="/contact"
+            href={contactHref}
             fullWidth={isMobile}
             style={{
               padding: isMobile ? '14px 24px' : '16px 32px',

@@ -48,7 +48,7 @@ const ArtistNavbar = () => {
                     </div>
                     <div className="navbar-mobile-right">
                         <span>
-                            <Link to="https://www.instagram.com/marshajus/" target="_blank">
+                            <Link to="https://www.instagram.com/marshajus/" target="_blank" rel="noopener noreferrer">
                                 <InstagramIcon style={{ color: theme.accent5 }} fontSize="large" />
                             </Link>
                         </span>
@@ -96,7 +96,7 @@ const ArtistNavbar = () => {
                     <span><HashLink className="navbar-site-buttons" to='/artist/#abstract-id'><Button variant="text" style={{ color: theme.accent5 }} className='navbar-button-color'>Abstract</Button></HashLink></span>
                 </div>
                 <div>
-                    <span><Link to="https://www.instagram.com/marshajus/" target="_blank"><InstagramIcon style={{ color: theme.accent5 }} fontSize="large" /></Link></span>
+                    <span><Link to="https://www.instagram.com/marshajus/" target="_blank" rel="noopener noreferrer"><InstagramIcon style={{ color: theme.accent5 }} fontSize="large" /></Link></span>
                 </div>
             </div>
         </header>

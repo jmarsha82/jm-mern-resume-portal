@@ -22,12 +22,6 @@ jest.mock('../pages/ArtistProfile', () => {
   };
 });
 
-jest.mock('../pages/Contact', () => {
-  return function MockContact() {
-    return <div data-testid="contact-page">Contact Page</div>;
-  };
-});
-
 jest.mock('../pages/About', () => {
   return function MockAbout() {
     return <div data-testid="about-page">About Page</div>;

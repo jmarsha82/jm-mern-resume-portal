@@ -68,8 +68,8 @@ const ProgrammerNavbar = () => {
                         </Button>
                     </div>
                     <div className="navbar-mobile-right">
-                        <span><Link to="https://www.linkedin.com/in/justin-marshall-3733065b" target="_blank"><LinkedInIcon style={{ color: theme.accent5 }} fontSize="large" /></Link></span>
-                        <span><Link to="https://github.com/jmarsha82" target="_blank"><GitHubIcon style={{ color: theme.accent5 }} fontSize="large" /></Link></span>
+                        <span><Link to="https://www.linkedin.com/in/justin-marshall-3733065b" target="_blank" rel="noopener noreferrer"><LinkedInIcon style={{ color: theme.accent5 }} fontSize="large" /></Link></span>
+                        <span><Link to="https://github.com/jmarsha82" target="_blank" rel="noopener noreferrer"><GitHubIcon style={{ color: theme.accent5 }} fontSize="large" /></Link></span>
                     </div>
                     <Drawer
                         anchor="left"
@@ -114,8 +114,8 @@ const ProgrammerNavbar = () => {
                 <span><HashLink className="navbar-site-buttons" to='/programmer/#dev-links-id'><Button style={{ color: theme.accent5 }} variant="text" className='navbar-button-color'>Dev Links</Button></HashLink></span>
             </div>
                 <div className="navbar-right-section">
-                    <span><Link  to="https://www.linkedin.com/in/justin-marshall-3733065b" target="_blank"><LinkedInIcon style={{ color: theme.accent5 }} fontSize="large" /></Link></span>
-                    <span><Link to="https://github.com/jmarsha82" target="_blank"><GitHubIcon style={{ color: theme.accent5 }} fontSize="large" /></Link></span>
+                    <span><Link  to="https://www.linkedin.com/in/justin-marshall-3733065b" target="_blank" rel="noopener noreferrer"><LinkedInIcon style={{ color: theme.accent5 }} fontSize="large" /></Link></span>
+                    <span><Link to="https://github.com/jmarsha82" target="_blank" rel="noopener noreferrer"><GitHubIcon style={{ color: theme.accent5 }} fontSize="large" /></Link></span>
                     <Button
                         variant="contained"
                         startIcon={<GetAppIcon />}

@@ -16,7 +16,7 @@ const EducationDetails = () => {
       transition: 'background 0.3s ease, color 0.3s ease'
     }}>
       <Divider style={{ backgroundColor: theme.border }} />
-      <ListItem button component={Link} to={"https://wustl.edu/"} target="_blank" style={{ color: theme.textColor }}>
+      <ListItem button component={Link} to={"https://wustl.edu/"} target="_blank" rel="noopener noreferrer" style={{ color: theme.textColor }}>
         <ListItemText>
           <h4 style={{ color: theme.accent4 }}>{"Masters in Computer Engineering"}</h4>
           <title>{"St.Louis MO"}</title>
@@ -24,7 +24,7 @@ const EducationDetails = () => {
         </ListItemText>
       </ListItem>
       <Divider style={{ backgroundColor: theme.border }} />
-      <ListItem button component={Link} to={"https://www.siue.edu/"} target="_blank" style={{ color: theme.textColor }}>
+      <ListItem button component={Link} to={"https://www.siue.edu/"} target="_blank" rel="noopener noreferrer" style={{ color: theme.textColor }}>
         <ListItemText>
           <h4 style={{ color: theme.accent4 }}>{"Masters in Business Administration with a Specialization in Management Information Systems"}</h4>
           <title>{"Edwardsville IL"}</title>
@@ -32,7 +32,7 @@ const EducationDetails = () => {
         </ListItemText>
       </ListItem>
       <Divider style={{ backgroundColor: theme.border }} />
-      <ListItem button component={Link} to={"https://www.siue.edu/"} target="_blank" style={{ color: theme.textColor }}>
+      <ListItem button component={Link} to={"https://www.siue.edu/"} target="_blank" rel="noopener noreferrer" style={{ color: theme.textColor }}>
         <ListItemText>
           <h4 style={{ color: theme.accent4 }}>{"Bachelor of Liberal Studies with an Emphasis in Art"}</h4>
           <title>{"Edwardsville IL"}</title>

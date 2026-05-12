@@ -91,7 +91,7 @@ const DevLinkDetails = () => {
         <Grid {...itemProps}>
           <StyledItem>
             <StyledCard>
-              <a href={"https://www.codingame.com/start"} target="_blank">
+              <a href={"https://www.codingame.com/start"} target="_blank" rel="noopener noreferrer">
                 <CardMedia
                   sx={mediaSx}
                   image={`${process.env.PUBLIC_URL}/img/developer/codin_game.jpg`}
@@ -110,7 +110,7 @@ const DevLinkDetails = () => {
         <Grid {...itemProps}>
           <StyledItem>
             <StyledCard>
-              <a href={"https://learning.oreilly.com/home/"} target="_blank">
+              <a href={"https://learning.oreilly.com/home/"} target="_blank" rel="noopener noreferrer">
                 <CardMedia
                   sx={mediaSx}
                   image={`${process.env.PUBLIC_URL}/img/developer/o_reilly.jpg`}
@@ -132,7 +132,7 @@ const DevLinkDetails = () => {
         <Grid {...itemProps}>
           <StyledItem>
             <StyledCard>
-              <a href={"https://www.cs.usfca.edu/~galles/visualization/"} target="_blank">
+              <a href={"https://www.cs.usfca.edu/~galles/visualization/"} target="_blank" rel="noopener noreferrer">
                 <CardMedia
                   sx={mediaSx}
                   image={`${process.env.PUBLIC_URL}/img/developer/data_stuct_visual.jpg`}
@@ -151,7 +151,7 @@ const DevLinkDetails = () => {
         <Grid {...itemProps}>
           <StyledItem>
             <StyledCard>
-              <a href={"https://jsonplaceholder.typicode.com/"} target="_blank">
+              <a href={"https://jsonplaceholder.typicode.com/"} target="_blank" rel="noopener noreferrer">
                 <CardMedia
                   sx={mediaSx}
                   image={`${process.env.PUBLIC_URL}/img/developer/json_placeholder.jpg`}
@@ -173,7 +173,7 @@ const DevLinkDetails = () => {
         <Grid {...itemProps}>
           <StyledItem>
             <StyledCard>
-              <a href={"https://replit.com/"} target="_blank">
+              <a href={"https://replit.com/"} target="_blank" rel="noopener noreferrer">
                 <CardMedia
                   sx={mediaSx}
                   image={`${process.env.PUBLIC_URL}/img/developer/replit.jpg`}
@@ -192,7 +192,7 @@ const DevLinkDetails = () => {
         <Grid {...itemProps}>
           <StyledItem>
             <StyledCard>
-              <a href={"https://www.w3schools.com/default.asp"} target="_blank">
+              <a href={"https://www.w3schools.com/default.asp"} target="_blank" rel="noopener noreferrer">
                 <CardMedia
                   sx={mediaSx}
                   image={`${process.env.PUBLIC_URL}/img/developer/w3_schools.jpg`}
@@ -214,7 +214,7 @@ const DevLinkDetails = () => {
         <Grid {...itemProps}>
           <StyledItem>
             <StyledCard>
-              <a href={"https://ninjamock.com/"} target="_blank">
+              <a href={"https://ninjamock.com/"} target="_blank" rel="noopener noreferrer">
                 <CardMedia
                   sx={mediaSx}
                   image={`${process.env.PUBLIC_URL}/img/developer/ninjamock.jpg`}
@@ -233,7 +233,7 @@ const DevLinkDetails = () => {
         <Grid {...itemProps}>
           <StyledItem>
             <StyledCard>
-              <a href={"https://trello.com/en"} target="_blank">
+              <a href={"https://trello.com/en"} target="_blank" rel="noopener noreferrer">
                 <CardMedia
                   sx={mediaSx}
                   image={`${process.env.PUBLIC_URL}/img/developer/trello.jpg`}
@@ -255,7 +255,7 @@ const DevLinkDetails = () => {
         <Grid {...itemProps}>
           <StyledItem>
             <StyledCard>
-              <a href={"https://www.hackerrank.com/dashboard"} target="_blank">
+              <a href={"https://www.hackerrank.com/dashboard"} target="_blank" rel="noopener noreferrer">
                 <CardMedia
                   sx={mediaSx}
                   image={`${process.env.PUBLIC_URL}/img/developer/hackerrank.jpg`}
@@ -274,7 +274,7 @@ const DevLinkDetails = () => {
         <Grid {...itemProps}>
           <StyledItem>
             <StyledCard>
-              <a href={"https://spring.io/guides"} target="_blank">
+              <a href={"https://spring.io/guides"} target="_blank" rel="noopener noreferrer">
                 <CardMedia
                   sx={mediaSx}
                   image={`${process.env.PUBLIC_URL}/img/developer/spring.jpg`}
@@ -296,7 +296,7 @@ const DevLinkDetails = () => {
         <Grid {...itemProps}>
           <StyledItem>
             <StyledCard>
-              <a href={"https://react.dev/"} target="_blank">
+              <a href={"https://react.dev/"} target="_blank" rel="noopener noreferrer">
                 <CardMedia
                   sx={mediaSx}
                   image={`${process.env.PUBLIC_URL}/img/developer/react.jpg`}
@@ -315,7 +315,7 @@ const DevLinkDetails = () => {
         <Grid {...itemProps}>
           <StyledItem>
             <StyledCard>
-              <a href={"https://angular.io/"} target="_blank">
+              <a href={"https://angular.io/"} target="_blank" rel="noopener noreferrer">
                 <CardMedia
                   sx={mediaSx}
                   image={`${process.env.PUBLIC_URL}/img/developer/angular.jpg`}
@@ -337,7 +337,7 @@ const DevLinkDetails = () => {
         <Grid {...itemProps}>
           <StyledItem>
             <StyledCard>
-              <a href={"https://leetcode.com/"} target="_blank">
+              <a href={"https://leetcode.com/"} target="_blank" rel="noopener noreferrer">
                 <CardMedia
                   sx={mediaSx}
                   image={`${process.env.PUBLIC_URL}/img/developer/leetcode.jpg`}
@@ -356,7 +356,7 @@ const DevLinkDetails = () => {
         <Grid {...itemProps}>
           <StyledItem>
             <StyledCard>
-              <a href={"https://claude.ai/"} target="_blank">
+              <a href={"https://claude.ai/"} target="_blank" rel="noopener noreferrer">
                 <CardMedia
                   sx={mediaSx}
                   image={`${process.env.PUBLIC_URL}/img/developer/claudeai.jpg`}

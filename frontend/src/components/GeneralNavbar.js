@@ -9,9 +9,9 @@ const GeneralNavbar = () => {
         <header>
             <div className="container">
                 <div>
-                    <span><Link href="https://www.instagram.com/marshajus/" target="_blank"><InstagramIcon sx={{ color: 'black' }} fontSize="large" /></Link></span>
-                    <span><Link href="https://www.linkedin.com/in/justin-marshall-3733065b" target="_blank"><LinkedInIcon sx={{ color: 'black' }} fontSize="large" /></Link></span>
-                    <span><Link href="https://github.com/jmarsha82" target="_blank"><GitHubIcon sx={{ color: 'black' }} fontSize="large" /></Link></span>
+                    <span><Link href="https://www.instagram.com/marshajus/" target="_blank" rel="noopener noreferrer"><InstagramIcon sx={{ color: 'black' }} fontSize="large" /></Link></span>
+                    <span><Link href="https://www.linkedin.com/in/justin-marshall-3733065b" target="_blank" rel="noopener noreferrer"><LinkedInIcon sx={{ color: 'black' }} fontSize="large" /></Link></span>
+                    <span><Link href="https://github.com/jmarsha82" target="_blank" rel="noopener noreferrer"><GitHubIcon sx={{ color: 'black' }} fontSize="large" /></Link></span>
                 </div>
             </div>
         </header>
