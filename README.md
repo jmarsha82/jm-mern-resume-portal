@@ -11,6 +11,28 @@
 npm run test:all
 ```
 
+## Local Development
+- Navigate to `jm-mern-resume-portal/frontend`
+- Build the static app
+
+```bash
+npm run build
+```
+
+- Serve the static build locally
+
+```bash
+npm run serve
+```
+
+- Or build and serve with one command
+
+```bash
+npm run dev
+```
+
+This project intentionally uses a build-and-serve workflow instead of a hot-reload development server. After changing source files, stop the server if it is running, rerun `npm run build`, then rerun `npm run serve`.
+
 ## App Structure
 ### Programmer Persona
 - General Information

@@ -23,14 +23,13 @@
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.11.2",
     "react-router-hash-link": "^2.4.3",
-    "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "node scripts/build-static.js",
+    "serve": "node scripts/serve-static.js",
+    "dev": "npm run build && npm run serve",
     "test": "jest",
-    "eject": "react-scripts eject",
     "test:all": "jest --coverage  --testPathPattern=frontend/src/test/.*\\.test\\.js$"
   },
   "eslintConfig": {
@@ -62,8 +61,14 @@
     "@babel/preset-env": "^7.28.3",
     "@babel/preset-react": "^7.27.1",
     "@testing-library/react": "^14.0.0",
+    "babel-loader": "^8.3.0",
     "babel-jest": "^29.7.0",
+    "css-loader": "^6.7.3",
+    "dotenv": "^10.0.0",
+    "html-webpack-plugin": "^5.5.1",
     "identity-obj-proxy": "^3.0.0",
+    "mini-css-extract-plugin": "^2.7.5",
+    "webpack": "^5.82.1",
     "react-test-renderer": "^18.2.0"
   }
 }
