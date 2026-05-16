@@ -6,7 +6,7 @@ const path = require('path');
 
 const buildDirectory = path.resolve(__dirname, '..', 'build');
 const port = Number(process.env.PORT) || 3000;
-const host = process.env.HOST || '127.0.0.1';
+const host = process.env.HOST || '0.0.0.0';
 
 const contentTypes = {
   '.css': 'text/css; charset=utf-8',
