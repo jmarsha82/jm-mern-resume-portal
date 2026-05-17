@@ -39,7 +39,9 @@ const ProgrammerProfile = () => {
             transition: 'background 0.3s ease, color 0.3s ease'
           }}>
             <h4 style={{ color: theme.accent4 }}>Github Contributions</h4>
-            <img className="github-chart-image" src="https://ghchart.rshah.org/1976d2/jmarsha82" alt="Github Profile" />
+            <div className="github-chart-frame">
+              <img className="github-chart-image" src="https://ghchart.rshah.org/1976d2/jmarsha82" alt="Github Profile" />
+            </div>
           </div>
         </div>
         <div className="home-two">

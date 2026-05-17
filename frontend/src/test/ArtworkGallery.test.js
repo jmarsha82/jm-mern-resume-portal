@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, screen, fireEvent, waitFor } from "@testing-library/react";
+import { render, screen, fireEvent, waitFor, act } from "@testing-library/react";
 import '@testing-library/jest-dom';
 import ArtworkGallery from "../components/ArtworkGallery";
 import { ThemeContextProvider } from "../context/ThemeContext";
@@ -49,6 +49,7 @@ describe('ArtworkGallery Component', () => {
 
   beforeEach(() => {
     setMatchMedia(false);
+    window.scrollTo = jest.fn();
   });
   
   describe('Component Rendering', () => {
@@ -378,6 +379,43 @@ describe('ArtworkGallery Component', () => {
 
       const galleryContainer = screen.getByText('Portraits').closest('.artwork-gallery');
       expect(galleryContainer).toHaveStyle('overflow-x: hidden');
+    });
+
+    test('phone back button closes modal and restores gallery scroll position', async () => {
+      const mockScrollTo = jest.fn();
+      window.scrollTo = mockScrollTo;
+      Object.defineProperty(window, 'scrollY', {
+        configurable: true,
+        value: 640,
+      });
+
+      renderWithProviders(<ArtworkGallery />);
+
+      const firstImage = screen.getAllByRole('img')[0];
+      fireEvent.click(firstImage);
+
+      await waitFor(() => {
+        expect(screen.getByTestId('image-modal')).toBeInTheDocument();
+      });
+
+      expect(window.history.state).toMatchObject({
+        imageModalOpen: true,
+        modalScrollPosition: 640,
+      });
+
+      act(() => {
+        window.dispatchEvent(new PopStateEvent('popstate'));
+      });
+
+      await waitFor(() => {
+        expect(screen.queryByTestId('image-modal')).not.toBeInTheDocument();
+      });
+
+      expect(mockScrollTo).toHaveBeenCalledWith({
+        top: 640,
+        left: 0,
+        behavior: 'auto',
+      });
     });
   });
 

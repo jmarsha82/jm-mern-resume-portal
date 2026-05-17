@@ -1,5 +1,4 @@
 import * as React from 'react';
-import { Link } from 'react-router-dom';
 import { styled } from '@mui/material/styles';
 import Card from '@mui/material/Card';
 import Paper from '@mui/material/Paper';
@@ -14,6 +13,9 @@ import { useTheme } from '../context/ThemeContext';
 const ArtworkGallery = () => {
   const [modalOpen, setModalOpen] = React.useState(false);
   const [selectedImage, setSelectedImage] = React.useState(null);
+  const modalOpenRef = React.useRef(false);
+  const modalHistoryEntryRef = React.useRef(false);
+  const modalScrollPositionRef = React.useRef(0);
   const { theme } = useTheme();
   const muiTheme = useMuiTheme();
   const isMobile = useMediaQuery(muiTheme.breakpoints.down('md'));
@@ -60,6 +62,40 @@ const ArtworkGallery = () => {
         }
       };
 
+  React.useEffect(() => {
+    modalOpenRef.current = modalOpen;
+  }, [modalOpen]);
+
+  const closeModalAtStoredScrollPosition = React.useCallback(() => {
+    setModalOpen(false);
+    setSelectedImage(null);
+
+    window.requestAnimationFrame(() => {
+      window.scrollTo({
+        top: modalScrollPositionRef.current,
+        left: 0,
+        behavior: 'auto'
+      });
+    });
+  }, []);
+
+  React.useEffect(() => {
+    const handlePopState = () => {
+      if (!modalOpenRef.current) {
+        return;
+      }
+
+      modalHistoryEntryRef.current = false;
+      closeModalAtStoredScrollPosition();
+    };
+
+    window.addEventListener('popstate', handlePopState);
+
+    return () => {
+      window.removeEventListener('popstate', handlePopState);
+    };
+  }, [closeModalAtStoredScrollPosition]);
+
   const handleImageClick = (event, imageUrl) => {
     const card = event.currentTarget.closest('.MuiCard-root');
     const typographyNodes = card?.querySelectorAll('.MuiCardContent-root .MuiTypography-root') ?? [];
@@ -67,6 +103,18 @@ const ArtworkGallery = () => {
       .map((node) => node.textContent?.trim())
       .filter(Boolean);
     const [title, ...details] = textValues;
+    const currentScrollPosition = window.scrollY || window.pageYOffset || 0;
+
+    modalScrollPositionRef.current = currentScrollPosition;
+
+    if (!modalHistoryEntryRef.current) {
+      window.history.pushState(
+        { imageModalOpen: true, modalScrollPosition: currentScrollPosition },
+        '',
+        window.location.href
+      );
+      modalHistoryEntryRef.current = true;
+    }
 
     setSelectedImage({
       imageUrl,
@@ -77,8 +125,14 @@ const ArtworkGallery = () => {
   };
 
   const handleCloseModal = () => {
-    setModalOpen(false);
-    setSelectedImage(null);
+    if (modalHistoryEntryRef.current) {
+      modalHistoryEntryRef.current = false;
+      closeModalAtStoredScrollPosition();
+      window.history.back();
+      return;
+    }
+
+    closeModalAtStoredScrollPosition();
   };
 
   // Styled Item component that responds to theme

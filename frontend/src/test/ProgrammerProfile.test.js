@@ -507,6 +507,16 @@ describe('ProgrammerProfile Component', () => {
       expect(githubImage).toHaveAttribute('src', 'https://ghchart.rshah.org/1976d2/jmarsha82');
     });
 
+    test('Github chart is bounded by a frame and fills it', () => {
+      renderProgrammerProfileWithContexts();
+
+      const githubImage = screen.getByAltText('Github Profile');
+      const githubFrame = githubImage.closest('.github-chart-frame');
+
+      expect(githubFrame).toBeInTheDocument();
+      expect(githubImage).toHaveClass('github-chart-image');
+    });
+
     test('section headings have proper styling', () => {
       renderProgrammerProfileWithContexts();
       
