@@ -194,29 +194,6 @@ const DevBooksDetails = () => {
             <StyledCard>
               <CardMedia
                 sx={mediaSx}
-                image={`${process.env.PUBLIC_URL}/img/developer/discrete_math.jpg`}
-                title={""}
-              />
-              <CardContent>
-                <Typography gutterBottom variant="h6" component="div" sx={{ color: theme.textColor }}>
-                  {"Discrete Mathematics and its Applications"}
-                </Typography>
-                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Kenneth H. Rosen"}</Typography>
-                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"2002"}</Typography>
-                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>{"Good basis for digital logic and machine learning.  Get the newest edition."}</Typography>
-                <Typography variant="body2" sx={{ color: theme.textColor, opacity: 0.7 }}>ISBN : {"9780072424346"}</Typography>
-              </CardContent>
-            </StyledCard>
-          </StyledItem>
-        </Grid>
-      </Grid>
-      <br />
-      <Grid className="programmer-card-gallery-row" container spacing={2} {...rowProps}>
-        <Grid {...itemProps}>
-          <StyledItem>
-            <StyledCard>
-              <CardMedia
-                sx={mediaSx}
                 image={`${process.env.PUBLIC_URL}/img/developer/clean_architecture.jpg`}
                 title={""}
               />
@@ -232,6 +209,9 @@ const DevBooksDetails = () => {
             </StyledCard>
           </StyledItem>
         </Grid>
+      </Grid>
+      <br />
+      <Grid className="programmer-card-gallery-row" container spacing={2} {...rowProps}>
         <Grid {...itemProps}>
           <StyledItem>
             <StyledCard>

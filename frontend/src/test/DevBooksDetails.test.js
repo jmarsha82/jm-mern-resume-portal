@@ -33,7 +33,6 @@ describe('DevBooksDetails Component', () => {
       expect(screen.getByText(/Computer Security.*A Hands-On Approach/)).toBeInTheDocument();
       expect(screen.getByText('Code: The Hidden Language of Computer Hardware and Software')).toBeInTheDocument();
       expect(screen.getByText('The Linux Programming Interface: A Linux and UNIX System Programming Handbook')).toBeInTheDocument();
-      expect(screen.getByText('Discrete Mathematics and its Applications')).toBeInTheDocument();
       expect(screen.getByText('Clean Architecture: A Craftsman\'s Guide to Software Structure and Design')).toBeInTheDocument();
       expect(screen.getByText('Extreme Programming Explained: Embrace Change')).toBeInTheDocument();
     });
@@ -66,7 +65,6 @@ describe('DevBooksDetails Component', () => {
       expect(screen.getByText('Wenliang Du')).toBeInTheDocument();
       expect(screen.getByText('Charles Petzold')).toBeInTheDocument();
       expect(screen.getByText('Michael Kerrisk')).toBeInTheDocument();
-      expect(screen.getByText('Kenneth H. Rosen')).toBeInTheDocument();
       expect(screen.getByText('Robert Martin')).toBeInTheDocument();
       expect(screen.getByText('Kent Beck, Cynthia Andres')).toBeInTheDocument();
     });
@@ -77,10 +75,9 @@ describe('DevBooksDetails Component', () => {
       // Check for publication years (using getAllByText for years that appear multiple times)
       expect(screen.getByText('1994')).toBeInTheDocument();
       expect(screen.getByText('2009')).toBeInTheDocument();
-      expect(screen.getAllByText('2017')).toHaveLength(2); // appears twice
+      expect(screen.getAllByText('2017')).toHaveLength(2);
       expect(screen.getByText('2022')).toBeInTheDocument();
       expect(screen.getByText('2010')).toBeInTheDocument();
-      expect(screen.getByText('2002')).toBeInTheDocument();
       expect(screen.getByText('2004')).toBeInTheDocument();
     });
 
@@ -93,7 +90,6 @@ describe('DevBooksDetails Component', () => {
       expect(screen.getByText(/Great walkthrough.*Learn a lot of C in the process/)).toBeInTheDocument();
       expect(screen.getByText(/Great explanation of how computers work at their most basic/)).toBeInTheDocument();
       expect(screen.getByText(/Complete guide to Linux OS with lots of C examples/)).toBeInTheDocument();
-      expect(screen.getByText(/Good basis for digital logic and machine learning/)).toBeInTheDocument();
       expect(screen.getByText(/Understanding of how applications should be designed/)).toBeInTheDocument();
       expect(screen.getByText(/Overview of agile and how dev teams should interact/)).toBeInTheDocument();
     });
@@ -107,7 +103,6 @@ describe('DevBooksDetails Component', () => {
       expect(screen.getByText('ISBN : 9781548367947')).toBeInTheDocument();
       expect(screen.getByText('ISBN : 9780735611313')).toBeInTheDocument();
       expect(screen.getByText('ISBN : 9781593272203')).toBeInTheDocument();
-      expect(screen.getByText('ISBN : 9780072424346')).toBeInTheDocument();
       expect(screen.getByText('ISBN : 9780134494164')).toBeInTheDocument();
       expect(screen.getByText('ISBN : 9780321278654')).toBeInTheDocument();
     });
@@ -175,7 +170,7 @@ describe('DevBooksDetails Component', () => {
         item.querySelector('[class*="MuiCard-root"]')
       );
       
-      expect(cardContainers.length).toBe(8); // Should have 8 book containers
+      expect(cardContainers.length).toBe(7); // Should have 7 book containers
       
       cardContainers.forEach(item => {
         // Each item should have a card
@@ -195,11 +190,11 @@ describe('DevBooksDetails Component', () => {
     test('has correct number of book cards', () => {
       renderWithProviders(<DevBooksDetails />);
       
-      // Should have 8 book cards total (filter for cards only, not outer containers)
+      // Should have 7 book cards total (filter for cards only, not outer containers)
       const cardContainers = Array.from(document.querySelectorAll('[class*="MuiPaper-root"]')).filter(item => 
         item.querySelector('[class*="MuiCard-root"]')
       );
-      expect(cardContainers.length).toBe(8);
+      expect(cardContainers.length).toBe(7);
     });
   });
 
@@ -215,6 +210,16 @@ describe('DevBooksDetails Component', () => {
         expect(container).toHaveAttribute('class');
         expect(container).toBeVisible();
       });
+    });
+
+    test('web layout groups books into rows of three unless fewer books remain', () => {
+      renderWithProviders(<DevBooksDetails />);
+
+      const gridContainers = document.querySelectorAll('.programmer-card-gallery-row');
+      expect(gridContainers).toHaveLength(3);
+      expect(gridContainers[0].children).toHaveLength(3);
+      expect(gridContainers[1].children).toHaveLength(3);
+      expect(gridContainers[2].children).toHaveLength(1);
     });
 
     test('Grid items have correct spacing', () => {
@@ -236,7 +241,7 @@ describe('DevBooksDetails Component', () => {
       
       // Check for Card components
       const cards = document.querySelectorAll('[class*="MuiCard-root"]');
-      expect(cards.length).toBe(8); // 8 books
+      expect(cards.length).toBe(7); // 7 books
       
       cards.forEach(card => {
         expect(card).toHaveClass('MuiCard-root');
@@ -248,7 +253,7 @@ describe('DevBooksDetails Component', () => {
       
       // Check for CardMedia components
       const cardMediaElements = document.querySelectorAll('[class*="MuiCardMedia-root"]');
-      expect(cardMediaElements.length).toBe(8); // 8 book images
+      expect(cardMediaElements.length).toBe(7); // 7 book images
       
       cardMediaElements.forEach(media => {
         expect(media).toHaveClass('MuiCardMedia-root');
@@ -262,7 +267,7 @@ describe('DevBooksDetails Component', () => {
       
       // Check for CardContent components
       const cardContentElements = document.querySelectorAll('[class*="MuiCardContent-root"]');
-      expect(cardContentElements.length).toBe(8); // 8 book contents
+      expect(cardContentElements.length).toBe(7); // 7 book contents
       
       cardContentElements.forEach(content => {
         expect(content).toHaveClass('MuiCardContent-root');
@@ -278,7 +283,7 @@ describe('DevBooksDetails Component', () => {
       
       // Check for h6 headings (book titles)
       const h6Elements = document.querySelectorAll('[class*="MuiTypography-h6"]');
-      expect(h6Elements.length).toBe(8); // 8 book titles
+      expect(h6Elements.length).toBe(7); // 7 book titles
     });
   });
 
@@ -287,7 +292,7 @@ describe('DevBooksDetails Component', () => {
       renderWithProviders(<DevBooksDetails />);
       
       const images = screen.getAllByRole('img');
-      expect(images.length).toBe(8);
+      expect(images.length).toBe(7);
       
       images.forEach(image => {
         // CardMedia uses background-image style, not src attribute
@@ -362,8 +367,6 @@ describe('DevBooksDetails Component', () => {
       // Check for technical terms
       expect(screen.getByText(/TDD/)).toBeInTheDocument();
       expect(screen.getByText(/agile/)).toBeInTheDocument();
-      expect(screen.getByText(/machine learning/)).toBeInTheDocument();
-      expect(screen.getByText(/digital logic/)).toBeInTheDocument();
     });
 
     test('contains proper book metadata', () => {
@@ -371,7 +374,7 @@ describe('DevBooksDetails Component', () => {
       
       // Check for ISBN format
       const isbnElements = screen.getAllByText(/ISBN :/);
-      expect(isbnElements.length).toBe(8);
+      expect(isbnElements.length).toBe(7);
       
       isbnElements.forEach(element => {
         expect(element.textContent).toMatch(/ISBN : \d{10,13}/);
@@ -428,14 +431,13 @@ describe('DevBooksDetails Component', () => {
     test('all book cards are properly rendered', () => {
       renderWithProviders(<DevBooksDetails />);
       
-      // Check that all 8 books are present
+      // Check that all 7 books are present
       const bookTitles = [
         'Expert C Programming: Deep C Secrets',
         'Growing Object-Oriented Software, Guided by Tests.',
         /Computer Security.*A Hands-On Approach/,
         'Code: The Hidden Language of Computer Hardware and Software',
         'The Linux Programming Interface: A Linux and UNIX System Programming Handbook',
-        'Discrete Mathematics and its Applications',
         'Clean Architecture: A Craftsman\'s Guide to Software Structure and Design',
         'Extreme Programming Explained: Embrace Change'
       ];
@@ -455,7 +457,7 @@ describe('DevBooksDetails Component', () => {
       renderWithProviders(<DevBooksDetails />);
       
       const images = screen.getAllByRole('img');
-      expect(images.length).toBe(8);
+      expect(images.length).toBe(7);
       
       // Check that images have the expected background-image pattern
       images.forEach(image => {
@@ -477,7 +479,6 @@ describe('DevBooksDetails Component', () => {
       expect(imageSources.some(src => src && src.includes('computer_sec_hands_on.jpg'))).toBe(true);
       expect(imageSources.some(src => src && src.includes('code_book.jpg'))).toBe(true);
       expect(imageSources.some(src => src && src.includes('linux_prog.jpg'))).toBe(true);
-      expect(imageSources.some(src => src && src.includes('discrete_math.jpg'))).toBe(true);
       expect(imageSources.some(src => src && src.includes('clean_architecture.jpg'))).toBe(true);
       expect(imageSources.some(src => src && src.includes('extreme_program.jpg'))).toBe(true);
     });
