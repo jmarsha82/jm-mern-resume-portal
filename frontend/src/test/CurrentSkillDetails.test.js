@@ -26,6 +26,11 @@ const SKILLS = [
     href: 'https://github.com/jmarsha82/jm-mern-resume-portal/tree/master/frontend/src/test',
     description: /Used to test javascript code in both work and personal projects/i,
   },
+  {
+    name: 'Codex',
+    href: 'https://openai.com/codex/',
+    description: /CLI for coding assitance/i,
+  },
 ];
 
 const renderWithProviders = (component) => render(
@@ -46,17 +51,17 @@ describe('CurrentSkillDetails Component', () => {
     });
   });
 
-  test('renders four skill cards', () => {
+  test('renders five skill cards', () => {
     renderWithProviders(<CurrentSkillDetails />);
-    expect(document.querySelectorAll('.current-skill-details')).toHaveLength(4);
-    expect(document.querySelectorAll('.current-skill-details-desc')).toHaveLength(4);
+    expect(document.querySelectorAll('.current-skill-details')).toHaveLength(5);
+    expect(document.querySelectorAll('.current-skill-details-desc')).toHaveLength(5);
   });
 
   test('renders the expected external links', () => {
     renderWithProviders(<CurrentSkillDetails />);
 
     const links = screen.getAllByRole('link');
-    expect(links).toHaveLength(4);
+    expect(links).toHaveLength(5);
 
     SKILLS.forEach(({ name, href }) => {
       const link = screen.getByText(name).closest('a');
@@ -93,5 +98,13 @@ describe('CurrentSkillDetails Component', () => {
     document.querySelectorAll('.current-skill-details-desc').forEach((description) => {
       expect(description.textContent.length).toBeGreaterThan(10);
     });
+  });
+
+  test('renders Codex as the final current skill', () => {
+    renderWithProviders(<CurrentSkillDetails />);
+
+    const links = screen.getAllByRole('link');
+    expect(links[links.length - 1]).toHaveTextContent('Codex');
+    expect(links[links.length - 1]).toHaveAttribute('href', 'https://openai.com/codex/');
   });
 });

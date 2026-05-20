@@ -6,7 +6,6 @@ import { ThemeContextProvider } from "../context/ThemeContext";
 import { BrowserRouter } from "react-router-dom";
 
 const SKILLS = [
-  { name: 'Codex', href: 'https://openai.com/codex/', aria: 'Used Daily', description: /CLI for coding assitance/i },
   { name: 'Kiro', href: 'https://kiro.dev/', aria: 'Used Daily', description: /built in features for work projects/i },
   { name: 'Visual Studio', href: 'https://visualstudio.microsoft.com/', aria: 'Used Daily', description: /VSCode for Python and React Projects/i },
   { name: 'Test-Driven Development', href: 'https://www.ibm.com/garage/method/practices/code/practice_test_driven_development/', aria: 'Used Daily', description: /work related development and most hobby codding/i },
@@ -48,15 +47,15 @@ describe('FullSkillDetails Component', () => {
 
   test('renders the expected number of skill cards and descriptions', () => {
     renderWithProviders(<FullSkillDetails />);
-    expect(document.querySelectorAll('.current-skill-details')).toHaveLength(20);
-    expect(document.querySelectorAll('.current-skill-details-desc')).toHaveLength(20);
+    expect(document.querySelectorAll('.current-skill-details')).toHaveLength(19);
+    expect(document.querySelectorAll('.current-skill-details-desc')).toHaveLength(19);
   });
 
   test('renders skill buttons with the current link targets and tooltip labels', () => {
     renderWithProviders(<FullSkillDetails />);
 
     const links = screen.getAllByRole('link');
-    expect(links).toHaveLength(20);
+    expect(links).toHaveLength(19);
 
     SKILLS.forEach(({ name, href, aria }) => {
       const link = screen.getByText(name).closest('a');
@@ -86,7 +85,7 @@ describe('FullSkillDetails Component', () => {
     renderWithProviders(<FullSkillDetails />);
 
     const labels = screen.getAllByRole('link').map((link) => link.getAttribute('aria-label'));
-    expect(labels.filter((label) => label === 'Used Daily')).toHaveLength(7);
+    expect(labels.filter((label) => label === 'Used Daily')).toHaveLength(6);
     expect(labels.filter((label) => label === 'Used Frequently')).toHaveLength(2);
     expect(labels.filter((label) => label === 'Used Ocassionally')).toHaveLength(3);
     expect(labels.filter((label) => label === 'Used Occasionally')).toHaveLength(3);

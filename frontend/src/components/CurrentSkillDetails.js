@@ -56,6 +56,18 @@ const CurrentSkillDetails = () => {
           </span>
         <div className="current-skill-details-desc">{"Used to test javascript code in both work and personal projects"}</div>
     </div>
+    <div className="current-skill-details" style={{ 
+      background: theme.cardBg, 
+      color: theme.textColor,
+      transition: 'background 0.3s ease, color 0.3s ease'
+    }}>
+      <span>
+        <Tooltip title={"Used Daily"} placement="top">
+          <Button style={{ background: theme.accent4, color: theme.accent5 }} variant="contained" href={"https://openai.com/codex/"} target="_blank" rel="noopener noreferrer">{"Codex"}</Button>
+        </Tooltip>
+      </span>
+      <div className="current-skill-details-desc">{"Go to CLI for coding assitance for both work and personal projects.  Use of hooks and skills daily"}</div>
+    </div>
     </div>
     
   )
