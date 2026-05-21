@@ -39,7 +39,7 @@ const CurrentSkillDetails = () => {
     }}>
         <span>
           <Tooltip title={"Used Daily"} placement="top">
-            <Button style={{ background: theme.accent4, color: theme.accent5 }} variant="contained" href={"https://isocpp.org/std/the-standard"} target="_blank" rel="noopener noreferrer">{"C++"}</Button>
+            <Button style={{ background: theme.accent4, color: theme.accent5 }} variant="contained" href={"https://github.com/jmarsha82/jm-gui-cplusplus"} target="_blank" rel="noopener noreferrer">{"C++"}</Button>
           </Tooltip>
           </span>
         <div className="current-skill-details-desc">{"Executable and Webassembly projects using a SimConnect API and Flight Simulation Software"}</div>

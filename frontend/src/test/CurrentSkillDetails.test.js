@@ -18,7 +18,7 @@ const SKILLS = [
   },
   {
     name: 'C++',
-    href: 'https://isocpp.org/std/the-standard',
+    href: 'https://github.com/jmarsha82/jm-gui-cplusplus',
     description: /Executable and Webassembly projects using a SimConnect API/i,
   },
   {
