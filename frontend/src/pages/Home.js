@@ -10,6 +10,7 @@ const Home = () => {
   const isMobile = useMediaQuery(muiTheme.breakpoints.down('sm'));
   const isTablet = useMediaQuery(muiTheme.breakpoints.down('md'));
   const contactHref = 'mailto:jmarsha82@yahoo.com?subject=From%20Website';
+  const masterProfileHref = process.env.REACT_APP_MASTER_PROFILE_URL || 'http://127.0.0.1:4100';
 
   const darkTheme = {
     background: 'linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 25%, #16213e 50%, #0f3460 75%, #0a0a0a 100%)',
@@ -228,6 +229,34 @@ const Home = () => {
         </Typography>
 
         <Box style={{ display: 'flex', gap: isMobile ? 14 : 24, justifyContent: 'center', flexWrap: 'wrap' }}>
+          <Button
+            variant="contained"
+            href={masterProfileHref}
+            fullWidth={isMobile}
+            style={{
+              padding: isMobile ? '14px 24px' : '16px 32px',
+              borderRadius: 25,
+              background: isDarkTheme
+                ? 'linear-gradient(45deg, #0f172a, #00ffff)'
+                : 'linear-gradient(45deg, #1e293b, #38bdf8)',
+              textTransform: 'none',
+              fontWeight: 800,
+              color: '#fff',
+              fontSize: isMobile ? '14px' : '16px',
+              letterSpacing: 1,
+              width: isMobile ? '100%' : undefined,
+              maxWidth: isMobile ? 320 : undefined,
+              border: isDarkTheme
+                ? '2px solid rgba(0,255,255,0.5)'
+                : '2px solid rgba(56,189,248,0.5)',
+              boxShadow: isDarkTheme
+                ? '0 0 30px rgba(0,255,255,0.32), inset 0 0 20px rgba(255,255,255,0.08)'
+                : '0 0 30px rgba(56,189,248,0.32), inset 0 0 20px rgba(255,255,255,0.08)',
+              transition: 'all 0.3s ease'
+            }}
+          >
+            PROFILE SELECT
+          </Button>
           <Button
             variant="contained"
             href="/artist"

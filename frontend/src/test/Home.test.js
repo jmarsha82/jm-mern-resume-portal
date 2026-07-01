@@ -306,11 +306,13 @@ describe('Home Component', () => {
       renderHomeWithTheme();
       
       const buttons = screen.getAllByRole('link');
-      expect(buttons).toHaveLength(4);
+      expect(buttons).toHaveLength(5);
       
       buttons.forEach(button => {
         expect(button).toBeInTheDocument();
       });
+
+      expect(screen.getByText('PROFILE SELECT')).toHaveAttribute('href', 'http://127.0.0.1:4100');
     });
   });
 
@@ -583,13 +585,14 @@ describe('Home Component', () => {
       renderHomeWithTheme();
       
       const buttons = screen.getAllByRole('link');
-      expect(buttons).toHaveLength(4);
+      expect(buttons).toHaveLength(5);
       
       // Check button order
-      expect(buttons[0]).toHaveTextContent('ART PORTFOLIO');
-      expect(buttons[1]).toHaveTextContent('DEV PROFILE');
-      expect(buttons[2]).toHaveTextContent('ABOUT');
-      expect(buttons[3]).toHaveTextContent('CONTACT ME');
+      expect(buttons[0]).toHaveTextContent('PROFILE SELECT');
+      expect(buttons[1]).toHaveTextContent('ART PORTFOLIO');
+      expect(buttons[2]).toHaveTextContent('DEV PROFILE');
+      expect(buttons[3]).toHaveTextContent('ABOUT');
+      expect(buttons[4]).toHaveTextContent('CONTACT ME');
     });
   });
 });
