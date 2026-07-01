@@ -29,8 +29,9 @@ The CI workflow runs on pushes to `master` and `dev`, and on pull requests targe
 - Uploads the Jest coverage folder as a workflow artifact.
 
 ### Code Scanning: Quality
-- Runs Super-Linter as a free GitHub Actions quality gate for source, script, documentation, and workflow files.
-- Keeps JavaScript Standard and duplicate-code checks disabled so the scanner follows this repo's existing React/Jest style instead of imposing a conflicting style preset.
+- Builds the frontend with `npm run build` to catch React/Webpack compilation problems.
+- Runs Super-Linter as a free GitHub Actions quality gate for workflow, JSON, YAML, and Markdown files.
+- Keeps unrelated default Super-Linter scanners disabled so the quality job only checks tooling that this repo has configured.
 
 ### Code Scanning: Security
 - Runs GitHub CodeQL for JavaScript/TypeScript with the security and quality query suites.

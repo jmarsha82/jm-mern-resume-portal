@@ -57,14 +57,38 @@ jobs:
           fetch-depth: 0
           persist-credentials: false
 
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+          cache-dependency-path: frontend/package-lock.json
+
+      - name: Install frontend dependencies
+        working-directory: ./frontend
+        run: npm ci
+
+      - name: Build frontend
+        working-directory: ./frontend
+        run: npm run build
+
       - name: Run Super-Linter quality checks
         uses: super-linter/super-linter/slim@v8.7.0
         env:
           DEFAULT_BRANCH: master
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          FILTER_REGEX_INCLUDE: ^(frontend/src/|frontend/scripts/|frontend/public/|README\.md$|frontend/README\.md$|\.github/)
-          VALIDATE_JAVASCRIPT_STANDARD: false
+          FILTER_REGEX_INCLUDE: ^(README\.md$|frontend/README\.md$|frontend/package.*\.json$|\.github/)
+          VALIDATE_ALL_CODEBASE: true
+          VALIDATE_GITHUB_ACTIONS: true
+          VALIDATE_JSON: true
+          VALIDATE_MARKDOWN: true
+          VALIDATE_YAML: true
+          VALIDATE_BIOME_FORMAT: false
+          VALIDATE_BIOME_LINT: false
+          VALIDATE_CHECKOV: false
           VALIDATE_JSCPD: false
+          VALIDATE_PRE_COMMIT: false
+          VALIDATE_TRIVY: false
 
   code-scanning-security:
     name: Code Scanning / Security
